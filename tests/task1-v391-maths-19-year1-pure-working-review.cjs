@@ -14,13 +14,20 @@ const hash=s=>{let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h
 const first=app.indexOf('const V391_MATHS_19_MANUAL='),last=app.indexOf('const V287_LEGACY_SPEC_GROUPS=',first);
 assert(first>0&&last>first);
 const {rows,patch}=new Function(app.slice(first,last)+'\nreturn {rows:V391_MATHS_19_MANUAL,patch:applyV391Maths19WorkingReview};')();
-assert.deepEqual(rows,audit.rows.map(({sourceFile,...row})=>row));
+// v427: AQA Vectors is 3.11, not the historical 3.10. Keep the old
+// audit ledger as evidence, but test the corrected source-locked guard.
+const correctedRefs={task1_v209_maths_003:'3.11',task1_v209_maths_004:'3.11'};
+const expectedRows=audit.rows.map(({sourceFile,...row})=>({
+ ...row,sourceSpecRef:correctedRefs[row.id]??row.sourceSpecRef
+}));
+const expectedById=new Map(expectedRows.map(x=>[x.id,x]));
+assert.deepEqual(rows,expectedRows);
 const banks=new Map(),original=[];
 for(const row of audit.rows){
  if(!banks.has(row.sourceFile))banks.set(row.sourceFile,json(row.sourceFile));
  const q=banks.get(row.sourceFile).questions.find(x=>x.id===row.id);
  assert(q,'Missing source question '+row.id);
- for(const [key,value] of Object.entries({subject:'Maths',level:'AS',mock:true,standalone:true,requiresWorking:true,marks:row.marks,specRef:row.sourceSpecRef}))assert.equal(q[key],value);
+ for(const [key,value] of Object.entries({subject:'Maths',level:'AS',mock:true,standalone:true,requiresWorking:true,marks:row.marks,specRef:expectedById.get(row.id).sourceSpecRef}))assert.equal(q[key],value);
  assert.equal(q.courseTopic??null,row.sourceCourseTopic);
  assert.notEqual(q.taught,false);assert.notEqual(q.manualWorkingReview,true);assert.notEqual(q.manualDiagramReview,true);
  assert.equal(q.markPoints.length,q.marks);assert.equal(q.markPointMarks.reduce((a,b)=>a+b,0),q.marks);

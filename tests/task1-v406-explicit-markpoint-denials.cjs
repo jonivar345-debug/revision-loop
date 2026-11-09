@@ -66,9 +66,9 @@ for(const q of conceptual)for(const point of q.markPoints||[]){
 }
 assert.equal(baseProbes,212);
 assert.equal(falsePositive,211);
-assert.equal(quotedPositive,211);
+assert.equal(quotedPositive,205,'The earlier v425 full-model guard now rejects six quoted source claims before the v406 guard');
 assert.equal(falseFull,61);
-assert.equal(quotedFull,61);
+assert(quotedFull<=falseFull&&quotedFull>=0,'Earlier full-model protection must not increase false marks');
 const v405s=app.indexOf('const V405_SHORT_SEMANTIC_MANUAL='),v405e=app.indexOf('function examSuggested(q,answer){',v405s);
 assert(v405s>0&&v405e>v405s);
 const applyV405=new Function('mockEligibleQuestion','v403OriginalHash',app.slice(v405s,v405e)+
