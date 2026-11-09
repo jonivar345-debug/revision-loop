@@ -3570,6 +3570,16 @@ function isV422ExplicitBondDiagramDenial(c,input){
   isV426ExplicitQuotedCorrectAnswerDenial(c,input));
 }
 function evaluateCard(c,input){
+ if(c?.paper2Section==='C'&&Array.isArray(c.paper2Choices)&&c.paper2Choices.length===4){
+  const raw=String(input||'').trim().toLowerCase().replace(/\s+/g,' ');
+  if(raw){
+   const choices=c.paper2Choices.map(x=>String(x).trim().toLowerCase().replace(/\s+/g,' '));
+   if(choices.includes(raw)){
+    return raw===choices[0]?{status:'correct',score:1,text:'Correct Paper 2 multiple-choice option.',missing:[]}:
+     {status:'wrong',score:0,text:'That option is incorrect. Review the common trap.',missing:[]};
+   }
+  }
+ }
  if(isV426ExplicitQuotedCorrectAnswerDenial(c,input))
   return {status:'wrong',score:0,text:'This explicitly rejects a correct answer.',missing:[String(c.back||'')]};
  // v389: repeating the full flashcard question is not an answer, even if
@@ -4653,15 +4663,31 @@ function renderCard(c){
  const p2Label=c.paper2Section?'<span class="paper2-card-badge">AS Paper 2 · '+esc(c.paper2Section)+'</span>':'';
  const p2Hint=c.paper2Hint?'<div class="paper2-card-hint"><button type="button" id="paper2HintBtn" aria-expanded="false">Show first-step hint</button><p id="paper2HintText" hidden>'+esc(c.paper2Hint)+'</p></div>':'';
  const p2Debrief=c.paper2Trap?'<div class="paper2-card-explain"><strong>Watch out:</strong> '+esc(c.paper2Trap)+'</div>':'';
- document.getElementById('studyHost').innerHTML='<article class="review-card"><div class="card-meta"><div class="meta-left"><span class="badge">'+esc(c.subject)+' · '+esc(c.courseTopic||c.topic)+'</span><span class="badge">'+esc(c.format==='cloze'?'fill in the gap':c.kind==='content'?'knowledge':c.kind)+'</span></div>'+recallBadge+p2Label+'<span class="queue-pos">memory '+health+'%</span></div><div class="card-body">'+(diag?'<div class="diagram">'+diag+'</div>':'')+'<div class="question">'+esc(c.front)+'</div>'+p2Hint+'<textarea id="answerInput" class="answer-input" placeholder="Type your answer from memory…"></textarea><div class="answer-actions"><button id="checkCard" class="check-btn">Check answer</button><button id="revealCard" class="show-btn">Just reveal</button></div><div id="feedback" class="feedback"></div><div id="modelAnswer" class="model-answer"><b>Model answer:</b> '+esc(c.back)+(backDiag?'<div class="diagram diagram-answer">'+backDiag+'</div>':'')+'<div id="missingIdeas"></div>'+p2Debrief+'</div><button id="overrideBtn" class="override-btn">My answer was actually correct</button><p class="flash-save-explainer">Correct checked answers earn +1 XP. Choose Again, Hard, Good or Easy to save your review, even if your answer was incorrect.</p><div id="ratings" class="ratings"><button class="rating again" data-rating="again">Again<small>~10 min</small></button><button class="rating hard" data-rating="hard">Hard<small>~1 day</small></button><button class="rating good" data-rating="good">Good<small>longer gap</small></button><button class="rating easy" data-rating="easy">Easy<small>much longer</small></button></div></div></article>';
+ const rotate=Number(c.id.slice(-3))%4;
+ const p2Options=Array.isArray(c.paper2Choices)&&c.paper2Choices.length===4?
+  [...c.paper2Choices.slice(rotate),...c.paper2Choices.slice(0,rotate)]:null;
+ const p2OptionHtml=p2Options?'<div class="paper2-mcq" role="group" aria-label="Select one multiple-choice answer">'+
+  p2Options.map((option,i)=>'<button type="button" class="paper2-mcq-option" data-paper2-choice="'+i+'" aria-pressed="false"><span class="paper2-choice-letter">'+String.fromCharCode(65+i)+'</span><span>'+esc(option)+'</span></button>').join('')+'</div>':'';
+ document.getElementById('studyHost').innerHTML='<article class="review-card"><div class="card-meta"><div class="meta-left"><span class="badge">'+esc(c.subject)+' · '+esc(c.courseTopic||c.topic)+'</span><span class="badge">'+esc(c.format==='cloze'?'fill in the gap':c.kind==='content'?'knowledge':c.kind)+'</span></div>'+recallBadge+p2Label+'<span class="queue-pos">memory '+health+'%</span></div><div class="card-body">'+(diag?'<div class="diagram">'+diag+'</div>':'')+'<div class="question">'+esc(c.front)+'</div>'+p2Hint+p2OptionHtml+(p2Options?'<input id="answerInput" type="hidden">':'<textarea id="answerInput" class="answer-input" placeholder="Type your answer from memory…"></textarea>')+'<div class="answer-actions"><button id="checkCard" class="check-btn">Check answer</button><button id="revealCard" class="show-btn">Just reveal</button></div><div id="feedback" class="feedback"></div><div id="modelAnswer" class="model-answer"><b>Model answer:</b> '+esc(c.back)+(backDiag?'<div class="diagram diagram-answer">'+backDiag+'</div>':'')+'<div id="missingIdeas"></div>'+p2Debrief+'</div><button id="overrideBtn" class="override-btn">My answer was actually correct</button><p class="flash-save-explainer">Correct checked answers earn +1 XP. Choose Again, Hard, Good or Easy to save your review, even if your answer was incorrect.</p><div id="ratings" class="ratings"><button class="rating again" data-rating="again">Again<small>~10 min</small></button><button class="rating hard" data-rating="hard">Hard<small>~1 day</small></button><button class="rating good" data-rating="good">Good<small>longer gap</small></button><button class="rating easy" data-rating="easy">Easy<small>much longer</small></button></div></div></article>';
  const reveal=(check)=>{const input=document.getElementById('answerInput').value;currentEvaluation=check?evaluateCard(c,input):{status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};if(currentEvaluation.status==='correct')awardFlashIfCorrect();const f=document.getElementById('feedback');f.className='feedback show '+currentEvaluation.status;f.textContent=currentEvaluation.text+(currentEvaluation.status==='correct'?' +1 XP awarded. Choose a rating to record the review.':currentEvaluation.status==='partial'?' Review recorded when you choose a rating; no XP awarded for a partly correct answer.':' Choose a rating to save your review; no XP awarded for this check.');document.getElementById('modelAnswer').classList.add('show');if(currentEvaluation.missing?.length)document.getElementById('missingIdeas').innerHTML='<ul class="missing-list">'+currentEvaluation.missing.map(x=>'<li>Missing: '+esc(x)+'</li>').join('')+'</ul>';document.getElementById('ratings').classList.add('show');if(currentEvaluation.status!=='correct')document.getElementById('overrideBtn').classList.add('show')};
+ if(p2Options)document.querySelectorAll('[data-paper2-choice]').forEach(btn=>btn.onclick=()=>{
+   const choice=Number(btn.dataset.paper2Choice);
+   document.getElementById('answerInput').value=p2Options[choice];
+   document.querySelectorAll('[data-paper2-choice]').forEach(item=>{
+    const selected=item===btn;item.classList.toggle('selected',selected);
+    item.setAttribute('aria-pressed',String(selected));
+   });
+ });
  const hintBtn=document.getElementById('paper2HintBtn');
  if(hintBtn)hintBtn.onclick=()=>{
   const explanation=document.getElementById('paper2HintText');explanation.hidden=!explanation.hidden;
   hintBtn.setAttribute('aria-expanded',String(!explanation.hidden));
   hintBtn.textContent=explanation.hidden?'Show first-step hint':'Hide first-step hint';
  };
- document.getElementById('checkCard').onclick=()=>reveal(true);document.getElementById('revealCard').onclick=()=>reveal(false);document.getElementById('overrideBtn').onclick=overrideFlashCorrect;document.querySelectorAll('[data-rating]').forEach(b=>b.onclick=()=>rateCard(c,b.dataset.rating,document.getElementById('answerInput').value))
+ document.getElementById('checkCard').onclick=()=>{
+  if(p2Options&&!document.getElementById('answerInput').value){showToast('Select A, B, C or D first');return}
+  reveal(true);
+ };document.getElementById('revealCard').onclick=()=>reveal(false);document.getElementById('overrideBtn').onclick=overrideFlashCorrect;document.querySelectorAll('[data-rating]').forEach(b=>b.onclick=()=>rateCard(c,b.dataset.rating,document.getElementById('answerInput').value))
 }
 function evidenceRuleScore(answer,alternatives){
  if(!String(answer||'').trim())return 0;
