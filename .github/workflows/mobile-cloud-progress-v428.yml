@@ -10,6 +10,7 @@ on:
       - 'styles.css'
       - 'sw.js'
       - 'tests/mobile-cloud-progress-v428.cjs'
+      - 'tests/mobile-cloud-browser-v428.mjs'
       - '.github/workflows/mobile-cloud-progress-v428.yml'
   workflow_dispatch:
 permissions:
@@ -32,3 +33,9 @@ jobs:
       - run: node tests/reset-layout-v120.cjs
       - run: node tests/cloud-photoelectric-v121.cjs
       - run: node tests/v173-maths-sketch-marking.cjs
+      - name: Install headless Chromium browser tester
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Real phone, PC, backup and offline browser smoke
+        run: node tests/mobile-cloud-browser-v428.mjs
