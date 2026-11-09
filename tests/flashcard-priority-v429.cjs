@@ -116,7 +116,7 @@ for(const id of ['mockMustKnowFirst','flashMustKnowFirst','flashMustKnowOnly','f
  assert(html.includes('id="'+id+'"'),id);
  assert(app.includes("'"+id+"'")||app.includes('"'+id+'"'),id+' not wired into app');
 }
-assert(html.indexOf('flashcard-priority-v429.js?v=429')<html.indexOf('app.js?v=429'),
+assert(html.indexOf('flashcard-priority-v429.js?v=429')<html.search(new RegExp('app[.]js[?]v=[0-9]+')),
   'Classifier must load before the app.');
 assert(sw.includes("'./flashcard-priority-v429.js'"));
 assert(sw.includes('v429-key-recall-priority'));
