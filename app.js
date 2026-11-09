@@ -2114,7 +2114,7 @@ let progress=load(PROGRESS_KEY,{});
 let profile=load(PROFILE_KEY,{});
 let settings=load(SETTINGS_KEY,{});
 let studyType='mock',activeSession=null,currentCardId=null,currentEvaluation=null,currentFlashAwarded=false,currentExamScore=0,manualScoreOverride=false,currentExamMarkingRoute='suggested',toastTimer=null;
-let flashScopeFilter='taught',flashTopics=new Set(),examTopics=new Set(),examYears=new Set(),examTypes=new Set(),globeLon=0,globeLat=5,dragging=false,lastPointer=null,dragDistance=0,selectedLocation='london',openLocationId=null,locationVisibleLimit=24;
+let flashScopeFilter='taught',paper2SectionSelected='all',flashTopics=new Set(),examTopics=new Set(),examYears=new Set(),examTypes=new Set(),globeLon=0,globeLat=5,dragging=false,lastPointer=null,dragDistance=0,selectedLocation='london',openLocationId=null,locationVisibleLimit=24;
 
 const CHARACTERS=[
  {id:'lelouch',name:'Lelouch',series:'Code Geass',cost:0,skin:'#efd0b5',hair:'#111827',hair2:'#312e81',style:'swept',eye:'#5b21b6'},
@@ -4622,7 +4622,7 @@ function selectPaper2Section(section='all'){
  document.getElementById('flashSubject').value='Physics';
  const base=subjectCards('Physics').filter(c=>c.paper2Training===true&&(section==='all'||c.paper2Section===section));
  if(!base.length){showToast('Paper 2 coaching cards are not available offline yet');return}
- flashScopeFilter='paper2';
+ flashScopeFilter='paper2';paper2SectionSelected=section;
  flashTopics=new Set(base.map(flashTopicLabel));
  // This is exam-technique coaching, independent of formula-memorisation mode.
  activeSession=null;
@@ -4631,6 +4631,14 @@ function selectPaper2Section(section='all'){
 }
 function renderTopicCounts(){
  const chosen=selectedFlashCards();
+ const paper2Active=flashScopeFilter==='paper2';
+ const priorityOptions=document.querySelector('.recall-priority-options');
+ if(priorityOptions)priorityOptions.classList.toggle('hidden',paper2Active);
+ document.querySelectorAll('[data-paper2-section]').forEach(btn=>{
+  btn.setAttribute('aria-pressed',String(paper2Active&&btn.dataset.paper2Section===paper2SectionSelected));
+ });
+ const startFlash=document.getElementById('startFlashcards');
+ if(startFlash)startFlash.textContent=paper2Active?'Start Paper 2 guided flashcards':'Start random flashcards';
  document.getElementById('flashTopicCount').textContent=flashTopics.size+' topics · '+chosen.length+' eligible cards · '+(flashScopeFilter==='paper2'?'AS Paper 2 coaching':flashScopeFilter==='mock'?'mock only':flashScopeFilter==='taught'?'taught so far':'full A-level');
  const all=subjectCards(document.getElementById('flashSubject').value).filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c));
  const essentials=all.filter(isRecallMustKnow).length;
