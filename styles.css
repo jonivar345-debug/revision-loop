@@ -766,3 +766,11 @@ html[data-layout-mode="pc"] .shop-grid{grid-template-columns:repeat(auto-fill,mi
 .paper2-card-hint p:not([hidden]){margin:9px 0 0;padding:9px 11px;background:#f8fafc;border-left:3px solid #64748b;border-radius:5px;color:#334155;line-height:1.45}
 .paper2-card-explain{margin-top:12px;padding:10px 12px;background:#f8fafc;border-radius:9px;border:1px solid #e2e8f0;font-size:.83rem;line-height:1.5;color:#334155}
 @media(max-width:480px){.paper2-coach{padding:11px 10px}.paper2-coach-grid{grid-template-columns:minmax(0,1fr)}.paper2-card-badge{font-size:.66rem}}
+
+/* v430: four accessible multiple-choice options; keyboard and touch. */
+.paper2-mcq{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin:12px 0 16px}
+.paper2-mcq-option{display:flex;align-items:center;gap:10px;min-width:0;min-height:43px;text-align:left;padding:9px 11px;background:#fff;border:1px solid #94a3b8;color:#1e293b;border-radius:9px;line-height:1.4;cursor:pointer;font-size:.88rem;white-space:normal}
+.paper2-choice-letter{display:inline-flex;align-items:center;justify-content:center;flex:0 0 29px;width:29px;height:29px;background:#f1f5f9;border-radius:6px;font-weight:800;color:#1e40af}
+.paper2-mcq-option:hover,.paper2-mcq-option:focus-visible{border-color:#2563eb;outline:2px solid #93c5fd;outline-offset:1px}
+.paper2-mcq-option.selected{border:2px solid #2563eb;background:#eff6ff;padding:8px 10px}
+.paper2-mcq-option.selected .paper2-choice-letter{background:#1d4ed8;color:#fff}
