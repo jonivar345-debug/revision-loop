@@ -33,6 +33,6 @@ assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"));
 assert(css.includes('.quick-review-actions')&&css.includes('.quick-review-btn:focus-visible'));
-assert(sw.includes('v432-study-skip-self-rate'));
+assert(sw.includes('v432-study-skip-known'));
 assert(sw.includes("'./physics_as_paper2_guided_v430.json'"));
 console.log('PASS v432: all shared study routes, unscored skip, distinct self-rating, manual exam override, draft safety, daily streak integrity, offline and stable saved-data keys.');
