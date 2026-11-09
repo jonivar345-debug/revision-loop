@@ -23,7 +23,7 @@
   return false;
  }
  function hasSymbolicAnswer(back){
-  return /[=∝⇌→]|(?:^|\s)(?:d\/dx|dy\/dx|∫|log|ln)\b/.test(back);
+  return /[=∝⇌→]|(?:^|\s)(?:d\/dx|dy\/dx|∫|log|ln)\b|(?:e\^|x\^|eˣ|xⁿ|√|π|\b(?:sin|cos|tan)\b|\bproportional to\b)/i.test(back);
  }
  function equationPrompt(front){
   return /\b(?:formula|equation|expression|relationship|equation for|written mathematically)\b/i.test(front);
