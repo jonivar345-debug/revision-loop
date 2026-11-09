@@ -2,6 +2,7 @@
 const DECK_URL='./deck.json',EXAM_URL='./exam_questions.json',EXAM_SUPPLEMENT_URL='./paper_supplement_2016_2017.json',EXAM_CORRECTIONS_URL='./exam_answer_corrections.json',DAY=86400000;
 const EXTRA_PRACTICE_URLS=['./gap_questions_physics_v48.json','./gap_questions_chemistry_v48.json','./gap_questions_maths_v48.json','./gap_questions_extended_v49.json','./mechanics_focus_v39.json','./mechanics_graphs_v118.json','./atomic_structure_focus_v43.json','./amount_of_substance_focus_v44.json','./bonding_focus_v49.json','./bonding_weakness_focus_v52.json','./energetics_focus_v50.json','./energetics_worked_followups_v51.json','./energetics_weakness_focus_v53.json','./maths_pure_proof_vectors_v190.json','./maths_as_pure_gap_challenges_v191.json','./science_practical_data_v194.json','./science_mock_application_v195.json','./science_mock_evidence_v196.json','./physics_mechanics_reasoning_v197.json','./science_waves_energetics_v198.json','./chemistry_mock_precision_v199.json','./physics_measurements_particles_v200.json','./chemistry_rp4_rp6_evidence_v202.json','./physics_graphs_circuits_v203.json','./maths_pure_proof_vector_applications_v209.json','./chemistry_rates_rp7_kp_v210.json','./physics_fibre_signal_application_v225.json','./physics_waves_interference_application_v226.json','./physics_particle_exchange_diagram_practice_v265.json','./chemistry_organic_drawing_practice_v267.json','./physics_uncertainty_graph_practice_v268.json','./physics_nuclear_conservation_practice_v269.json','./chemistry_amount_applied_practice_v270.json','./maths_year1_pure_reasoning_v271.json','./maths_as_graph_transform_sketches_v272.json','./maths_year1_circle_vector_gaps_v273.json','./chemistry_as_inorganic_tests_practice_v274.json','./physics_refraction_fibres_practice_v275.json','./chemistry_as_bonding_shapes_practice_v276.json','./chemistry_as_bonding_structures_practice_v277.json','./chemistry_amount_precision_applications_v278.json','./physics_waves_polarisation_stationary_practice_v279.json','./physics_mechanics_signed_area_couples_practice_v280.json','./maths_year1_trigonometry_differentiation_practice_v292.json','./science_practical_diagram_applications_v313.json','./science_application_gaps_v333.json','./maths_inequality_sign_reasoning_v335.json','./chemistry_atom_economy_sustainability_practice_v338.json','./maths_year1_pure_targeted_practice_v340.json','./physics_particles_three_application_gaps_v342.json','./physics_order_of_magnitude_practice_v376.json','./physics_electricity_manual_sketch_practice_v407.json'];
 const EXTRA_FLASHCARD_URLS=['./maths_mock_recall_v186.json','./maths_mock_recall_v187.json','./chemistry_mock_recall_v189.json','./maths_mock_recall_v192.json','./physics_mock_recall_v193.json','./chemistry_mock_recall_v193.json','./physics_mock_recall_v195.json','./chemistry_mock_recall_v195.json','./physics_mock_recall_v196.json','./chemistry_mock_recall_v196.json','./chemistry_mock_recall_v199.json','./chemistry_rates_rp7_recall_v210.json','./chemistry_rp4_recall_v215.json','./chemistry_as_measurement_recall_v218.json','./chemistry_tof_precision_recall_v219.json','./chemistry_ion_tests_recall_v220.json','./chemistry_practicals_analysis_recall_v221.json','./chemistry_rp5_rp6_reasoning_recall_v222.json','./physics_optical_fibre_precision_recall_v225.json','./physics_waves_reasoning_recall_v226.json','./physics_cross_spec_recall_v227.json','./chemistry_cross_spec_recall_v227.json','./maths_as_pure_cross_spec_recall_v227.json','./physics_waves_crosswalk_recall_v229.json','./physics_mechanics_cross_spec_recall_v230.json','./physics_electricity_cross_spec_recall_v231.json','./maths_first_mock_pure_precision_v232.json','./chemistry_bonding_diagram_recall_v237.json','./chemistry_atomic_tof_applications_v238.json','./chemistry_amount_applications_v239.json','./physics_particles_applications_v243.json','./maths_first_mock_pure_applied_v245.json','./maths_first_mock_circle_geometry_v246.json','./chemistry_energetics_applications_v247.json','./physics_measurements_applications_v248.json','./chemistry_rates_kp_applications_v249.json','./physics_electricity_applications_v250.json','./maths_first_mock_pure_challenges_v252.json','./physics_waves_applications_v253.json','./chemistry_atomic_tof_applications_v254.json','./chemistry_thermodynamics_applications_v256.json','./physics_mechanics_applications_v257.json','./maths_year1_pure_breadth_v260.json','./physics_uncertainty_graph_recall_v268.json','./physics_nuclear_conservation_recall_v269.json','./maths_as_graph_transform_recall_v272.json','./chemistry_as_inorganic_tests_recall_v274.json','./physics_refraction_fibres_recall_v275.json','./chemistry_as_bonding_shapes_recall_v276.json','./chemistry_as_bonding_structures_recall_v277.json','./chemistry_amount_sigfig_formula_recall_v278.json','./physics_waves_polarisation_stationary_recall_v279.json','./physics_mechanics_signed_area_couples_recall_v280.json','./mock_short_varied_recall_v293.json','./mock_short_recall_and_cloze_v298.json','./science_partial_skill_short_recall_v312.json'];
+// v430 coaching is intentionally separate from the 56 historic mock banks.
 // New focused cards load after the 56 historic banks, preserving their stable indices and test baselines.
 function isV348MathsFirstMockCard(c){
  return Boolean(c&&/^task1_v348_math_\d{2}$/.test(c.id||'')&&c.subject==='Maths'&&
@@ -57,6 +58,7 @@ const V354_CHEM_CRACKING_URL='./chemistry_cracking_pressure_recall_v354.json';
 const V367_CHEM_ALKANE_TREND_URL='./chemistry_alkane_trend_recall_v367.json';
 const V370_PHYSICS_HISTORY_URL='./physics_light_history_recall_v370.json';
 const V375_CHEM_KP_CATALYST_URL='./chemistry_kp_catalyst_recall_v375.json';
+const PHYSICS_AS_PAPER2_TRAINING_FILES=['./physics_as_paper2_section_a_v430.json','./physics_as_paper2_section_b_v430.json','./physics_as_paper2_section_c_v430.json','./physics_as_paper2_mcq_v430.json'];
 // v372: five original first-mock AS Pure questions need actual multi-step self-review.
 const V372_YEAR1_PURE_MANUAL=Object.freeze([{"id":"task1_v271_maths_pure_q03","specRef":"3.11","prompt":"Points A, B and C have position vectors (1,2), (7,−1) and (−2,8). P is the midpoint of BC and Q is the midpoint of AC. (a) Find the position vectors of P and Q. (b) Show by vector methods that the points on AP and BQ two-thirds of the way from A and B respectively coincide. (c) Give their common position vector and the ratio AG:GP. [8 marks]","marks":8},{"id":"task1_v271_maths_pure_q04","specRef":"3.4","prompt":"A circle is given by x²+y²−4x−6y−12=0. (a) Find its centre and radius. (b) Verify that P=(5,7) lies on the circle. (c) Find an exact equation of the tangent to the circle at P. (d) Find both axis intercepts of this tangent. [7 marks]","marks":7},{"id":"task1_v271_maths_pure_q05","specRef":"3.3","prompt":"Let f(x)=x²−4x+1 and g(x)=−2f(1−2x)+3. (a) Complete the square for f. (b) Describe a valid ordered sequence of graph transformations giving y=g(x) from y=f(x). (c) Express g as a quadratic in x and find the turning point. (d) Find both exact x-intercepts of g. [9 marks]","marks":9},{"id":"task1_v271_maths_pure_q06","specRef":"3.5","prompt":"In the expansion of (1+ax)⁷, the coefficient of x² is 84 and the coefficient of x³ is negative. (a) Show that a²=4. (b) Find a. (c) Calculate the coefficients of x³ and x⁴, showing the binomial coefficients used. [7 marks]","marks":7},{"id":"task1_v271_maths_pure_q07","specRef":"3.9","prompt":"For y=x²−5x+6 over 0≤x≤4, calculate (a) the signed definite integral from 0 to 4 and (b) the total area between the curve and the x-axis. You must show where the graph lies below the axis and split the integral correctly. Give exact answers. [8 marks]","marks":8}]);
 function applyV372Year1PureManualReview(questions){
@@ -2112,7 +2114,7 @@ let progress=load(PROGRESS_KEY,{});
 let profile=load(PROFILE_KEY,{});
 let settings=load(SETTINGS_KEY,{});
 let studyType='mock',activeSession=null,currentCardId=null,currentEvaluation=null,currentFlashAwarded=false,currentExamScore=0,manualScoreOverride=false,currentExamMarkingRoute='suggested',toastTimer=null;
-let flashScopeFilter='taught',flashTopics=new Set(),examTopics=new Set(),examYears=new Set(),examTypes=new Set(),globeLon=0,globeLat=5,dragging=false,lastPointer=null,dragDistance=0,selectedLocation='london',openLocationId=null,locationVisibleLimit=24;
+let flashScopeFilter='taught',paper2SectionSelected='all',flashTopics=new Set(),examTopics=new Set(),examYears=new Set(),examTypes=new Set(),globeLon=0,globeLat=5,dragging=false,lastPointer=null,dragDistance=0,selectedLocation='london',openLocationId=null,locationVisibleLimit=24;
 
 const CHARACTERS=[
  {id:'lelouch',name:'Lelouch',series:'Code Geass',cost:0,skin:'#efd0b5',hair:'#111827',hair2:'#312e81',style:'swept',eye:'#5b21b6'},
@@ -3569,6 +3571,15 @@ function isV422ExplicitBondDiagramDenial(c,input){
   isV426ExplicitQuotedCorrectAnswerDenial(c,input));
 }
 function evaluateCard(c,input){
+ // The 20 original four-option practice cards are marked by the selected
+ // letter, not by fuzzy text matching which can credit the wrong option.
+ if(c?.paper2Training===true&&Array.isArray(c.paper2Options)&&c.paper2Options.length===4){
+  const answer=String(input||'').trim().toUpperCase();
+  if(/^[A-D]$/.test(answer))
+   return answer===c.paper2CorrectOption
+    ?{status:'correct',score:1,text:'Correct option. Check the reasoning below.',missing:[]}
+    :{status:'wrong',score:0,text:'That option is not correct. Read the method before retrying.',missing:[String(c.back||'')]};
+ }
  if(isV426ExplicitQuotedCorrectAnswerDenial(c,input))
   return {status:'wrong',score:0,text:'This explicitly rejects a correct answer.',missing:[String(c.back||'')]};
  // v389: repeating the full flashcard question is not an answer, even if
@@ -4044,12 +4055,16 @@ function startMockSession(){
  }
  activeSession={kind:'mock',items,index:0,title:sub+' mock revision'};currentCardId=null;renderAll();
 }
-function flashEligible(c){return flashScopeFilter==='mock'?mockEligibleCard(c):flashScopeFilter==='taught'?taughtCard(c):true}
-function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c)&&(!settings.recallMustKnowOnly||isRecallMustKnow(c)))}
+function flashEligible(c){
+ if(c.paper2Training===true)return flashScopeFilter==='paper2';
+ if(flashScopeFilter==='paper2')return false;
+ return flashScopeFilter==='mock'?mockEligibleCard(c):flashScopeFilter==='taught'?taughtCard(c):true;
+}
+function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c)&&(flashScopeFilter==='paper2'||!settings.recallMustKnowOnly||isRecallMustKnow(c)))}
 function startFlashSession(){
  const count=Number(document.getElementById('flashCount').value),pool=selectedFlashCards();if(!pool.length){showToast(settings.recallMustKnowOnly?'No must-memorise cards in those topics':'Pick at least one topic');return}
  const picked=pickRecallCards(pool,Math.min(count,pool.length),c=>1+weakness(c)/6+(isDue(c)?4:0)+(isNew(c)?1:0));
- activeSession={kind:'flash',items:picked.map(c=>({type:'card',id:c.id})),index:0,title:settings.recallMustKnowOnly?'Must memorise · key recall':'Random flashcards'};currentCardId=null;renderAll();
+ activeSession={kind:'flash',items:picked.map(c=>({type:'card',id:c.id})),index:0,title:flashScopeFilter==='paper2'?'AQA AS Physics Paper 2 · skills':settings.recallMustKnowOnly?'Must memorise · key recall':'Random flashcards'};currentCardId=null;renderAll();
 }
 function examGroups(){
  const sub=document.getElementById('examSubject').value,level=document.getElementById('examLevel').value;
@@ -4085,7 +4100,7 @@ function awardExam(q,marks,answer,missedPoints){
  award(marks,'exam');save();advanceSession();
 }
 
-function challengeCards(sub,scope){let a=cards.filter(c=>c.active!==false&&(!sub||c.subject===sub));return scope==='mock'?a.filter(mockEligibleCard):a.filter(taughtCard)}
+function challengeCards(sub,scope){let a=cards.filter(c=>c.active!==false&&c.paper2Training!==true&&(!sub||c.subject===sub));return scope==='mock'?a.filter(mockEligibleCard):a.filter(taughtCard)}
 function challengeQuestions(sub,scope){let q=examQuestions.filter(x=>x.standalone!==false&&(!sub||x.subject===sub));if(scope==='mock')q=q.filter(mockEligibleQuestion);return q}
 function makeChallenge(sub,scope){
  const key=dateKey()+'|'+(sub||'All')+'|'+scope;if(profile.dailyChallenges[key])return {key,...profile.dailyChallenges[key]};
@@ -4342,6 +4357,7 @@ function renderChallenge(){document.getElementById('challengeStreak').textConten
 function flashTopicLabel(c){return c.revisionTopic||c.topic||c.courseTopic||'Unclassified'}
 function examTopicLabel(q){return q.revisionTopic||q.subtopic||q.topic||q.courseTopic||'Unclassified'}
 function flashCourseFamily(c){
+ if(c.paper2Training===true)return 'AS Paper 2 · how to answer';
  const p=String(c.specRef||''),t=String(c.topic||''),u=String(c.unit||'');
  if(c.subject==='Physics'){
   if(p.startsWith('3.10')||u==='medical'||t.startsWith('Medical physics'))return '3.10 Medical physics (option)';
@@ -4419,7 +4435,7 @@ function refreshFlashTopics(defaultIfEmpty=false){
  const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);
  const topics=[...new Set(base.map(flashTopicLabel))];
  flashTopics=new Set([...flashTopics].filter(t=>topics.includes(t)));
- if(defaultIfEmpty&&!flashTopics.size){flashScopeFilter='taught';base.filter(taughtCard).forEach(c=>flashTopics.add(flashTopicLabel(c)));}
+ if(defaultIfEmpty&&!flashTopics.size){flashScopeFilter='taught';base.filter(c=>taughtCard(c)&&!c.paper2Training).forEach(c=>flashTopics.add(flashTopicLabel(c)));}
  document.getElementById('flashTopics').innerHTML=groupedTopicPicker(sub,'flash',flashTopics);
  document.querySelectorAll('[data-flash-topic]').forEach(el=>el.onchange=()=>{el.checked?flashTopics.add(el.dataset.flashTopic):flashTopics.delete(el.dataset.flashTopic);renderTopicCounts()});bindTopicGroupControls('flash');
  renderTopicCounts();
@@ -4427,7 +4443,7 @@ function refreshFlashTopics(defaultIfEmpty=false){
 function applyFlashPreset(p){
  flashScopeFilter=['mock','taught','all'].includes(p)?p:'all';
  const base=subjectCards(document.getElementById('flashSubject').value);flashTopics.clear();
- if(p!=='clear'){const filtered=p==='mock'?base.filter(mockEligibleCard):p==='taught'?base.filter(taughtCard):base;filtered.forEach(c=>flashTopics.add(flashTopicLabel(c)))}
+ if(p!=='clear'){const filtered=(p==='mock'?base.filter(mockEligibleCard):p==='taught'?base.filter(taughtCard):base).filter(c=>!c.paper2Training);filtered.forEach(c=>flashTopics.add(flashTopicLabel(c)))}
  refreshFlashTopics(false);
 }
 const PMT_PAPER_INDEX={
@@ -4602,11 +4618,33 @@ function refreshExamFilters(defaultIfEmpty=false){
  const yearCounts=years.map(y=>y+': '+base.filter(q=>q.year===y).length).join(' · ');
  document.getElementById('examCoverage').textContent='Self-contained bank: '+base.length+' question parts (including separately labelled practice)'+(yearCounts?' · '+yearCounts:'')+'. Related subparts are grouped; missing-context questions are excluded. Coverage counts refer to app topic categories, not every individual specification requirement. Years with no indexed parts are visible but disabled; 2015 and earlier reform-era papers are in the separate legacy archive. Official past-paper coverage remains incomplete.';
 }
+function selectPaper2Section(section='all'){
+ document.getElementById('flashSubject').value='Physics';
+ const base=subjectCards('Physics').filter(c=>c.paper2Training===true&&(section==='all'||c.paper2Section===section));
+ if(!base.length){showToast('Paper 2 coaching cards are not available offline yet');return}
+ flashScopeFilter='paper2';paper2SectionSelected=section;
+ flashTopics=new Set(base.map(flashTopicLabel));
+ // This is exam-technique coaching, independent of formula-memorisation mode.
+ activeSession=null;
+ refreshFlashTopics(false);
+ renderAll();
+}
 function renderTopicCounts(){
  const chosen=selectedFlashCards();
- document.getElementById('flashTopicCount').textContent=flashTopics.size+' topics · '+chosen.length+' eligible cards · '+(flashScopeFilter==='mock'?'mock only':flashScopeFilter==='taught'?'taught so far':'full A-level');
+ const paper2Active=flashScopeFilter==='paper2';
+ const priorityOptions=document.querySelector('.recall-priority-options');
+ if(priorityOptions)priorityOptions.classList.toggle('hidden',paper2Active);
+ document.querySelectorAll('[data-paper2-section]').forEach(btn=>{
+  btn.setAttribute('aria-pressed',String(paper2Active&&btn.dataset.paper2Section===paper2SectionSelected));
+ });
+ const startFlash=document.getElementById('startFlashcards');
+ if(startFlash)startFlash.textContent=paper2Active?'Start Paper 2 guided flashcards':'Start random flashcards';
+ document.getElementById('flashTopicCount').textContent=flashTopics.size+' topics · '+chosen.length+' eligible cards · '+(flashScopeFilter==='paper2'?'AS Paper 2 coaching':flashScopeFilter==='mock'?'mock only':flashScopeFilter==='taught'?'taught so far':'full A-level');
  const all=subjectCards(document.getElementById('flashSubject').value).filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c));
  const essentials=all.filter(isRecallMustKnow).length;
+ const paper2Status=document.getElementById('paper2Status');
+ if(paper2Status)paper2Status.textContent=flashScopeFilter==='paper2'
+  ?'Paper 2 coaching: '+chosen.length+' short cards in your chosen section(s). Rate each card for spaced review.':'Paper 2 is a separate track; use the buttons below to practise its question styles.';
  const info=document.getElementById('flashMustKnowCount');
  if(info)info.textContent=essentials+' key-definition / missing-equation cards in selected topics'+(settings.recallMustKnowOnly?' · only these will be shown.':'. Other cards remain in normal sessions.');
  for(const id of ['mockMustKnowFirst','flashMustKnowFirst']){const control=document.getElementById(id);if(control)control.checked=settings.recallMustKnowFirst!==false}
@@ -4623,8 +4661,19 @@ function renderCard(c){
  currentCardId=c.id;currentEvaluation=null;currentFlashAwarded=false;const s=state(c.id),health=Math.round(memoryHealth(c)*100),diag=c.visual?diagram(c.visual):'',backDiag=c.visualBack?diagram(c.visualBack):'';
  const recallInfo=window.RevisionFlashPriority?.classify(c);
  const recallBadge=recallInfo?'<span class="recall-priority-pill" title="High-priority knowledge for recall">'+esc(recallInfo.label)+'</span>':'';
- document.getElementById('studyHost').innerHTML='<article class="review-card"><div class="card-meta"><div class="meta-left"><span class="badge">'+esc(c.subject)+' · '+esc(c.courseTopic||c.topic)+'</span><span class="badge">'+esc(c.format==='cloze'?'fill in the gap':c.kind==='content'?'knowledge':c.kind)+'</span></div>'+recallBadge+'<span class="queue-pos">memory '+health+'%</span></div><div class="card-body">'+(diag?'<div class="diagram">'+diag+'</div>':'')+'<div class="question">'+esc(c.front)+'</div><textarea id="answerInput" class="answer-input" placeholder="Type your answer from memory…"></textarea><div class="answer-actions"><button id="checkCard" class="check-btn">Check answer</button><button id="revealCard" class="show-btn">Just reveal</button></div><div id="feedback" class="feedback"></div><div id="modelAnswer" class="model-answer"><b>Model answer:</b> '+esc(c.back)+(backDiag?'<div class="diagram diagram-answer">'+backDiag+'</div>':'')+'<div id="missingIdeas"></div></div><button id="overrideBtn" class="override-btn">My answer was actually correct</button><p class="flash-save-explainer">Correct checked answers earn +1 XP. Choose Again, Hard, Good or Easy to save your review, even if your answer was incorrect.</p><div id="ratings" class="ratings"><button class="rating again" data-rating="again">Again<small>~10 min</small></button><button class="rating hard" data-rating="hard">Hard<small>~1 day</small></button><button class="rating good" data-rating="good">Good<small>longer gap</small></button><button class="rating easy" data-rating="easy">Easy<small>much longer</small></button></div></div></article>';
+ const paper2Intro=c.paper2Training===true?'<div class="paper2-card-eyebrow">AS Physics Paper 2 · Section '+esc(c.paper2Section)+'</div>':'';
+ const paper2Hint=c.paper2Training===true&&c.paper2Hint?'<details class="paper2-hint"><summary>Need a starting hint?</summary><p>'+esc(c.paper2Hint)+'</p></details>':'';
+ const paper2Choices=Array.isArray(c.paper2Options)&&c.paper2Options.length===4
+  ?'<div class="paper2-choices" role="group" aria-label="Choose one answer">'+c.paper2Options.map((option,i)=>
+   '<button type="button" class="paper2-choice" data-paper2-option="'+String.fromCharCode(65+i)+'" aria-pressed="false"><b>'+String.fromCharCode(65+i)+'</b><span>'+esc(option)+'</span></button>').join('')+'</div>':'';
+ const paper2Reason=c.paper2Training===true?'<div class="paper2-reason"><strong>How to approach it:</strong> '+esc(c.paper2Method||'')+
+  (c.paper2Pitfall?'<div><strong>Common trap:</strong> '+esc(c.paper2Pitfall)+'</div>':'')+'</div>':'';
+ document.getElementById('studyHost').innerHTML='<article class="review-card"><div class="card-meta"><div class="meta-left"><span class="badge">'+esc(c.subject)+' · '+esc(c.courseTopic||c.topic)+'</span><span class="badge">'+esc(c.format==='cloze'?'fill in the gap':c.kind==='content'?'knowledge':c.kind)+'</span></div>'+recallBadge+'<span class="queue-pos">memory '+health+'%</span></div><div class="card-body">'+(diag?'<div class="diagram">'+diag+'</div>':'')+paper2Intro+'<div class="question">'+esc(c.front)+'</div>'+paper2Hint+paper2Choices+'<textarea id="answerInput" class="answer-input" placeholder="'+(paper2Choices?'Choose A–D above, or type your reasoning…':'Type your answer from memory…')+'"></textarea><div class="answer-actions"><button id="checkCard" class="check-btn">Check answer</button><button id="revealCard" class="show-btn">Just reveal</button></div><div id="feedback" class="feedback"></div><div id="modelAnswer" class="model-answer"><b>Model answer:</b> '+esc(c.back)+(backDiag?'<div class="diagram diagram-answer">'+backDiag+'</div>':'')+'<div id="missingIdeas"></div>'+paper2Reason+'</div><button id="overrideBtn" class="override-btn">My answer was actually correct</button><p class="flash-save-explainer">Correct checked answers earn +1 XP. Choose Again, Hard, Good or Easy to save your review, even if your answer was incorrect.</p><div id="ratings" class="ratings"><button class="rating again" data-rating="again">Again<small>~10 min</small></button><button class="rating hard" data-rating="hard">Hard<small>~1 day</small></button><button class="rating good" data-rating="good">Good<small>longer gap</small></button><button class="rating easy" data-rating="easy">Easy<small>much longer</small></button></div></div></article>';
  const reveal=(check)=>{const input=document.getElementById('answerInput').value;currentEvaluation=check?evaluateCard(c,input):{status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};if(currentEvaluation.status==='correct')awardFlashIfCorrect();const f=document.getElementById('feedback');f.className='feedback show '+currentEvaluation.status;f.textContent=currentEvaluation.text+(currentEvaluation.status==='correct'?' +1 XP awarded. Choose a rating to record the review.':currentEvaluation.status==='partial'?' Review recorded when you choose a rating; no XP awarded for a partly correct answer.':' Choose a rating to save your review; no XP awarded for this check.');document.getElementById('modelAnswer').classList.add('show');if(currentEvaluation.missing?.length)document.getElementById('missingIdeas').innerHTML='<ul class="missing-list">'+currentEvaluation.missing.map(x=>'<li>Missing: '+esc(x)+'</li>').join('')+'</ul>';document.getElementById('ratings').classList.add('show');if(currentEvaluation.status!=='correct')document.getElementById('overrideBtn').classList.add('show')};
+ if(paper2Choices)document.querySelectorAll('[data-paper2-option]').forEach(btn=>btn.onclick=()=>{
+  document.getElementById('answerInput').value=btn.dataset.paper2Option;
+  document.querySelectorAll('[data-paper2-option]').forEach(item=>item.setAttribute('aria-pressed',String(item===btn)));
+ });
  document.getElementById('checkCard').onclick=()=>reveal(true);document.getElementById('revealCard').onclick=()=>reveal(false);document.getElementById('overrideBtn').onclick=overrideFlashCorrect;document.querySelectorAll('[data-rating]').forEach(b=>b.onclick=()=>rateCard(c,b.dataset.rating,document.getElementById('answerInput').value))
 }
 function evidenceRuleScore(answer,alternatives){
@@ -6394,12 +6443,33 @@ async function sync(manual=false){
   q.manualWorkingReview=true;
   q.v412SupplementManualRequired=true;
  }
- deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
+ deckMeta=d.meta||{};
+ // Optional original Paper 2 coaching cards: separate from real mock sessions
+ // and full past-paper questions. Missing files never break core revision.
+ for(const url of PHYSICS_AS_PAPER2_TRAINING_FILES){
+  try{
+   const response=await fetch(url+'?v='+Date.now(),{cache:'no-store'});
+   if(!response.ok)continue;
+   const bank=await response.json();
+   for(const c of bank.cards||[]){
+    if(!c||!/^as_p2_v430_[abcm]\d{2}$/.test(c.id||'')||knownFlashIds.has(c.id)||
+       c.subject!=='Physics'||c.stage!=='AS'||c.paper2Training!==true||
+       !['A','B','C'].includes(c.paper2Section)||c.active!==true||
+       c.mock!==false||c.scope!=='paper2-training'||
+       typeof c.front!=='string'||typeof c.back!=='string'||
+       c.front.length>170||c.back.length>180||!c.front||!c.back)continue;
+    if(c.paper2Options&&(!Array.isArray(c.paper2Options)||c.paper2Options.length!==4||
+       !['A','B','C','D'].includes(c.paper2CorrectOption)))continue;
+    knownFlashIds.add(c.id);cards.push(c);
+   }
+  }catch{}
+ }
+ coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}
 // Deep links from the retired article-preview page open the actual shop.
 window.addEventListener('DOMContentLoaded',()=>{if(window.location.hash==='#shop')switchPanel('shop')});
-function buildWeakSession(){const top=cards.filter(c=>c.active!==false).sort((a,b)=>weakness(b)-weakness(a)).slice(0,20);activeSession={kind:'flash',items:top.map(c=>({type:'card',id:c.id})),index:0,title:'Weak-topic flashcards'};switchPanel('study');renderAll()}
+function buildWeakSession(){const top=cards.filter(c=>c.active!==false&&c.paper2Training!==true).sort((a,b)=>weakness(b)-weakness(a)).slice(0,20);activeSession={kind:'flash',items:top.map(c=>({type:'card',id:c.id})),index:0,title:'Weak-topic flashcards'};switchPanel('study');renderAll()}
 
 ensureProfile();
 // Keep the world shop and unlocked locations usable even when the exam-bank
@@ -6423,6 +6493,7 @@ document.getElementById('flashSubject').onchange=()=>{flashTopics.clear();refres
   save();renderTopicCounts();
  };
 document.querySelectorAll('[data-flash-preset]').forEach(b=>b.onclick=()=>applyFlashPreset(b.dataset.flashPreset));
+ document.querySelectorAll('[data-paper2-section]').forEach(b=>b.onclick=()=>selectPaper2Section(b.dataset.paper2Section));
 document.getElementById('startMock').onclick=startMockSession;
 document.getElementById('mockSubject').onchange=()=>{const hint=document.getElementById('mathsMockScopeNote');if(hint)hint.hidden=document.getElementById('mockSubject').value!=='Maths'};document.getElementById('startFlashcards').onclick=startFlashSession;
 document.getElementById('examDifficulty').onchange=renderTopicCounts;

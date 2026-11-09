@@ -1,0 +1,43 @@
+name: v430 AS Physics Paper 2 coaching and marking
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'styles.css'
+      - 'sw.js'
+      - 'flashcard-priority-v429.js'
+      - 'physics_as_paper2_*_v430.json'
+      - 'tests/physics-as-paper2-v430.cjs'
+      - 'tests/physics-as-paper2-browser-v430.mjs'
+      - '.github/workflows/physics-as-paper2-v430.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  paper2-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax and 148-card source-integrity audit
+        run: |
+          node --check app.js
+          node --check tests/physics-as-paper2-v430.cjs
+          node --check tests/physics-as-paper2-browser-v430.mjs
+          node tests/physics-as-paper2-v430.cjs
+      - name: Existing marker, saved-history and mobile-cloud safeguards
+        run: |
+          node tests/flashcard-priority-v429.cjs
+          node tests/mobile-cloud-progress-v428.cjs
+          node tests/revision-backup.cjs
+          node tests/chemistry-organic-v42.cjs
+      - name: Install browser for actual mobile Paper 2 UI checks
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Test separate A/B/C topic, MCQ correct/wrong and saved progress on 360/390px
+        run: node tests/physics-as-paper2-browser-v430.mjs
