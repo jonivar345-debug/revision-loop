@@ -47,7 +47,7 @@
  const MATHS_MISSING=/\b(?:quadratic formula|sine rule|cosine rule|(?:area of (?:a )?triangle|triangle area) (?:formula|using sine)|circle (?:equation|formula)|equation of (?:a |the )?circle|(?:midpoint|gradient|slope) (?:formula|of (?:a )?(?:straight )?line)|point[- ]slope (?:equation|formula)|vector equation of (?:a |the )?line|(?:area )?formula using two sides|(?:the )?(?:power|index) (?:rule for|rule of) (?:differentiation|integration)|(?:differentiat(?:e|ion)|derivative|integrat(?:e|ion)|integral) (?:of )?(?:a?x\^?[n0-9]|xⁿ|e\^|eˣ|ln ?x|sin ?x|cos ?x)|(?:trigonometric|pythagorean) identit(?:y|ies))\b/i;
  const MATHS_PRINTED=/\b(?:arithmetic (?:series|sum)|geometric (?:series|sum)|binomial (?:series|expansion)|small.angle|(?:sin|cos|tan)\s*\(\s*[a-z]\s*[+−-]|(?:derivative|differentiat(?:e|ion)) of (?:tan|sec|cosec|cot)|quotient rule|integration by parts|newton.raphson|trapezium rule)\b/i;
  function classify(card){
-  if(!card||card.active===false||!subjects.has(card.subject))return null;
+  if(!card||card.paper2Training===true||card.active===false||!subjects.has(card.subject))return null;
   const front=String(card.front||'').trim(),back=String(card.back||'').trim();
   if(!front||!back)return null;
   if(card.subject==='Maths'&&/\bfirst.principles (?:definition|formula) of f[′']\(x\)|\bfirst.principles definition of f[′']\(x\)/i.test(front))return null;
