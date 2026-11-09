@@ -104,7 +104,8 @@
           <label><span>Session</span><select id="mockMode"><option value="mixed">Mixed flashcards + exam questions</option><option value="flash">Flashcards only</option><option value="exam">Exam questions only</option></select></label>
           <label><span>Length</span><select id="mockCount"><option value="10">10 items</option><option value="15" selected>15 items</option><option value="20">20 items</option><option value="30">30 items</option></select></label>
         </div>
-        <div class="coverage-note">Uses only the topics currently tagged for your mock. Weak areas and older knowledge are more likely to appear, but the order is random.</div>
+        <label class="recall-priority-option"><input type="checkbox" id="mockMustKnowFirst" checked><span><strong>Must memorise first</strong> — bring key definitions and equations not printed by AQA to the front of flashcard practice.</span></label>
+        <div class="coverage-note">Uses only the topics currently tagged for your mock. Within flashcards, unlearned or due must-memorise facts are prioritised; exam questions remain mixed. Other flashcards remain available.</div>
         <p id="mathsMockScopeNote" class="maths-mock-scope" hidden><strong>Maths first mock: Year 12/AS Pure only.</strong> Pure topics studied in Year 12, selected from both papers. No Statistics, Mechanics, radians or Year 13-only content. The separate Year 13 class paper is after the other mocks and is not included in this preset.</p>
         <button id="startMock" class="primary-btn full-btn">Start mock revision</button>
       </div>
@@ -113,6 +114,11 @@
         <div class="control-row two">
           <label><span>Subject</span><select id="flashSubject"><option>Physics</option><option>Chemistry</option><option>Maths</option></select></label>
           <label><span>Session size</span><select id="flashCount"><option value="10">10 cards</option><option value="20" selected>20 cards</option><option value="30">30 cards</option><option value="50">50 cards</option></select></label>
+        </div>
+        <div class="recall-priority-options" aria-label="Flashcard memorisation priorities">
+          <label class="recall-priority-option"><input type="checkbox" id="flashMustKnowFirst" checked><span><strong>Must memorise first</strong> — prioritise key definitions and equations missing from the AQA booklet.</span></label>
+          <label class="recall-priority-option"><input type="checkbox" id="flashMustKnowOnly"><span><strong>Only must-memorise cards</strong> — focus entirely on those facts within your selected topics.</span></label>
+          <p class="recall-priority-note" id="flashMustKnowCount" aria-live="polite"></p>
         </div>
         <div class="picker-head"><b>Topics to include</b><span id="flashTopicCount"></span></div>
         <div class="preset-row">
@@ -302,6 +308,7 @@
 <script src="progress-backup.js?v=120" defer></script>
 <script src="cloud-sync-core.js?v=119" defer></script>
 <script type="module" src="cloud-sync.js?v=428"></script>
+<script src="flashcard-priority-v429.js?v=429" defer></script>
 <script src="photoelectric-flashcard-marking.js?v=121" defer></script>
 <script src="exam-sketch-v173.js?v=428" defer></script>
 <script src="maths-as-pure-marking-v191.js?v=207" defer></script>
@@ -309,7 +316,7 @@
 <script src="chemistry-rates-marking-v210.js?v=210" defer></script>
 <script src="physics-concise-marking-v211.js?v=211" defer></script>
 <script src="physics-materials-divider-marking-v213.js?v=213" defer></script>
-<script src="app.js?v=203" defer></script>
+<script src="app.js?v=429" defer></script>
 <script src="world-zoom-helpers.js?v=61" defer></script>
 <script src="world-globe-article-bridge.js?v=73" defer></script>
 <script>
