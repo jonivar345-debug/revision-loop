@@ -115,6 +115,19 @@ try{
   const result=await page.evaluate(()=>({day:profile.dailyChallenges['v431-test'],streak:profile.challengeStreak,points:profile.points}));
   assert.equal(result.day.done,true);assert.equal(result.day.skipped,1);
   assert.equal(result.streak,streak.streak);assert.equal(result.points,streak.points);
+  // Once a correctly checked card earns XP, Skip must not leave it due for XP farming.
+  await page.evaluate(()=>{
+   activeSession={kind:'flash',items:[{type:'card',id:'as_p2_v430_m01'},{type:'card',id:'as_p2_v430_m02'}],index:0,title:'v431 scored-card guard'};
+   renderAll();
+  });
+  await page.locator('[data-paper2-option="B"]').click();
+  await page.locator('#checkCard').click();
+  assert(await page.locator('#skipCard').isDisabled(),'Scored card must require a saved review rating');
+  assert.equal(await page.evaluate(()=>activeSession.index),0);
+  assert.equal(await page.evaluate(()=>profile.lifetimeXp),before.xp+1);
+  await page.locator('#knowCard').click();
+  assert.equal(await page.evaluate(()=>activeSession.index),1,'Known after a checked answer should record Good');
+  assert.equal(await page.evaluate(()=>profile.lifetimeXp),before.xp+1,'Known must not award duplicate XP');
   const dims=await page.evaluate(()=>({w:document.documentElement.clientWidth,s:document.documentElement.scrollWidth}));
   assert(dims.s<=dims.w+3,'Study controls overflow '+width+'px viewport');
   assert.deepEqual(errors,[],'Browser errors: '+errors.join(' | '));
