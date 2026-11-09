@@ -16,7 +16,7 @@
     2024,
     2025
   ],
-  "sourceAuditStatus": "Style-level coverage aligned with AQA assessment structure. No claim of exhaustive per-question comparison for each past paper.",
+  "sourceAuditStatus": "Built from the AQA 7407/2 assessment structure and recurring skills; these original short cards do not reproduce AQA questions. A complete year-by-year item-to-skill map for 2018–2025 has not yet been independently verified.",
   "cards": [
     {
       "id": "as_paper2_v430_001",
@@ -40,9 +40,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Graph: independent variable",
-      "paper2Hint": "Identify what the experimenter deliberately changes.",
-      "paper2Method": "Check axes before plotting; an axis label must include its unit.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about graph: independent variable. What single step would earn the mark?",
+      "paper2Method": "Identify what the experimenter deliberately changes.",
+      "paper2Pitfall": "Check axes before plotting; an axis label must include its unit.",
       "priority": 2
     },
     {
@@ -67,9 +67,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Graph: dependent variable",
-      "paper2Hint": "Identify the measured response to the changed variable.",
-      "paper2Method": "Do not swap axes just because the quantity has a larger numerical range.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about graph: dependent variable. What single step would earn the mark?",
+      "paper2Method": "Identify the measured response to the changed variable.",
+      "paper2Pitfall": "Do not swap axes just because the quantity has a larger numerical range.",
       "priority": 2
     },
     {
@@ -94,9 +94,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Control variables",
-      "paper2Hint": "State what is held fixed and why.",
-      "paper2Method": "Repeating a measurement is not the same as controlling a variable.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about control variables. What single step would earn the mark?",
+      "paper2Method": "State what is held fixed and why.",
+      "paper2Pitfall": "Repeating a measurement is not the same as controlling a variable.",
       "priority": 2
     },
     {
@@ -121,9 +121,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Graph: gradient",
-      "paper2Hint": "Write gradient = change in y / change in x.",
-      "paper2Method": "Use points ON the fitted line, not necessarily measured points.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about graph: gradient. What single step would earn the mark?",
+      "paper2Method": "Write gradient = change in y / change in x.",
+      "paper2Pitfall": "Use points ON the fitted line, not necessarily measured points.",
       "priority": 2
     },
     {
@@ -148,9 +148,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Graph: axes and units",
-      "paper2Hint": "Write, for example, 'current / A'.",
-      "paper2Method": "A number-only axis loses information.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about graph: axes and units. What single step would earn the mark?",
+      "paper2Method": "Write, for example, 'current / A'.",
+      "paper2Pitfall": "A number-only axis loses information.",
       "priority": 2
     },
     {
@@ -175,9 +175,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Graph: intercept",
-      "paper2Hint": "First check whether the theory genuinely predicts a zero intercept.",
-      "paper2Method": "Do not claim every intercept proves a faulty instrument.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about graph: intercept. What single step would earn the mark?",
+      "paper2Method": "First check whether the theory genuinely predicts a zero intercept.",
+      "paper2Pitfall": "Do not claim every intercept proves a faulty instrument.",
       "priority": 2
     },
     {
@@ -202,9 +202,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Graph: straight line",
-      "paper2Hint": "Differentiate a linear relationship from direct proportionality.",
-      "paper2Method": "A straight line with non-zero intercept is not direct proportion.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about graph: straight line. What single step would earn the mark?",
+      "paper2Method": "Differentiate a linear relationship from direct proportionality.",
+      "paper2Pitfall": "A straight line with non-zero intercept is not direct proportion.",
       "priority": 2
     },
     {
@@ -229,9 +229,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Graph: error bars",
-      "paper2Hint": "Check the bar size and units against the scale.",
-      "paper2Method": "It does not automatically show the instrument's resolution alone.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about graph: error bars. What single step would earn the mark?",
+      "paper2Method": "Check the bar size and units against the scale.",
+      "paper2Pitfall": "It does not automatically show the instrument's resolution alone.",
       "priority": 2
     },
     {
@@ -256,9 +256,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Graph: uncertainty gradient",
-      "paper2Hint": "Find the range of plausible gradients using the error bars.",
-      "paper2Method": "Do not use only one uncertain point.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about graph: uncertainty gradient. What single step would earn the mark?",
+      "paper2Method": "Find the range of plausible gradients using the error bars.",
+      "paper2Pitfall": "Do not use only one uncertain point.",
       "priority": 2
     },
     {
@@ -283,9 +283,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Graph: anomaly",
-      "paper2Hint": "Give a reason before discounting a data point.",
-      "paper2Method": "Never discard data simply because it disagrees with theory.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about graph: anomaly. What single step would earn the mark?",
+      "paper2Method": "Give a reason before discounting a data point.",
+      "paper2Pitfall": "Never discard data simply because it disagrees with theory.",
       "priority": 2
     },
     {
@@ -310,9 +310,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Accuracy vs precision",
-      "paper2Hint": "Think 'repeatability', not closeness to accepted value.",
-      "paper2Method": "Precision does not guarantee accuracy.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about accuracy vs precision. What single step would earn the mark?",
+      "paper2Method": "Think 'repeatability', not closeness to accepted value.",
+      "paper2Pitfall": "Precision does not guarantee accuracy.",
       "priority": 2
     },
     {
@@ -337,9 +337,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Systematic error",
-      "paper2Hint": "Look for a zero error or calibration bias.",
-      "paper2Method": "Repeats alone do not remove systematic error.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about systematic error. What single step would earn the mark?",
+      "paper2Method": "Look for a zero error or calibration bias.",
+      "paper2Pitfall": "Repeats alone do not remove systematic error.",
       "priority": 2
     },
     {
@@ -364,9 +364,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Random uncertainty",
-      "paper2Hint": "Repeat readings under the same conditions.",
-      "paper2Method": "They do not remove systematic errors.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about random uncertainty. What single step would earn the mark?",
+      "paper2Method": "Repeat readings under the same conditions.",
+      "paper2Pitfall": "They do not remove systematic errors.",
       "priority": 2
     },
     {
@@ -391,9 +391,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Resolution",
-      "paper2Hint": "Quote it with the unit.",
-      "paper2Method": "Resolution is not always the full measurement uncertainty.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about resolution. What single step would earn the mark?",
+      "paper2Method": "Quote it with the unit.",
+      "paper2Pitfall": "Resolution is not always the full measurement uncertainty.",
       "priority": 2
     },
     {
@@ -418,9 +418,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Percentage uncertainty",
-      "paper2Hint": "Check that the uncertainty and value have the same unit.",
-      "paper2Method": "Do not divide the value by its uncertainty.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about percentage uncertainty. What single step would earn the mark?",
+      "paper2Method": "Check that the uncertainty and value have the same unit.",
+      "paper2Pitfall": "Do not divide the value by its uncertainty.",
       "priority": 2
     },
     {
@@ -445,9 +445,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Combining uncertainties",
-      "paper2Hint": "Write the proportional uncertainty for each measured quantity.",
-      "paper2Method": "For powers, multiply the percentage uncertainty by the power.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about combining uncertainties. What single step would earn the mark?",
+      "paper2Method": "Write the proportional uncertainty for each measured quantity.",
+      "paper2Pitfall": "For powers, multiply the percentage uncertainty by the power.",
       "priority": 2
     },
     {
@@ -472,9 +472,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Uncertainty in sum",
-      "paper2Hint": "Convert to common units before combining.",
-      "paper2Method": "Do not add percentage uncertainties for sums.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about uncertainty in sum. What single step would earn the mark?",
+      "paper2Method": "Convert to common units before combining.",
+      "paper2Pitfall": "Do not add percentage uncertainties for sums.",
       "priority": 2
     },
     {
@@ -499,9 +499,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Uncertainty in powers",
-      "paper2Hint": "Use the power rule for fractional uncertainty.",
-      "paper2Method": "Do not square the percentage uncertainty.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about uncertainty in powers. What single step would earn the mark?",
+      "paper2Method": "Use the power rule for fractional uncertainty.",
+      "paper2Pitfall": "Do not square the percentage uncertainty.",
       "priority": 2
     },
     {
@@ -526,9 +526,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Time repeated oscillations",
-      "paper2Hint": "Divide total measured time by ten to find one period.",
-      "paper2Method": "This does not make the stopwatch reaction delay vanish.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about time repeated oscillations. What single step would earn the mark?",
+      "paper2Method": "Divide total measured time by ten to find one period.",
+      "paper2Pitfall": "This does not make the stopwatch reaction delay vanish.",
       "priority": 2
     },
     {
@@ -553,9 +553,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Light gate method",
-      "paper2Hint": "Use card length ÷ time to estimate speed.",
-      "paper2Method": "It does not measure velocity direction without other information.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about light gate method. What single step would earn the mark?",
+      "paper2Method": "Use card length ÷ time to estimate speed.",
+      "paper2Pitfall": "It does not measure velocity direction without other information.",
       "priority": 2
     },
     {
@@ -580,9 +580,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Micrometer reading",
-      "paper2Hint": "Correct for a consistent offset.",
-      "paper2Method": "Measure diameter at several positions to check variation.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about micrometer reading. What single step would earn the mark?",
+      "paper2Method": "Correct for a consistent offset.",
+      "paper2Pitfall": "Measure diameter at several positions to check variation.",
       "priority": 2
     },
     {
@@ -607,9 +607,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Zero check",
-      "paper2Hint": "Explain which reading would be biased without the adjustment.",
-      "paper2Method": "Do not claim zeroing removes random uncertainty.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about zero check. What single step would earn the mark?",
+      "paper2Method": "Explain which reading would be biased without the adjustment.",
+      "paper2Pitfall": "Do not claim zeroing removes random uncertainty.",
       "priority": 2
     },
     {
@@ -634,9 +634,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Repeated diameter",
-      "paper2Hint": "Calculate a representative mean after checking anomalies.",
-      "paper2Method": "One reading cannot show whether the wire is uniform.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about repeated diameter. What single step would earn the mark?",
+      "paper2Method": "Calculate a representative mean after checking anomalies.",
+      "paper2Pitfall": "One reading cannot show whether the wire is uniform.",
       "priority": 2
     },
     {
@@ -661,9 +661,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Plotting uncertainty",
-      "paper2Hint": "State what theory predicts BEFORE comparing data.",
-      "paper2Method": "'It is linear' without mentioning intercept can be insufficient.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about plotting uncertainty. What single step would earn the mark?",
+      "paper2Method": "State what theory predicts BEFORE comparing data.",
+      "paper2Pitfall": "'It is linear' without mentioning intercept can be insufficient.",
       "priority": 2
     },
     {
@@ -688,9 +688,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Linearising a graph",
-      "paper2Hint": "Rearrange into y = mx + c form.",
-      "paper2Method": "Choose axes from the equation, not by guesswork.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about linearising a graph. What single step would earn the mark?",
+      "paper2Method": "Rearrange into y = mx + c form.",
+      "paper2Pitfall": "Choose axes from the equation, not by guesswork.",
       "priority": 2
     },
     {
@@ -715,9 +715,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Graph: extrapolation",
-      "paper2Hint": "Distinguish interpolation from extrapolation.",
-      "paper2Method": "Never assume a fitted trend continues indefinitely.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about graph: extrapolation. What single step would earn the mark?",
+      "paper2Method": "Distinguish interpolation from extrapolation.",
+      "paper2Pitfall": "Never assume a fitted trend continues indefinitely.",
       "priority": 2
     },
     {
@@ -742,9 +742,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Uncertainty overlap",
-      "paper2Hint": "Compare the stated ranges, not just the central values.",
-      "paper2Method": "Overlap alone is not proof the values are equal.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about uncertainty overlap. What single step would earn the mark?",
+      "paper2Method": "Compare the stated ranges, not just the central values.",
+      "paper2Pitfall": "Overlap alone is not proof the values are equal.",
       "priority": 2
     },
     {
@@ -769,9 +769,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Experimental improvement",
-      "paper2Hint": "Use 'change → how it reduces error'.",
-      "paper2Method": "'Use better equipment' is too vague.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about experimental improvement. What single step would earn the mark?",
+      "paper2Method": "Use 'change → how it reduces error'.",
+      "paper2Pitfall": "'Use better equipment' is too vague.",
       "priority": 2
     },
     {
@@ -796,9 +796,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Valid conclusion",
-      "paper2Hint": "Quote a measured relationship or range if available.",
-      "paper2Method": "Do not call a result 'proved' merely from a graph.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about valid conclusion. What single step would earn the mark?",
+      "paper2Method": "Quote a measured relationship or range if available.",
+      "paper2Pitfall": "Do not call a result 'proved' merely from a graph.",
       "priority": 2
     },
     {
@@ -823,9 +823,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Significant figures",
-      "paper2Hint": "Carry extra digits in working, round at the end.",
-      "paper2Method": "Avoid reporting more precision than the readings allow.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about significant figures. What single step would earn the mark?",
+      "paper2Method": "Carry extra digits in working, round at the end.",
+      "paper2Pitfall": "Avoid reporting more precision than the readings allow.",
       "priority": 2
     },
     {
@@ -850,9 +850,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Units of gradient",
-      "paper2Hint": "Cancel units algebraically.",
-      "paper2Method": "Do not copy the y-axis unit automatically.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about units of gradient. What single step would earn the mark?",
+      "paper2Method": "Cancel units algebraically.",
+      "paper2Pitfall": "Do not copy the y-axis unit automatically.",
       "priority": 2
     },
     {
@@ -877,9 +877,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Best-fit line",
-      "paper2Hint": "Aim for balanced scatter above and below.",
-      "paper2Method": "Do not join point-to-point on a noisy linear plot.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about best-fit line. What single step would earn the mark?",
+      "paper2Method": "Aim for balanced scatter above and below.",
+      "paper2Pitfall": "Do not join point-to-point on a noisy linear plot.",
       "priority": 2
     },
     {
@@ -904,9 +904,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Choice of scales",
-      "paper2Hint": "Select convenient intervals that remain easy to read.",
-      "paper2Method": "Very compressed data makes gradient readings less precise.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about choice of scales. What single step would earn the mark?",
+      "paper2Method": "Select convenient intervals that remain easy to read.",
+      "paper2Pitfall": "Very compressed data makes gradient readings less precise.",
       "priority": 2
     },
     {
@@ -931,9 +931,9 @@
       "paper2": true,
       "paper2Section": "A",
       "paper2Skill": "Practical safety",
-      "paper2Hint": "Explain, for example, how a hot component is handled safely.",
-      "paper2Method": "'Be careful' is not a method.",
-      "paper2Pitfall": "Measurements and their errors",
+      "paper2Hint": "Think about practical safety. What single step would earn the mark?",
+      "paper2Method": "Explain, for example, how a hot component is handled safely.",
+      "paper2Pitfall": "'Be careful' is not a method.",
       "priority": 2
     },
     {
@@ -958,9 +958,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Free-body diagram",
-      "paper2Hint": "Isolate one object and label only forces on it.",
-      "paper2Method": "Do not include the force the object exerts on something else.",
-      "paper2Pitfall": "Mechanics and materials",
+      "paper2Hint": "Think about free-body diagram. What single step would earn the mark?",
+      "paper2Method": "Isolate one object and label only forces on it.",
+      "paper2Pitfall": "Do not include the force the object exerts on something else.",
       "priority": 2
     },
     {
@@ -985,9 +985,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Resolving a force",
-      "paper2Hint": "Draw a right triangle before choosing sine or cosine.",
-      "paper2Method": "The component adjacent to θ uses cosine.",
-      "paper2Pitfall": "Mechanics and materials",
+      "paper2Hint": "Think about resolving a force. What single step would earn the mark?",
+      "paper2Method": "Draw a right triangle before choosing sine or cosine.",
+      "paper2Pitfall": "The component adjacent to θ uses cosine.",
       "priority": 2
     },
     {
@@ -1012,9 +1012,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Graph velocity-time",
-      "paper2Hint": "Account for negative signed area below the axis.",
-      "paper2Method": "Distance needs absolute areas added.",
-      "paper2Pitfall": "Mechanics and materials",
+      "paper2Hint": "Think about graph velocity-time. What single step would earn the mark?",
+      "paper2Method": "Account for negative signed area below the axis.",
+      "paper2Pitfall": "Distance needs absolute areas added.",
       "priority": 2
     },
     {
@@ -1039,9 +1039,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Graph velocity gradient",
-      "paper2Hint": "Use Δv/Δt with appropriate units.",
-      "paper2Method": "A negative gradient indicates negative acceleration, not necessarily slowing down.",
-      "paper2Pitfall": "Mechanics and materials",
+      "paper2Hint": "Think about graph velocity gradient. What single step would earn the mark?",
+      "paper2Method": "Use Δv/Δt with appropriate units.",
+      "paper2Pitfall": "A negative gradient indicates negative acceleration, not necessarily slowing down.",
       "priority": 2
     },
     {
@@ -1066,9 +1066,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Graph displacement slope",
-      "paper2Hint": "Use a tangent for instantaneous velocity on a curve.",
-      "paper2Method": "It is not acceleration.",
-      "paper2Pitfall": "Mechanics and materials",
+      "paper2Hint": "Think about graph displacement slope. What single step would earn the mark?",
+      "paper2Method": "Use a tangent for instantaneous velocity on a curve.",
+      "paper2Pitfall": "It is not acceleration.",
       "priority": 2
     },
     {
@@ -1093,9 +1093,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Conservation of momentum",
-      "paper2Hint": "Set and maintain a consistent positive direction.",
-      "paper2Method": "Kinetic energy need not be conserved.",
-      "paper2Pitfall": "Mechanics and materials",
+      "paper2Hint": "Think about conservation of momentum. What single step would earn the mark?",
+      "paper2Method": "Set and maintain a consistent positive direction.",
+      "paper2Pitfall": "Kinetic energy need not be conserved.",
       "priority": 2
     },
     {
@@ -1120,9 +1120,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Newton's third law",
-      "paper2Hint": "Name both interacting objects.",
-      "paper2Method": "They never cancel as forces on one object.",
-      "paper2Pitfall": "Mechanics and materials",
+      "paper2Hint": "Think about newton's third law. What single step would earn the mark?",
+      "paper2Method": "Name both interacting objects.",
+      "paper2Pitfall": "They never cancel as forces on one object.",
       "priority": 2
     },
     {
@@ -1147,9 +1147,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Terminal speed",
-      "paper2Hint": "Explain the change in drag with increasing speed.",
-      "paper2Method": "Zero acceleration does not mean zero velocity.",
-      "paper2Pitfall": "Mechanics and materials",
+      "paper2Hint": "Think about terminal speed. What single step would earn the mark?",
+      "paper2Method": "Explain the change in drag with increasing speed.",
+      "paper2Pitfall": "Zero acceleration does not mean zero velocity.",
       "priority": 2
     },
     {
@@ -1174,9 +1174,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Energy accounting",
-      "paper2Hint": "State the system and energy transfers.",
-      "paper2Method": "Do not assume 100% efficiency without evidence.",
-      "paper2Pitfall": "Mechanics and materials",
+      "paper2Hint": "Think about energy accounting. What single step would earn the mark?",
+      "paper2Method": "State the system and energy transfers.",
+      "paper2Pitfall": "Do not assume 100% efficiency without evidence.",
       "priority": 2
     },
     {
@@ -1201,9 +1201,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Young modulus method",
-      "paper2Hint": "Remember modulus = stress ÷ strain in the linear region.",
-      "paper2Method": "Use the original cross-sectional area and length.",
-      "paper2Pitfall": "Mechanics and materials",
+      "paper2Hint": "Think about young modulus method. What single step would earn the mark?",
+      "paper2Method": "Remember modulus = stress ÷ strain in the linear region.",
+      "paper2Pitfall": "Use the original cross-sectional area and length.",
       "priority": 2
     },
     {
@@ -1228,9 +1228,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Wave superposition",
-      "paper2Hint": "Add signed displacements at each location.",
-      "paper2Method": "Amplitudes do not always simply add as positive values.",
-      "paper2Pitfall": "Waves",
+      "paper2Hint": "Think about wave superposition. What single step would earn the mark?",
+      "paper2Method": "Add signed displacements at each location.",
+      "paper2Pitfall": "Amplitudes do not always simply add as positive values.",
       "priority": 2
     },
     {
@@ -1255,9 +1255,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Stationary wave nodes",
-      "paper2Hint": "Identify where opposite-travelling waves cancel.",
-      "paper2Method": "A node is not a point where no wave energy exists anywhere.",
-      "paper2Pitfall": "Waves",
+      "paper2Hint": "Think about stationary wave nodes. What single step would earn the mark?",
+      "paper2Method": "Identify where opposite-travelling waves cancel.",
+      "paper2Pitfall": "A node is not a point where no wave energy exists anywhere.",
       "priority": 2
     },
     {
@@ -1282,9 +1282,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Diffraction",
-      "paper2Hint": "Compare gap width with wavelength.",
-      "paper2Method": "It is not exclusive to light.",
-      "paper2Pitfall": "Waves",
+      "paper2Hint": "Think about diffraction. What single step would earn the mark?",
+      "paper2Method": "Compare gap width with wavelength.",
+      "paper2Pitfall": "It is not exclusive to light.",
       "priority": 2
     },
     {
@@ -1309,9 +1309,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "TIR conditions",
-      "paper2Hint": "Check the direction across the boundary first.",
-      "paper2Method": "Increasing angle in the opposite direction never gives TIR.",
-      "paper2Pitfall": "Waves",
+      "paper2Hint": "Think about tir conditions. What single step would earn the mark?",
+      "paper2Method": "Check the direction across the boundary first.",
+      "paper2Pitfall": "Increasing angle in the opposite direction never gives TIR.",
       "priority": 2
     },
     {
@@ -1336,9 +1336,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Interference pattern",
-      "paper2Hint": "Relate path difference to phase difference.",
-      "paper2Method": "The sources must be coherent for stable fringes.",
-      "paper2Pitfall": "Waves",
+      "paper2Hint": "Think about interference pattern. What single step would earn the mark?",
+      "paper2Method": "Relate path difference to phase difference.",
+      "paper2Pitfall": "The sources must be coherent for stable fringes.",
       "priority": 2
     },
     {
@@ -1363,9 +1363,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Polarisation",
-      "paper2Hint": "State that oscillations have a selected plane.",
-      "paper2Method": "Longitudinal waves cannot be plane-polarised.",
-      "paper2Pitfall": "Waves",
+      "paper2Hint": "Think about polarisation. What single step would earn the mark?",
+      "paper2Method": "State that oscillations have a selected plane.",
+      "paper2Pitfall": "Longitudinal waves cannot be plane-polarised.",
       "priority": 2
     },
     {
@@ -1390,9 +1390,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Photoelectric threshold",
-      "paper2Hint": "Photon energy depends on frequency.",
-      "paper2Method": "More low-frequency light cannot compensate for insufficient photon energy.",
-      "paper2Pitfall": "Particles and radiation",
+      "paper2Hint": "Think about photoelectric threshold. What single step would earn the mark?",
+      "paper2Method": "Photon energy depends on frequency.",
+      "paper2Pitfall": "More low-frequency light cannot compensate for insufficient photon energy.",
       "priority": 2
     },
     {
@@ -1417,9 +1417,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Photoelectric intensity",
-      "paper2Hint": "Hold frequency constant.",
-      "paper2Method": "Intensity does not increase maximum electron kinetic energy.",
-      "paper2Pitfall": "Particles and radiation",
+      "paper2Hint": "Think about photoelectric intensity. What single step would earn the mark?",
+      "paper2Method": "Hold frequency constant.",
+      "paper2Pitfall": "Intensity does not increase maximum electron kinetic energy.",
       "priority": 2
     },
     {
@@ -1444,9 +1444,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "De Broglie trend",
-      "paper2Hint": "Recall λ = h/p.",
-      "paper2Method": "Massive particles can still show wave behaviour.",
-      "paper2Pitfall": "Particles and radiation",
+      "paper2Hint": "Think about de broglie trend. What single step would earn the mark?",
+      "paper2Method": "Recall λ = h/p.",
+      "paper2Pitfall": "Massive particles can still show wave behaviour.",
       "priority": 2
     },
     {
@@ -1471,9 +1471,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Charge conservation",
-      "paper2Hint": "Add the charges on both sides.",
-      "paper2Method": "A proposed reaction can look plausible but violate charge conservation.",
-      "paper2Pitfall": "Particles and radiation",
+      "paper2Hint": "Think about charge conservation. What single step would earn the mark?",
+      "paper2Method": "Add the charges on both sides.",
+      "paper2Pitfall": "A proposed reaction can look plausible but violate charge conservation.",
       "priority": 2
     },
     {
@@ -1498,9 +1498,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "EMF definition",
-      "paper2Hint": "Think energy per coulomb supplied by the source.",
-      "paper2Method": "EMF is not always the terminal potential difference.",
-      "paper2Pitfall": "Electricity",
+      "paper2Hint": "Think about emf definition. What single step would earn the mark?",
+      "paper2Method": "Think energy per coulomb supplied by the source.",
+      "paper2Pitfall": "EMF is not always the terminal potential difference.",
       "priority": 2
     },
     {
@@ -1525,9 +1525,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Internal resistance graph",
-      "paper2Hint": "Use V = ε − Ir.",
-      "paper2Method": "The gradient is negative; resistance is its positive magnitude.",
-      "paper2Pitfall": "Electricity",
+      "paper2Hint": "Think about internal resistance graph. What single step would earn the mark?",
+      "paper2Method": "Use V = ε − Ir.",
+      "paper2Pitfall": "The gradient is negative; resistance is its positive magnitude.",
       "priority": 2
     },
     {
@@ -1552,9 +1552,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Potential divider",
-      "paper2Hint": "Identify which resistor Vout is across.",
-      "paper2Method": "The formula does not give the voltage across the other resistor.",
-      "paper2Pitfall": "Electricity",
+      "paper2Hint": "Think about potential divider. What single step would earn the mark?",
+      "paper2Method": "Identify which resistor Vout is across.",
+      "paper2Pitfall": "The formula does not give the voltage across the other resistor.",
       "priority": 2
     },
     {
@@ -1579,9 +1579,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "I–V curve",
-      "paper2Hint": "State which quantity is on each axis.",
-      "paper2Method": "Do not call a filament lamp an ohmic resistor over a wide range.",
-      "paper2Pitfall": "Electricity",
+      "paper2Hint": "Think about i–v curve. What single step would earn the mark?",
+      "paper2Method": "State which quantity is on each axis.",
+      "paper2Pitfall": "Do not call a filament lamp an ohmic resistor over a wide range.",
       "priority": 2
     },
     {
@@ -1606,9 +1606,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Resistivity units",
-      "paper2Hint": "Rearrange ρ = RA/L to check units.",
-      "paper2Method": "Resistance is Ω; resistivity is Ω m.",
-      "paper2Pitfall": "Electricity",
+      "paper2Hint": "Think about resistivity units. What single step would earn the mark?",
+      "paper2Method": "Rearrange ρ = RA/L to check units.",
+      "paper2Pitfall": "Resistance is Ω; resistivity is Ω m.",
       "priority": 2
     },
     {
@@ -1633,9 +1633,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Series and parallel",
-      "paper2Hint": "Draw both branches across the same two nodes.",
-      "paper2Method": "It is current, not p.d., that splits between parallel branches.",
-      "paper2Pitfall": "Electricity",
+      "paper2Hint": "Think about series and parallel. What single step would earn the mark?",
+      "paper2Method": "Draw both branches across the same two nodes.",
+      "paper2Pitfall": "It is current, not p.d., that splits between parallel branches.",
       "priority": 2
     },
     {
@@ -1660,9 +1660,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Explanations: cause",
-      "paper2Hint": "State the governing principle, then the consequence.",
-      "paper2Method": "Restating the question is not an explanation.",
-      "paper2Pitfall": "General exam method",
+      "paper2Hint": "Think about explanations: cause. What single step would earn the mark?",
+      "paper2Method": "State the governing principle, then the consequence.",
+      "paper2Pitfall": "Restating the question is not an explanation.",
       "priority": 2
     },
     {
@@ -1687,9 +1687,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Calculations: working",
-      "paper2Hint": "List the quantities and convert them to SI units.",
-      "paper2Method": "A correct number without working can lose method marks.",
-      "paper2Pitfall": "General exam method",
+      "paper2Hint": "Think about calculations: working. What single step would earn the mark?",
+      "paper2Method": "List the quantities and convert them to SI units.",
+      "paper2Pitfall": "A correct number without working can lose method marks.",
       "priority": 2
     },
     {
@@ -1714,9 +1714,9 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Compare two cases",
-      "paper2Hint": "Use evidence for each case.",
-      "paper2Method": "Describing only one case is not a comparison.",
-      "paper2Pitfall": "General exam method",
+      "paper2Hint": "Think about compare two cases. What single step would earn the mark?",
+      "paper2Method": "Use evidence for each case.",
+      "paper2Pitfall": "Describing only one case is not a comparison.",
       "priority": 2
     },
     {
@@ -1741,9 +1741,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: units",
-      "paper2Hint": "Reduce compound units to base units if necessary.",
-      "paper2Method": "A dimensionally correct equation is not necessarily physically correct.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: units. What single step would earn the mark?",
+      "paper2Method": "Reduce compound units to base units if necessary.",
+      "paper2Pitfall": "A dimensionally correct equation is not necessarily physically correct.",
       "priority": 2
     },
     {
@@ -1768,9 +1768,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: powers of ten",
-      "paper2Hint": "Write m = 10⁻³ and μ = 10⁻⁶ before substituting.",
-      "paper2Method": "A prefix mistake can shift the answer by factors of 1000.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: powers of ten. What single step would earn the mark?",
+      "paper2Method": "Write m = 10⁻³ and μ = 10⁻⁶ before substituting.",
+      "paper2Pitfall": "A prefix mistake can shift the answer by factors of 1000.",
       "priority": 2
     },
     {
@@ -1795,9 +1795,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: estimation",
-      "paper2Hint": "Estimate before exact calculator work.",
-      "paper2Method": "Do not round early when close options require precision.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: estimation. What single step would earn the mark?",
+      "paper2Method": "Estimate before exact calculator work.",
+      "paper2Pitfall": "Do not round early when close options require precision.",
       "priority": 2
     },
     {
@@ -1822,9 +1822,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: vectors",
-      "paper2Hint": "Resolve components or draw a scale sketch.",
-      "paper2Method": "Magnitudes cannot simply be added for non-parallel vectors.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: vectors. What single step would earn the mark?",
+      "paper2Method": "Resolve components or draw a scale sketch.",
+      "paper2Pitfall": "Magnitudes cannot simply be added for non-parallel vectors.",
       "priority": 2
     },
     {
@@ -1849,9 +1849,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: signed graphs",
-      "paper2Hint": "Shade areas above and below the time axis.",
-      "paper2Method": "A negative velocity does not give negative distance.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: signed graphs. What single step would earn the mark?",
+      "paper2Method": "Shade areas above and below the time axis.",
+      "paper2Pitfall": "A negative velocity does not give negative distance.",
       "priority": 2
     },
     {
@@ -1876,9 +1876,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: photon",
-      "paper2Hint": "Use E = hf.",
-      "paper2Method": "Intensity controls photons per second at fixed frequency.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: photon. What single step would earn the mark?",
+      "paper2Method": "Use E = hf.",
+      "paper2Pitfall": "Intensity controls photons per second at fixed frequency.",
       "priority": 2
     },
     {
@@ -1903,9 +1903,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: momentum",
-      "paper2Hint": "Use signed momentum conservation in an isolated system.",
-      "paper2Method": "Inelastic collisions lose kinetic energy as other forms.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: momentum. What single step would earn the mark?",
+      "paper2Method": "Use signed momentum conservation in an isolated system.",
+      "paper2Pitfall": "Inelastic collisions lose kinetic energy as other forms.",
       "priority": 2
     },
     {
@@ -1930,9 +1930,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: current and charge",
-      "paper2Hint": "Check charge units are coulombs and time is seconds.",
-      "paper2Method": "Do not use the number of electrons without converting to charge.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: current and charge. What single step would earn the mark?",
+      "paper2Method": "Check charge units are coulombs and time is seconds.",
+      "paper2Pitfall": "Do not use the number of electrons without converting to charge.",
       "priority": 2
     },
     {
@@ -1957,9 +1957,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: resistance",
-      "paper2Hint": "Use R = V/I.",
-      "paper2Method": "A larger p.d. alone does not imply a different ohmic resistance.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: resistance. What single step would earn the mark?",
+      "paper2Method": "Use R = V/I.",
+      "paper2Pitfall": "A larger p.d. alone does not imply a different ohmic resistance.",
       "priority": 2
     },
     {
@@ -1984,9 +1984,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: wave frequency",
-      "paper2Hint": "The source sets the oscillation frequency.",
-      "paper2Method": "Speed and wavelength can both change.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: wave frequency. What single step would earn the mark?",
+      "paper2Method": "The source sets the oscillation frequency.",
+      "paper2Pitfall": "Speed and wavelength can both change.",
       "priority": 2
     },
     {
@@ -2011,9 +2011,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: uncertainty",
-      "paper2Hint": "Find uncertainty in each length first.",
-      "paper2Method": "Subtracting quantities does not subtract their uncertainties.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: uncertainty. What single step would earn the mark?",
+      "paper2Method": "Find uncertainty in each length first.",
+      "paper2Pitfall": "Subtracting quantities does not subtract their uncertainties.",
       "priority": 2
     },
     {
@@ -2038,9 +2038,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: gradients",
-      "paper2Hint": "Read axis labels before using a memorised gradient formula.",
-      "paper2Method": "Reversing axes gives a reciprocal gradient, not the same value.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: gradients. What single step would earn the mark?",
+      "paper2Method": "Read axis labels before using a memorised gradient formula.",
+      "paper2Pitfall": "Reversing axes gives a reciprocal gradient, not the same value.",
       "priority": 2
     },
     {
@@ -2065,9 +2065,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: projectile",
-      "paper2Hint": "Horizontal velocity remains non-zero without air resistance.",
-      "paper2Method": "Acceleration remains downward.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: projectile. What single step would earn the mark?",
+      "paper2Method": "Horizontal velocity remains non-zero without air resistance.",
+      "paper2Pitfall": "Acceleration remains downward.",
       "priority": 2
     },
     {
@@ -2092,9 +2092,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: force",
-      "paper2Hint": "Newton's first law.",
-      "paper2Method": "Constant speed on a curved path can still require force.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: force. What single step would earn the mark?",
+      "paper2Method": "Newton's first law.",
+      "paper2Pitfall": "Constant speed on a curved path can still require force.",
       "priority": 2
     },
     {
@@ -2119,9 +2119,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: spring energy",
-      "paper2Hint": "Energy is proportional to extension squared.",
-      "paper2Method": "Force only doubles for a Hookean spring.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: spring energy. What single step would earn the mark?",
+      "paper2Method": "Energy is proportional to extension squared.",
+      "paper2Pitfall": "Force only doubles for a Hookean spring.",
       "priority": 2
     },
     {
@@ -2146,9 +2146,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: internal resistance",
-      "paper2Hint": "Use V = ε − Ir.",
-      "paper2Method": "EMF itself is not generally falling.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: internal resistance. What single step would earn the mark?",
+      "paper2Method": "Use V = ε − Ir.",
+      "paper2Pitfall": "EMF itself is not generally falling.",
       "priority": 2
     },
     {
@@ -2173,9 +2173,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: identify a trap",
-      "paper2Hint": "Use a diagram or signed conservation equation.",
-      "paper2Method": "Do not choose a sign from intuition alone.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: identify a trap. What single step would earn the mark?",
+      "paper2Method": "Use a diagram or signed conservation equation.",
+      "paper2Pitfall": "Do not choose a sign from intuition alone.",
       "priority": 2
     },
     {
@@ -2200,9 +2200,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: eliminate",
-      "paper2Hint": "Identify the exact variable the question changes.",
-      "paper2Method": "Eliminating is stronger than guessing without checking.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: eliminate. What single step would earn the mark?",
+      "paper2Method": "Identify the exact variable the question changes.",
+      "paper2Pitfall": "Eliminating is stronger than guessing without checking.",
       "priority": 2
     },
     {
@@ -2227,9 +2227,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: time allocation",
-      "paper2Hint": "You have roughly one mark per multiple-choice question.",
-      "paper2Method": "One question must not consume several easier marks.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: time allocation. What single step would earn the mark?",
+      "paper2Method": "You have roughly one mark per multiple-choice question.",
+      "paper2Pitfall": "One question must not consume several easier marks.",
       "priority": 2
     },
     {
@@ -2254,9 +2254,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: limiting case",
-      "paper2Hint": "Choose a physically meaningful limit.",
-      "paper2Method": "A limiting case tests consistency but is not a full derivation.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: limiting case. What single step would earn the mark?",
+      "paper2Method": "Choose a physically meaningful limit.",
+      "paper2Pitfall": "A limiting case tests consistency but is not a full derivation.",
       "priority": 2
     },
     {
@@ -2281,9 +2281,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: ratio",
-      "paper2Hint": "Use proportional relationships first.",
-      "paper2Method": "Do not introduce unnecessary constants into ratios.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: ratio. What single step would earn the mark?",
+      "paper2Method": "Use proportional relationships first.",
+      "paper2Pitfall": "Do not introduce unnecessary constants into ratios.",
       "priority": 2
     },
     {
@@ -2308,9 +2308,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: reading command",
-      "paper2Hint": "Separate given values from what is requested.",
-      "paper2Method": "Do not solve for a different but related quantity.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: reading command. What single step would earn the mark?",
+      "paper2Method": "Separate given values from what is requested.",
+      "paper2Pitfall": "Do not solve for a different but related quantity.",
       "priority": 2
     },
     {
@@ -2335,9 +2335,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: graph shape",
-      "paper2Hint": "The gradient is zero, so acceleration is zero.",
-      "paper2Method": "It does not mean displacement is constant.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: graph shape. What single step would earn the mark?",
+      "paper2Method": "The gradient is zero, so acceleration is zero.",
+      "paper2Pitfall": "It does not mean displacement is constant.",
       "priority": 2
     },
     {
@@ -2362,9 +2362,9 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "MCQ: optical fibre",
-      "paper2Hint": "Check light travels from higher to lower refractive index.",
-      "paper2Method": "Greater cladding index would prevent the usual guiding condition.",
-      "paper2Pitfall": "Multiple-choice strategies",
+      "paper2Hint": "Think about mcq: optical fibre. What single step would earn the mark?",
+      "paper2Method": "Check light travels from higher to lower refractive index.",
+      "paper2Pitfall": "Greater cladding index would prevent the usual guiding condition.",
       "priority": 2
     }
   ]
