@@ -15,7 +15,7 @@ assert.equal(audit.newCards,13);assert.equal(audit.newExamMarks,10);
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"));
-assert(html.includes('app.js?v=203'));assert(sw.includes('v226-waves-reasoning'));
+assert(new RegExp('app[.]js[?]v=[0-9]+').test(html));assert(sw.includes('v226-waves-reasoning'));
 for(const name of ['physics_waves_reasoning_recall_v226.json','physics_waves_interference_application_v226.json']){
  assert(app.includes("'./"+name+"'"),'missing app source '+name);
  assert(sw.includes("'./"+name+"'"),'missing offline source '+name);

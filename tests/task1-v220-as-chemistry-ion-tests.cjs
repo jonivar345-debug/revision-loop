@@ -16,7 +16,7 @@ assert.equal(core.cards.filter(c=>c.subject==='Chemistry'&&c.stage==='AS'&&c.moc
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"));
-assert(html.includes('app.js?v=203'),'Do not break legacy static script queries');
+assert(new RegExp('app[.]js[?]v=[0-9]+').test(html),'Do not break legacy static script queries');
 assert(sw.includes('v220-ion-tests'),'New assets could remain stale offline');
 assert(sw.includes("'./chemistry_ion_tests_recall_v220.json'"));
 assert(app.includes("'./chemistry_ion_tests_recall_v220.json'"));

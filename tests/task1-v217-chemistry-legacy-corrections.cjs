@@ -13,7 +13,7 @@ assert(start>=0&&end>start,'Source of runtime correction function missing');
 const apply=vm.runInNewContext(app.slice(start,end)+'\napplyV217LegacyChemistryCorrections;');
 assert.equal(typeof apply,'function');
 assert(app.includes('applyV217LegacyChemistryCorrections((d.cards||[]).filter(c=>c.active!==false))'),'v217 corrections must still run inside the loader');
-assert(html.includes('app.js?v=203'),'Keep existing script URL for legacy regression and network-first service worker');
+assert(new RegExp('app[.]js[?]v=[0-9]+').test(html),'Keep existing script URL for legacy regression and network-first service worker');
 assert(sw.includes('v217-chemistry-legacy-recall-fixes'),'Offline cache version was not bumped');
 assert(sw.includes("u.pathname.endsWith('/app.js')"),'App updates must remain network-first');
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));

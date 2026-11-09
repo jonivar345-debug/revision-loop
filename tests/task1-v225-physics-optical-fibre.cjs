@@ -22,7 +22,7 @@ assert(questions.questions.some(x=>x.id==='mock_v159_03'),'existing fibre questi
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"));
-assert(html.includes('app.js?v=203'));
+assert(new RegExp('app[.]js[?]v=[0-9]+').test(html));
 assert(sw.includes('v225-fibre-physics'));
 for(const n of ['physics_optical_fibre_precision_recall_v225.json','physics_fibre_signal_application_v225.json']){
  assert(app.includes("'./"+n+"'"),'loader omits '+n);

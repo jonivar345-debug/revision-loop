@@ -15,7 +15,7 @@ assert.equal(extra.cards.length,8);
 assert.equal(report.newCards,8);
 assert.equal(report.task1Complete,false);
 assert.equal(report.fullyCertifiedSpecification,false);
-assert(html.includes('app.js?v=203'),'Retain existing script query and network-first app refresh');
+assert(new RegExp('app[.]js[?]v=[0-9]+').test(html),'Retain existing script query and network-first app refresh');
 assert(sw.includes('v218-as-chem-precision-recall'),'SW cache version not updated');
 assert(sw.includes("'./chemistry_as_measurement_recall_v218.json'"),'Offline shell missing supplement');
 assert(app.includes("'./chemistry_as_measurement_recall_v218.json'"),'App does not request supplement');

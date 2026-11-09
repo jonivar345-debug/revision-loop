@@ -1,0 +1,56 @@
+name: v429 AQA must-memorise flashcard priority
+on:
+  pull_request:
+    paths:
+      - 'flashcard-priority-v429.js'
+      - 'app.js'
+      - 'index.html'
+      - 'styles.css'
+      - 'sw.js'
+      - 'tests/flashcard-priority-v429.cjs'
+      - 'tests/flashcard-priority-browser-v429.mjs'
+      - '.github/workflows/flashcard-priority-v429.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  priority-recall:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate priority classifier and existing app syntax
+        run: |
+          node --check flashcard-priority-v429.js
+          node --check app.js
+          node --check tests/flashcard-priority-v429.cjs
+      - name: AQA booklet, selection and saved-key regressions
+        run: node tests/flashcard-priority-v429.cjs
+      - name: Check existing flashcard and cloud regressions
+        run: |
+          node tests/cloud-sync-v119.cjs
+          node tests/reset-layout-v120.cjs
+          node tests/mobile-cloud-progress-v428.cjs
+          node tests/revision-backup.cjs
+      - name: Consolidated legacy marking, mock-scope and flashcard regressions
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          for major in v197 v227 v282 v311 v319 v403 v421 v426; do
+            tests=(tests/*"${major}"*.cjs)
+            echo "Running ${#tests[@]} regression(s) for ${major}"
+            for testfile in "${tests[@]}"; do
+              echo ">>> ${testfile}"
+              node "${testfile}"
+            done
+          done
+      - name: Install Chromium smoke runner
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Exercise real flashcard priority controls in mobile Chromium
+        run: node tests/flashcard-priority-browser-v429.mjs

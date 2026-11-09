@@ -736,3 +736,13 @@ html[data-layout-mode="pc"] .shop-grid{grid-template-columns:repeat(auto-fill,mi
 .sketch-status{font-size:.85rem;color:var(--muted);padding:6px 0}
 .sketch-status.sketch-warning{color:#b45309}
 .exam-marking-help,.mark-fairness-note{font-size:.88rem;line-height:1.5;color:var(--muted);padding:9px 11px;background:var(--bg);border-radius:8px}
+
+/* v429: calm, accessible key-recall priority controls at phone and PC widths. */
+.recall-priority-options{display:grid;gap:6px;margin:10px 0 3px}
+.recall-priority-option{display:flex;align-items:flex-start;gap:9px;background:#f8fafc;border:1px solid #cbd5e1;border-radius:10px;padding:9px 11px;line-height:1.45;color:#334155;font-size:.74rem}
+.recall-priority-option input{flex:0 0 auto;width:17px;height:17px;margin:1px 0 0;accent-color:#1d4ed8}
+.recall-priority-option span{min-width:0}
+.recall-priority-option strong{color:#1e40af}
+.recall-priority-note{margin:3px 2px 4px;color:#475569;font-size:.71rem;line-height:1.45}
+.recall-priority-pill{display:inline-block;padding:3px 8px;border-radius:9px;border:1px solid #cbd5e1;background:#eff6ff;color:#1e40af;font-size:.69rem;font-weight:750}
+@media(max-width:400px){.recall-priority-option{padding:9px 8px}.recall-priority-option input{width:19px;height:19px}}

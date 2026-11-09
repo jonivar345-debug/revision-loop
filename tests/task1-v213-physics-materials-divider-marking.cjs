@@ -8,7 +8,7 @@ assert.equal(bank.questions.length,8);
 assert.equal(bank.questions.reduce((n,q)=>n+q.marks,0),67);
 assert(app.includes('window.RevisionPhysicsMaterialsV213?.evaluate(q,answer)'));
 assert(html.includes('physics-materials-divider-marking-v213.js?v=213'));
-assert(html.indexOf('physics-materials-divider-marking-v213.js')<html.indexOf('app.js?v=203'));
+assert(html.indexOf('physics-materials-divider-marking-v213.js')<html.search(new RegExp('app[.]js[?]v=[0-9]+')));
 assert(sw.includes("'./physics-materials-divider-marking-v213.js'"));
 assert(sw.includes('v213-materials-divider-marking'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));

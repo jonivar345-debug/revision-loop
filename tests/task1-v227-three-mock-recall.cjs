@@ -13,7 +13,7 @@ assert.equal(deck.cards.length,3345);assert.equal(exam.questions.length,1268);
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"));
-assert(html.includes('app.js?v=203'));assert(sw.includes('v227-three-mocks'));
+assert.match(html,/<script src="app\.js\?v=\d+" defer><\/script>/,'Main app must use a versioned script');assert(sw.includes('v227-three-mocks'));
 const match=app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/);
 assert(match,'missing flashbank manifest');
 const listed=[...match[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1]);
