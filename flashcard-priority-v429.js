@@ -31,7 +31,9 @@
   // Asking about a method *using* an equation does not make that answer a
   // memorised equation. Keep 'What is the route to an empirical formula?'
   // and 'If 2 mol react per equation...' in ordinary practice.
-  return /^(?:what is|what's|write|state|give|show|which|express|provide|recall)\b.{0,135}\b(?:formula|equation|expression|relationship)\b/i.test(front)&&
+  const direct=/^what (?:formula|equation|expression|relationship)\b/i.test(front);
+  const explicit=/^(?:what is|what's|write|state|give|show|which|express|provide|recall)\b.{0,135}\b(?:formula|equation|expression|relationship)\b/i.test(front);
+  return (direct||explicit)&&
    !/\b(?:route from|route to|if the formula is forgotten|checking a formula)\b/i.test(front);
  }
  // These Physics relationships do not appear as stated in the AQA 7408
