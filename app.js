@@ -6373,22 +6373,6 @@ async function sync(manual=false){
   }else continue;
   knownFlashIds.add(c.id);cards.push(c);
  }
- // Separate AS 7407/2 method practice: not a school-mock or full-paper source.
- // Do not renumber historic supplement banks or mutate any existing card.
- try{
-  const response=await fetch(AS_PAPER2_SKILLS_URL+'?v='+Date.now(),{cache:'no-store'});
-  if(response.ok){
-   const paper2=await response.json();
-   const seenPaper2=new Set(cards.map(c=>c.id));
-   for(const c of paper2.cards||[]){
-    if(!c||!/^as_paper2_v430_\d{3}$/.test(String(c.id))||seenPaper2.has(c.id)||
-       c.subject!=='Physics'||c.stage!=='AS'||c.paper2!==true||
-       !['A','B','C'].includes(c.paper2Section)||c.active!==true||
-       c.mock!==false||c.scope!=='paper2'||!c.front||!c.back)continue;
-    seenPaper2.add(c.id);cards.push(c);
-   }
-  }
- }catch(error){console.warn('Optional Paper 2 method cards unavailable',error)}
  const added=[...(x.questions||[]),...extraBanks.flatMap(bank=>bank.questions||[])],seen=new Set();
  examQuestions=[...(e.questions||[]),...added].filter(q=>{
   if(seen.has(q.id))return false;seen.add(q.id);return true;
@@ -6435,6 +6419,22 @@ async function sync(manual=false){
   q.manualWorkingReview=true;
   q.v412SupplementManualRequired=true;
  }
+ // Separate AS 7407/2 method practice: not a school-mock or full-paper source.
+ // Do not renumber historic supplement banks or mutate any existing card.
+ try{
+  const response=await fetch(AS_PAPER2_SKILLS_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(response.ok){
+   const paper2=await response.json();
+   const seenPaper2=new Set(cards.map(c=>c.id));
+   for(const c of paper2.cards||[]){
+    if(!c||!/^as_paper2_v430_\d{3}$/.test(String(c.id))||seenPaper2.has(c.id)||
+       c.subject!=='Physics'||c.stage!=='AS'||c.paper2!==true||
+       !['A','B','C'].includes(c.paper2Section)||c.active!==true||
+       c.mock!==false||c.scope!=='paper2'||!c.front||!c.back)continue;
+    seenPaper2.add(c.id);cards.push(c);
+   }
+  }
+ }catch(error){console.warn('Optional Paper 2 method cards unavailable',error)}
  deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}
