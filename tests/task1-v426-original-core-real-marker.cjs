@@ -98,6 +98,11 @@ for(const c of cards){
 assert.equal(Object.values(summary.bySubject).reduce((n,s)=>n+s.candidateCards,0),2369);
 assert.equal(summary.counts.blankCredited,0,'Raw core blank answer got full marks');
 assert.equal(summary.counts.idkCredited,0,'Raw core nonanswer got full marks');
+assert.equal(summary.counts.fullModelDenialCredited,0,'Exact quoted source answer denied yet marked correct');
+assert.equal(summary.counts.explicitRejectCredited,0,'Curated rejected response earned full credit');
+assert.equal(summary.counts.questionEchoCredited,0,'Repeating the question earned full credit');
+assert.equal(summary.counts.modelCorrect,2369,'Raw correct model no longer accepted');
+assert.equal(summary.counts.acceptedCorrect,summary.counts.acceptedAttempted,'Valid sourced alternative was rejected');
 assert.equal(json('exam_questions.json').questions.length,1268);
 for(const k of ["PROGRESS_KEY='revisionLoopProgress5'",
  "PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(k));
