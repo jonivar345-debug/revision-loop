@@ -1,0 +1,58 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const deck=JSON.parse(fs.readFileSync('physics_as_paper2_guided_v430.json','utf8'));
+const app=fs.readFileSync('app.js','utf8');
+const html=fs.readFileSync('index.html','utf8');
+const css=fs.readFileSync('styles.css','utf8');
+const sw=fs.readFileSync('sw.js','utf8');
+assert.equal(deck.version,'v430');
+assert.equal(deck.cards.length,132);
+const tally={A:0,B:0,C:0},ids=new Set(),fronts=new Set();
+for(const c of deck.cards){
+ assert(/^as_p2_v430_\d{3}$/.test(c.id),'stable ID '+c.id);
+ assert(!ids.has(c.id),'duplicate id');ids.add(c.id);
+ assert(!fronts.has(c.front),'duplicated question pattern');fronts.add(c.front);
+ assert.equal(c.subject,'Physics');assert.equal(c.stage,'AS');
+ assert.equal(c.mock,false,'Do not flood existing school mock');
+ assert.equal(c.taught,true);assert.equal(c.active,true);
+ assert(['A','B','C'].includes(c.paper2Section));tally[c.paper2Section]++;
+ assert(c.revisionTopic.startsWith('Section '),'pack must be its own topic');
+ assert(c.front.length<=175&&c.back.length<=165,'single recall skill, not an essay');
+ assert(c.paper2Hint.length>=15&&c.paper2Trap.length>=15,'hint + trap on '+c.id);
+ assert(c.paper2Hint.length<=145&&c.paper2Trap.length<=145,'hint or trap too long');
+ if(c.paper2Section==='C'){
+  assert.equal(c.paper2Choices.length,4,'A-D required for '+c.id);
+  assert.equal(c.paper2Choices[0],c.back,'correct answer is canonical');
+  assert.equal(new Set(c.paper2Choices.map(x=>x.toLowerCase().replace(/[\s.,!]/g,''))).size,4);
+ }else assert(!c.paper2Choices,'free-text coaching in A and B');
+}
+assert.deepEqual(tally,{A:39,B:30,C:63});
+assert.equal(deck.sources.length,10);
+assert(app.includes("const AS_P2_COACH_URL='./physics_as_paper2_guided_v430.json'"));
+assert(app.includes("const res=await fetch(AS_P2_COACH_URL"));
+assert(app.includes("c.mock=false;c.scope='full'"));
+assert(app.includes("function startPaper2CoachSession()"));
+assert(app.includes("weightedPick(pool,n,c=>1+weakness(c)/5"));
+assert(app.includes("paper2Section==='C'&&Array.isArray(c.paper2Choices)"));
+assert(app.includes("p2Options.map((option,i)=>"));
+assert(app.includes("String.fromCharCode(65+i)"));
+assert(app.includes("Show first-step hint"));
+assert(app.includes("paper2Card")||app.includes("paper2-card-explain"));
+for(const id of ['paper2Coach','paper2CoachTitle','paper2Section','paper2SessionCount','paper2CoachSummary','startPaper2Coach']){
+ assert(html.includes('id="'+id+'"'),id+' missing');
+}
+assert(html.includes('app.js?v=430'));
+assert(css.includes('.paper2-coach-grid'));
+assert(css.includes('.paper2-mcq-option.selected'));
+assert(sw.includes('physics_as_paper2_guided_v430.json'));
+assert(sw.includes('v430-AS-paper2-guided'));
+assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
+assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
+assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"));
+const source=app.slice(app.indexOf("function evaluateCard(c,input){"),app.indexOf("function evidenceRuleScore(",app.indexOf("function evaluateCard(c,input){")));
+assert(source.includes("paper2Choices.length===4")&&source.includes("status:'wrong'"));
+new Function(app);
+const examples=[0,38,39,68,69,85,131].map(i=>deck.cards[i]);
+assert(examples.every(c=>c.paper2Hint&&c.paper2Trap));
+console.log('PASS v430: 132 original compact AS Physics Paper 2 cards; A39/B30/C63 (63 four-option MCQs); independent session, support, offline asset, unchanged XP/progress keys.');
