@@ -15,8 +15,10 @@
  const DEFINITION=Object.freeze({kind:'definition',label:'Key definition'});
  const EQUATION=Object.freeze({kind:'equation',label:'Equation to memorise'});
  function isDefinitionPrompt(front){
-  if(/^(?:define|give (?:a |the )?definition of|state (?:the )?definition of|what (?:is|are) meant by|what (?:does|do) .{2,85} mean\b)/i.test(front))return true;
+  if(/^(?:define|give (?:a |the )?definition of|state (?:the )?(?:complete )?definition of|what (?:is|are) meant by|what (?:does|do) .{2,85} mean\b)/i.test(front))return true;
   if(/^state (?:newton'?s |hess'?s |le chatelier'?s |the )?.{0,65}\b(?:law|principle|postulate)\b/i.test(front))return true;
+  if(/^what is the meaning of (?:the )?(?:decay constant|mass defect|back emf)\b/i.test(front))return true;
+  if(/^state the first.principles definition of f[′']\(x\)/i.test(front))return true;
   // "What is a lepton?" is a definition; "What is the gradient of..." is not.
   if(/^what (?:is|are) an? [^?]{2,80}\?$/i.test(front)
     && !/\b(?:if|when|where|given|after|before|with|from|on a graph)\b/i.test(front))return true;
@@ -26,7 +28,11 @@
   return /[=∝⇌→]|(?:^|\s)(?:d\/dx|dy\/dx|∫|log|ln)\b|(?:e\^|x\^|eˣ|xⁿ|√|π|\b(?:sin|cos|tan)\b|\bproportional to\b)/i.test(back);
  }
  function equationPrompt(front){
-  return /\b(?:formula|equation|expression|relationship|equation for|written mathematically)\b/i.test(front);
+  // Asking about a method *using* an equation does not make that answer a
+  // memorised equation. Keep 'What is the route to an empirical formula?'
+  // and 'If 2 mol react per equation...' in ordinary practice.
+  return /^(?:what is|what's|write|state|give|show|which|express|provide|recall)\b.{0,135}\b(?:formula|equation|expression|relationship)\b/i.test(front)&&
+   !/\b(?:route from|route to|if the formula is forgotten|checking a formula)\b/i.test(front);
  }
  // These Physics relationships do not appear as stated in the AQA 7408
  // booklet. In contrast F=ma, P=VI, v=fλ, SUVAT, pV=nRT,
@@ -35,8 +41,8 @@
  // AQA Mathematics MFB8 prints arithmetic/geometric sums, binomial
  // series, addition formulae, and selected Year-13 derivatives/rules.
  // Do not label those as missing, even when they're important to use.
- const MATHS_MISSING=/\b(?:quadratic formula|sine rule|cosine rule|(?:area of (?:a )?triangle|triangle area) (?:formula|using sine)|circle (?:equation|formula)|equation of (?:a |the )?circle|(?:midpoint|gradient|slope) (?:formula|of (?:a )?(?:straight )?line)|point[- ]slope (?:equation|formula)|(?:the )?(?:power|index) (?:rule for|rule of) (?:differentiation|integration)|(?:differentiat(?:e|ion)|derivative|integrat(?:e|ion)|integral) (?:of )?(?:a?x\^?[n0-9]|xⁿ|e\^|eˣ|ln ?x|sin ?x|cos ?x)|(?:trigonometric|pythagorean) identit(?:y|ies))\b/i;
- const MATHS_PRINTED=/\b(?:arithmetic (?:series|sum)|geometric (?:series|sum)|binomial (?:series|expansion)|small.angle|(?:sin|cos|tan)\s*\(\s*[a-z]\s*[+−-]|(?:derivative|differentiat(?:e|ion)) of (?:tan|sec|cosec|cot)|quotient rule|first principles|integration by parts|newton.raphson|trapezium rule)\b/i;
+ const MATHS_MISSING=/\b(?:quadratic formula|sine rule|cosine rule|(?:area of (?:a )?triangle|triangle area) (?:formula|using sine)|circle (?:equation|formula)|equation of (?:a |the )?circle|(?:midpoint|gradient|slope) (?:formula|of (?:a )?(?:straight )?line)|point[- ]slope (?:equation|formula)|vector equation of (?:a |the )?line|(?:area )?formula using two sides|(?:the )?(?:power|index) (?:rule for|rule of) (?:differentiation|integration)|(?:differentiat(?:e|ion)|derivative|integrat(?:e|ion)|integral) (?:of )?(?:a?x\^?[n0-9]|xⁿ|e\^|eˣ|ln ?x|sin ?x|cos ?x)|(?:trigonometric|pythagorean) identit(?:y|ies))\b/i;
+ const MATHS_PRINTED=/\b(?:arithmetic (?:series|sum)|geometric (?:series|sum)|binomial (?:series|expansion)|small.angle|(?:sin|cos|tan)\s*\(\s*[a-z]\s*[+−-]|(?:derivative|differentiat(?:e|ion)) of (?:tan|sec|cosec|cot)|quotient rule|integration by parts|newton.raphson|trapezium rule)\b/i;
  function classify(card){
   if(!card||card.active===false||!subjects.has(card.subject))return null;
   const front=String(card.front||'').trim(),back=String(card.back||'').trim();
@@ -60,7 +66,8 @@
   // Memorised standard derivatives/integrals are required by AQA Appendix B
   // but are not printed in MFB8. Example: derivative of e^(kx).
   const baseCalculus=/^(?:what is|state|give) (?:the )?(?:derivative|integral|differentiation rule|integration rule) (?:of|for) .{0,50}(?:e\^|eˣ|x\^|xⁿ|\bsin\b|\bcos\b|\bln\b)/i.test(front);
-  return MATHS_MISSING.test(front)||baseCalculus?EQUATION:null;
+  const firstPrinciples=/\bfirst.principles definition of f[′']\(x\)|\bfirst.principles formula\b/i.test(front);
+  return MATHS_MISSING.test(front)||baseCalculus||firstPrinciples?EQUATION:null;
  }
  function isMustKnow(card){return !!classify(card);}
  function group(cards,needsAttention){
