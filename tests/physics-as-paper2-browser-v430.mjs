@@ -59,6 +59,9 @@ try{
    assert.equal(chosen.sub,'Physics');
    assert.equal(chosen.size,count,section+' topic count');
    assert(chosen.only&&chosen.scope==='paper2');
+   assert.equal(await page.locator('[data-paper2-section="'+section+'"]').getAttribute('aria-pressed'),'true');
+   assert(await page.locator('.recall-priority-options').isHidden(),'Memorisation controls should hide during Paper 2 coaching');
+   assert.equal(await page.locator('#startFlashcards').textContent(),'Start Paper 2 guided flashcards');
   }
   await page.locator('[data-paper2-section="C"]').click();
   await page.locator('#startFlashcards').click();
