@@ -3170,6 +3170,8 @@ function ensureProfile(){
   profile.economyVersion=2;
  }
  settings.dailyNew=settings.dailyNew||18;settings.physicsUnits=settings.physicsUnits||{};
+  settings.recallMustKnowFirst=settings.recallMustKnowFirst!==false;
+  settings.recallMustKnowOnly=settings.recallMustKnowOnly===true;
 }
 function now(){return Date.now()}
 function dateKey(t=Date.now()){
@@ -3956,6 +3958,19 @@ function overrideFlashCorrect(){
  if(currentEvaluation?.status==='correct')return;currentEvaluation={status:'correct',score:1,text:'Marked correct by you.',missing:[]};awardFlashIfCorrect();const f=document.getElementById('feedback');f.className='feedback show correct';f.textContent='Marked correct by you. +1 point / +1 XP.';document.getElementById('overrideBtn').classList.remove('show')
 }
 
+function isRecallMustKnow(card){return window.RevisionFlashPriority?.isMustKnow(card)===true}
+function urgentRecallMustKnow(card){return !!card&&isRecallMustKnow(card)&&(isNew(card)||isDue(card)||memoryHealth(card)<.85)}
+function pickRecallCards(pool,n,scoreFn){
+ const count=Math.min(n,pool.length);
+ if(settings.recallMustKnowFirst===false)return weightedPick(pool,count,scoreFn);
+ // Unlearned, due or weak must-know cards appear before ordinary cards.
+ // Familiar key facts are rescheduled normally and do not starve other topics.
+ const first=pool.filter(urgentRecallMustKnow);
+ const selected=weightedPick(first,Math.min(count,first.length),scoreFn);
+ if(selected.length===count)return selected;
+ const chosen=new Set(selected.map(c=>c.id));
+ return selected.concat(weightedPick(pool.filter(c=>!chosen.has(c.id)),count-selected.length,scoreFn));
+}
 function weightedPick(items,n,weightFn){
  const pool=[...items],out=[];while(pool.length&&out.length<n){let total=0,ws=pool.map(x=>{const w=Math.max(.05,weightFn(x));total+=w;return w});let r=Math.random()*total,idx=0;for(;idx<ws.length;idx++){r-=ws[idx];if(r<=0)break}out.push(pool.splice(Math.min(idx,pool.length-1),1)[0])}return out;
 }
@@ -4003,7 +4018,7 @@ function startMockSession(){
  const items=[];
  if(mode!=='exam'){
    const want=mode==='flash'?count:Math.max(1,Math.ceil(count*.6));
-   const picked=weightedPick(cardPool,Math.min(want,cardPool.length),c=>1+weakness(c)/5+(isDue(c)?4:0)+(1-memoryHealth(c))*3);
+   const picked=pickRecallCards(cardPool,Math.min(want,cardPool.length),c=>1+weakness(c)/5+(isDue(c)?4:0)+(1-memoryHealth(c))*3);
    picked.forEach(c=>items.push({type:'card',id:c.id}));
  }
  if(mode!=='flash'){
@@ -4021,16 +4036,20 @@ function startMockSession(){
      }else blocks.push([item]);
    }
    blocks.sort(()=>Math.random()-.5);
+   if(settings.recallMustKnowFirst!==false)blocks.sort((a,b)=>{
+    const important=x=>x[0]?.type==='card'&&urgentRecallMustKnow(cards.find(c=>c.id===x[0].id));
+    return Number(important(b))-Number(important(a));
+   });
    items.splice(0,items.length,...blocks.flat());
  }
  activeSession={kind:'mock',items,index:0,title:sub+' mock revision'};currentCardId=null;renderAll();
 }
 function flashEligible(c){return flashScopeFilter==='mock'?mockEligibleCard(c):flashScopeFilter==='taught'?taughtCard(c):true}
-function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c))}
+function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c)&&(!settings.recallMustKnowOnly||isRecallMustKnow(c)))}
 function startFlashSession(){
- const count=Number(document.getElementById('flashCount').value),pool=selectedFlashCards();if(!pool.length){showToast('Pick at least one topic');return}
- const picked=weightedPick(pool,Math.min(count,pool.length),c=>1+weakness(c)/6+(isDue(c)?4:0)+(isNew(c)?1:0));
- activeSession={kind:'flash',items:picked.map(c=>({type:'card',id:c.id})),index:0,title:'Random flashcards'};currentCardId=null;renderAll();
+ const count=Number(document.getElementById('flashCount').value),pool=selectedFlashCards();if(!pool.length){showToast(settings.recallMustKnowOnly?'No must-memorise cards in those topics':'Pick at least one topic');return}
+ const picked=pickRecallCards(pool,Math.min(count,pool.length),c=>1+weakness(c)/6+(isDue(c)?4:0)+(isNew(c)?1:0));
+ activeSession={kind:'flash',items:picked.map(c=>({type:'card',id:c.id})),index:0,title:settings.recallMustKnowOnly?'Must memorise · key recall':'Random flashcards'};currentCardId=null;renderAll();
 }
 function examGroups(){
  const sub=document.getElementById('examSubject').value,level=document.getElementById('examLevel').value;
@@ -4070,7 +4089,8 @@ function challengeCards(sub,scope){let a=cards.filter(c=>c.active!==false&&(!sub
 function challengeQuestions(sub,scope){let q=examQuestions.filter(x=>x.standalone!==false&&(!sub||x.subject===sub));if(scope==='mock')q=q.filter(mockEligibleQuestion);return q}
 function makeChallenge(sub,scope){
  const key=dateKey()+'|'+(sub||'All')+'|'+scope;if(profile.dailyChallenges[key])return {key,...profile.dailyChallenges[key]};
- const cpool=challengeCards(sub,scope),weak=[...cpool].sort((a,b)=>weakness(b)-weakness(a)),items=[],used=new Set();
+ const cpool=challengeCards(sub,scope),weak=[...cpool].sort((a,b)=>
+  (settings.recallMustKnowFirst!==false?(Number(urgentRecallMustKnow(b))-Number(urgentRecallMustKnow(a))):0)||weakness(b)-weakness(a)),items=[],used=new Set();
  for(const c of weak){if(items.length>=3)break;const ct=c.courseTopic||c.topic;if(!used.has(ct)){items.push({type:'card',id:c.id});used.add(ct)}}
  const old=[...cpool].filter(c=>state(c.id).stage>=0&&!items.some(i=>i.id===c.id)).sort((a,b)=>(state(a.id).last||0)-(state(b.id).last||0));if(old[0])items.push({type:'card',id:old[0].id});
  const random=[...cpool].filter(c=>!items.some(i=>i.id===c.id)).sort(()=>Math.random()-.5);if(random[0])items.push({type:'card',id:random[0].id});
@@ -4583,7 +4603,14 @@ function refreshExamFilters(defaultIfEmpty=false){
  document.getElementById('examCoverage').textContent='Self-contained bank: '+base.length+' question parts (including separately labelled practice)'+(yearCounts?' · '+yearCounts:'')+'. Related subparts are grouped; missing-context questions are excluded. Coverage counts refer to app topic categories, not every individual specification requirement. Years with no indexed parts are visible but disabled; 2015 and earlier reform-era papers are in the separate legacy archive. Official past-paper coverage remains incomplete.';
 }
 function renderTopicCounts(){
- document.getElementById('flashTopicCount').textContent=flashTopics.size+' topics · '+selectedFlashCards().length+' eligible cards · '+(flashScopeFilter==='mock'?'mock only':flashScopeFilter==='taught'?'taught so far':'full A-level');
+ const chosen=selectedFlashCards();
+ document.getElementById('flashTopicCount').textContent=flashTopics.size+' topics · '+chosen.length+' eligible cards · '+(flashScopeFilter==='mock'?'mock only':flashScopeFilter==='taught'?'taught so far':'full A-level');
+ const all=subjectCards(document.getElementById('flashSubject').value).filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c));
+ const essentials=all.filter(isRecallMustKnow).length;
+ const info=document.getElementById('flashMustKnowCount');
+ if(info)info.textContent=essentials+' key-definition / missing-equation cards in selected topics'+(settings.recallMustKnowOnly?' · only these will be shown.':'. Other cards remain in normal sessions.');
+ for(const id of ['mockMustKnowFirst','flashMustKnowFirst']){const control=document.getElementById(id);if(control)control.checked=settings.recallMustKnowFirst!==false}
+ const only=document.getElementById('flashMustKnowOnly');if(only)only.checked=settings.recallMustKnowOnly===true;
  document.getElementById('examTopicCount').textContent=examTopics.size+' selected';
  document.getElementById('examYearCount').textContent=examYears.size+' selected';
  const count=examGroups().reduce((n,g)=>n+g.length,0);
@@ -4594,7 +4621,9 @@ function renderStudyType(){document.querySelectorAll('.study-type-btn').forEach(
 function renderSessionBanner(){const e=document.getElementById('sessionBanner');if(!activeSession||activeSession.done){e.classList.add('hidden');return}e.classList.remove('hidden');e.textContent=activeSession.title+' · '+Math.min(activeSession.index+1,activeSession.items.length)+' / '+activeSession.items.length}
 function renderCard(c){
  currentCardId=c.id;currentEvaluation=null;currentFlashAwarded=false;const s=state(c.id),health=Math.round(memoryHealth(c)*100),diag=c.visual?diagram(c.visual):'',backDiag=c.visualBack?diagram(c.visualBack):'';
- document.getElementById('studyHost').innerHTML='<article class="review-card"><div class="card-meta"><div class="meta-left"><span class="badge">'+esc(c.subject)+' · '+esc(c.courseTopic||c.topic)+'</span><span class="badge">'+esc(c.format==='cloze'?'fill in the gap':c.kind==='content'?'knowledge':c.kind)+'</span></div><span class="queue-pos">memory '+health+'%</span></div><div class="card-body">'+(diag?'<div class="diagram">'+diag+'</div>':'')+'<div class="question">'+esc(c.front)+'</div><textarea id="answerInput" class="answer-input" placeholder="Type your answer from memory…"></textarea><div class="answer-actions"><button id="checkCard" class="check-btn">Check answer</button><button id="revealCard" class="show-btn">Just reveal</button></div><div id="feedback" class="feedback"></div><div id="modelAnswer" class="model-answer"><b>Model answer:</b> '+esc(c.back)+(backDiag?'<div class="diagram diagram-answer">'+backDiag+'</div>':'')+'<div id="missingIdeas"></div></div><button id="overrideBtn" class="override-btn">My answer was actually correct</button><p class="flash-save-explainer">Correct checked answers earn +1 XP. Choose Again, Hard, Good or Easy to save your review, even if your answer was incorrect.</p><div id="ratings" class="ratings"><button class="rating again" data-rating="again">Again<small>~10 min</small></button><button class="rating hard" data-rating="hard">Hard<small>~1 day</small></button><button class="rating good" data-rating="good">Good<small>longer gap</small></button><button class="rating easy" data-rating="easy">Easy<small>much longer</small></button></div></div></article>';
+ const recallInfo=window.RevisionFlashPriority?.classify(c);
+ const recallBadge=recallInfo?'<span class="recall-priority-pill" title="High-priority knowledge for recall">'+esc(recallInfo.label)+'</span>':'';
+ document.getElementById('studyHost').innerHTML='<article class="review-card"><div class="card-meta"><div class="meta-left"><span class="badge">'+esc(c.subject)+' · '+esc(c.courseTopic||c.topic)+'</span><span class="badge">'+esc(c.format==='cloze'?'fill in the gap':c.kind==='content'?'knowledge':c.kind)+'</span></div>'+recallBadge+'<span class="queue-pos">memory '+health+'%</span></div><div class="card-body">'+(diag?'<div class="diagram">'+diag+'</div>':'')+'<div class="question">'+esc(c.front)+'</div><textarea id="answerInput" class="answer-input" placeholder="Type your answer from memory…"></textarea><div class="answer-actions"><button id="checkCard" class="check-btn">Check answer</button><button id="revealCard" class="show-btn">Just reveal</button></div><div id="feedback" class="feedback"></div><div id="modelAnswer" class="model-answer"><b>Model answer:</b> '+esc(c.back)+(backDiag?'<div class="diagram diagram-answer">'+backDiag+'</div>':'')+'<div id="missingIdeas"></div></div><button id="overrideBtn" class="override-btn">My answer was actually correct</button><p class="flash-save-explainer">Correct checked answers earn +1 XP. Choose Again, Hard, Good or Easy to save your review, even if your answer was incorrect.</p><div id="ratings" class="ratings"><button class="rating again" data-rating="again">Again<small>~10 min</small></button><button class="rating hard" data-rating="hard">Hard<small>~1 day</small></button><button class="rating good" data-rating="good">Good<small>longer gap</small></button><button class="rating easy" data-rating="easy">Easy<small>much longer</small></button></div></div></article>';
  const reveal=(check)=>{const input=document.getElementById('answerInput').value;currentEvaluation=check?evaluateCard(c,input):{status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};if(currentEvaluation.status==='correct')awardFlashIfCorrect();const f=document.getElementById('feedback');f.className='feedback show '+currentEvaluation.status;f.textContent=currentEvaluation.text+(currentEvaluation.status==='correct'?' +1 XP awarded. Choose a rating to record the review.':currentEvaluation.status==='partial'?' Review recorded when you choose a rating; no XP awarded for a partly correct answer.':' Choose a rating to save your review; no XP awarded for this check.');document.getElementById('modelAnswer').classList.add('show');if(currentEvaluation.missing?.length)document.getElementById('missingIdeas').innerHTML='<ul class="missing-list">'+currentEvaluation.missing.map(x=>'<li>Missing: '+esc(x)+'</li>').join('')+'</ul>';document.getElementById('ratings').classList.add('show');if(currentEvaluation.status!=='correct')document.getElementById('overrideBtn').classList.add('show')};
  document.getElementById('checkCard').onclick=()=>reveal(true);document.getElementById('revealCard').onclick=()=>reveal(false);document.getElementById('overrideBtn').onclick=overrideFlashCorrect;document.querySelectorAll('[data-rating]').forEach(b=>b.onclick=()=>rateCard(c,b.dataset.rating,document.getElementById('answerInput').value))
 }
@@ -6383,6 +6412,16 @@ if(localStorage.getItem('rl_auth')==='1'||sessionStorage.getItem('rl_auth')==='1
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>switchPanel(b.dataset.panel));
 document.querySelectorAll('.study-type-btn').forEach(b=>b.onclick=()=>{studyType=b.dataset.study;activeSession=null;renderAll()});
 document.getElementById('flashSubject').onchange=()=>{flashTopics.clear();refreshFlashTopics(true);renderAll()};
+ for(const id of ['flashMustKnowFirst','mockMustKnowFirst']){
+  document.getElementById(id).onchange=e=>{
+   settings.recallMustKnowFirst=e.target.checked;
+   save();renderTopicCounts();
+  };
+ }
+ document.getElementById('flashMustKnowOnly').onchange=e=>{
+  settings.recallMustKnowOnly=e.target.checked;
+  save();renderTopicCounts();
+ };
 document.querySelectorAll('[data-flash-preset]').forEach(b=>b.onclick=()=>applyFlashPreset(b.dataset.flashPreset));
 document.getElementById('startMock').onclick=startMockSession;
 document.getElementById('mockSubject').onchange=()=>{const hint=document.getElementById('mathsMockScopeNote');if(hint)hint.hidden=document.getElementById('mockSubject').value!=='Maths'};document.getElementById('startFlashcards').onclick=startFlashSession;
