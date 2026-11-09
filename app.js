@@ -6230,6 +6230,21 @@ async function sync(manual=false){
   if(!isV375ChemKpCatalystCard(c)||cards.some(old=>old.id===c.id))continue;
   cards.push(c);
  }
+ // Separate append-only AS Physics Paper 2 bank. Do not shift historic
+ // supplementary indices or mark this as part of the school mixed mock.
+ try{
+  const res=await fetch(AS_P2_COACH_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(res.ok){
+   const bank=await res.json();
+   for(const c of Array.isArray(bank.cards)?bank.cards:[]){
+    if(!c||!/^as_p2_v430_\d{3}$/.test(c.id||'')||c.subject!=='Physics'||
+       c.stage!=='AS'||!['A','B','C'].includes(c.paper2Section)||
+       typeof c.front!=='string'||typeof c.back!=='string'||!c.front.trim()||
+       !c.back.trim()||c.active!==true||cards.some(old=>old.id===c.id))continue;
+    c.mock=false;c.scope='full';cards.push(c);
+   }
+  }
+ }catch(error){console.warn('Optional Paper 2 training pack unavailable',error)}
  const knownFlashIds=new Set(cards.map(c=>c.id));
  for(const [index,bank] of extraFlashBanks.entries())for(const c of (bank.cards||[])){
   if(!c||typeof c.id!=='string'||knownFlashIds.has(c.id)||c.active===false)continue;
@@ -6410,21 +6425,6 @@ async function sync(manual=false){
   }else continue;
   knownFlashIds.add(c.id);cards.push(c);
  }
- // Separate append-only AS Physics Paper 2 bank. Do not shift historic
- // supplementary indices or mark this as part of the school mixed mock.
- try{
-  const res=await fetch(AS_P2_COACH_URL+'?v='+Date.now(),{cache:'no-store'});
-  if(res.ok){
-   const bank=await res.json();
-   for(const c of Array.isArray(bank.cards)?bank.cards:[]){
-    if(!c||!/^as_p2_v430_\d{3}$/.test(c.id||'')||c.subject!=='Physics'||
-       c.stage!=='AS'||!['A','B','C'].includes(c.paper2Section)||
-       typeof c.front!=='string'||typeof c.back!=='string'||!c.front.trim()||
-       !c.back.trim()||c.active!==true||knownFlashIds.has(c.id))continue;
-    c.mock=false;c.scope='full';knownFlashIds.add(c.id);cards.push(c);
-   }
-  }
- }catch(error){console.warn('Optional Paper 2 training pack unavailable',error)}
  const added=[...(x.questions||[]),...extraBanks.flatMap(bank=>bank.questions||[])],seen=new Set();
  examQuestions=[...(e.questions||[]),...added].filter(q=>{
   if(seen.has(q.id))return false;seen.add(q.id);return true;
