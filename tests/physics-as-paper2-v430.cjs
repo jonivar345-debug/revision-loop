@@ -68,4 +68,44 @@ assert(app.includes("const paper2Hint=c.paper2===true"));
 assert(app.includes("const paper2Support=c.paper2===true"));
 assert(app.includes('paper2.length')&&app.includes('state(c.id).stage>=0'),'Saved reviews count toward progress');
 assert(!app.includes('revisionLoopProgress6'),'Existing saved progress storage key must remain unchanged.');
+
+// Execute the site's actual flashcard checker, not a test-only approximation.
+// These source-level probes prevent confusing independent/dependent, distance/
+// displacement, opposite changes and incorrect numerical answers.
+const markerStart=app.indexOf('function normalise(');
+const markerEnd=app.indexOf('function importantTokens(',markerStart);
+assert(markerStart>=0&&markerEnd>markerStart,'Real app marker source not found');
+const evaluateCard=new Function('window',app.slice(markerStart,markerEnd)+
+ '\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
+let acceptedChecks=0,rejectedChecks=0;
+for(const c of cards){
+ assert.equal(evaluateCard(c,c.back).status,'correct','Model answer rejected: '+c.id);
+ acceptedChecks++;
+ for(const accepted of c.accept||[]){
+  assert.equal(evaluateCard(c,accepted).status,'correct','Acceptable equivalent rejected: '+c.id+' / '+accepted);
+  acceptedChecks++;
+ }
+ for(const rejected of c.reject||[]){
+  assert.equal(evaluateCard(c,rejected).status,'wrong','Wrong answer incorrectly credited: '+c.id+' / '+rejected);
+  rejectedChecks++;
+ }
+ assert.notEqual(evaluateCard(c,'completely unrelated impossible answer').status,'correct','Unrelated answer credited: '+c.id);
+}
+for(const [id,wrong] of [
+ ['001','dependent variable'],
+ ['002','independent variable'],
+ ['053','wavelength increases'],
+ ['069','intensity'],
+ ['095','8 m'],
+ ['096','4 m'],
+ ['101','frequency halves'],
+ ['106','positive'],
+ ['107','doubles']
+]){
+ const c=cards.find(x=>x.id.endsWith('_'+id));
+ assert.equal(evaluateCard(c,wrong).status,'wrong','Wrong Paper 2 misconception passed: '+id);
+}
+assert(acceptedChecks>=230,'Insufficient valid model and paraphrase tests');
+assert(rejectedChecks>=55,'Insufficient substantive wrong-answer test coverage.');
+
 console.log('PASS v430 '+cards.length+' original AS Physics 7407/2 guided cards: A='+counts.A+', B='+counts.B+', C='+counts.C+'; unique short prompts, safe mock boundary, browser UI hooks, offline assets and saved ID protections.');
