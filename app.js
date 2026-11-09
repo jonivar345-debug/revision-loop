@@ -3959,7 +3959,7 @@ function overrideFlashCorrect(){
  if(currentEvaluation?.status==='correct')return;currentEvaluation={status:'correct',score:1,text:'Marked correct by you.',missing:[]};awardFlashIfCorrect();const f=document.getElementById('feedback');f.className='feedback show correct';f.textContent='Marked correct by you. +1 point / +1 XP.';document.getElementById('overrideBtn').classList.remove('show')
 }
 
-function isRecallMustKnow(card){return window.RevisionFlashPriority?.isMustKnow(card)===true}
+function isRecallMustKnow(card){return !!card&&card.paper2!==true&&window.RevisionFlashPriority?.isMustKnow(card)===true}
 function urgentRecallMustKnow(card){return !!card&&isRecallMustKnow(card)&&(isNew(card)||isDue(card)||memoryHealth(card)<.85)}
 function pickRecallCards(pool,n,scoreFn){
  const count=Math.min(n,pool.length);
@@ -4643,7 +4643,7 @@ function renderStudyType(){document.querySelectorAll('.study-type-btn').forEach(
 function renderSessionBanner(){const e=document.getElementById('sessionBanner');if(!activeSession||activeSession.done){e.classList.add('hidden');return}e.classList.remove('hidden');e.textContent=activeSession.title+' · '+Math.min(activeSession.index+1,activeSession.items.length)+' / '+activeSession.items.length}
 function renderCard(c){
  currentCardId=c.id;currentEvaluation=null;currentFlashAwarded=false;const s=state(c.id),health=Math.round(memoryHealth(c)*100),diag=c.visual?diagram(c.visual):'',backDiag=c.visualBack?diagram(c.visualBack):'';
- const recallInfo=window.RevisionFlashPriority?.classify(c);
+ const recallInfo=c.paper2===true?null:window.RevisionFlashPriority?.classify(c);
  const recallBadge=recallInfo?'<span class="recall-priority-pill" title="High-priority knowledge for recall">'+esc(recallInfo.label)+'</span>':'';
  const paper2Label=c.paper2===true?'<span class="recall-priority-pill">Paper 2 · Section '+esc(c.paper2Section)+'</span>':'';
  const paper2Hint=c.paper2===true?'<details class="paper2-hint"><summary>Need a starting hint?</summary><p>'+esc(c.paper2Hint)+'</p></details>':'';
@@ -6193,22 +6193,6 @@ async function sync(manual=false){
   if(!isV375ChemKpCatalystCard(c)||cards.some(old=>old.id===c.id))continue;
   cards.push(c);
  }
- // Separate AS 7407/2 method practice: not a school-mock or full-paper source.
- // Do not renumber historic supplement banks or mutate any existing card.
- try{
-  const response=await fetch(AS_PAPER2_SKILLS_URL+'?v='+Date.now(),{cache:'no-store'});
-  if(response.ok){
-   const paper2=await response.json();
-   const seenPaper2=new Set(cards.map(c=>c.id));
-   for(const c of paper2.cards||[]){
-    if(!c||!/^as_paper2_v430_\d{3}$/.test(String(c.id))||seenPaper2.has(c.id)||
-       c.subject!=='Physics'||c.stage!=='AS'||c.paper2!==true||
-       !['A','B','C'].includes(c.paper2Section)||c.active!==true||
-       c.mock!==false||c.scope!=='paper2'||!c.front||!c.back)continue;
-    seenPaper2.add(c.id);cards.push(c);
-   }
-  }
- }catch(error){console.warn('Optional Paper 2 method cards unavailable',error)}
  const knownFlashIds=new Set(cards.map(c=>c.id));
  for(const [index,bank] of extraFlashBanks.entries())for(const c of (bank.cards||[])){
   if(!c||typeof c.id!=='string'||knownFlashIds.has(c.id)||c.active===false)continue;
@@ -6389,6 +6373,22 @@ async function sync(manual=false){
   }else continue;
   knownFlashIds.add(c.id);cards.push(c);
  }
+ // Separate AS 7407/2 method practice: not a school-mock or full-paper source.
+ // Do not renumber historic supplement banks or mutate any existing card.
+ try{
+  const response=await fetch(AS_PAPER2_SKILLS_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(response.ok){
+   const paper2=await response.json();
+   const seenPaper2=new Set(cards.map(c=>c.id));
+   for(const c of paper2.cards||[]){
+    if(!c||!/^as_paper2_v430_\d{3}$/.test(String(c.id))||seenPaper2.has(c.id)||
+       c.subject!=='Physics'||c.stage!=='AS'||c.paper2!==true||
+       !['A','B','C'].includes(c.paper2Section)||c.active!==true||
+       c.mock!==false||c.scope!=='paper2'||!c.front||!c.back)continue;
+    seenPaper2.add(c.id);cards.push(c);
+   }
+  }
+ }catch(error){console.warn('Optional Paper 2 method cards unavailable',error)}
  const added=[...(x.questions||[]),...extraBanks.flatMap(bank=>bank.questions||[])],seen=new Set();
  examQuestions=[...(e.questions||[]),...added].filter(q=>{
   if(seen.has(q.id))return false;seen.add(q.id);return true;
