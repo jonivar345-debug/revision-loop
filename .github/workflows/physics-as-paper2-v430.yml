@@ -10,6 +10,8 @@ on:
       - 'physics_as_paper2_*_v430.json'
       - 'tests/physics-as-paper2-v430.cjs'
       - 'tests/physics-as-paper2-browser-v430.mjs'
+      - 'tests/universal-study-actions-v431.cjs'
+      - 'tests/universal-study-actions-browser-v431.mjs'
       - '.github/workflows/physics-as-paper2-v430.yml'
   workflow_dispatch:
 permissions:
@@ -28,6 +30,9 @@ jobs:
           node --check app.js
           node --check tests/physics-as-paper2-v430.cjs
           node --check tests/physics-as-paper2-browser-v430.mjs
+          node --check tests/universal-study-actions-v431.cjs
+          node --check tests/universal-study-actions-browser-v431.mjs
+          node tests/universal-study-actions-v431.cjs
           node tests/physics-as-paper2-v430.cjs
       - name: Existing marker, saved-history and mobile-cloud safeguards
         run: |
@@ -40,4 +45,6 @@ jobs:
           npm install --no-save --no-package-lock playwright@1.64.1
           npx playwright install --with-deps chromium
       - name: Test separate A/B/C topic, MCQ correct/wrong and saved progress on 360/390px
-        run: node tests/physics-as-paper2-browser-v430.mjs
+        run: |
+          node tests/physics-as-paper2-browser-v430.mjs
+          node tests/universal-study-actions-browser-v431.mjs
