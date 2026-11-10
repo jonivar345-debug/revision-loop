@@ -106,7 +106,7 @@ try{
   assert(dim.s<=dim.w+3,'No horizontal overflow '+width+'px');
   const bad=errors.filter(e=>!/firebase/i.test(e));
   assert.deepEqual(bad,[]);
-  console.log('PASS v433 '+width+'px: 104+ Chemistry tests prioritised, eleven extra cards, no A2 mock leak, correct-mark/skip integrity, saved history and responsive UI.');
+  console.log('PASS v433 '+width+'px: 113+ Chemistry tests prioritised, eleven extra cards, no A2 mock leak, correct-mark/skip integrity, saved history and responsive UI.');
   await ctx.close();
  }
 }finally{
