@@ -486,7 +486,7 @@ async function clearSharedDevice(){
   try{
     await signOut(auth);
     for(const key of core.KEYS)localStorage.removeItem(key);
-    for(const key of [BOUND_KEY,CHECKPOINT_KEY,MANUAL_RESTORE_KEY])localStorage.removeItem(key);
+    for(const key of [BOUND_KEY,CHECKPOINT_KEY,MANUAL_RESTORE_KEY,'rl_auth'])localStorage.removeItem(key);
     user=null;latestRemote=null;
     window.location.reload();
   }catch(error){
