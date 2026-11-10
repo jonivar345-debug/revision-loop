@@ -16,8 +16,9 @@ const {newPrivateKey,cleanPrivateKey,privateCredentials}=sandbox.helpers;
   const key=newPrivateKey();
   assert.equal(key.length,8);
   assert.equal(cleanPrivateKey(key),key);
+  assert.equal(cleanPrivateKey('AAAAAAAA'),'AAAAAAAA','format checks cannot prove randomness; create keys with the built-in generator');
   assert.equal(cleanPrivateKey('  '+key.slice(0,4)+'-'+key.slice(4)+' '),key);
-  for(const invalid of ['0481','048154','123456','a'.repeat(8),'']){
+  for(const invalid of ['0481','048154','123456','00000000','OOOOOOOO','']){
     assert.throws(()=>cleanPrivateKey(invalid),'weak/invalid keys must be rejected');
   }
   const legacy='ABCDEFGHJKLMNPQRSTUVWXYZ';
