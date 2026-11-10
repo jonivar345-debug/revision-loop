@@ -7,6 +7,7 @@ on:
       - 'index.html'
       - 'tests/private-key-auth-v436.cjs'
       - 'tests/cloud-seamless-v435.cjs'
+      - 'tests/private-key-enrolment-v436.cjs'
       - '.github/workflows/cross-device-private-v436.yml'
   workflow_dispatch:
 permissions:
@@ -26,7 +27,9 @@ jobs:
           node --check cloud-sync-core.js
           node --check tests/private-key-auth-v436.cjs
           node --check tests/cloud-seamless-v435.cjs
+          node --check tests/private-key-enrolment-v436.cjs
       - name: Check safe portable login and no-surprise restore
         run: |
           node tests/private-key-auth-v436.cjs
           node tests/cloud-seamless-v435.cjs
+          node tests/private-key-enrolment-v436.cjs
