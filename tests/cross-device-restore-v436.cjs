@@ -22,7 +22,7 @@ async function scenario(type){
   const cp=type==='remote-ahead'?{uid:'my-user',revision:1,fingerprint:JSON.stringify(local.values)}:null;
   const storage={
     getItem:key=>key==='bound'?type==='different-account'?'another-user':null:
-      key==='manual'?type==='manual-review'?'1':null
+      key==='manual'?(type==='manual-review'?'1':null):null
   };
   const context={
     core,user:{uid:'my-user'},working:false,active:false,queuedServerCheck:false,
