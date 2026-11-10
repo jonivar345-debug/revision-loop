@@ -25,7 +25,7 @@ const {newPrivateKey,cleanPrivateKey,privateCredentials}=sandbox.helpers;
   const legacy='ABCDEFGHJKLMNPQRSTUVWXYZ';
   assert.equal(cleanPrivateKey(legacy),legacy,'previous longer keys must remain usable');
   const credentials=await privateCredentials(key);
-  assert.match(credentials.email,/^rl-[a-f0-9]{48}@revision-loop\.invalid$/);
+  assert.match(credentials.email,/^rl-[a-f0-9]{48}@example\.com$/);
   assert.ok(credentials.email.split('@')[0].length<=64,'Firebase pseudonymous email local part must fit the standard limit');
   assert.match(credentials.password,/^rl-private-v436:[A-Z2-9]{8}$/);
   assert.deepEqual(await privateCredentials(key),credentials,'same key must find same account on another computer');
