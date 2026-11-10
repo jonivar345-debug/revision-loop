@@ -9,14 +9,14 @@ const end=source.indexOf('async function connect(){',begin);
 assert.ok(begin>=0&&end>begin,'find actual account creation function');
 const fn=source.slice(begin,end);
 async function scenario(mode){
-  const events=[],input={value:'ABCDEFGH'},snapshot={
+  const events=[],input={value:'ABCDEFGHJKLMNPQR'},snapshot={
     app:'revision-loop',schemaVersion:1,values:{
       revisionLoopProgress5:'{}',revisionLoopProfile11:'{}',revisionLoopSettings11:'{}'
     }
   };
   const context={
     migrationInProgress:false,authActionInProgress:false,working:false,user:null,active:true,
-    generatedPrivateKey:mode==='chosen-key'?'WXYZ2345':'ABCDEFGH',
+    generatedPrivateKey:mode==='chosen-key'?'WXYZ2345':'ABCDEFGHJKLMNPQR',
     cleanPrivateKey:key=>key,
     window:{confirm:()=>mode!=='cancel'},el:id=>id==='cloudPrivateKey'?input:null,
     privateCredentials:async()=>({email:'test@example.com',password:'test'}),
