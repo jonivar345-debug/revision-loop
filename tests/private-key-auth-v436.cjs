@@ -27,6 +27,7 @@ const {newPrivateKey,cleanPrivateKey,privateCredentials}=sandbox.helpers;
   assert.match(credentials.email,/^rl-[a-f0-9]{64}@revision-loop\.invalid$/);
   assert.match(credentials.password,/^rl-private-v436:[A-Z2-9]{8}$/);
   assert.deepEqual(await privateCredentials(key),credentials,'same key must find same account on another computer');
+  assert.match(cloud,/setPersistence\(auth,browserSessionPersistence\)/,'private-key sessions must not persist indefinitely on public computers');
   assert.match(cloud,/createUserWithEmailAndPassword\(auth,credentials\.email,credentials\.password\)/);
   assert.match(cloud,/signInWithEmailAndPassword\(auth,credentials\.email,credentials\.password\)/);
   assert.match(cloud,/tx\.set\(ref,\{payload,revision:1,updatedAt:serverTimestamp\(\)\}\)/);
