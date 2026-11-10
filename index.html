@@ -41,6 +41,11 @@
       <button id="lockBtn" class="icon-btn" aria-label="Lock app" title="Lock">⌁</button>
     </div>
   </header>
+  <section class="sync-quick-access" aria-label="Cross-device progress" style="margin:10px 0;padding:12px;border:1px solid #64748b;border-radius:12px">
+    <strong>Keep your progress on every computer</strong>
+    <p id="cloudQuickStatus" role="status" aria-live="polite">Enter 0481 to use the site. Link Google once on each computer to load and save the same XP, flashcards and exam marks automatically.</p>
+    <button type="button" id="cloudQuickSignIn" class="mini-btn">Connect progress with Google</button>
+  </section>
   <div class="top-layout-switch"><div class="layout-switch" role="group" aria-label="Choose display layout">
         <span>Layout</span>
         <button type="button" data-layout-choice="auto" aria-pressed="true">Auto</button>
@@ -235,7 +240,7 @@
       </section>
       <section class="progress-card" aria-labelledby="cloudSyncHeading">
         <h3 id="cloudSyncHeading">Automatic private cloud backup</h3>
-        <p>Sign in with Google to back up your XP, points, unlocks, exam results, revision history and settings. Your existing four-digit website PIN remains unchanged. Local saving continues without internet or Google sign-in.</p>
+        <p>Link your Google account once on each computer. On a fresh computer, saved XP, points, unlocks, exam results, revision history and settings are restored automatically. Existing work on another computer is never silently replaced. Your four-digit website PIN remains unchanged; offline local saving still works.</p>
         <p id="cloudAccountLabel">Not signed in. Browser saving remains available.</p>
         <div class="preset-row">
           <button type="button" class="mini-btn" id="cloudGoogleSignIn">Sign in with Google</button>
@@ -325,8 +330,8 @@
 <script src="world-location-photo-gallery.js?v=117" defer></script>
 <script src="world-city-offline-guides.js?v=103" defer></script>
 <script src="progress-backup.js?v=120" defer></script>
-<script src="cloud-sync-core.js?v=119" defer></script>
-<script type="module" src="cloud-sync.js?v=428"></script>
+<script src="cloud-sync-core.js?v=435" defer></script>
+<script type="module" src="cloud-sync.js?v=435"></script>
 <script src="flashcard-priority-v429.js?v=429&chem=v433" defer></script>
 <script src="photoelectric-flashcard-marking.js?v=121" defer></script>
 <script src="exam-sketch-v173.js?v=428" defer></script>
