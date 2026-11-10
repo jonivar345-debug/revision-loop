@@ -15,9 +15,9 @@ vm.runInNewContext(cloud.slice(begin,end)+'\nthis.helpers={newPrivateKey,cleanPr
 const {newPrivateKey,cleanPrivateKey,privateCredentials}=sandbox.helpers;
 (async()=>{
   const key=newPrivateKey();
-  assert.equal(key.length,8);
+  assert.equal(key.length,16);
   assert.equal(cleanPrivateKey(key),key);
-  assert.equal(cleanPrivateKey('AAAAAAAA'),'AAAAAAAA','format checks cannot prove randomness; create keys with the built-in generator');
+  assert.equal(cleanPrivateKey('AAAAAAAA'),'AAAAAAAA','existing 8-character keys must remain usable for sign-in');
   assert.equal(cleanPrivateKey('  '+key.slice(0,4)+'-'+key.slice(4)+' '),key);
   for(const invalid of ['0481','048154','123456','00000000','OOOOOOOO','']){
     assert.throws(()=>cleanPrivateKey(invalid),'weak/invalid keys must be rejected');
@@ -27,7 +27,7 @@ const {newPrivateKey,cleanPrivateKey,privateCredentials}=sandbox.helpers;
   const credentials=await privateCredentials(key);
   assert.match(credentials.email,/^rl-[a-f0-9]{48}@example\.com$/);
   assert.ok(credentials.email.split('@')[0].length<=64,'Firebase pseudonymous email local part must fit the standard limit');
-  assert.match(credentials.password,/^rl-private-v436:[A-Z2-9]{8}$/);
+  assert.match(credentials.password,/^rl-private-v436:[A-Z2-9]{16}$/);
   assert.deepEqual(await privateCredentials(key),credentials,'same key must find same account on another computer');
   assert.match(cloud,/setPersistence\(auth,browserSessionPersistence\)/,'private-key sessions must not persist indefinitely on public computers');
   assert.match(cloud,/visible\('cloudPrivateSignIn',!user\)/,'connected accounts must not invite a second key login');
