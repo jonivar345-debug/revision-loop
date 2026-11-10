@@ -9,6 +9,8 @@ on:
       - 'sw.js'
       - 'tests/physics-paper2-coach-v430.cjs'
       - 'tests/physics-paper2-coach-browser-v430.mjs'
+      - 'tests/universal-study-actions-v432.cjs'
+      - 'tests/universal-study-actions-browser-v432.mjs'
       - '.github/workflows/physics-paper2-coach-v430.yml'
   workflow_dispatch:
 permissions:
@@ -27,6 +29,9 @@ jobs:
           node --check app.js
           node --check tests/physics-paper2-coach-v430.cjs
           node --check tests/physics-paper2-coach-browser-v430.mjs
+          node --check tests/universal-study-actions-v432.cjs
+          node --check tests/universal-study-actions-browser-v432.mjs
+          node tests/universal-study-actions-v432.cjs
           node tests/physics-paper2-coach-v430.cjs
       - name: Existing priority, saved progress and marking checks
         run: |
@@ -41,4 +46,6 @@ jobs:
           npm install --no-save --no-package-lock playwright@1.64.1
           npx playwright install --with-deps chromium
       - name: Real phone and desktop Paper 2 coaching browser check
-        run: node tests/physics-paper2-coach-browser-v430.mjs
+        run: |
+          node tests/physics-paper2-coach-browser-v430.mjs
+          node tests/universal-study-actions-browser-v432.mjs
