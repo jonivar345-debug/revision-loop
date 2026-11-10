@@ -102,11 +102,28 @@ try{
   assert(await page.locator('#skipCard').isDisabled(),'No repeated XP by skipping an awarded correct card');
   await page.locator('[data-rating="good"]').click();
   assert.equal(await page.evaluate(()=>profile.lifetimeXp),241);
+  // v434: prioritised graph/practical and Maths exact recall must be visible
+  // through the same existing 'Only must memorise' and subject/topic controls.
+  await page.locator('.study-type-btn[data-study="flashcards"]').click();
+  for(const [subject,ids] of [
+   ['Physics',['phy_motion_d','phy_rp6','task1_phy_052']],
+   ['Maths',['math_tan_identity','task1_v136_068','task1_v162_023']]
+  ]){
+   await page.locator('#flashSubject').selectOption(subject);
+   await page.locator('[data-flash-preset="all"]').click();
+   if(!await page.locator('#flashMustKnowOnly').isChecked())await page.locator('#flashMustKnowOnly').check();
+   const picked=await page.evaluate(()=>({
+    ids:selectedFlashCards().map(c=>c.id),
+    all:selectedFlashCards().every(c=>window.RevisionFlashPriority?.isMustKnow(c))
+   }));
+   assert(picked.all,subject+' only-memorise mode leaked ordinary questions');
+   for(const id of ids)assert(picked.ids.includes(id),subject+' core fact not promoted: '+id);
+  }
   const dim=await page.evaluate(()=>({w:document.documentElement.clientWidth,s:document.documentElement.scrollWidth}));
   assert(dim.s<=dim.w+3,'No horizontal overflow '+width+'px');
   const bad=errors.filter(e=>!/firebase/i.test(e));
   assert.deepEqual(bad,[]);
-  console.log('PASS v433 '+width+'px: 113+ Chemistry tests prioritised, eleven extra cards, no A2 mock leak, correct-mark/skip integrity, saved history and responsive UI.');
+  console.log('PASS v434 '+width+'px: 113+ Chemistry tests, 56 Physics/Maths/chem core facts, strict priority-only subject filtering, no A2 mock leak, saved progress and responsive UI.');
   await ctx.close();
  }
 }finally{
