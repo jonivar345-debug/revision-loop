@@ -32,7 +32,7 @@ async function run(kind){
 (async()=>{
   let x=await run('success');
   assert.ok(x.includes('signed-out')&&x.includes('reload'));
-  for(const k of ['revisionLoopProgress5','revisionLoopProfile11','revisionLoopSettings11','bound','checkpoint','manual'])
+  for(const k of ['revisionLoopProgress5','revisionLoopProfile11','revisionLoopSettings11','bound','checkpoint','manual','rl_auth'])
     assert.ok(x.includes('removed:'+k),'erase local saved values and cloud linkage: '+k);
   for(const kind of ['working','conflict','wrong-user','unsaved','cancel']){
     x=await run(kind);
