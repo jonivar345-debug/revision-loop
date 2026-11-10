@@ -45,6 +45,18 @@
     <strong>Keep your progress on every computer</strong>
     <p id="cloudQuickStatus" role="status" aria-live="polite">Use your existing website code. Link Google once on each computer to load and save the same XP, flashcards and exam marks automatically.</p>
     <button type="button" id="cloudQuickSignIn" class="mini-btn">Connect progress with Google</button>
+    <div class="private-key-access" style="margin-top:12px">
+      <label for="cloudPrivateKey"><strong>Or use a private progress key (no Google login on new computers)</strong></label>
+      <p>Set this up once on your current device while your progress is present. Keep the key somewhere private. A short website PIN cannot recover cloud progress.</p>
+      <input id="cloudPrivateKey" type="password" autocomplete="off" spellcheck="false" minlength="24" maxlength="29" placeholder="Your 24-character private key" aria-describedby="cloudPrivateStatus" style="width:100%;max-width:390px">
+      <div class="preset-row" style="margin-top:8px">
+        <button type="button" id="cloudGeneratePrivateKey" class="mini-btn">Generate secure key</button>
+        <button type="button" id="cloudCopyPrivateKey" class="mini-btn">Copy key</button>
+        <button type="button" id="cloudCreatePrivateKey" class="mini-btn">Set up key with this device’s progress</button>
+        <button type="button" id="cloudPrivateSignIn" class="mini-btn">Load progress using key</button>
+      </div>
+      <p id="cloudPrivateStatus" role="status" aria-live="polite">Your key stays on your device. Never share it or use it on an untrusted computer.</p>
+    </div>
   </section>
   <div class="top-layout-switch"><div class="layout-switch" role="group" aria-label="Choose display layout">
         <span>Layout</span>
@@ -331,7 +343,7 @@
 <script src="world-city-offline-guides.js?v=103" defer></script>
 <script src="progress-backup.js?v=120" defer></script>
 <script src="cloud-sync-core.js?v=435" defer></script>
-<script type="module" src="cloud-sync.js?v=435"></script>
+<script type="module" src="cloud-sync.js?v=436"></script>
 <script src="flashcard-priority-v429.js?v=429&chem=v433" defer></script>
 <script src="photoelectric-flashcard-marking.js?v=121" defer></script>
 <script src="exam-sketch-v173.js?v=428" defer></script>
