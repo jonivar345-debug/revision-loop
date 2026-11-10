@@ -1,4 +1,4 @@
-/* Revision Loop Cloud v119 — opt-in Google account synchronisation.
+/* Revision Loop Cloud v435 — opt-in Google account synchronisation.
    No personal browser data is uploaded until the user explicitly links the device.
    Offline local saves continue to use the original app.js/localStorage mechanism. */
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-app.js';
@@ -24,10 +24,11 @@ const el=id=>document.getElementById(id);
 let user=null,latestRemote=null,active=false,working=false,saveTimer=0,phase='idle';
 let stopRemoteListener=null,queuedServerCheck=false;
 
-function message(text){if(el('cloudSyncStatus'))el('cloudSyncStatus').textContent=text;}
+function message(text){if(el('cloudSyncStatus'))el('cloudSyncStatus').textContent=text;if(el('cloudQuickStatus'))el('cloudQuickStatus').textContent=text;}
 function visible(id,show){if(el(id))el(id).hidden=!show;}
 function buttons(){
   visible('cloudGoogleSignIn',!user);
+  visible('cloudQuickSignIn',!user);
   visible('cloudGoogleSignOut',!!user);
   visible('cloudUploadDevice',!!user&&phase==='first-upload');
   visible('cloudUseRemote',!!user&&(phase==='first-restore'||phase==='conflict'||phase==='review'));
@@ -142,7 +143,14 @@ async function inspect(){
     if(action==='first-upload'){
       active=false;changePhase('first-upload','No online backup yet. Select Upload this device to start cloud saving; nothing has been uploaded.');
     }else if(action==='first-restore'){
-      active=false;changePhase('first-restore','Cloud progress already exists. Select Use cloud progress to link this device. Local progress will be backed up first.');
+      if(core.isFreshDevice(local.values)&&!hasUnsavedAnswer()){
+        active=false;changePhase('loading','Fresh computer detected. Loading your existing cloud progress automatically…');
+        // Keep a recovery copy before replacing even an apparently unused device.
+        download(local,'revision-loop-fresh-device-before-cloud-restore.json');
+        await applyRemote(remote,true);
+      }else{
+        active=false;changePhase('first-restore','Existing device data detected. Choose Use cloud progress after reviewing the local backup; nothing has been overwritten.');
+      }
     }else if(action==='current'){
       active=true;saveCheckpoint(user.uid,remote.revision,hash);
       changePhase('active','Cloud backup is current. Changes will save automatically.');
@@ -349,6 +357,7 @@ async function useRemote(){
 function boot(){
   if(!backup||!core){message('Cloud sync helper did not load; local progress is unaffected.');return}
   el('cloudGoogleSignIn')?.addEventListener('click',()=>void connect());
+  el('cloudQuickSignIn')?.addEventListener('click',()=>void connect());
   el('cloudResetAll')?.addEventListener('click',()=>void resetAllProgress());
   el('cloudGoogleSignOut')?.addEventListener('click',()=>void disconnect());
   el('cloudUploadDevice')?.addEventListener('click',()=>void firstUpload());
