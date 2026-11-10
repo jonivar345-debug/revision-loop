@@ -184,7 +184,6 @@ async function firstUpload(){
       if(existing.exists())throw new Error('Cloud progress appeared on another device. Nothing was uploaded; review first.');
       tx.set(ref,{payload,revision:1,updatedAt:serverTimestamp()});
     });
-    cloudCreated=true;
     latestRemote={payload,revision:1};
     saveCheckpoint(user.uid,1,hash);
     localStorage.removeItem(MANUAL_RESTORE_KEY);
@@ -411,6 +410,7 @@ async function createPrivateAccount(){
       if(existing.exists())throw new Error('Private key account already has progress; nothing has been overwritten.');
       tx.set(ref,{payload,revision:1,updatedAt:serverTimestamp()});
     });
+    cloudCreated=true;
     latestRemote={payload,revision:1};
     saveCheckpoint(user.uid,1,hash);
     localStorage.removeItem(MANUAL_RESTORE_KEY);
