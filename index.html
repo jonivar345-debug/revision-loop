@@ -47,15 +47,15 @@
     <button type="button" id="cloudQuickSignIn" class="mini-btn">Connect progress with Google</button>
     <div class="private-key-access" style="margin-top:12px">
       <label for="cloudPrivateKey"><strong>Or use a private progress key (no Google login on new computers)</strong></label>
-      <p><strong>First computer:</strong> select <strong>Generate 8-character key</strong>, copy it somewhere safe, then select <strong>Set up key</strong>. You can begin with zero progress. <strong>Other computers:</strong> enter the same key and select <strong>Load progress</strong>. No Google account is needed.</p>
+      <p><strong>First computer:</strong> select <strong>Generate 16-character key</strong>, copy it somewhere safe, then select <strong>Set up key</strong>. You can begin with zero progress. <strong>Other computers:</strong> enter the same key and select <strong>Load progress</strong>. No Google account is needed.</p>
       <input id="cloudPrivateKey" type="password" autocomplete="off" spellcheck="false" minlength="8" maxlength="29" placeholder="Your private progress key" aria-describedby="cloudPrivateStatus" style="width:100%;max-width:390px">
       <div class="preset-row" style="margin-top:8px">
-        <button type="button" id="cloudGeneratePrivateKey" class="mini-btn">Generate 8-character key</button>
+        <button type="button" id="cloudGeneratePrivateKey" class="mini-btn">Generate 16-character key</button>
         <button type="button" id="cloudCopyPrivateKey" class="mini-btn">Copy key</button>
         <button type="button" id="cloudCreatePrivateKey" class="mini-btn">Set up key</button>
         <button type="button" id="cloudPrivateSignIn" class="mini-btn">Load progress</button>
       </div>
-      <p id="cloudPrivateStatus" role="status" aria-live="polite">Never share your key or enter it on an untrusted computer. An 8-character key is less secure than a longer one.</p>
+      <p id="cloudPrivateStatus" role="status" aria-live="polite">Never share your key or enter it on an untrusted computer. Keep this generated key private. It cannot be recovered if lost.</p>
     </div>
   </section>
   <div class="top-layout-switch"><div class="layout-switch" role="group" aria-label="Choose display layout">
