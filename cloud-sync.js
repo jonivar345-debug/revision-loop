@@ -347,7 +347,7 @@ function newPrivateKey(){
   return Array.from(random,n=>PRIVATE_ALPHABET[n%PRIVATE_ALPHABET.length]).join('');
 }
 function cleanPrivateKey(raw){
-  const key=String(raw||'').trim().toUpperCase().replace(/[\\s-]/g,'');
+  const key=String(raw||'').trim().toUpperCase().replace(/[\s-]/g,'');
   if(key.length!==24||![...key].every(ch=>PRIVATE_ALPHABET.includes(ch)))
     throw new Error('Use a generated 24-character private key. A four- or six-digit PIN is not secure enough for cloud progress.');
   return key;
