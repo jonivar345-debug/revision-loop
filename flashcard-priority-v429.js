@@ -14,6 +14,32 @@
  const subjects=new Set(['Physics','Chemistry','Maths']);
  const DEFINITION=Object.freeze({kind:'definition',label:'Key definition'});
  const EQUATION=Object.freeze({kind:'equation',label:'Equation to memorise'});
+ const CHEMICAL_TEST=Object.freeze({kind:'chemical-test',label:'Chemical test to know'});
+ // v433: test results and identification facts matter for AQA 7405 RP4/RP6/RP11,
+ // but they do not all fit the older definition/equation-only heuristics.
+ // Conservative, direct-recall prompts only: explanation and experimental
+ // method questions remain in ordinary practice unless explicitly tagged.
+ const TEST_TOPICS=/(?:group 2|group 7|rp4|rp6|rp11|aqueous metal ions|transition metal complexes|transition metals|aldehydes and ketones|organic analysis|alkenes|alcohols|carboxylic acids)/i;
+ const TEST_FACT=/(?:\b(?:test|tests|precipitate|colour|color|observation|silver mirror|solubility|soluble|insoluble|ion|reagent|litmus|bromine.water|ammonia|fehling|tollens|dnph|dichromate)\b|AgCl|AgBr|AgI|BaSO₄|BaSO4|Fe\(OH\)|Cu\(OH\)|Al\(OH\))/i;
+ function isChemicalTestRecall(card,front){
+  if(card.subject!=='Chemistry')return false;
+  if(card.memoryPriority==='chemical-test')return true;
+  if(card.memoryPriority==='ordinary'||card.gcseOnly===true)return false;
+  const topic=String(card.topic||card.revisionTopic||card.courseTopic||'');
+  if(!TEST_TOPICS.test(topic)||!TEST_FACT.test(front))return false;
+  // Year 1 flame-colour lists are GCSE material, not an explicit A-level
+  // 7405 ion-test requirement; do not promote them to compulsory recall.
+  if(/\bflame tests?\b|\bflame colours?\b/i.test(front))return false;
+  if(/\b(?:nickel|cobalt)\b/i.test(front))return false;
+  // Do not promote unrelated synthesis, mass-spectrometry peak vocabulary,
+  // simple metal-ion formulae, or explanations of colour mechanisms as
+  // qualitative identification observations.
+  if(/(?:molecular.ion peak|mass.spectrom|acyl product|acyl chloride|carbonyl reduction|reduce[s]? aldehydes|charge on a hexaaqua|which ion forms when|what happens when a metal hexaaqua|what (?:causes|changes) .*colour|why .* suitable as an insoluble)/i.test(front))return false;
+  const direct=/^(?:what|which|name|state|give|identify|a |an |in a |if |after |with |for |how is |how are )/i.test(front);
+  const rationale=/^why (?:acidif|use |is |does |should )/i.test(front) && /\b(?:test|acidif|halide|silver|sulfate|ammonia|barium|2,4-DNPH)\b/i.test(front);
+  const interpretation=/^(?:bromine water changes|how does the Al³⁺ hydroxide precipitate behave)/i.test(front);
+  return direct||rationale||interpretation;
+ }
  function isDefinitionPrompt(front){
   if(/^(?:define|give (?:a |the )?definition of|state (?:the )?(?:complete )?definition of|what (?:is|are) meant by|what (?:does|do) .{2,85} mean\b)/i.test(front))return true;
   if(/^state (?:newton'?s |hess'?s |le chatelier'?s |the )?.{0,65}\b(?:law|principle|postulate)\b/i.test(front))return true;
@@ -52,11 +78,13 @@
   if(!front||!back)return null;
   if(card.subject==='Maths'&&/\bfirst.principles (?:definition|formula) of f[′']\(x\)|\bfirst.principles definition of f[′']\(x\)/i.test(front))return null;
   if(card.memoryPriority==='definition')return DEFINITION;
+  if(card.subject==='Chemistry'&&card.memoryPriority==='chemical-test')return CHEMICAL_TEST;
   if(card.subject==='Maths'&&/^(?:state|give|write) (?:the )?(?:index|logarithm|log)(?: (?:product|quotient|power|change.of.base))? law\b/i.test(front)&&/[=^]|\blog\b/i.test(back))return EQUATION;
   if(isDefinitionPrompt(front))return DEFINITION;
   // Even if a sheet provides an equation, a definition using quantities
   // may still be key; only suppress equation tagging for provided entries.
   if(card.formulaBooklet==='provided'||card.memoryPriority==='provided')return null;
+  if(isChemicalTestRecall(card,front))return CHEMICAL_TEST;
   if(card.memoryPriority==='unprovided-equation')return EQUATION;
   if(!hasSymbolicAnswer(back))return null;
   if(card.subject==='Chemistry'){

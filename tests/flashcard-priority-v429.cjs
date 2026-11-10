@@ -69,13 +69,13 @@ passed+=2;
 // Audit the actual original 3,345-card bank, not just generated fixtures.
 const core=JSON.parse(fs.readFileSync('deck.json','utf8')).cards;
 assert.equal(core.length,3345);
-const counts={Physics:{definition:0,equation:0},Chemistry:{definition:0,equation:0},Maths:{definition:0,equation:0}};
+const counts={Physics:{definition:0,equation:0},Chemistry:{definition:0,equation:0,'chemical-test':0},Maths:{definition:0,equation:0}};
 for(const card of core){const group=recall.classify(card);if(group)counts[card.subject][group.kind]++;}
 assert.deepEqual(counts,{
  Physics:{definition:82,equation:5},
- Chemistry:{definition:151,equation:49},
+ Chemistry:{definition:151,equation:49,'chemical-test':113},
  Maths:{definition:11,equation:11}
-},'Core priority labels must match independent 9 Nov source audit.');
+},'Keep original definition/equation counts and explicitly assert 113 v433 Chemistry test priorities.');
 const byId=new Map(core.map(card=>[card.id,card]));
 for(const id of ['chem_bonding_v47_01','chem_bonding_v47_17','task1_v124_bulk_phy_126',
  'task1_v131_066','task1_v136_002','task1_v138_001','math_triangle_area','math_vector_line']){

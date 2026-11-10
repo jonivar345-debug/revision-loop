@@ -1,0 +1,320 @@
+{
+  "version": "v433",
+  "qualification": "AQA A-level Chemistry 7405",
+  "scope": "Short theoretical recall for published Required Practical 4 and 11 outcomes plus two AS ionisation equations; not laboratory instructions. A-level-only ion reactions are not tagged for the earlier school mock.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+    "https://filestore.aqa.org.uk/resources/chemistry/AQA-7405-REACTIONS-OF-METAL-IONS.PDF"
+  ],
+  "cards": [
+    {
+      "id": "chem_test_v433_01",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "specRef": "3.2.2",
+      "topic": "Group 2",
+      "courseTopic": "Group 2",
+      "revisionTopic": "Group 2",
+      "active": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 3,
+      "memoryPriority": "chemical-test",
+      "front": "For Mg²⁺, what colour is the hydroxide precipitate?",
+      "back": "White Mg(OH)₂.",
+      "accept": [
+        "white magnesium hydroxide",
+        "white precipitate"
+      ],
+      "reject": [
+        "blue precipitate",
+        "brown precipitate"
+      ]
+    },
+    {
+      "id": "chem_test_v433_02",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "specRef": "3.2.2",
+      "topic": "Group 2",
+      "courseTopic": "Group 2",
+      "revisionTopic": "Group 2",
+      "active": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 3,
+      "memoryPriority": "chemical-test",
+      "front": "Compared with Mg(OH)₂, how soluble is Ca(OH)₂ in water?",
+      "back": "More soluble.",
+      "accept": [
+        "calcium hydroxide is more soluble",
+        "more soluble"
+      ],
+      "reject": [
+        "less soluble",
+        "equally soluble"
+      ]
+    },
+    {
+      "id": "chem_test_v433_03",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "specRef": "3.2.3.1",
+      "topic": "RP4 Ion tests",
+      "courseTopic": "RP4 Ion tests",
+      "revisionTopic": "RP4 Ion tests",
+      "active": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 3,
+      "memoryPriority": "unprovided-equation",
+      "front": "Write the ionic equation linking NH₄⁺, OH⁻ and ammonia.",
+      "back": "NH₄⁺ + OH⁻ → NH₃ + H₂O.",
+      "accept": [
+        "NH4+ + OH- -> NH3 + H2O",
+        "NH₄⁺ + OH⁻ → NH₃ + H₂O"
+      ],
+      "reject": [
+        "ammonium produces carbon dioxide",
+        "NH4+ + H+ -> NH3"
+      ]
+    },
+    {
+      "id": "chem_test_v433_04",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "specRef": "3.2.3.1",
+      "topic": "RP4 Ion tests",
+      "courseTopic": "RP4 Ion tests",
+      "revisionTopic": "RP4 Ion tests",
+      "active": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 3,
+      "memoryPriority": "unprovided-equation",
+      "front": "Write the ionic equation for carbonate reacting with acid.",
+      "back": "CO₃²⁻ + 2H⁺ → CO₂ + H₂O.",
+      "accept": [
+        "CO3^2- + 2H+ -> CO2 + H2O",
+        "CO₃²⁻ + 2H⁺ → CO₂ + H₂O"
+      ],
+      "reject": [
+        "carbonate produces ammonia",
+        "CO3^2- + H+ -> CO2"
+      ]
+    },
+    {
+      "id": "chem_test_v433_05",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "specRef": "3.1.1.2",
+      "topic": "Mass spectrometry",
+      "courseTopic": "Mass spectrometry",
+      "revisionTopic": "Mass spectrometry",
+      "active": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 3,
+      "memoryPriority": "unprovided-equation",
+      "front": "What is the simplified equation for electron-impact ionisation of M?",
+      "back": "M(g) + e⁻ → M⁺(g) + 2e⁻.",
+      "accept": [
+        "M + e- -> M+ + 2e-",
+        "M(g) + e⁻ → M⁺(g) + 2e⁻"
+      ],
+      "reject": [
+        "M + H+ -> MH+",
+        "M + e- -> M-"
+      ]
+    },
+    {
+      "id": "chem_test_v433_06",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "specRef": "3.1.1.2",
+      "topic": "Mass spectrometry",
+      "courseTopic": "Mass spectrometry",
+      "revisionTopic": "Mass spectrometry",
+      "active": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 3,
+      "memoryPriority": "unprovided-equation",
+      "front": "What is the simplified equation for single protonation of M in electrospray?",
+      "back": "M + H⁺ → [M+H]⁺.",
+      "accept": [
+        "M + H+ -> [M+H]+",
+        "M + H⁺ → [M+H]⁺"
+      ],
+      "reject": [
+        "M + e- -> M+ + 2e-",
+        "M -> M+ + e-"
+      ]
+    },
+    {
+      "id": "chem_test_v433_07",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "specRef": "3.2.6",
+      "topic": "Aqueous metal ions",
+      "courseTopic": "Aqueous metal ions",
+      "revisionTopic": "Aqueous metal ions",
+      "active": true,
+      "mock": false,
+      "taught": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 3,
+      "memoryPriority": "chemical-test",
+      "front": "What precipitate forms from Fe²⁺ and carbonate ions?",
+      "back": "Green FeCO₃.",
+      "accept": [
+        "green iron ii carbonate",
+        "green FeCO3"
+      ],
+      "reject": [
+        "brown iron(III) hydroxide",
+        "white precipitate"
+      ]
+    },
+    {
+      "id": "chem_test_v433_08",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "specRef": "3.2.6",
+      "topic": "Aqueous metal ions",
+      "courseTopic": "Aqueous metal ions",
+      "revisionTopic": "Aqueous metal ions",
+      "active": true,
+      "mock": false,
+      "taught": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 3,
+      "memoryPriority": "chemical-test",
+      "front": "What is observed when Fe³⁺ aqueous ions react with carbonate?",
+      "back": "Brown hydroxide precipitate and CO₂ gas.",
+      "accept": [
+        "brown precipitate and carbon dioxide",
+        "brown Fe(OH)3 and CO2"
+      ],
+      "reject": [
+        "green iron ii carbonate",
+        "only a green precipitate"
+      ]
+    },
+    {
+      "id": "chem_test_v433_09",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "specRef": "3.2.6",
+      "topic": "Aqueous metal ions",
+      "courseTopic": "Aqueous metal ions",
+      "revisionTopic": "Aqueous metal ions",
+      "active": true,
+      "mock": false,
+      "taught": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 3,
+      "memoryPriority": "chemical-test",
+      "front": "What is observed when Al³⁺ aqueous ions react with carbonate?",
+      "back": "White hydroxide precipitate and CO₂ gas.",
+      "accept": [
+        "white precipitate and carbon dioxide",
+        "white Al(OH)3 and CO2"
+      ],
+      "reject": [
+        "only blue precipitate",
+        "no gas forms"
+      ]
+    },
+    {
+      "id": "chem_test_v433_10",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "specRef": "3.2.6",
+      "topic": "Aqueous metal ions",
+      "courseTopic": "Aqueous metal ions",
+      "revisionTopic": "Aqueous metal ions",
+      "active": true,
+      "mock": false,
+      "taught": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 3,
+      "memoryPriority": "chemical-test",
+      "front": "What is the precipitate from Cu²⁺ and carbonate ions?",
+      "back": "Blue-green CuCO₃.",
+      "accept": [
+        "blue green copper ii carbonate",
+        "blue green precipitate"
+      ],
+      "reject": [
+        "brown iron iii hydroxide",
+        "white barium sulfate"
+      ]
+    },
+    {
+      "id": "chem_test_v433_11",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "specRef": "3.2.6",
+      "topic": "Aqueous metal ions",
+      "courseTopic": "Aqueous metal ions",
+      "revisionTopic": "Aqueous metal ions",
+      "active": true,
+      "mock": false,
+      "taught": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 3,
+      "memoryPriority": "chemical-test",
+      "front": "What colour change can a green Fe(II) hydroxide precipitate show in air?",
+      "back": "Green to brown, owing to oxidation.",
+      "accept": [
+        "green to brown",
+        "it turns brown on standing"
+      ],
+      "reject": [
+        "green to blue",
+        "no possible colour change"
+      ]
+    }
+  ]
+}

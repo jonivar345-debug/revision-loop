@@ -6266,6 +6266,27 @@ async function sync(manual=false){
   if(!isV375ChemKpCatalystCard(c)||cards.some(old=>old.id===c.id))continue;
   cards.push(c);
  }
+ // v433: preserve historic bank indices and IDs. Optional short Chemistry
+ // observations and ionisation equations; no laboratory instructions.
+ // Year 2 aqueous metal-ion observations stay outside the earlier mock.
+ try{
+  const response=await fetch('./chemistry_qualitative_recall_v433.json?v=433',{cache:'no-store'});
+  if(response.ok){
+   const bank=await response.json();
+   for(const c of Array.isArray(bank.cards)?bank.cards:[]){
+    if(!c||!/^chem_test_v433_\d{2}$/.test(c.id||'')||
+       c.subject!=='Chemistry'||!['AS','A2'].includes(c.stage)||
+       c.active!==true||c.strictRecall!==true||
+       c.mock!==(c.stage==='AS')||c.taught!==(c.stage==='AS')||
+       !['chemical-test','unprovided-equation'].includes(c.memoryPriority)||
+       typeof c.front!=='string'||c.front.length>145||!c.front.trim()||
+       typeof c.back!=='string'||c.back.length>160||!c.back.trim()||
+       !Array.isArray(c.accept)||!Array.isArray(c.reject)||
+       cards.some(old=>old.id===c.id))continue;
+    cards.push(c);
+   }
+  }
+ }catch(error){console.warn('Optional v433 Chemistry recall unavailable',error)}
  // Separate append-only AS Physics Paper 2 bank. Do not shift historic
  // supplementary indices or mark this as part of the school mixed mock.
  try{
