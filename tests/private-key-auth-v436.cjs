@@ -33,7 +33,7 @@ const {newPrivateKey,cleanPrivateKey,privateCredentials}=sandbox.helpers;
   assert.match(cloud,/visible\('cloudPrivateSignIn',!user\)/,'connected accounts must not invite a second key login');
   assert.match(cloud,/visible\('cloudCreatePrivateKey',!privateConnected\)/,'connected private accounts must not duplicate setup');
   assert.match(html,/First computer:/,'show first-device setup instructions');
-  assert.match(html,/Another computer:/,'show returning-device sign-in instructions');
+  assert.match(html,/(Another computer|Other computers):/,'show returning-device sign-in instructions');
   assert.doesNotMatch(cloud,/deleteUser\(createdUser\)/,'ambiguous server acknowledgement must never delete cloud identity');
   const firstUploadStart=cloud.indexOf('async function firstUpload()');
   const privateSetupStart=cloud.indexOf('async function createPrivateAccount()');
