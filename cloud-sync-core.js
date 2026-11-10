@@ -34,13 +34,17 @@
       const profile=JSON.parse(values?.revisionLoopProfile11||'{}');
       if(!progress||!profile||Array.isArray(progress)||Array.isArray(profile))return false;
       if(Object.keys(progress).length>0)return false;
+      const settings=JSON.parse(values?.revisionLoopSettings11||'{}');
+      if(!settings||Array.isArray(settings)||typeof settings!=='object'||Object.keys(settings).length>0)return false;
       if(Number(profile.lifetimeXp||0)!==0||Number(profile.points||0)!==0||
          Number(profile.reviews||0)!==0||Number(profile.challengeStreak||0)!==0)return false;
-      for(const key of ['examResults','topicStats','topicWeakness','dailyChallenges','errorLog']){
+      for(const key of ['examResults','topicStats','topicWeakness','dailyChallenges','errorLog','daily']){
         const x=profile[key];
         if(Array.isArray(x)?x.length>0:x&&typeof x==='object'?Object.keys(x).length>0:!!x)return false;
       }
       if(profile.lastChallengeDate)return false;
+      const safeProfileKeys=new Set(['daily','examResults','topicWeakness','topicStats','errorLog','dailyChallenges','challengeStreak','lastChallengeDate','economyVersion','shopOwned','points','lifetimeXp','reviews','equippedCharacter','equippedOutfit','equippedLocation']);
+      if(Object.keys(profile).some(k=>!safeProfileKeys.has(k)))return false;
       if(profile.shopOwned){
         const starters={characters:['lelouch'],outfits:['lelouch-default'],locations:['london']};
         for(const kind of Object.keys(starters)){
