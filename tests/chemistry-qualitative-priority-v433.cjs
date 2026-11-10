@@ -39,11 +39,11 @@ assert.equal(priority.classify(addition.cards[0]).label,'Chemical test to know')
 assert.equal(priority.classify(addition.cards[4]).kind,'equation');
 assert.equal(priority.classify(addition.cards[5]).kind,'equation');
 const make=(front,topic='Group 7')=>({subject:'Chemistry',stage:'AS',topic,front,back:'Example.',active:true});
-assert.equal(priority.classify(make('What flame colour identifies lithium?'))?.kind,null,
+assert.equal(priority.classify(make('What flame colour identifies lithium?')),null,
  'GCSE flame colours must not silently become compulsory A-level priorities');
-assert.equal(priority.classify(make('What reagent reduces aldehydes and ketones?','Aldehydes and ketones'))?.kind,null,
+assert.equal(priority.classify(make('What reagent reduces aldehydes and ketones?','Aldehydes and ketones')),null,
  'Organic synthesis must not be labelled a chemical identification test');
-assert.equal(priority.classify(make('What colour is nickel(II) in solution?','Aqueous metal ions'))?.kind,null,
+assert.equal(priority.classify(make('What colour is nickel(II) in solution?','Aqueous metal ions')),null,
  'Optional nickel colours are not an RP11 core identification requirement');
 assert.equal(priority.classify({subject:'Physics',front:'What is the formula for Newton’s second law?',back:'F=ma',active:true}),null);
 assert.equal(priority.classify({subject:'Chemistry',front:'What formula gives heat transferred?',back:'q=mcΔT',active:true})?.kind,'equation');
