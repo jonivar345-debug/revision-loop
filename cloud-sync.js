@@ -378,7 +378,7 @@ function explainPrivateError(error){
 }
 async function privateSignIn(){
   if(migrationInProgress)return;
-  if(user){privateMessage('A cloud account is already connected. Disconnect it before using a different progress key.');return}
+  if(user||auth.currentUser){privateMessage('A cloud account is already connected. Disconnect it before using a different progress key.');return}
   try{
     const credentials=await privateCredentials(el('cloudPrivateKey')?.value);
     privateMessage('Checking private cloud key…');
@@ -391,7 +391,7 @@ async function privateSignIn(){
 }
 async function createPrivateAccount(){
   if(migrationInProgress||working)return;
-  if(user){privateMessage('Disconnect the current cloud account before creating another progress account.');return}
+  if(user||auth.currentUser){privateMessage('Disconnect the current cloud account before creating another progress account.');return}
   let credentials;
   try{credentials=await privateCredentials(el('cloudPrivateKey')?.value)}
   catch(error){privateMessage(error.message);return}
