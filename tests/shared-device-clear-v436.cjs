@@ -11,17 +11,23 @@ const source=cloud.slice(begin,end);
 async function run(kind){
   const events=[];
   const keys=['revisionLoopProgress5','revisionLoopProfile11','revisionLoopSettings11'];
+  const first={revisionLoopProgress5:'{}',revisionLoopProfile11:'{}',revisionLoopSettings11:'{}'};
+  let values=first;
   const context={
     user:{uid:'account-one'},working:kind==='working',migrationInProgress:false,
     phase:kind==='conflict'?'conflict':'active',active:true,
     checkpoint:()=>({uid:kind==='wrong-user'?'account-two':'account-one',fingerprint:'saved'}),
-    current:()=>({values:{revisionLoopProgress5:'{}',revisionLoopProfile11:'{}',revisionLoopSettings11:'{}'}}),
+    current:()=>({values}),
+    hasUnsavedAnswer:()=>kind==='draft',
     fingerprint:async()=>kind==='unsaved'?'newer':'saved',
     message:m=>events.push('message'),confirm:()=>kind!=='cancel',
     clearTimeout:()=>events.push('timer-cleared'),saveTimer:3,
-    signOut:async()=>events.push('signed-out'),auth:{},
-    core:{KEYS:keys},localStorage:{removeItem:key=>events.push('removed:'+key)},
-    BOUND_KEY:'bound',CHECKPOINT_KEY:'checkpoint',MANUAL_RESTORE_KEY:'manual',
+    signOut:async()=>{
+      events.push('signed-out');
+      if(kind==='changed-on-signout')values={...first,revisionLoopProfile11:'{"points":1}'};
+    },auth:{},
+    core:{KEYS:keys,sameValues:(a,b)=>keys.every(key=>a[key]===b[key])},localStorage:{removeItem:key=>events.push('removed:'+key)},
+    BOUND_KEY:'bound',CHECKPOINT_KEY:'checkpoint',MANUAL_RESTORE_KEY:'manual',PRIVATE_MIGRATION_KEY:'private-migration',
     latestRemote:null,window:{location:{reload:()=>events.push('reload')}},
     changePhase:()=>events.push('error')
   };
@@ -32,9 +38,11 @@ async function run(kind){
 (async()=>{
   let x=await run('success');
   assert.ok(x.includes('signed-out')&&x.includes('reload'));
-  for(const k of ['revisionLoopProgress5','revisionLoopProfile11','revisionLoopSettings11','bound','checkpoint','manual','rl_auth'])
+  for(const k of ['revisionLoopProgress5','revisionLoopProfile11','revisionLoopSettings11','bound','checkpoint','manual','private-migration','rl_auth'])
     assert.ok(x.includes('removed:'+k),'erase local saved values and cloud linkage: '+k);
-  for(const kind of ['working','conflict','wrong-user','unsaved','cancel']){
+  x=await run('changed-on-signout');
+  assert.ok(x.includes('signed-out')&&!x.some(s=>s.startsWith('removed:')),'a save during sign-out must be kept');
+  for(const kind of ['working','conflict','wrong-user','unsaved','draft','cancel']){
     x=await run(kind);
     assert.ok(!x.includes('signed-out')&&!x.some(s=>s.startsWith('removed:')),'do not erase unconfirmed or cancelled work: '+kind);
   }

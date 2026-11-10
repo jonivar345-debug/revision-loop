@@ -26,7 +26,7 @@ assert.equal(core.assess({remoteRevision:8,checkpoint:null,localFingerprint:'loc
 const cloud=fs.readFileSync(path.join(__dirname,'..','cloud-sync.js'),'utf8');
 const page=fs.readFileSync(path.join(__dirname,'..','index.html'),'utf8');
 assert.match(cloud,/core\.isFreshDevice\(local\.values\)&&!hasUnsavedAnswer\(\)/);
-assert.match(cloud,/await applyRemote\(remote,true\)/);
+assert.match(cloud,/await applyRemote\(remote,local\.values\)/);
 assert.match(cloud,/if\(action==='first-restore'\)/);
 assert.match(page,/id="cloudQuickSignIn"/);
 assert.match(page,/cloud-sync-core\.js\?v=435/);

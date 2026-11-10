@@ -21,16 +21,21 @@ async function scenario(type){
   }};
   const cp=type==='remote-ahead'?{uid:'my-user',revision:1,fingerprint:JSON.stringify(local.values)}:null;
   const storage={
+    removeItem:()=>{},
     getItem:key=>key==='bound'?type==='different-account'?'another-user':null:
       key==='manual'?(type==='manual-review'?'1':null):null
   };
   const context={
     core,user:{uid:'my-user'},working:false,active:false,queuedServerCheck:false,
+    pendingPrivateMigration:()=>null,
     localStorage:storage,BOUND_KEY:'bound',MANUAL_RESTORE_KEY:'manual',
     auth:{},signOut:async()=>events.push('signout'),
     retrieve:async()=>remote,remoteBackup:r=>r.snapshot,
-    current:()=>local,
-    fingerprint:async v=>JSON.stringify(v),
+    current:()=>({...local}),
+    fingerprint:async v=>{
+      if(type==='new-local-work'&&v===remote.snapshot.values)local.values=values(25);
+      return JSON.stringify(v);
+    },
     checkpoint:()=>type==='manual-review'?{uid:'my-user',revision:1,fingerprint:'old'}:cp,
     changePhase:p=>events.push('phase:'+p),
     hasUnsavedAnswer:()=>type==='draft',
@@ -50,6 +55,8 @@ async function scenario(type){
   let x=await scenario('fresh');
   assert.ok(x.events.some(e=>e.startsWith('restore:')),'fresh second browser restores cloud');
   assert.ok(x.events.includes('checkpoint')&&x.events.includes('reload'));
+  x=await scenario('new-local-work');
+  assert.ok(!x.events.some(e=>e.startsWith('restore:')),'a local save during fingerprinting must survive');
   x=await scenario('nonempty');
   assert.ok(!x.events.some(e=>e.startsWith('restore:')),'existing work is never overwritten');
   assert.ok(x.events.includes('phase:first-restore'));

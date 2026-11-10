@@ -15,7 +15,9 @@ async function scenario(mode){
     }
   };
   const context={
-    migrationInProgress:false,working:false,user:null,active:true,
+    migrationInProgress:false,authActionInProgress:false,working:false,user:null,active:true,
+    generatedPrivateKey:mode==='chosen-key'?'WXYZ2345':'ABCDEFGH',
+    cleanPrivateKey:key=>key,
     window:{confirm:()=>mode!=='cancel'},el:id=>id==='cloudPrivateKey'?input:null,
     privateCredentials:async()=>({email:'test@example.com',password:'test'}),
     privateMessage:msg=>events.push(['message',msg]),
@@ -25,7 +27,7 @@ async function scenario(mode){
     TextEncoder,clearTimeout:()=>{},saveTimer:0,
     stopRemoteListener:()=>events.push(['listener-stop']),
     setPersistence:async()=>events.push(['persistence']),
-    auth:{},browserSessionPersistence:{},db:{},
+    auth:{authStateReady:async()=>{}},browserSessionPersistence:{},db:{},
     createUserWithEmailAndPassword:async()=>{events.push(['auth-create']);return {user:{uid:'new-user'}}},
     remoteRef:()=>({path:'new-user/state/bundle'}),
     runTransaction:async(_db,callback)=>{
@@ -39,7 +41,8 @@ async function scenario(mode){
     serverTimestamp:()=>0,
     latestRemote:null,
     saveCheckpoint:()=>{events.push(['checkpoint']);if(mode==='checkpoint-fail')throw Error('browser storage full')},
-    localStorage:{removeItem:()=>events.push(['remove-manual-restore'])},
+    localStorage:{getItem:()=>null,removeItem:()=>events.push(['remove-manual-restore'])},
+    BOUND_KEY:'bound',PRIVATE_MIGRATION_KEY:'private-migration',
     MANUAL_RESTORE_KEY:'revisionLoopCloudManualRestorePending',
     changePhase:(phase)=>events.push(['phase',phase]),
     watchRemote:()=>events.push(['watch-remote']),
@@ -51,7 +54,8 @@ async function scenario(mode){
     context.current=()=>({...snapshot,values:{...snapshot.values,revisionLoopProgress5:'x'.repeat(801000)}});
   }
   vm.runInNewContext(fn+'\nthis.run=createPrivateAccount;',context);
-  await context.run();
+  if(mode==='double-click')await Promise.all([context.run(),context.run()]);
+  else await context.run();
   return {events,context};
 }
 (async()=>{
@@ -63,9 +67,14 @@ async function scenario(mode){
   assert.ok(!events.includes('delete-new-auth-user'),'successful upload must retain account');
   assert.equal(x.context.active,true);
   assert.equal(x.context.migrationInProgress,false);
+  x=await scenario('chosen-key');
+  assert.ok(!x.events.some(([kind])=>kind==='backup'||kind==='auth-create'),'only a key generated on this page can enrol');
+  x=await scenario('double-click');
+  assert.equal(x.events.filter(([kind])=>kind==='auth-create').length,1,'double clicks must not register competing accounts');
   x=await scenario('upload-fail');events=x.events.map(x=>x[0]);
   assert.ok(!events.includes('delete-new-auth-user'),'uncertain upload outcome must retain the auth account');
   assert.ok(x.events.some(e=>e[0]==='phase'&&e[1]==='error'),'failed upload requires recovery with the same key');
+  assert.ok(x.events.some(([kind,message])=>kind==='message'&&message.includes('same private key')),'recovery reuses the same key');
   assert.ok(!events.includes('checkpoint'),'failed upload cannot checkpoint');
   assert.equal(x.context.active,false);
   x=await scenario('checkpoint-fail');events=x.events.map(x=>x[0]);

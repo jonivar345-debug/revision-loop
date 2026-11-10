@@ -11,8 +11,8 @@ const method=source.slice(begin,end);
 async function scenario(mode){
   const calls=[],input={value:'ABCDEFGH'};
   const context={
-    migrationInProgress:mode==='busy',user:mode==='connected'?{uid:'one'}:null,
-    auth:{currentUser:mode==='auth-pending'?{uid:'one'}:null},
+    generatedPrivateKey:null,authActionInProgress:false,migrationInProgress:mode==='busy',user:mode==='connected'?{uid:'one'}:null,
+    auth:{authStateReady:async()=>{},currentUser:mode==='auth-pending'?{uid:'one'}:null},
     el:id=>id==='cloudPrivateKey'?input:null,
     privateCredentials:async()=>{calls.push('validate');if(mode==='invalid')throw Error('Invalid key');return {email:'internal@example.com',password:'derived'}},
     privateMessage:message=>calls.push('message:'+message),
@@ -22,13 +22,16 @@ async function scenario(mode){
     explainPrivateError:error=>error.message||error.code
   };
   vm.runInNewContext(method+'\nthis.run=privateSignIn;',context);
-  await context.run();
+  if(mode==='double-click')await Promise.all([context.run(),context.run()]);
+  else await context.run();
   return {calls,input,context};
 }
 (async()=>{
   let x=await scenario('success');
   assert.deepEqual(x.calls.filter(c=>!c.startsWith('message:')),['validate','session-persistence','sign-in']);
   assert.equal(x.input.value,'','successful login clears the key field');
+  x=await scenario('double-click');
+  assert.equal(x.calls.filter(call=>call==='sign-in').length,1,'double clicks must not race sign-in');
   x=await scenario('wrong');
   assert.ok(x.calls.includes('sign-in'));
   assert.equal(x.input.value,'ABCDEFGH',"failed login must not silently clear the user's entry");
