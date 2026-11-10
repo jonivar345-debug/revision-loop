@@ -43,12 +43,12 @@
   </header>
   <section class="sync-quick-access" aria-label="Cross-device progress" style="margin:10px 0;padding:12px;border:1px solid #64748b;border-radius:12px">
     <strong>Keep your progress on every computer</strong>
-    <p id="cloudQuickStatus" role="status" aria-live="polite">Use your existing website code. Link Google once on each computer to load and save the same XP, flashcards and exam marks automatically.</p>
+    <p id="cloudQuickStatus" role="status" aria-live="polite">Unlock the website, then use your private progress key on each new browser. Google sign-in is optional.</p>
     <button type="button" id="cloudQuickSignIn" class="mini-btn">Connect progress with Google</button>
     <div class="private-key-access" style="margin-top:12px">
       <label for="cloudPrivateKey"><strong>Or use a private progress key (no Google login on new computers)</strong></label>
       <p>Set this up once on your current device while your progress is present. Keep the key somewhere private. An 8-character random key is used to recover cloud progress; keep it private.</p>
-      <input id="cloudPrivateKey" type="password" autocomplete="off" spellcheck="false" minlength="8" maxlength="29" placeholder="Your 8-character private key" aria-describedby="cloudPrivateStatus" style="width:100%;max-width:390px">
+      <input id="cloudPrivateKey" type="password" autocomplete="off" spellcheck="false" minlength="8" maxlength="29" placeholder="Your private progress key" aria-describedby="cloudPrivateStatus" style="width:100%;max-width:390px">
       <div class="preset-row" style="margin-top:8px">
         <button type="button" id="cloudGeneratePrivateKey" class="mini-btn">Generate 8-character key</button>
         <button type="button" id="cloudCopyPrivateKey" class="mini-btn">Copy key</button>
@@ -257,6 +257,7 @@
         <div class="preset-row">
           <button type="button" class="mini-btn" id="cloudGoogleSignIn">Sign in with Google</button>
           <button type="button" class="mini-btn" id="cloudGoogleSignOut" hidden>Disconnect cloud account</button>
+          <button type="button" class="mini-btn" id="cloudEraseSharedDevice" hidden>Sign out and clear this computer</button>
           <button type="button" class="mini-btn" id="cloudUploadDevice" hidden>Upload this device to cloud</button>
           <button type="button" class="mini-btn" id="cloudUseRemote" hidden>Use cloud progress here</button>
           <button type="button" class="mini-btn" id="cloudDownloadRemote" hidden>Download cloud backup</button>
