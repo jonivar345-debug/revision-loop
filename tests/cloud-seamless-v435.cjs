@@ -18,6 +18,9 @@ assert.equal(core.isFreshDevice(values({}, {...starter,shopOwned:{...starter.sho
 assert.equal(core.isFreshDevice(values({}, {...starter,daily:{'2026-11-10':{reviews:1}}})),false,'daily history must not be replaced');
 assert.equal(core.isFreshDevice(values({},starter,{dailyNew:20})),false,'custom settings must be reviewed');
 assert.equal(core.isFreshDevice(values({}, {...starter,unknownHistoricData:{review:'saved'}})),false,'unknown saved fields must be protected');
+assert.equal(core.isFreshDevice(values({}, {...starter,equippedLocation:'paris'})),false,'chosen location must be protected');
+assert.equal(core.isFreshDevice(values({}, {...starter,equippedCharacter:'custom-avatar'})),false,'chosen avatar must be protected');
+assert.equal(core.isFreshDevice(values({}, {...starter,shopOwned:{...starter.shopOwned,unknownCollection:['item']}})),false,'unknown collection categories must be protected');
 assert.equal(core.isFreshDevice({revisionLoopProgress5:'bad JSON'}),false,'corruption must never be auto-overwritten');
 assert.equal(core.assess({remoteRevision:8,checkpoint:null,localFingerprint:'local',remoteFingerprint:'remote',uid:'account'}),'first-restore');
 const cloud=fs.readFileSync(path.join(__dirname,'..','cloud-sync.js'),'utf8');
