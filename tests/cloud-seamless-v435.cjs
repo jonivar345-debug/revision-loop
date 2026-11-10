@@ -27,5 +27,5 @@ assert.match(cloud,/await applyRemote\(remote,true\)/);
 assert.match(cloud,/if\(action==='first-restore'\)/);
 assert.match(page,/id="cloudQuickSignIn"/);
 assert.match(page,/cloud-sync-core\.js\?v=435/);
-assert.match(page,/cloud-sync\.js\?v=435/);
+assert.match(page,/cloud-sync\.js\?v=(435|436)/);
 console.log('v435 safe new-device auto-restore checks passed');
