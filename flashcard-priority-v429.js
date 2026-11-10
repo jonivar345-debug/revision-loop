@@ -19,7 +19,7 @@
  // but they do not all fit the older definition/equation-only heuristics.
  // Conservative, direct-recall prompts only: explanation and experimental
  // method questions remain in ordinary practice unless explicitly tagged.
- const TEST_TOPICS=/(?:group 2|group 7|rp4|rp6|rp11|aqueous metal ions|transition metal complexes|aldehydes and ketones|organic analysis|alkenes|alcohols|carboxylic acids)/i;
+ const TEST_TOPICS=/(?:group 2|group 7|rp4|rp6|rp11|aqueous metal ions|transition metal complexes|transition metals|aldehydes and ketones|organic analysis|alkenes|alcohols|carboxylic acids)/i;
  const TEST_FACT=/(?:\b(?:test|tests|precipitate|colour|color|observation|silver mirror|solubility|soluble|insoluble|ion|reagent|litmus|bromine.water|ammonia|fehling|tollens|dnph|dichromate)\b|AgCl|AgBr|AgI|BaSO₄|BaSO4|Fe\(OH\)|Cu\(OH\)|Al\(OH\))/i;
  function isChemicalTestRecall(card,front){
   if(card.subject!=='Chemistry')return false;
@@ -36,8 +36,9 @@
   // qualitative identification observations.
   if(/(?:molecular.ion peak|mass.spectrom|acyl product|acyl chloride|carbonyl reduction|reduce[s]? aldehydes|charge on a hexaaqua|which ion forms when|what happens when a metal hexaaqua|what (?:causes|changes) .*colour|why .* suitable as an insoluble)/i.test(front))return false;
   const direct=/^(?:what|which|name|state|give|identify|a |an |in a |if |after |with |for |how is |how are )/i.test(front);
-  const rationale=/^why (?:acidif|use |is |does |should )/i.test(front) && /\b(?:test|acidif|halide|silver|sulfate|ammonia|barium)\b/i.test(front);
-  return direct||rationale;
+  const rationale=/^why (?:acidif|use |is |does |should )/i.test(front) && /\b(?:test|acidif|halide|silver|sulfate|ammonia|barium|2,4-DNPH)\b/i.test(front);
+  const interpretation=/^(?:bromine water changes|how does the Al³⁺ hydroxide precipitate behave)/i.test(front);
+  return direct||rationale||interpretation;
  }
  function isDefinitionPrompt(front){
   if(/^(?:define|give (?:a |the )?definition of|state (?:the )?(?:complete )?definition of|what (?:is|are) meant by|what (?:does|do) .{2,85} mean\b)/i.test(front))return true;
