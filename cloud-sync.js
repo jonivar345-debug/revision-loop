@@ -335,21 +335,23 @@ async function resetAllProgress(){
   }finally{working=false}
 }
 
-/* The private key is a high-entropy bearer credential, not the four-digit
+/* The private key is a randomly generated bearer credential, not the four-digit
    public website PIN. A deterministic pseudonymous email enables Firebase
    email/password auth without needing to type or disclose a real email address.
+   Eight random base32 characters provide 40 bits, weaker than 24 characters;
+   provider-side abuse limits and rate limits must be verified before release.
    Firebase Email/Password provider must be enabled before this feature can work.
    Firestore writes remain protected by existing per-UID security rules. */
 const PRIVATE_ALPHABET='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 function newPrivateKey(){
-  const random=new Uint8Array(24);
+  const random=new Uint8Array(8);
   crypto.getRandomValues(random);
   return Array.from(random,n=>PRIVATE_ALPHABET[n%PRIVATE_ALPHABET.length]).join('');
 }
 function cleanPrivateKey(raw){
   const key=String(raw||'').trim().toUpperCase().replace(/[\s-]/g,'');
-  if(key.length!==24||![...key].every(ch=>PRIVATE_ALPHABET.includes(ch)))
-    throw new Error('Use a generated 24-character private key. A four- or six-digit PIN is not secure enough for cloud progress.');
+  if(![8,24].includes(key.length)||![...key].every(ch=>PRIVATE_ALPHABET.includes(ch)))
+    throw new Error('Use a generated 8-character private key (or an existing 24-character key). A four- or six-digit PIN is not secure enough for cloud progress.');
   return key;
 }
 async function privateCredentials(raw){
