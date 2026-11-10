@@ -29,6 +29,12 @@ function visible(id,show){if(el(id))el(id).hidden=!show;}
 function buttons(){
   visible('cloudGoogleSignIn',!user);
   visible('cloudQuickSignIn',!user);
+  // Never invite an already connected private-key account to create a second one.
+  const privateConnected=!!user?.email?.endsWith('@example.com');
+  visible('cloudPrivateSignIn',!user);
+  visible('cloudCreatePrivateKey',!privateConnected);
+  visible('cloudGeneratePrivateKey',!privateConnected);
+  visible('cloudCopyPrivateKey',!privateConnected);
   visible('cloudGoogleSignOut',!!user);
   visible('cloudUploadDevice',!!user&&phase==='first-upload');
   visible('cloudUseRemote',!!user&&(phase==='first-restore'||phase==='conflict'||phase==='review'));
