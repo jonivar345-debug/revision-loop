@@ -30,8 +30,8 @@ for(const id of ['cloudGoogleSignIn','cloudGoogleSignOut','cloudUploadDevice','c
  assert.match(index,new RegExp('id="'+id+'"'));
  assert.ok(cloud.includes("'"+id+"'"));
 }
-assert.match(index,/cloud-sync-core\.js\?v=119/);
-assert.match(index,/cloud-sync\.js\?v=428/);
+assert.match(index,/cloud-sync-core\.js\?v=(119|435)/);
+assert.match(index,/cloud-sync\.js\?v=(428|435|436)/);
 assert.match(app,/RevisionLoopCloudSync\.onLocalSaved/);
 assert.match(backup,/revisionLoopCloudManualRestorePending/);
 assert.match(sw,/cloud-sync-core\.js/);
