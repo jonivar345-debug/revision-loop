@@ -3,10 +3,10 @@
 **Status: development only. Do not merge or announce live until every release gate has evidence.**
 
 ## Purpose and credentials
-- Website's original 4-digit unlock and the separate private **8-character random progress key** have different roles.
+- Website's original 4-digit unlock and the separate private **16-character random progress key** have different roles.
 - A new learner can create a private progress account on their first computer, even with zero progress, then enter that same key on a different computer to retrieve changes.
 - A private key uses the existing Firebase Email/Password auth service and an internal reserved example.com pseudonymous identifier. There is **no Google sign-in requirement in this flow** and **no recoverable email inbox**.
-- The 8-character base32 key has approximately 40 bits of entropy **only when generated randomly**. It is a compromise versus a long secret. The original PIN and predictable/reused keys must not authorise progress. An exposed key must be retired by migrating to a new account, after the data migration flow is independently tested.
+- The generated 16-character base32 key has approximately 80 bits of entropy. Existing 8- or 24-character keys remain sign-in compatible, but new accounts must use the app's 16-character generator. The original PIN and predictable/reused keys must not authorise progress. An exposed key must be retired by migrating to a new account, after the data migration flow is independently tested.
 - Browser-session auth expires when the session ends. School/shared machines should still be explicitly signed out of and should not use Remember this device on the website gate.
 
 ## Account/platform prerequisites (admin-only)
@@ -17,7 +17,7 @@
 5. Confirm the final Vercel exact-head preview is READY, not only a previous branch head. The free-plan build-rate limit is an outstanding blocker.
 
 ## Synthetic two-browser acceptance test (NEVER use actual learner data)
-- A: start with clean browser storage. Unlock website PIN. Generate a new key, copy it into a secure temporary test record, choose **Set up key with this device's progress**. Expect Firebase account creation plus revision 1 in Firestore. Confirm a JSON recovery download, and status says private-key account connected.
+- A: start with clean browser storage. Unlock website PIN. Generate a new 16-character key, copy it into a secure temporary test record, choose **Set up key with this device's progress**. Expect Firebase account creation plus revision 1 in Firestore. Confirm a JSON recovery download, and status says private-key account connected.
 - A: complete one mock flashcard and one scored exam question. Check visible XP, reviews, purchases and results; wait until status confirms cloud saved.
 - B: in a different browser profile with fresh storage, unlock website, enter the same key and choose **Load progress using key**. Expect exactly A's saved XP, answers, progress and settings after automatic restore. Reopen browser and repeat key sign-in.
 - B: revise another card and check cloud-saved status. Return to A after it has no unsaved answer: expect newer revision to arrive without losing A's data.
@@ -35,6 +35,12 @@
 - Existing v428 mobile/cloud regression workflow, v436 dedicated regression, and any required baseline CI.
 - Check desktop and 360px/390px Chromium for clickability, keyboard focus, cropped fields, reload, and offline cache update.
 - Ensure the final test SHA matches the exact PR head. A stale green run does not approve a newer commit.
+
+## Verification updated 10 November 2026
+- Codex reports live Email/Password, enumeration protection and published owner-only Firestore rules verified.
+- Two-browser emulator tests and both focused GitHub workflows passed on prior commit `10baaf5`; production end-to-end test and exact-head GitHub Actions for the stronger-key commit remain unverified.
+- Vercel preview of the stronger-key changes built successfully. No production merge yet.
+- Shorter legacy keys should be replaced through an independently tested migration process when available; app-side enrolment checks alone cannot stop direct API requests.
 
 ## Known limitations
 - The key is an account credential, not end-to-end encryption. Firebase project administrators and the existing app's data model still control storage.
