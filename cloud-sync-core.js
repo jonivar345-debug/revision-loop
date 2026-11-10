@@ -43,9 +43,13 @@
         if(Array.isArray(x)?x.length>0:x&&typeof x==='object'?Object.keys(x).length>0:!!x)return false;
       }
       if(profile.lastChallengeDate)return false;
+      if(profile.equippedCharacter&&profile.equippedCharacter!=='lelouch')return false;
+      if(profile.equippedOutfit&&profile.equippedOutfit!=='lelouch-default')return false;
+      if(profile.equippedLocation&&profile.equippedLocation!=='london')return false;
       const safeProfileKeys=new Set(['daily','examResults','topicWeakness','topicStats','errorLog','dailyChallenges','challengeStreak','lastChallengeDate','economyVersion','shopOwned','points','lifetimeXp','reviews','equippedCharacter','equippedOutfit','equippedLocation']);
       if(Object.keys(profile).some(k=>!safeProfileKeys.has(k)))return false;
       if(profile.shopOwned){
+        if(Object.keys(profile.shopOwned).some(k=>!['characters','outfits','locations'].includes(k)))return false;
         const starters={characters:['lelouch'],outfits:['lelouch-default'],locations:['london']};
         for(const kind of Object.keys(starters)){
           const owned=profile.shopOwned[kind]||[];
