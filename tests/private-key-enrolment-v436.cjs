@@ -64,7 +64,8 @@ async function scenario(mode){
   assert.equal(x.context.active,true);
   assert.equal(x.context.migrationInProgress,false);
   x=await scenario('upload-fail');events=x.events.map(x=>x[0]);
-  assert.ok(events.includes('delete-new-auth-user'),'failed upload removes only new empty account');
+  assert.ok(!events.includes('delete-new-auth-user'),'uncertain upload outcome must retain the auth account');
+  assert.ok(events.includes('phase:error'),'failed upload requires recovery with the same key');
   assert.ok(!events.includes('checkpoint'),'failed upload cannot checkpoint');
   assert.equal(x.context.active,false);
   x=await scenario('checkpoint-fail');events=x.events.map(x=>x[0]);
@@ -75,5 +76,5 @@ async function scenario(mode){
   assert.ok(!events.includes('auth-create'),'oversized state rejected before registering user');
   x=await scenario('cancel');events=x.events.map(x=>x[0]);
   assert.ok(!events.includes('backup')&&!events.includes('auth-create'),'cancelled setup has no effects');
-  console.log('v436 private-key enrollment state transitions passed: success, upload error, local error, size, cancel');
+  console.log('v436 private-key enrollment state transitions passed: success, safe upload recovery, local error, size, cancel');
 })().catch(error=>{console.error(error);process.exitCode=1});
