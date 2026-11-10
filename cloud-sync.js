@@ -2,7 +2,7 @@
    No personal browser data is uploaded until the user explicitly links the device.
    Offline local saves continue to use the original app.js/localStorage mechanism. */
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-app.js';
-import {getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, setPersistence, browserSessionPersistence, deleteUser} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js';
+import {getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, setPersistence, browserSessionPersistence} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js';
 import {getFirestore, doc, getDocFromServer, onSnapshot, runTransaction, serverTimestamp} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-firestore.js';
 
 const CONFIG=Object.freeze({
@@ -435,23 +435,19 @@ async function createPrivateAccount(){
     watchRemote();
   }catch(error){
     active=false;
-    // An account may have been created even if its first Firestore upload failed.
-    // Remove only that newly created empty account; never touch the old Google
-    // account or any cloud backup. Local progress and downloaded JSON remain.
-    if(createdUser&&!cloudCreated){
-      try{
-        await deleteUser(createdUser);
-        user=null;
-      }catch(cleanupError){
-        await signOut(auth).catch(()=>{});
-        user=null;
-        privateMessage('Setup failed and the empty account could not be removed automatically. Save your key and JSON backup; contact the site administrator before retrying. '+explainPrivateError(error));
-        changePhase('error','Private-key setup incomplete. Your local progress is unchanged.');
-        return;
-      }
+    // A transaction can commit on the server even when the reply is lost.
+    // Never delete the new auth account on an ambiguous upload failure.
+    // The local progress and recovery JSON remain unchanged; retry with the
+    // SAME private key after checking whether cloud revision 1 already exists.
+    if(createdUser){
+      changePhase('error',cloudCreated
+        ?'Cloud backup was created but this browser could not finish linking. Keep your key and backup; do not create another account.'
+        :'Cloud setup is incomplete. The private account may exist; keep your key and local backup. When online, check cloud status and finish linking with this SAME account.');
+      privateMessage('Setup needs recovery using the same private key. Do not generate another key or clear this browser. '+explainPrivateError(error));
+    }else{
+      changePhase('error','Could not create a private progress account. Existing browser progress remains unchanged.');
+      privateMessage(explainPrivateError(error));
     }
-    changePhase('error',cloudCreated?'Cloud progress was created but local setup could not finish. Do not create a second account; keep your key and backup.':'Private-key setup was not completed. Existing browser progress is unchanged.');
-    privateMessage(explainPrivateError(error));
   }finally{migrationInProgress=false}
 }
 async function connect(){
