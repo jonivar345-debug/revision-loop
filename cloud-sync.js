@@ -1,8 +1,8 @@
-/* Revision Loop Cloud v119 — opt-in Google account synchronisation.
+/* Revision Loop Cloud v436 — opt-in Google account synchronisation.
    No personal browser data is uploaded until the user explicitly links the device.
    Offline local saves continue to use the original app.js/localStorage mechanism. */
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-app.js';
-import {getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js';
+import {getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, setPersistence, browserSessionPersistence} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js';
 import {getFirestore, doc, getDocFromServer, onSnapshot, runTransaction, serverTimestamp} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-firestore.js';
 
 const CONFIG=Object.freeze({
@@ -20,22 +20,32 @@ const core=window.RevisionLoopCloudCore;
 const BOUND_KEY='revisionLoopCloudBoundUidV1';
 const CHECKPOINT_KEY='revisionLoopCloudCheckpointV1';
 const MANUAL_RESTORE_KEY='revisionLoopCloudManualRestorePending';
+const PRIVATE_MIGRATION_KEY='revisionLoopPrivateMigrationV436';
 const el=id=>document.getElementById(id);
 let user=null,latestRemote=null,active=false,working=false,saveTimer=0,phase='idle';
-let stopRemoteListener=null,queuedServerCheck=false;
+let stopRemoteListener=null,queuedServerCheck=false,migrationInProgress=false,authActionInProgress=false;
+let generatedPrivateKey=null;
 
-function message(text){if(el('cloudSyncStatus'))el('cloudSyncStatus').textContent=text;}
+function message(text){if(el('cloudSyncStatus'))el('cloudSyncStatus').textContent=text;if(el('cloudQuickStatus'))el('cloudQuickStatus').textContent=text;}
 function visible(id,show){if(el(id))el(id).hidden=!show;}
 function buttons(){
   visible('cloudGoogleSignIn',!user);
+  visible('cloudQuickSignIn',!user);
+  // Never invite an already connected private-key account to create a second one.
+  const privateConnected=!!user?.email?.endsWith('@example.com');
+  visible('cloudPrivateSignIn',!user);
+  visible('cloudCreatePrivateKey',!privateConnected);
+  visible('cloudGeneratePrivateKey',!privateConnected);
+  visible('cloudCopyPrivateKey',!privateConnected);
   visible('cloudGoogleSignOut',!!user);
+  visible('cloudEraseSharedDevice',!!user);
   visible('cloudUploadDevice',!!user&&phase==='first-upload');
   visible('cloudUseRemote',!!user&&(phase==='first-restore'||phase==='conflict'||phase==='review'));
   visible('cloudDownloadRemote',!!user&&!!latestRemote);
   visible('cloudSaveNow',!!user&&phase!=='loading'&&phase!=='resetting'&&phase!=='blocked');
   visible('cloudResetAll',!!user&&phase!=='loading'&&phase!=='resetting'&&phase!=='blocked');
   if(el('cloudAccountLabel'))el('cloudAccountLabel').textContent=user?
-    'Google account: '+(user.email||'signed in'):'Not signed in. Browser saving remains available.';
+    'Connected progress account: '+(user.email?.endsWith('@example.com')?'private key':(user.email||'signed in')):'Not signed in. Browser saving remains available.';
 }
 function changePhase(next,text){phase=next;message(text);buttons();}
 function checkpoint(){
@@ -43,9 +53,14 @@ function checkpoint(){
     return c&&typeof c.uid==='string'&&Number.isSafeInteger(c.revision)&&typeof c.fingerprint==='string'?c:null
   }catch{return null}
 }
+function pendingPrivateMigration(){
+  try{return JSON.parse(localStorage.getItem(PRIVATE_MIGRATION_KEY)||'null')}
+  catch{return null}
+}
 function saveCheckpoint(uid,revision,fingerprint){
   localStorage.setItem(BOUND_KEY,uid);
   localStorage.setItem(CHECKPOINT_KEY,JSON.stringify({uid,revision,fingerprint}));
+  if(pendingPrivateMigration()?.to===uid)localStorage.removeItem(PRIVATE_MIGRATION_KEY);
 }
 function current(){return backup.snapshot(localStorage);}
 function encoded(values){return JSON.stringify(core.KEYS.map(key=>values[key]));}
@@ -106,21 +121,23 @@ function watchRemote(){
     if(user?.uid===uid)message('Live cloud updates unavailable: '+error.message+'. You can still check progress manually.');
   });
 }
-async function applyRemote(record,automatic=false){
+async function applyRemote(record,expectedLocalValues=null){
+  const uid=user?.uid;
   const incoming=remoteBackup(record);
-  if(automatic&&hasUnsavedAnswer()){
+  const hash=await fingerprint(incoming.values);
+  if(!uid||user?.uid!==uid)return;
+  if(expectedLocalValues&&(!core.sameValues(expectedLocalValues,current().values)||hasUnsavedAnswer())){
     active=false;
-    changePhase('remote-ready','Newer cloud progress is available. Finish the current revision session or draft, then press Check cloud now. Cloud saving is paused to protect both versions.');
+    changePhase('remote-ready','Newer cloud progress is available. Finish your draft or save your work, then press Check cloud now to review both versions.');
     return;
   }
-  if(!automatic){
+  if(!expectedLocalValues){
     const ok=confirm('Use your cloud progress on this device? This will replace the current browser progress. A local JSON backup will download first. Continue?');
     if(!ok)return;
     download(current(),'revision-loop-before-cloud-restore.json');
   }
   backup.restore(localStorage,incoming);
-  const hash=await fingerprint(incoming.values);
-  saveCheckpoint(user.uid,record.revision,hash);
+  saveCheckpoint(uid,record.revision,hash);
   localStorage.removeItem(MANUAL_RESTORE_KEY);
   window.location.reload();
 }
@@ -129,11 +146,14 @@ async function inspect(){
   working=true;
   try{
     const bound=localStorage.getItem(BOUND_KEY);
-    if(bound&&bound!==user.uid){
-      changePhase('blocked','This browser has progress linked to a different Google account. Sign out and use the original account or another browser profile. No data has been changed.');
+    const pending=pendingPrivateMigration();
+    const resumingMigration=!!bound&&pending?.from===bound&&pending.to===user.uid;
+    if(bound&&bound!==user.uid&&!resumingMigration){
+      changePhase('blocked','This browser has progress linked to a different cloud account. Use the original account or another browser profile.');
       await signOut(auth);return;
     }
-    const remote=await retrieve(),local=current(),hash=await fingerprint(local.values),cp=checkpoint();
+    const remote=await retrieve(),local=current(),hash=await fingerprint(local.values);
+    const saved=checkpoint(),cp=saved?.uid===user.uid?saved:null;
     const action=core.assess({
       remoteRevision:remote?.revision||0,checkpoint:cp,
       localFingerprint:hash,remoteFingerprint:remote?await fingerprint(remoteBackup(remote).values):null,
@@ -142,7 +162,12 @@ async function inspect(){
     if(action==='first-upload'){
       active=false;changePhase('first-upload','No online backup yet. Select Upload this device to start cloud saving; nothing has been uploaded.');
     }else if(action==='first-restore'){
-      active=false;changePhase('first-restore','Cloud progress already exists. Select Use cloud progress to link this device. Local progress will be backed up first.');
+      if(!resumingMigration&&core.isFreshDevice(local.values)&&!hasUnsavedAnswer()){
+        active=false;changePhase('loading','Fresh computer detected. Loading your existing cloud progress automatically…');
+        await applyRemote(remote,local.values);
+      }else{
+        active=false;changePhase('first-restore','Existing device data detected. Choose Use cloud progress after reviewing the local backup; nothing has been overwritten.');
+      }
     }else if(action==='current'){
       active=true;saveCheckpoint(user.uid,remote.revision,hash);
       changePhase('active','Cloud backup is current. Changes will save automatically.');
@@ -151,7 +176,7 @@ async function inspect(){
       scheduleSave();
     }else if(action==='remote-ahead'){
       active=false;changePhase('loading','Newer cloud progress found; restoring this device.');
-      await applyRemote(remote,true);
+      await applyRemote(remote,local.values);
     }else {
       active=false;changePhase('conflict',
         'Cloud sync is paused: this device and the cloud contain different progress. Download both copies before choosing which to use. Nothing has been overwritten.');
@@ -182,6 +207,7 @@ async function firstUpload(){
     saveCheckpoint(user.uid,1,hash);
     localStorage.removeItem(MANUAL_RESTORE_KEY);
     active=true;changePhase('active','Cloud backup created. Future progress will synchronise automatically.');
+    watchRemote();
   }catch(err){
     changePhase('error','Cloud backup not created: '+err.message+'. Your local progress is safe.');
   }finally{working=false}
@@ -329,12 +355,157 @@ async function resetAllProgress(){
   }finally{working=false}
 }
 
-async function connect(){
+/* The private key is a randomly generated bearer credential, not the four-digit
+   public website PIN. A deterministic pseudonymous email enables Firebase
+   email/password auth without needing to type or disclose a real email address.
+   New keys use 16 random base32 characters (80 bits), reducing guessing risk.
+   Existing 8- and 24-character credentials remain usable for sign-in;
+   provider-side abuse limits are still recommended as additional defence.
+   The reserved example.com domain is used only as an internal identifier;
+   there is no mailbox, email recovery or ability to reset a lost private key.
+   Firebase Email/Password provider must be enabled before this feature can work.
+   Firestore writes remain protected by existing per-UID security rules. */
+const PRIVATE_ALPHABET='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+function newPrivateKey(){
+  const random=new Uint8Array(16);
+  crypto.getRandomValues(random);
+  return Array.from(random,n=>PRIVATE_ALPHABET[n%PRIVATE_ALPHABET.length]).join('');
+}
+function cleanPrivateKey(raw){
+  const key=String(raw||'').trim().toUpperCase().replace(/[\s-]/g,'');
+  if(![8,16,24].includes(key.length)||![...key].every(ch=>PRIVATE_ALPHABET.includes(ch)))
+    throw new Error('Use a generated 16-character private key (or an existing 8- or 24-character key). A four- or six-digit PIN is not secure enough for cloud progress.');
+  return key;
+}
+async function privateCredentials(raw){
+  const key=cleanPrivateKey(raw);
+  const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('revision-loop-private-v436|'+key));
+  const hash=Array.from(new Uint8Array(digest)).map(b=>b.toString(16).padStart(2,'0')).join('');
+  return {email:'rl-'+hash.slice(0,48)+'@example.com',password:'rl-private-v436:'+key};
+}
+function privateMessage(messageText){const target=el('cloudPrivateStatus');if(target)target.textContent=messageText;}
+function explainPrivateError(error){
+  const code=String(error?.code||'');
+  if(code.includes('operation-not-allowed'))return 'The Firebase Email/Password sign-in provider has not been enabled yet; no progress was changed.';
+  if(code.includes('email-already-in-use'))return 'This key already has a cloud account. Select Load progress using key instead.';
+  if(code.includes('invalid-credential')||code.includes('wrong-password')||code.includes('user-not-found'))return 'This key was not recognised. Check every character or use the original device.';
+  return error?.message||'Connection failed. Your local progress remains saved.';
+}
+function generatePrivateKey(){
+  const input=el('cloudPrivateKey');
+  if(!input||authActionInProgress)return;
+  generatedPrivateKey=newPrivateKey();
+  input.value=generatedPrivateKey;
+  privateMessage('New private key generated. Copy and save it before connecting.');
+}
+async function privateSignIn(){
+  if(authActionInProgress||migrationInProgress)return;
+  authActionInProgress=true;
   try{
+    await auth.authStateReady();
+    if(user||auth.currentUser){privateMessage('A cloud account is already connected. Disconnect it before using a different progress key.');return}
+    const credentials=await privateCredentials(el('cloudPrivateKey')?.value);
+    privateMessage('Checking private cloud key…');
+    // On public or school computers, close the browser to end key-based access.
+    await setPersistence(auth,browserSessionPersistence);
+    await signInWithEmailAndPassword(auth,credentials.email,credentials.password);
+    generatedPrivateKey=null;
+    if(el('cloudPrivateKey'))el('cloudPrivateKey').value='';
+    privateMessage('Private key accepted. Loading cloud progress… For safety, this private-key session ends when this browser session closes.');
+  }catch(error){privateMessage(explainPrivateError(error))}
+  finally{authActionInProgress=false}
+}
+async function createPrivateAccount(){
+  if(authActionInProgress||migrationInProgress||working)return;
+  authActionInProgress=true;
+  try{
+    await auth.authStateReady();
+    if(user||auth.currentUser){privateMessage('Disconnect the current cloud account before creating another progress account.');return}
+    await enrolPrivateAccount();
+  }catch(error){privateMessage(explainPrivateError(error))}
+  finally{authActionInProgress=false}
+}
+async function enrolPrivateAccount(){
+  let credentials;
+  try{
+    const key=cleanPrivateKey(el('cloudPrivateKey')?.value);
+    if(key!==generatedPrivateKey){
+      privateMessage('Generate a key on this device before setup. For an existing key, choose Load progress.');
+      return;
+    }
+    credentials=await privateCredentials(key);
+  }catch(error){privateMessage(error.message);return}
+  if(!window.confirm('Create a NEW private-key cloud account using all progress currently saved in THIS browser? This keeps the existing Google cloud copy unchanged. Download a recovery backup before switching accounts. You MUST save your private key; it cannot be recovered if lost. Continue?'))return;
+  // Validate and size the complete snapshot BEFORE creating a Firebase account.
+  // Otherwise an oversized or invalid browser state could strand an empty login.
+  let snapshot,payload,hash;
+  try{
+    snapshot=current();
+    payload=JSON.stringify(snapshot);
+    if(new TextEncoder().encode(payload).byteLength>800000)
+      throw new Error('Progress is too large for a single cloud document. Export your JSON backup instead.');
+    hash=await fingerprint(snapshot.values);
+    download(snapshot,'revision-loop-before-private-key-migration.json');
+  }catch(error){privateMessage('Setup stopped before account creation: '+error.message);return}
+  migrationInProgress=true;
+  active=false;
+  clearTimeout(saveTimer);
+  if(stopRemoteListener){stopRemoteListener();stopRemoteListener=null}
+  privateMessage('Creating a separate private-key cloud account…');
+  let createdUser=null,cloudCreated=false;
+  try{
+    await setPersistence(auth,browserSessionPersistence);
+    const credential=await createUserWithEmailAndPassword(auth,credentials.email,credentials.password);
+    createdUser=credential.user;
+    user=credential.user;
+    // Recover a confirmed migration after a failed first write without discarding the old binding.
+    const previousUid=localStorage.getItem(BOUND_KEY);
+    if(previousUid&&previousUid!==user.uid)
+      localStorage.setItem(PRIVATE_MIGRATION_KEY,JSON.stringify({from:previousUid,to:user.uid}));
+    await runTransaction(db,async tx=>{
+      const ref=remoteRef();
+      const existing=await tx.get(ref);
+      if(existing.exists())throw new Error('Private key account already has progress; nothing has been overwritten.');
+      tx.set(ref,{payload,revision:1,updatedAt:serverTimestamp()});
+    });
+    cloudCreated=true;
+    latestRemote={payload,revision:1};
+    saveCheckpoint(user.uid,1,hash);
+    localStorage.removeItem(MANUAL_RESTORE_KEY);
+    active=true;
+    changePhase('active','Private-key cloud account connected. Your progress will synchronise automatically.');
+    generatedPrivateKey=null;
+    if(el('cloudPrivateKey'))el('cloudPrivateKey').value='';
+    privateMessage('Setup complete. Keep your copied key safe. Enter it on any other computer to retrieve this progress without Google.');
+    watchRemote();
+  }catch(error){
+    active=false;
+    // A transaction can commit on the server even when the reply is lost.
+    // Never delete the new auth account on an ambiguous upload failure.
+    // The local progress and recovery JSON remain unchanged; retry with the
+    // SAME private key after checking whether cloud revision 1 already exists.
+    if(createdUser){
+      changePhase('error',cloudCreated
+        ?'Cloud backup was created but this browser could not finish linking. Keep your key and backup; do not create another account.'
+        :'Cloud setup is incomplete. The private account may exist; keep your key and local backup. When online, check cloud status and finish linking with this SAME account.');
+      privateMessage('Setup needs recovery using the same private key. Do not generate another key or clear this browser. '+explainPrivateError(error));
+    }else{
+      changePhase('error','Could not create a private progress account. Existing browser progress remains unchanged.');
+      privateMessage(explainPrivateError(error));
+    }
+  }finally{migrationInProgress=false}
+}
+async function connect(){
+  if(authActionInProgress)return;
+  authActionInProgress=true;
+  try{
+    await auth.authStateReady();
+    if(user||auth.currentUser)return;
     message('Opening Google sign-in…');
     const provider=new GoogleAuthProvider();
     await signInWithPopup(auth,provider);
   }catch(error){message('Google sign-in could not finish: '+(error?.message||'Please retry'))}
+  finally{authActionInProgress=false}
 }
 async function disconnect(){
   clearTimeout(saveTimer);active=false;
@@ -342,15 +513,63 @@ async function disconnect(){
   user=null;latestRemote=null;
   changePhase('idle','Signed out of cloud saving. Local progress remains in this browser.');
 }
+async function clearSharedDevice(){
+  if(!user||working||migrationInProgress)return;
+  // Never erase unsynchronised learning or a device in an unresolved conflict.
+  // A successful checkpoint confirms this exact local state reached the cloud.
+  const uid=user.uid;
+  let safe=false,values;
+  try{
+    values=current().values;
+    const hash=await fingerprint(values),cp=checkpoint();
+    safe=phase==='active'&&!working&&user?.uid===uid&&cp?.uid===uid&&
+      cp.fingerprint===hash&&core.sameValues(values,current().values)&&!hasUnsavedAnswer();
+  }catch(error){
+    message('Cannot verify whether this computer has safely uploaded its progress: '+error.message);
+    return;
+  }
+  if(!safe){
+    message('This device still has progress not confirmed in the cloud. Use Check cloud now and save or export a backup before clearing anything.');
+    return;
+  }
+  if(!confirm('Sign out and erase this browser’s Revision Loop progress, XP, results and cloud linkage? The confirmed online backup will remain. Use this only on a shared computer.'))return;
+  clearTimeout(saveTimer);
+  active=false;
+  try{
+    await signOut(auth);
+    if(!core.sameValues(values,current().values)||hasUnsavedAnswer()){
+      message('Signed out. New progress was detected while signing out, so this browser has kept your work.');
+      return;
+    }
+    for(const key of core.KEYS)localStorage.removeItem(key);
+    for(const key of [BOUND_KEY,CHECKPOINT_KEY,MANUAL_RESTORE_KEY,PRIVATE_MIGRATION_KEY,'rl_auth'])localStorage.removeItem(key);
+    user=null;latestRemote=null;
+    window.location.reload();
+  }catch(error){
+    changePhase('error','Could not finish clearing this browser. Do not leave a shared computer until you have signed out and cleared its site data. '+error.message);
+  }
+}
 async function useRemote(){
   if(!user||!latestRemote)return;
-  try{await applyRemote(latestRemote,false)}catch(error){message('Could not restore cloud progress: '+error.message)}
+  try{await applyRemote(latestRemote)}catch(error){message('Could not restore cloud progress: '+error.message)}
 }
 function boot(){
   if(!backup||!core){message('Cloud sync helper did not load; local progress is unaffected.');return}
   el('cloudGoogleSignIn')?.addEventListener('click',()=>void connect());
+  el('cloudQuickSignIn')?.addEventListener('click',()=>void connect());
+  el('cloudGeneratePrivateKey')?.addEventListener('click',generatePrivateKey);
+  el('cloudCopyPrivateKey')?.addEventListener('click',async()=>{
+    try{
+      const key=cleanPrivateKey(el('cloudPrivateKey')?.value);
+      await navigator.clipboard.writeText(key);
+      privateMessage('Key copied. Store it in a private password manager; clear the clipboard on shared computers.');
+    }catch(error){privateMessage(error.message)}
+  });
+  el('cloudCreatePrivateKey')?.addEventListener('click',()=>void createPrivateAccount());
+  el('cloudPrivateSignIn')?.addEventListener('click',()=>void privateSignIn());
   el('cloudResetAll')?.addEventListener('click',()=>void resetAllProgress());
   el('cloudGoogleSignOut')?.addEventListener('click',()=>void disconnect());
+  el('cloudEraseSharedDevice')?.addEventListener('click',()=>void clearSharedDevice());
   el('cloudUploadDevice')?.addEventListener('click',()=>void firstUpload());
   el('cloudUseRemote')?.addEventListener('click',()=>void useRemote());
   el('cloudDownloadRemote')?.addEventListener('click',()=>{
@@ -359,9 +578,10 @@ function boot(){
   el('cloudSaveNow')?.addEventListener('click',()=>requestCloudCheck());
   buttons();
   onAuthStateChanged(auth,async account=>{
+    if(migrationInProgress)return;
     if(stopRemoteListener){stopRemoteListener();stopRemoteListener=null}
     user=account||null;active=false;queuedServerCheck=false;
-    if(!user){changePhase('idle','Google sign-in is optional. Revision Loop continues saving locally.');return}
+    if(!user){changePhase('idle','Cloud connection is optional. Revision Loop continues saving locally.');return}
     changePhase('loading','Checking your private cloud progress…');
     await inspect();
     if(user)watchRemote();

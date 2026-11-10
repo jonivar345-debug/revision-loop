@@ -1,0 +1,44 @@
+name: v436 private-key and cross-device progress checks
+on:
+  pull_request:
+    paths:
+      - 'cloud-sync.js'
+      - 'cloud-sync-core.js'
+      - 'index.html'
+      - 'tests/private-key-auth-v436.cjs'
+      - 'tests/cloud-seamless-v435.cjs'
+      - 'tests/private-key-enrolment-v436.cjs'
+      - 'tests/cross-device-restore-v436.cjs'
+      - 'tests/private-key-login-v436.cjs'
+      - 'tests/shared-device-clear-v436.cjs'
+      - '.github/workflows/cross-device-private-v436.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regressions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify JavaScript syntax
+        run: |
+          node --check cloud-sync.js
+          node --check cloud-sync-core.js
+          node --check tests/private-key-auth-v436.cjs
+          node --check tests/cloud-seamless-v435.cjs
+          node --check tests/private-key-enrolment-v436.cjs
+          node --check tests/cross-device-restore-v436.cjs
+          node --check tests/private-key-login-v436.cjs
+          node --check tests/shared-device-clear-v436.cjs
+      - name: Check safe portable login and no-surprise restore
+        run: |
+          node tests/private-key-auth-v436.cjs
+          node tests/cloud-seamless-v435.cjs
+          node tests/private-key-enrolment-v436.cjs
+          node tests/cross-device-restore-v436.cjs
+          node tests/private-key-login-v436.cjs
+          node tests/shared-device-clear-v436.cjs

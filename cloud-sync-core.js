@@ -26,6 +26,39 @@
     if(remoteRevision===checkpoint.revision)return 'local-ahead';
     return 'conflict';
   }
+  // Only a genuinely untouched browser may restore automatically. Any evidence
+  // of learner activity or non-default purchases requires explicit review.
+  function isFreshDevice(values){
+    try{
+      const progress=JSON.parse(values?.revisionLoopProgress5||'{}');
+      const profile=JSON.parse(values?.revisionLoopProfile11||'{}');
+      if(!progress||!profile||Array.isArray(progress)||Array.isArray(profile))return false;
+      if(Object.keys(progress).length>0)return false;
+      const settings=JSON.parse(values?.revisionLoopSettings11||'{}');
+      if(!settings||Array.isArray(settings)||typeof settings!=='object'||Object.keys(settings).length>0)return false;
+      if(Number(profile.lifetimeXp||0)!==0||Number(profile.points||0)!==0||
+         Number(profile.reviews||0)!==0||Number(profile.challengeStreak||0)!==0)return false;
+      for(const key of ['examResults','topicStats','topicWeakness','dailyChallenges','errorLog','daily']){
+        const x=profile[key];
+        if(Array.isArray(x)?x.length>0:x&&typeof x==='object'?Object.keys(x).length>0:!!x)return false;
+      }
+      if(profile.lastChallengeDate)return false;
+      if(profile.equippedCharacter&&profile.equippedCharacter!=='lelouch')return false;
+      if(profile.equippedOutfit&&profile.equippedOutfit!=='lelouch-default')return false;
+      if(profile.equippedLocation&&profile.equippedLocation!=='london')return false;
+      const safeProfileKeys=new Set(['daily','examResults','topicWeakness','topicStats','errorLog','dailyChallenges','challengeStreak','lastChallengeDate','economyVersion','shopOwned','points','lifetimeXp','reviews','equippedCharacter','equippedOutfit','equippedLocation']);
+      if(Object.keys(profile).some(k=>!safeProfileKeys.has(k)))return false;
+      if(profile.shopOwned){
+        if(Object.keys(profile.shopOwned).some(k=>!['characters','outfits','locations'].includes(k)))return false;
+        const starters={characters:['lelouch'],outfits:['lelouch-default'],locations:['london']};
+        for(const kind of Object.keys(starters)){
+          const owned=profile.shopOwned[kind]||[];
+          if(!Array.isArray(owned)||owned.some(x=>!starters[kind].includes(x)))return false;
+        }
+      }
+      return true;
+    }catch{return false}
+  }
   // Fresh learning state: free starter characters/locations are restored by
   // app.js ensureProfile() on reload, but no earned XP or reviews remain.
   function freshStartSnapshot(at){
@@ -35,5 +68,5 @@
       values:Object.fromEntries(KEYS.map(key=>[key,'{}']))
     };
   }
-  return Object.freeze({KEYS,sameValues,hasData,assess,freshStartSnapshot});
+  return Object.freeze({KEYS,sameValues,hasData,assess,isFreshDevice,freshStartSnapshot});
 });

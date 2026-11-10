@@ -41,6 +41,23 @@
       <button id="lockBtn" class="icon-btn" aria-label="Lock app" title="Lock">⌁</button>
     </div>
   </header>
+  <section class="sync-quick-access" aria-label="Cross-device progress" style="margin:10px 0;padding:12px;border:1px solid #64748b;border-radius:12px">
+    <strong>Keep your progress on every computer</strong>
+    <p id="cloudQuickStatus" role="status" aria-live="polite">Unlock the website, then use your private progress key on each new browser. Google sign-in is optional.</p>
+    <button type="button" id="cloudQuickSignIn" class="mini-btn">Connect progress with Google</button>
+    <div class="private-key-access" style="margin-top:12px">
+      <label for="cloudPrivateKey"><strong>Or use a private progress key (no Google login on new computers)</strong></label>
+      <p><strong>First computer:</strong> select <strong>Generate 16-character key</strong>, copy it somewhere safe, then select <strong>Set up key</strong>. You can begin with zero progress. <strong>Other computers:</strong> enter the same key and select <strong>Load progress</strong>. No Google account is needed.</p>
+      <input id="cloudPrivateKey" type="password" autocomplete="off" spellcheck="false" minlength="8" maxlength="29" placeholder="Your private progress key" aria-describedby="cloudPrivateStatus" style="width:100%;max-width:390px">
+      <div class="preset-row" style="margin-top:8px">
+        <button type="button" id="cloudGeneratePrivateKey" class="mini-btn">Generate 16-character key</button>
+        <button type="button" id="cloudCopyPrivateKey" class="mini-btn">Copy key</button>
+        <button type="button" id="cloudCreatePrivateKey" class="mini-btn">Set up key</button>
+        <button type="button" id="cloudPrivateSignIn" class="mini-btn">Load progress</button>
+      </div>
+      <p id="cloudPrivateStatus" role="status" aria-live="polite">Never share your key or enter it on an untrusted computer. Keep this generated key private. It cannot be recovered if lost.</p>
+    </div>
+  </section>
   <div class="top-layout-switch"><div class="layout-switch" role="group" aria-label="Choose display layout">
         <span>Layout</span>
         <button type="button" data-layout-choice="auto" aria-pressed="true">Auto</button>
@@ -235,11 +252,12 @@
       </section>
       <section class="progress-card" aria-labelledby="cloudSyncHeading">
         <h3 id="cloudSyncHeading">Automatic private cloud backup</h3>
-        <p>Sign in with Google to back up your XP, points, unlocks, exam results, revision history and settings. Your existing four-digit website PIN remains unchanged. Local saving continues without internet or Google sign-in.</p>
+        <p>Link your Google account once on each computer. On a fresh computer, saved XP, points, unlocks, exam results, revision history and settings are restored automatically. Existing work on another computer is never silently replaced. Your four-digit website PIN remains unchanged; offline local saving still works.</p>
         <p id="cloudAccountLabel">Not signed in. Browser saving remains available.</p>
         <div class="preset-row">
           <button type="button" class="mini-btn" id="cloudGoogleSignIn">Sign in with Google</button>
-          <button type="button" class="mini-btn" id="cloudGoogleSignOut" hidden>Sign out of Google</button>
+          <button type="button" class="mini-btn" id="cloudGoogleSignOut" hidden>Disconnect cloud account</button>
+          <button type="button" class="mini-btn" id="cloudEraseSharedDevice" hidden>Sign out and clear this computer</button>
           <button type="button" class="mini-btn" id="cloudUploadDevice" hidden>Upload this device to cloud</button>
           <button type="button" class="mini-btn" id="cloudUseRemote" hidden>Use cloud progress here</button>
           <button type="button" class="mini-btn" id="cloudDownloadRemote" hidden>Download cloud backup</button>
@@ -247,7 +265,7 @@
           <button type="button" class="mini-btn reset-progress-btn" id="cloudResetAll" hidden>Reset all progress to zero</button>
         </div>
         <p id="cloudSyncStatus" role="status" aria-live="polite">Cloud saving is optional and not active until you link this device.</p>
-        <p id="cloudResetNote">A fresh start resets flashcard reviews, exam results, XP, points, achievements and purchases in your browser and your linked Google account. It needs an internet connection and confirmation; free starter content remains.</p>
+        <p id="cloudResetNote">A fresh start resets flashcard reviews, exam results, XP, points, achievements and purchases in this browser and whichever cloud account is linked. It needs an internet connection and confirmation; free starter content remains.</p>
         <p>Before first linking, download a JSON backup above. If two devices have conflicting changes, cloud saving pauses to protect both copies.</p>
       </section>
     </section>
@@ -325,8 +343,8 @@
 <script src="world-location-photo-gallery.js?v=117" defer></script>
 <script src="world-city-offline-guides.js?v=103" defer></script>
 <script src="progress-backup.js?v=120" defer></script>
-<script src="cloud-sync-core.js?v=119" defer></script>
-<script type="module" src="cloud-sync.js?v=428"></script>
+<script src="cloud-sync-core.js?v=435" defer></script>
+<script type="module" src="cloud-sync.js?v=436"></script>
 <script src="flashcard-priority-v429.js?v=429&chem=v433" defer></script>
 <script src="photoelectric-flashcard-marking.js?v=121" defer></script>
 <script src="exam-sketch-v173.js?v=428" defer></script>

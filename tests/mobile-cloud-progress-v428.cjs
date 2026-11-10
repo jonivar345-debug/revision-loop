@@ -33,7 +33,7 @@ check(null,field('hidden',false),false,true,'A typed draft remains protected aft
 check(null,null,true,true,'An in-progress pen sketch blocks remote reload');
 check(field('full model',false),field('working'),false,true,'Visible exam answer wins over hidden card');
 check(null,null,false,true,'Untyped active revision session must not reload',true);
-assert.match(cloud,/if\(automatic&&hasUnsavedAnswer\(\)\)/);
+assert.match(cloud,/if\(expectedLocalValues&&\(!core\.sameValues\(expectedLocalValues,current\(\)\.values\)\|\|hasUnsavedAnswer\(\)\)\)/);
 assert.match(cloud,/phase==='remote-ready'/);
 assert.match(sketch,/function hasPendingInk\(\)/);
 assert.match(sketch,/window\.RevisionSketch=\{mount,hasPendingInk\}/);
@@ -78,7 +78,7 @@ assert.equal(sync.assess({uid:'account-A',checkpoint:cp,remoteRevision:8,
   localFingerprint:'new-pc',remoteFingerprint:'saved-local'}),'local-ahead');
 assert.equal(sync.assess({uid:'account-A',checkpoint:cp,remoteRevision:8,
   localFingerprint:'restored-backup',remoteFingerprint:'saved-local',manualRestore:true}),'review');
-assert.match(cloud,/bound&&bound!==user\.uid/);
+assert.match(cloud,/bound&&bound!==user\.uid&&!resumingMigration/);
 assert.match(cloud,/before\.data\(\)\.revision!==oldRevision/);
 assert.match(cloud,/backup\.restore\(localStorage,incoming\)/);
 assert.match(cloud,/window\.location\.reload\(\)/);
