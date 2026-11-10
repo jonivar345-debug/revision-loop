@@ -31,6 +31,10 @@
   // 7405 ion-test requirement; do not promote them to compulsory recall.
   if(/\bflame tests?\b|\bflame colours?\b/i.test(front))return false;
   if(/\b(?:nickel|cobalt)\b/i.test(front))return false;
+  // Do not promote unrelated synthesis, mass-spectrometry peak vocabulary,
+  // simple metal-ion formulae, or explanations of colour mechanisms as
+  // qualitative identification observations.
+  if(/(?:molecular.ion peak|mass.spectrom|acyl product|acyl chloride|carbonyl reduction|reduce[s]? aldehydes|charge on a hexaaqua|which ion forms when|what happens when a metal hexaaqua|what (?:causes|changes) .*colour|why .* suitable as an insoluble)/i.test(front))return false;
   const direct=/^(?:what|which|name|state|give|identify|a |an |in a |if |after |with |for |how is |how are )/i.test(front);
   const rationale=/^why (?:acidif|use |is |does |should )/i.test(front) && /\b(?:test|acidif|halide|silver|sulfate|ammonia|barium)\b/i.test(front);
   return direct||rationale;
