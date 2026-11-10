@@ -31,7 +31,7 @@ async function scenario(mode){
   assert.equal(x.input.value,'','successful login clears the key field');
   x=await scenario('wrong');
   assert.ok(x.calls.includes('sign-in'));
-  assert.equal(x.input.value,'ABCDEFGH','failed login must not silently clear the user's entry');
+  assert.equal(x.input.value,'ABCDEFGH',"failed login must not silently clear the user's entry");
   x=await scenario('invalid');
   assert.ok(!x.calls.includes('sign-in'),'invalid key must fail locally');
   x=await scenario('connected');
