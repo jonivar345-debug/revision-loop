@@ -65,7 +65,7 @@ async function scenario(mode){
   assert.equal(x.context.migrationInProgress,false);
   x=await scenario('upload-fail');events=x.events.map(x=>x[0]);
   assert.ok(!events.includes('delete-new-auth-user'),'uncertain upload outcome must retain the auth account');
-  assert.ok(events.includes('phase:error'),'failed upload requires recovery with the same key');
+  assert.ok(x.events.some(e=>e[0]==='phase'&&e[1]==='error'),'failed upload requires recovery with the same key');
   assert.ok(!events.includes('checkpoint'),'failed upload cannot checkpoint');
   assert.equal(x.context.active,false);
   x=await scenario('checkpoint-fail');events=x.events.map(x=>x[0]);
