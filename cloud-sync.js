@@ -36,6 +36,7 @@ function buttons(){
   visible('cloudGeneratePrivateKey',!privateConnected);
   visible('cloudCopyPrivateKey',!privateConnected);
   visible('cloudGoogleSignOut',!!user);
+  visible('cloudEraseSharedDevice',!!user);
   visible('cloudUploadDevice',!!user&&phase==='first-upload');
   visible('cloudUseRemote',!!user&&(phase==='first-restore'||phase==='conflict'||phase==='review'));
   visible('cloudDownloadRemote',!!user&&!!latestRemote);
@@ -463,6 +464,35 @@ async function disconnect(){
   user=null;latestRemote=null;
   changePhase('idle','Signed out of cloud saving. Local progress remains in this browser.');
 }
+async function clearSharedDevice(){
+  if(!user||working||migrationInProgress)return;
+  // Never erase unsynchronised learning or a device in an unresolved conflict.
+  // A successful checkpoint confirms this exact local state reached the cloud.
+  let safe=false;
+  try{
+    const cp=checkpoint(),hash=await fingerprint(current().values);
+    safe=phase==='active'&&!!cp&&cp.uid===user.uid&&cp.fingerprint===hash;
+  }catch(error){
+    message('Cannot verify whether this computer has safely uploaded its progress: '+error.message);
+    return;
+  }
+  if(!safe){
+    message('This device still has progress not confirmed in the cloud. Use Check cloud now and save or export a backup before clearing anything.');
+    return;
+  }
+  if(!confirm('Sign out and erase this browser’s Revision Loop progress, XP, results and cloud linkage? The confirmed online backup will remain. Use this only on a shared computer.'))return;
+  clearTimeout(saveTimer);
+  active=false;
+  try{
+    await signOut(auth);
+    for(const key of core.KEYS)localStorage.removeItem(key);
+    for(const key of [BOUND_KEY,CHECKPOINT_KEY,MANUAL_RESTORE_KEY])localStorage.removeItem(key);
+    user=null;latestRemote=null;
+    window.location.reload();
+  }catch(error){
+    changePhase('error','Could not finish clearing this browser. Do not leave a shared computer until you have signed out and cleared its site data. '+error.message);
+  }
+}
 async function useRemote(){
   if(!user||!latestRemote)return;
   try{await applyRemote(latestRemote,false)}catch(error){message('Could not restore cloud progress: '+error.message)}
@@ -486,6 +516,7 @@ function boot(){
   el('cloudPrivateSignIn')?.addEventListener('click',()=>void privateSignIn());
   el('cloudResetAll')?.addEventListener('click',()=>void resetAllProgress());
   el('cloudGoogleSignOut')?.addEventListener('click',()=>void disconnect());
+  el('cloudEraseSharedDevice')?.addEventListener('click',()=>void clearSharedDevice());
   el('cloudUploadDevice')?.addEventListener('click',()=>void firstUpload());
   el('cloudUseRemote')?.addEventListener('click',()=>void useRemote());
   el('cloudDownloadRemote')?.addEventListener('click',()=>{
