@@ -14,15 +14,17 @@ vm.runInNewContext(cloud.slice(begin,end)+'\nthis.helpers={newPrivateKey,cleanPr
 const {newPrivateKey,cleanPrivateKey,privateCredentials}=sandbox.helpers;
 (async()=>{
   const key=newPrivateKey();
-  assert.equal(key.length,24);
+  assert.equal(key.length,8);
   assert.equal(cleanPrivateKey(key),key);
-  assert.equal(cleanPrivateKey('  '+key.slice(0,12)+'-'+key.slice(12)+' '),key);
-  for(const invalid of ['0481','048154','123456','a'.repeat(24),'']){
+  assert.equal(cleanPrivateKey('  '+key.slice(0,4)+'-'+key.slice(4)+' '),key);
+  for(const invalid of ['0481','048154','123456','a'.repeat(8),'']){
     assert.throws(()=>cleanPrivateKey(invalid),'weak/invalid keys must be rejected');
   }
+  const legacy='ABCDEFGHJKLMNPQRSTUVWXYZ';
+  assert.equal(cleanPrivateKey(legacy),legacy,'previous longer keys must remain usable');
   const credentials=await privateCredentials(key);
   assert.match(credentials.email,/^rl-[a-f0-9]{64}@revision-loop\.invalid$/);
-  assert.match(credentials.password,/^rl-private-v436:[A-Z2-9]{24}$/);
+  assert.match(credentials.password,/^rl-private-v436:[A-Z2-9]{8}$/);
   assert.deepEqual(await privateCredentials(key),credentials,'same key must find same account on another computer');
   assert.match(cloud,/createUserWithEmailAndPassword\(auth,credentials\.email,credentials\.password\)/);
   assert.match(cloud,/signInWithEmailAndPassword\(auth,credentials\.email,credentials\.password\)/);
