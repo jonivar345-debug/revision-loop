@@ -40,6 +40,8 @@
 - The key is an account credential, not end-to-end encryption. Firebase project administrators and the existing app's data model still control storage.
 - There is no self-service forgotten-key recovery because the pseudonymous address has no inbox.
 - Email/password provider and deployed Firestore rules cannot be verified by inspecting repository source alone.
-- A successful static syntax test or Vercel preview **does not prove** that real Firebase authentication, Firestore writes or two-device sync work.
+- Function-level simulations do not prove real Firebase authentication or Firestore permission behaviour. A successful static syntax test or Vercel preview **does not prove** that real Firebase authentication, Firestore writes or two-device sync work.
+- Firebase project configuration and currently deployed rules have not yet been verified using an authenticated Firebase administration connection.
+- Latest Vercel production deployment remains v433; the new private-key branch must not be treated as live.
 
 Merge order: v435 (#404) and then v436 (#405), with fresh exact-main integration tests at each step.
