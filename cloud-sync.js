@@ -36,7 +36,7 @@ function buttons(){
   visible('cloudSaveNow',!!user&&phase!=='loading'&&phase!=='resetting'&&phase!=='blocked');
   visible('cloudResetAll',!!user&&phase!=='loading'&&phase!=='resetting'&&phase!=='blocked');
   if(el('cloudAccountLabel'))el('cloudAccountLabel').textContent=user?
-    'Connected progress account: '+(user.email?.endsWith('@revision-loop.invalid')?'private key':(user.email||'signed in')):'Not signed in. Browser saving remains available.';
+    'Connected progress account: '+(user.email?.endsWith('@example.com')?'private key':(user.email||'signed in')):'Not signed in. Browser saving remains available.';
 }
 function changePhase(next,text){phase=next;message(text);buttons();}
 function checkpoint(){
@@ -340,6 +340,8 @@ async function resetAllProgress(){
    email/password auth without needing to type or disclose a real email address.
    Eight random base32 characters provide 40 bits, weaker than 24 characters;
    provider-side abuse limits and rate limits must be verified before release.
+   The reserved example.com domain is used only as an internal identifier;
+   there is no mailbox, email recovery or ability to reset a lost private key.
    Firebase Email/Password provider must be enabled before this feature can work.
    Firestore writes remain protected by existing per-UID security rules. */
 const PRIVATE_ALPHABET='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
@@ -358,7 +360,7 @@ async function privateCredentials(raw){
   const key=cleanPrivateKey(raw);
   const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('revision-loop-private-v436|'+key));
   const hash=Array.from(new Uint8Array(digest)).map(b=>b.toString(16).padStart(2,'0')).join('');
-  return {email:'rl-'+hash.slice(0,48)+'@revision-loop.invalid',password:'rl-private-v436:'+key};
+  return {email:'rl-'+hash.slice(0,48)+'@example.com',password:'rl-private-v436:'+key};
 }
 function privateMessage(messageText){const target=el('cloudPrivateStatus');if(target)target.textContent=messageText;}
 function explainPrivateError(error){
