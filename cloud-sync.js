@@ -358,7 +358,7 @@ async function privateCredentials(raw){
   const key=cleanPrivateKey(raw);
   const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('revision-loop-private-v436|'+key));
   const hash=Array.from(new Uint8Array(digest)).map(b=>b.toString(16).padStart(2,'0')).join('');
-  return {email:'rl-'+hash+'@revision-loop.invalid',password:'rl-private-v436:'+key};
+  return {email:'rl-'+hash.slice(0,48)+'@revision-loop.invalid',password:'rl-private-v436:'+key};
 }
 function privateMessage(messageText){const target=el('cloudPrivateStatus');if(target)target.textContent=messageText;}
 function explainPrivateError(error){
