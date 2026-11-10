@@ -13,6 +13,23 @@
  'use strict';
  const subjects=new Set(['Physics','Chemistry','Maths']);
  const DEFINITION=Object.freeze({kind:'definition',label:'Key definition'});
+ // v434 curated, limited quick-recall priorities. Selected from checked core
+ // card IDs with one short factual result each. These are *useful to recall*,
+ // not an assertion that every displayed equation is absent from the booklet.
+ // Do not use keyword heuristics to turn multi-step practice into memory facts.
+ const PRACTICAL_FACT=Object.freeze({kind:'practical-fact',label:'Key graph / practical fact'});
+ const MATHS_FACT=Object.freeze({kind:'maths-fact',label:'Essential maths recall'});
+ const CHEMISTRY_FACT=Object.freeze({kind:'chemistry-fact',label:'Key Chemistry recall'});
+ const CURATED_CORE=Object.freeze({
+  Physics:new Set(["phy_motion_d","phy_motion_v","phy_motion_a","phy_force_time_area","phy_rp1","phy_rp4","phy_rp5","phy_rp6","phy_uncert_products","phy_uncert_power","phy_measure_recap_20261024_uncert_add","phy_measure_recap_20261024_gradient_uncert","phy_newton3","v33_card_physics_i_v_characteristics_10","v33_card_physics_interference_16","v33_card_physics_waves_18","v33_card_physics_photoelectric_effect_20","phy_pandr_v29_kef_gradient","phy_pandr_v29_stopping_gradient","task1_practical_006","task1_practical_008","task1_practical_011","task1_practical_012","task1_phy_052","task1_phy_053","task1_phy_105","task1_phy_106","phy_graph_weakness_v36_iv_axes_resistance"]),
+  Maths:new Set(["math_proof_exhaust","math_quad_discriminant","math_perp_grad","math_circle_tangent","math_tan_identity","math_logs_product","math_logs_power","math_diff_power","math_integrate_power","math_vector_mag","v33_card_maths_trigonometry_73","v33_card_maths_trigonometry_84","task1_v136_011","task1_v136_012","task1_v136_068","task1_v136_069","task1_v162_016","task1_v162_017","task1_v162_018","task1_v162_002","task1_v162_023","task1_v171_001","task1_maths_001","task1_v171_005","task1_v136_006","task1_v162_006"]),
+  Chemistry:new Set(["chem_atomic_v43_18","chem_atomic_v43_34"])
+ });
+ function curatedCoreFact(card){
+  if(!card||!card.id||!CURATED_CORE[card.subject]?.has(card.id))return null;
+  return card.subject==='Physics'?PRACTICAL_FACT:card.subject==='Maths'?MATHS_FACT:CHEMISTRY_FACT;
+ }
+
  const EQUATION=Object.freeze({kind:'equation',label:'Equation to memorise'});
  const CHEMICAL_TEST=Object.freeze({kind:'chemical-test',label:'Chemical test to know'});
  // v433: test results and identification facts matter for AQA 7405 RP4/RP6/RP11,
@@ -85,6 +102,7 @@
   // may still be key; only suppress equation tagging for provided entries.
   if(card.formulaBooklet==='provided'||card.memoryPriority==='provided')return null;
   if(isChemicalTestRecall(card,front))return CHEMICAL_TEST;
+  const essential=curatedCoreFact(card);if(essential)return essential;
   if(card.memoryPriority==='unprovided-equation')return EQUATION;
   if(!hasSymbolicAnswer(back))return null;
   if(card.subject==='Chemistry'){
