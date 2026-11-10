@@ -24,7 +24,7 @@
 - Confirm browser-session sign-in is not persistent across a fresh browser session on shared machines.
 - Confirm wrong/short key cannot read another account. An empty new key must not silently load another account. Existing Google cloud account remains separate.
 - C: a browser with an existing local exam answer or purchased location must **not** be overwritten automatically; it must present deliberate review/backup. Cloud revisions changing concurrently must pause sync rather than overwrite.
-- Switch from offline to online and test that local work is not lost. Test failed initial Firestore upload and a post-upload checkpoint failure separately: the former may remove only the just-created empty auth account; the latter MUST keep the uploaded cloud account.
+- Switch from offline to online and test that local work is not lost. Test failed initial Firestore upload and a post-upload checkpoint failure separately: neither may delete the newly created auth account because a failed network response does not prove the transaction failed on the server. Reuse the SAME key to recover and check the remote revision before another upload.
 - A fresh computer must not require Google sign-in. First account creation should happen only after the user's explicit setup action, not merely entering the website PIN.
 
 ## Build/test gates
