@@ -184,6 +184,7 @@ async function firstUpload(){
       if(existing.exists())throw new Error('Cloud progress appeared on another device. Nothing was uploaded; review first.');
       tx.set(ref,{payload,revision:1,updatedAt:serverTimestamp()});
     });
+    cloudCreated=true;
     latestRemote={payload,revision:1};
     saveCheckpoint(user.uid,1,hash);
     localStorage.removeItem(MANUAL_RESTORE_KEY);
@@ -395,7 +396,7 @@ async function createPrivateAccount(){
   clearTimeout(saveTimer);
   if(stopRemoteListener){stopRemoteListener();stopRemoteListener=null}
   privateMessage('Creating a separate private-key cloud account…');
-  let createdUser=null;
+  let createdUser=null,cloudCreated=false;
   try{
     await setPersistence(auth,browserSessionPersistence);
     const credential=await createUserWithEmailAndPassword(auth,credentials.email,credentials.password);
@@ -423,7 +424,7 @@ async function createPrivateAccount(){
     // An account may have been created even if its first Firestore upload failed.
     // Remove only that newly created empty account; never touch the old Google
     // account or any cloud backup. Local progress and downloaded JSON remain.
-    if(createdUser){
+    if(createdUser&&!cloudCreated){
       try{
         await deleteUser(createdUser);
         user=null;
@@ -435,7 +436,7 @@ async function createPrivateAccount(){
         return;
       }
     }
-    changePhase('error','Private-key setup was not completed. Existing browser progress is unchanged.');
+    changePhase('error',cloudCreated?'Cloud progress was created but local setup could not finish. Do not create a second account; keep your key and backup.':'Private-key setup was not completed. Existing browser progress is unchanged.');
     privateMessage(explainPrivateError(error));
   }finally{migrationInProgress=false}
 }
