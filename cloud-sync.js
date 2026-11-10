@@ -2,7 +2,7 @@
    No personal browser data is uploaded until the user explicitly links the device.
    Offline local saves continue to use the original app.js/localStorage mechanism. */
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-app.js';
-import {getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, setPersistence, browserSessionPersistence} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js';
+import {getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, setPersistence, browserSessionPersistence, deleteUser} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js';
 import {getFirestore, doc, getDocFromServer, onSnapshot, runTransaction, serverTimestamp} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-firestore.js';
 
 const CONFIG=Object.freeze({
@@ -36,7 +36,7 @@ function buttons(){
   visible('cloudSaveNow',!!user&&phase!=='loading'&&phase!=='resetting'&&phase!=='blocked');
   visible('cloudResetAll',!!user&&phase!=='loading'&&phase!=='resetting'&&phase!=='blocked');
   if(el('cloudAccountLabel'))el('cloudAccountLabel').textContent=user?
-    'Google account: '+(user.email||'signed in'):'Not signed in. Browser saving remains available.';
+    'Connected progress account: '+(user.email?.endsWith('@revision-loop.invalid')?'private key':(user.email||'signed in')):'Not signed in. Browser saving remains available.';
 }
 function changePhase(next,text){phase=next;message(text);buttons();}
 function checkpoint(){
@@ -395,9 +395,11 @@ async function createPrivateAccount(){
   clearTimeout(saveTimer);
   if(stopRemoteListener){stopRemoteListener();stopRemoteListener=null}
   privateMessage('Creating a separate private-key cloud account…');
+  let createdUser=null;
   try{
     await setPersistence(auth,browserSessionPersistence);
     const credential=await createUserWithEmailAndPassword(auth,credentials.email,credentials.password);
+    createdUser=credential.user;
     user=credential.user;
     const payload=JSON.stringify(snapshot),hash=await fingerprint(snapshot.values);
     if(new TextEncoder().encode(payload).byteLength>800000)
@@ -418,6 +420,21 @@ async function createPrivateAccount(){
     watchRemote();
   }catch(error){
     active=false;
+    // An account may have been created even if its first Firestore upload failed.
+    // Remove only that newly created empty account; never touch the old Google
+    // account or any cloud backup. Local progress and downloaded JSON remain.
+    if(createdUser){
+      try{
+        await deleteUser(createdUser);
+        user=null;
+      }catch(cleanupError){
+        await signOut(auth).catch(()=>{});
+        user=null;
+        privateMessage('Setup failed and the empty account could not be removed automatically. Save your key and JSON backup; contact the site administrator before retrying. '+explainPrivateError(error));
+        changePhase('error','Private-key setup incomplete. Your local progress is unchanged.');
+        return;
+      }
+    }
     changePhase('error','Private-key setup was not completed. Existing browser progress is unchanged.');
     privateMessage(explainPrivateError(error));
   }finally{migrationInProgress=false}
@@ -469,7 +486,7 @@ function boot(){
     if(migrationInProgress)return;
     if(stopRemoteListener){stopRemoteListener();stopRemoteListener=null}
     user=account||null;active=false;queuedServerCheck=false;
-    if(!user){changePhase('idle','Google sign-in is optional. Revision Loop continues saving locally.');return}
+    if(!user){changePhase('idle','Cloud connection is optional. Revision Loop continues saving locally.');return}
     changePhase('loading','Checking your private cloud progress…');
     await inspect();
     if(user)watchRemote();
