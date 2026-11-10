@@ -2,7 +2,7 @@
    No personal browser data is uploaded until the user explicitly links the device.
    Offline local saves continue to use the original app.js/localStorage mechanism. */
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-app.js';
-import {getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js';
+import {getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, setPersistence, browserSessionPersistence} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js';
 import {getFirestore, doc, getDocFromServer, onSnapshot, runTransaction, serverTimestamp} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-firestore.js';
 
 const CONFIG=Object.freeze({
@@ -373,9 +373,11 @@ async function privateSignIn(){
   try{
     const credentials=await privateCredentials(el('cloudPrivateKey')?.value);
     privateMessage('Checking private cloud key…');
+    // On public or school computers, close the browser to end key-based access.
+    await setPersistence(auth,browserSessionPersistence);
     await signInWithEmailAndPassword(auth,credentials.email,credentials.password);
     if(el('cloudPrivateKey'))el('cloudPrivateKey').value='';
-    privateMessage('Private key accepted. Loading cloud progress…');
+    privateMessage('Private key accepted. Loading cloud progress… For safety, this private-key session ends when this browser session closes.');
   }catch(error){privateMessage(explainPrivateError(error))}
 }
 async function createPrivateAccount(){
@@ -394,6 +396,7 @@ async function createPrivateAccount(){
   if(stopRemoteListener){stopRemoteListener();stopRemoteListener=null}
   privateMessage('Creating a separate private-key cloud account…');
   try{
+    await setPersistence(auth,browserSessionPersistence);
     const credential=await createUserWithEmailAndPassword(auth,credentials.email,credentials.password);
     user=credential.user;
     const payload=JSON.stringify(snapshot),hash=await fingerprint(snapshot.values);
