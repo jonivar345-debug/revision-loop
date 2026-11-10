@@ -378,6 +378,7 @@ function explainPrivateError(error){
 }
 async function privateSignIn(){
   if(migrationInProgress)return;
+  if(user){privateMessage('A cloud account is already connected. Disconnect it before using a different progress key.');return}
   try{
     const credentials=await privateCredentials(el('cloudPrivateKey')?.value);
     privateMessage('Checking private cloud key…');
@@ -390,14 +391,22 @@ async function privateSignIn(){
 }
 async function createPrivateAccount(){
   if(migrationInProgress||working)return;
+  if(user){privateMessage('Disconnect the current cloud account before creating another progress account.');return}
   let credentials;
   try{credentials=await privateCredentials(el('cloudPrivateKey')?.value)}
   catch(error){privateMessage(error.message);return}
   if(!window.confirm('Create a NEW private-key cloud account using all progress currently saved in THIS browser? This keeps the existing Google cloud copy unchanged. Download a recovery backup before switching accounts. You MUST save your private key; it cannot be recovered if lost. Continue?'))return;
-  const snapshot=current();
-  // Download the whole original snapshot so migration cannot strand local work.
-  try{download(snapshot,'revision-loop-before-private-key-migration.json')}
-  catch(error){privateMessage('Backup could not be prepared: '+error.message);return}
+  // Validate and size the complete snapshot BEFORE creating a Firebase account.
+  // Otherwise an oversized or invalid browser state could strand an empty login.
+  let snapshot,payload,hash;
+  try{
+    snapshot=current();
+    payload=JSON.stringify(snapshot);
+    if(new TextEncoder().encode(payload).byteLength>800000)
+      throw new Error('Progress is too large for a single cloud document. Export your JSON backup instead.');
+    hash=await fingerprint(snapshot.values);
+    download(snapshot,'revision-loop-before-private-key-migration.json');
+  }catch(error){privateMessage('Setup stopped before account creation: '+error.message);return}
   migrationInProgress=true;
   active=false;
   clearTimeout(saveTimer);
@@ -409,9 +418,6 @@ async function createPrivateAccount(){
     const credential=await createUserWithEmailAndPassword(auth,credentials.email,credentials.password);
     createdUser=credential.user;
     user=credential.user;
-    const payload=JSON.stringify(snapshot),hash=await fingerprint(snapshot.values);
-    if(new TextEncoder().encode(payload).byteLength>800000)
-      throw new Error('Progress is too large for a single cloud document. Your local and downloaded backups are safe.');
     await runTransaction(db,async tx=>{
       const ref=remoteRef();
       const existing=await tx.get(ref);
