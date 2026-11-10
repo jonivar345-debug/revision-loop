@@ -145,8 +145,6 @@ async function inspect(){
     }else if(action==='first-restore'){
       if(core.isFreshDevice(local.values)&&!hasUnsavedAnswer()){
         active=false;changePhase('loading','Fresh computer detected. Loading your existing cloud progress automatically…');
-        // Keep a recovery copy before replacing even an apparently unused device.
-        download(local,'revision-loop-fresh-device-before-cloud-restore.json');
         await applyRemote(remote,true);
       }else{
         active=false;changePhase('first-restore','Existing device data detected. Choose Use cloud progress after reviewing the local backup; nothing has been overwritten.');
