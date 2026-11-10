@@ -11,6 +11,10 @@ on:
       - 'tests/physics-paper2-coach-browser-v430.mjs'
       - 'tests/universal-study-actions-v432.cjs'
       - 'tests/universal-study-actions-browser-v432.mjs'
+      - 'chemistry_qualitative_recall_v433.json'
+      - 'flashcard-priority-v429.js'
+      - 'tests/chemistry-qualitative-priority-v433.cjs'
+      - 'tests/chemistry-qualitative-priority-browser-v433.mjs'
       - '.github/workflows/physics-paper2-coach-v430.yml'
   workflow_dispatch:
 permissions:
@@ -32,6 +36,9 @@ jobs:
           node --check tests/universal-study-actions-v432.cjs
           node --check tests/universal-study-actions-browser-v432.mjs
           node tests/universal-study-actions-v432.cjs
+          node --check tests/chemistry-qualitative-priority-v433.cjs
+          node --check tests/chemistry-qualitative-priority-browser-v433.mjs
+          node tests/chemistry-qualitative-priority-v433.cjs
           node tests/physics-paper2-coach-v430.cjs
       - name: Existing priority, saved progress and marking checks
         run: |
@@ -49,3 +56,4 @@ jobs:
         run: |
           node tests/physics-paper2-coach-browser-v430.mjs
           node tests/universal-study-actions-browser-v432.mjs
+          node tests/chemistry-qualitative-priority-browser-v433.mjs
