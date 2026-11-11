@@ -1,0 +1,124 @@
+{
+  "version": "v444",
+  "created": "2026-11-11",
+  "assessment": "AQA AS Physics 7407/2",
+  "scope": "10 selected method families across source-verified June 2022 and June 2023 written questions, not complete paper transcription or exhaustive 2018–2025 audit",
+  "paperSources": [
+    {
+      "year": 2022,
+      "questionPaper": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74072-QP-JUN22.PDF",
+      "markScheme": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74072-MS-JUN22.PDF",
+      "reviewScope": "Selected question parts in Sections A/B, specifically 01.6, 02.2, 02.6, 03.1, 03.3–03.5; not all parts or 30 MCQs"
+    },
+    {
+      "year": 2023,
+      "questionPaper": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-74072-QP-JUN23.PDF",
+      "markScheme": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-74072-MS-JUN23.PDF",
+      "reviewScope": "Selected question parts in Section A, 01.5–01.6 and 02.4–02.5; not all parts or 30 MCQs"
+    }
+  ],
+  "mappings": [
+    {
+      "year": 2022,
+      "question": "01.6",
+      "assessedMethod": "Early timer start: explain change to graph at fixed drop distance",
+      "cardId": "as_p2_v444_001",
+      "section": "A",
+      "markingFocus": "rightward shift in t²; systematic timing bias",
+      "provenance": "Method verified from AQA paper + mark scheme; new prompt, quantities and accepted answers are independently authored, not a past-paper reproduction"
+    },
+    {
+      "year": 2022,
+      "question": "02.2",
+      "assessedMethod": "Calculate unknown resistance from a balanced bridge ratio",
+      "cardId": "as_p2_v444_002",
+      "section": "A",
+      "markingFocus": "algebraic bridge ratio and units",
+      "provenance": "Method verified from AQA paper + mark scheme; new prompt, quantities and accepted answers are independently authored, not a past-paper reproduction"
+    },
+    {
+      "year": 2022,
+      "question": "02.6",
+      "assessedMethod": "Infer change of wire diameter from a material resistivity ratio",
+      "cardId": "as_p2_v444_003",
+      "section": "A",
+      "markingFocus": "R/L proportional to ρ/d²; square-root scaling",
+      "provenance": "Method verified from AQA paper + mark scheme; new prompt, quantities and accepted answers are independently authored, not a past-paper reproduction"
+    },
+    {
+      "year": 2023,
+      "question": "01.5",
+      "assessedMethod": "Use repeated f×d products to check inverse proportionality",
+      "cardId": "as_p2_v444_004",
+      "section": "A",
+      "markingFocus": "calculated products and a justified trend",
+      "provenance": "Method verified from AQA paper + mark scheme; new prompt, quantities and accepted answers are independently authored, not a past-paper reproduction"
+    },
+    {
+      "year": 2023,
+      "question": "01.6",
+      "assessedMethod": "Predict effect of increased string tension on resonance frequency",
+      "cardId": "as_p2_v444_005",
+      "section": "A",
+      "markingFocus": "square-root dependence of f on T",
+      "provenance": "Method verified from AQA paper + mark scheme; new prompt, quantities and accepted answers are independently authored, not a past-paper reproduction"
+    },
+    {
+      "year": 2023,
+      "question": "02.5",
+      "assessedMethod": "Locate an experimental optimum on graph and propose focused readings",
+      "cardId": "as_p2_v444_006",
+      "section": "A",
+      "markingFocus": "minimum of best-fit curve and further nearby samples",
+      "provenance": "Method verified from AQA paper + mark scheme; new prompt, quantities and accepted answers are independently authored, not a past-paper reproduction"
+    },
+    {
+      "year": 2022,
+      "question": "03.4–03.5",
+      "assessedMethod": "Calculate source-path differences without small-angle assumptions",
+      "cardId": "as_p2_v444_007",
+      "section": "B",
+      "markingFocus": "actual geometric paths and first-minimum condition",
+      "provenance": "Method verified from AQA paper + mark scheme; new prompt, quantities and accepted answers are independently authored, not a past-paper reproduction"
+    },
+    {
+      "year": 2022,
+      "question": "03.1",
+      "assessedMethod": "Separate battery charging energy from mean output power over discharge",
+      "cardId": "as_p2_v444_008",
+      "section": "B",
+      "markingFocus": "E=VIt, then output power E/t (different intervals)",
+      "provenance": "Method verified from AQA paper + mark scheme; new prompt, quantities and accepted answers are independently authored, not a past-paper reproduction"
+    },
+    {
+      "year": 2022,
+      "question": "03.3",
+      "assessedMethod": "State both requirements for coherent sound sources",
+      "cardId": "as_p2_v444_009",
+      "section": "C",
+      "markingFocus": "same frequency and constant phase difference",
+      "provenance": "Method verified from AQA paper + mark scheme; new prompt, quantities and accepted answers are independently authored, not a past-paper reproduction"
+    },
+    {
+      "year": 2023,
+      "question": "02.4",
+      "assessedMethod": "Explain change in relative uncertainty with longer timed interval",
+      "cardId": "as_p2_v444_010",
+      "section": "C",
+      "markingFocus": "constant absolute time uncertainty ÷ increased measured time",
+      "provenance": "Method verified from AQA paper + mark scheme; new prompt, quantities and accepted answers are independently authored, not a past-paper reproduction"
+    }
+  ],
+  "auditLimits": [
+    "No complete 7407/2 paper verified as transcribed into the app",
+    "Other parts of June 2022/2023 and all MCQs require independent checking before claiming question-level coverage",
+    "The original coach bank has topical help, but no exact source paper mark fidelity is claimed for its older cards",
+    "2018–2021 and 2024–2025 historical part-by-part reviews remain outstanding",
+    "Scan and open-ended marking are not equivalent to human examiner decisions"
+  ],
+  "nextActions": [
+    "Continue Q-by-Q style review for 2018–2021, 2024–2025 official paper and schemes",
+    "Check diverse practical graph and signed-gradient reasoning, multi-stage written answers and misconceptions",
+    "Protect preexisting IDs and review progress, mark MCQs strictly and keep source link discoverable"
+  ]
+}

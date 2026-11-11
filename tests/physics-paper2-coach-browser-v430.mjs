@@ -46,9 +46,92 @@ try{
    count:paper2CoachCards('all').length,a:paper2CoachCards('A').length,
    b:paper2CoachCards('B').length,c:paper2CoachCards('C').length
   }));
-  assert.deepEqual(bank,{count:132,a:39,b:30,c:63},'Live Paper 2 loader must preserve 132 unique cards.');
+  assert.deepEqual(bank,{count:198,a:71,b:44,c:83},'Live Paper 2 trainer must retain 190 prior cards and load eight illustrated visual MCQs.');
+  const supplemental=await page.evaluate(()=>{
+   const list=cards.filter(c=>/^as_p2_v443_\d{3}$/.test(c.id));
+   return list.map(c=>({id:c.id,ref:c.specRef,section:c.paper2Section,
+     model:evaluateCard(c,c.back).status,
+     wrongChoice:c.paper2Section==='C'?evaluateCard(c,c.paper2Choices[1]).status:null}));
+  });
+  assert.equal(supplemental.length,8,'All eight new AS Paper 2 cards must load');
+  for(const check of supplemental){
+   assert.equal(check.model,'correct','New card model answer rejected: '+check.id);
+   if(check.section==='C')assert.equal(check.wrongChoice,'wrong','New MCQ distractor falsely accepted: '+check.id);
+  }
+  const historical=await page.evaluate(()=>{
+   const list=cards.filter(c=>/^as_p2_v444_\d{3}$/.test(c.id));
+   return list.map(c=>({id:c.id,year:c.sourceStyle?.year,section:c.paper2Section,
+      model:evaluateCard(c,c.back).status,
+      wrongChoice:c.paper2Section==='C'?evaluateCard(c,c.paper2Choices[1]).status:null}));
+  });
+  assert.equal(historical.length,10,'All ten paper-style cards must load');
+  for(const check of historical){
+   assert([2022,2023].includes(check.year));
+   assert.equal(check.model,'correct','Paper-style model answer rejected: '+check.id);
+   if(check.section==='C')assert.equal(check.wrongChoice,'wrong','Paper-style distractor falsely accepted: '+check.id);
+  }
+  const earlier=await page.evaluate(()=>{
+   const list=cards.filter(c=>/^as_p2_v445_\d{3}$/.test(c.id));
+   return list.map(c=>({id:c.id,year:c.sourceStyle?.year,section:c.paper2Section,
+    model:evaluateCard(c,c.back).status,
+    alternate:c.paper2Section!=='C'?evaluateCard(c,c.accept[0]).status:null,
+    wrongChoice:c.paper2Section==='C'?evaluateCard(c,c.paper2Choices[1]).status:null}));
+  });
+  assert.equal(earlier.length,20,'All twenty source-mapped early Paper 2 cards must load');
+  for(const check of earlier){
+   assert([2018,2019,2020,2021].includes(check.year),'Unexpected historical source year: '+check.id);
+   assert.equal(check.model,'correct','New model answer rejected by real marker: '+check.id);
+   if(check.section==='C')assert.equal(check.wrongChoice,'wrong','New MCQ distractor falsely credited: '+check.id);
+   else assert.equal(check.alternate,'correct','Valid alternative rejected by real marker: '+check.id);
+  }
+  const recent=await page.evaluate(()=>{
+    const list=cards.filter(c=>/^as_p2_v446_\d{3}$/.test(c.id));
+    return list.map(c=>({id:c.id,year:c.sourceStyle?.year,section:c.paper2Section,
+      source:c.sourceStyle?.verification,model:evaluateCard(c,c.back).status,
+      alternate:c.paper2Section==='C'?null:evaluateCard(c,c.accept[0]).status,
+      wrongChoice:c.paper2Section==='C'?evaluateCard(c,c.paper2Choices[1]).status:null}));
+  });
+  assert.equal(recent.length,20,'All 20 new 2024/2025 guided-card examples must load');
+  for(const check of recent){
+    assert([2024,2025].includes(check.year));
+    assert.equal(check.model,'correct','New model answer rejected by real marker: '+check.id);
+    if(check.section==='C')assert.equal(check.wrongChoice,'wrong','New MCQ distractor falsely credited: '+check.id);
+    else assert.equal(check.alternate,'correct','Allowed equivalent rejected: '+check.id);
+    if(check.year===2025)assert(check.source.includes('mark_scheme_unverified'),'2025 must not claim mark-scheme sign-off');
+  }
+  const visualAudit=await page.evaluate(()=>{
+   const list=cards.filter(c=>/^as_p2_v447_\d{3}$/.test(c.id));
+   return list.map(c=>({id:c.id,section:c.paper2Section,visual:c.visual,
+     svg:window.RevisionPaper2Visuals?.render(c.visual)||'',
+     model:evaluateCard(c,c.back).status,
+     wrong:evaluateCard(c,c.paper2Choices[1]).status}));
+  });
+  assert.equal(visualAudit.length,8,'All eight visual MCQs must load with stable new IDs');
+  for(const check of visualAudit){
+   assert.equal(check.section,'C');
+   assert(check.svg.includes('role="img"')&&check.svg.includes('<title>'),'Visual asset missing or inaccessible: '+check.id);
+   assert.equal(check.model,'correct','Visual model answer rejected: '+check.id);
+   assert.equal(check.wrong,'wrong','Visual MCQ distractor wrongly awarded: '+check.id);
+   await page.evaluate(id=>{
+    activeSession={kind:'flash',items:[{type:'card',id}],index:0,title:'AS Physics visual Paper 2 QA'};
+    currentCardId=null;
+    renderAll();
+   },check.id);
+   assert.equal(await page.locator('.diagram svg[role="img"]').count(),1,check.id+' diagram not mounted');
+   assert(await page.locator('.paper2-diagram-caption').isVisible(),check.id+' visual description missing');
+   assert.equal(await page.locator('.paper2-mcq-option').count(),4,check.id+' four-choice MCQ missing');
+   const view=await page.locator('.diagram svg').evaluate(node=>({
+    aria:node.getAttribute('aria-label'),
+    bounds:node.getBoundingClientRect().width,
+    viewport:document.documentElement.clientWidth,
+    html:node.outerHTML
+   }));
+   assert(view.aria?.length>=20,'Description absent from visual '+check.id);
+   assert(view.bounds<=view.viewport+1,'Diagram causes horizontal overflow '+check.id);
+   assert(!view.html.includes('aria-hidden="true"'),'Accessible visual must not be hidden '+check.id);
+  }
   await page.locator('#paper2Section').selectOption('C');
-  assert.match(await page.locator('#paper2CoachSummary').textContent(),/63 guided cards/);
+  assert.match(await page.locator('#paper2CoachSummary').textContent(),/83 guided cards/);
   await page.locator('#paper2SessionCount').selectOption('10');
   await page.locator('#startPaper2Coach').click();
   let session=await page.evaluate(()=>({

@@ -1,0 +1,47 @@
+name: v447 Paper 2 eight visual question QA
+on:
+  pull_request:
+    paths:
+      - physics-paper2-visuals-v447.js
+      - physics_as_paper2_guided_v430.json
+      - app.js
+      - index.html
+      - sw.js
+      - styles.css
+      - tests/physics-paper2-visual-v447.cjs
+      - tests/physics-paper2-coach-browser-v430.mjs
+      - editorial/physics-paper2-mcq-2024-skill-matrix-v446.json
+      - .github/workflows/physics-paper2-visual-v447.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  visual-paper2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Visual source, old cards and progress checks
+        run: |
+          node --check app.js
+          node --check physics-paper2-visuals-v447.js
+          node tests/physics-paper2-visual-v447.cjs
+          node tests/physics-paper2-coach-v430.cjs
+          node tests/physics-paper2-spec-v443.cjs
+          node tests/physics-paper2-past-style-v444.cjs
+          node tests/physics-paper2-earlier-sources-v445.cjs
+          node tests/physics-paper2-recent-sources-v446.cjs
+          node tests/physics-paper2-mcq-2024-audit-v446.cjs
+          node tests/mock-unlimited-v438.cjs
+          node tests/universal-study-actions-v432.cjs
+          node tests/mobile-cloud-progress-v428.cjs
+          node tests/world-satellite-texture-v442.cjs
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Browser visual, options, small screens and XP/history
+        run: node tests/physics-paper2-coach-browser-v430.mjs
