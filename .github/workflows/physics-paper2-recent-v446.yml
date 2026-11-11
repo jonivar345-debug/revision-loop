@@ -1,0 +1,43 @@
+name: v446 Paper 2 recent-source quality and protected progress
+on:
+  pull_request:
+    paths:
+      - physics_as_paper2_guided_v430.json
+      - app.js
+      - index.html
+      - sw.js
+      - tests/physics-paper2-recent-sources-v446.cjs
+      - tests/physics-paper2-coach-browser-v430.mjs
+      - editorial/physics-paper2-recent-sources-v446.json
+      - .github/workflows/physics-paper2-recent-v446.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  recent-methods:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify maths, sources and saved-progress invariants
+        run: |
+          node --check app.js
+          node tests/physics-paper2-recent-sources-v446.cjs
+          node tests/physics-paper2-earlier-sources-v445.cjs
+          node tests/physics-paper2-past-style-v444.cjs
+          node tests/physics-paper2-spec-v443.cjs
+          node tests/physics-paper2-coach-v430.cjs
+          node tests/physics-mock-breadth-v439.cjs
+          node tests/physics-mock-quality-v439.cjs
+          node tests/mock-unlimited-v438.cjs
+          node tests/mobile-cloud-progress-v428.cjs
+          node tests/universal-study-actions-v432.cjs
+      - name: Chromium install
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Browser check for all 20 model answers, equivalents and distractors
+        run: node tests/physics-paper2-coach-browser-v430.mjs
