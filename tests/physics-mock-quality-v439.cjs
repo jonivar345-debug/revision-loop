@@ -21,7 +21,7 @@ for(const c of cards){
  assert(c.front.length<=140&&c.back.length<=150,'Single-fact flashcard');
  assert(Array.isArray(c.accept)&&c.accept.includes(c.back)&&c.accept.length>=2);
  assert(Array.isArray(c.reject)&&c.reject.length>=1,'Wrong-answer probes');
- assert(/^3\.1\.2$|^7\.2 RP[1-6]$/.test(c.specRef));
+ assert(/^(?:3\.(?:1\.2|2\.2|3\.2|4|5)|7\.2 RP[1-6])$/.test(c.specRef));
 }
 for(const q of questions){
  assert(/^v439_phy_exam_(?:rp[1-6]|data0[1-6])$/.test(q.id)&&!ids.has(q.id)&&!knownIds.has(q.id));
