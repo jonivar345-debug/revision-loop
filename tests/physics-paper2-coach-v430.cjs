@@ -7,14 +7,14 @@ const html=fs.readFileSync('index.html','utf8');
 const css=fs.readFileSync('styles.css','utf8');
 const sw=fs.readFileSync('sw.js','utf8');
 assert.equal(deck.version,'v430');
-assert.equal(deck.cards.length,190);
+assert.equal(deck.cards.length,198);
 assert.equal(deck.cards.filter(c=>/^as_p2_v430_\d{3}$/.test(c.id)).length,132,'All original card IDs retained');
 assert.equal(deck.cards.filter(c=>/^as_p2_v443_\d{3}$/.test(c.id)).length,8,'New subtopic gap cards are distinct');
 assert.equal(deck.cards.filter(c=>/^as_p2_v444_\d{3}$/.test(c.id)).length,10,'v444 paper styles retained');
 assert.equal(deck.cards.filter(c=>/^as_p2_v445_\d{3}$/.test(c.id)).length,20,'Twenty new v445 paper styles loaded');
 const tally={A:0,B:0,C:0},ids=new Set(),fronts=new Set();
 for(const c of deck.cards){
- assert(/^as_p2_v(?:430|443|444|445|446)_\d{3}$/.test(c.id),'stable ID '+c.id);
+ assert(/^as_p2_v(?:430|443|444|445|446|447)_\d{3}$/.test(c.id),'stable ID '+c.id);
  assert(!ids.has(c.id),'duplicate id');ids.add(c.id);
  assert(!fronts.has(c.front),'duplicated question pattern');fronts.add(c.front);
  assert.equal(c.subject,'Physics');assert.equal(c.stage,'AS');
@@ -31,7 +31,7 @@ for(const c of deck.cards){
   assert.equal(new Set(c.paper2Choices.map(x=>x.toLowerCase().replace(/[\s.,!]/g,''))).size,4);
  }else assert(!c.paper2Choices,'free-text coaching in A and B');
 }
-assert.deepEqual(tally,{A:71,B:44,C:75});
+assert.deepEqual(tally,{A:71,B:44,C:83});
 assert.equal(deck.sources.length,10);
 assert(app.includes("const AS_P2_COACH_URL='./physics_as_paper2_guided_v430.json'"));
 assert(app.includes("const res=await fetch(AS_P2_COACH_URL"));
