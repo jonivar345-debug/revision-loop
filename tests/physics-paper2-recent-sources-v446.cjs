@@ -9,9 +9,9 @@ const deck=JSON.parse(fs.readFileSync('physics_as_paper2_guided_v430.json','utf8
 const ledger=JSON.parse(fs.readFileSync('editorial/physics-paper2-recent-sources-v446.json','utf8'));
 const app=fs.readFileSync('app.js','utf8'),html=fs.readFileSync('index.html','utf8'),sw=fs.readFileSync('sw.js','utf8');
 const cards=deck.cards,base=cards.slice(0,170),added=cards.filter(c=>/^as_p2_v446_\d{3}$/.test(c.id));
-assert.equal(cards.length,213);
+assert.equal(cards.length,218);
 assert.equal(added.length,20);
-assert.equal(new Set(cards.map(c=>c.id)).size,213);
+assert.equal(new Set(cards.map(c=>c.id)).size,218);
 assert.equal(crypto.createHash('sha256').update(JSON.stringify(base)).digest('hex'),
  '939165b0d8079a3fd1bd954642734799c17942c5fedac21b1bbb47d05994b942',
  'All prior 170 cards must retain the same ID, prompt, answer, hint, choices and scheduling flags');
@@ -47,7 +47,7 @@ for(const c of added){
 }
 assert.equal(added.filter(c=>c.sourceStyle.year===2024).length,12);
 assert.equal(added.filter(c=>c.sourceStyle.year===2025).length,8);
-assert.deepEqual(Object.fromEntries(['A','B','C'].map(k=>[k,cards.filter(c=>c.paper2Section===k).length])),{A:71,B:44,C:98});
+assert.deepEqual(Object.fromEntries(['A','B','C'].map(k=>[k,cards.filter(c=>c.paper2Section===k).length])),{A:71,B:44,C:103});
 function nearly(a,b,atol=1e-10){assert(Math.abs(a-b)<=atol,a+' differs from '+b)}
 nearly(2.5*0.44,1.1);
 nearly(2*0.18/(1.2*1.2),0.25);
