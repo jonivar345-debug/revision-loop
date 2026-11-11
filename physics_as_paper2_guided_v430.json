@@ -4040,14 +4040,15 @@
       "revisionTopic": "Section A · Practicals & data",
       "paper2Section": "A",
       "paper2Skill": "Estimation and scale",
-      "paper2Hint": "Convert 10 minutes to 600 seconds, then use distance = speed × time.",
-      "paper2Trap": "Ten minutes is not ten seconds; give the distance, not the speed.",
-      "front": "At roughly 1 m s⁻¹, how far does a person walk in 10 minutes, to one significant figure?",
-      "back": "About 600 m.",
+      "paper2Hint": "First estimate distance: 1 × 600 = 600 m. Compare nearby powers of ten.",
+      "paper2Trap": "600 m is the estimated distance, but the nearest power of ten is 10³ m, not 10² m.",
+      "front": "A person walks roughly 1 m s⁻¹ for 10 minutes. What is the distance's nearest order of magnitude in metres?",
+      "back": "10³ m.",
       "accept": [
-        "600 m",
-        "0.6 km",
-        "six hundred metres"
+        "10^3 m",
+        "1000 m",
+        "1 × 10³ m",
+        "10 to the power 3 metres"
       ]
     },
     {
