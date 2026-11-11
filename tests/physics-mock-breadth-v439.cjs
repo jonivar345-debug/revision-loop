@@ -25,6 +25,7 @@ assert.equal(balance.strand({courseTopic:'Mechanics & materials',topic:'Motion g
 assert.equal(balance.strand({courseTopic:'Waves',topic:'Polarisation'}),'Waves');
 assert.equal(balance.strand({courseTopic:'Electricity',topic:'Potential dividers'}),'Electricity');
 assert.equal(balance.strand({specRef:'3.2.2.1'}),'Particles and radiation');
+assert.equal(balance.strand({courseTopic:'Particles & radiation',topic:'Photoelectric effect'}),'Particles and radiation','Photoelectric must not leak into Electricity');
 assert.equal(balance.practical({revisionTopic:'RP6 EMF/internal resistance'}),6);
 
 // Real bank and weighted selection: each five-area sample must represent
