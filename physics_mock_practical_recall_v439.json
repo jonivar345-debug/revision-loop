@@ -23,7 +23,10 @@
         "twice the original frequency",
         "2 times the frequency"
       ],
-      "reject": [],
+      "reject": [
+        "frequency becomes four times as large",
+        "frequency halves"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -46,7 +49,9 @@
         "f against 1/L: straight line through the origin.",
         "straight line through origin on f versus reciprocal length graph"
       ],
-      "reject": [],
+      "reject": [
+        "plot frequency against length as a straight line through the origin"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -70,7 +75,10 @@
         "reduces relative uncertainty",
         "improves precision of average fringe width"
       ],
-      "reject": [],
+      "reject": [
+        "it increases the uncertainty",
+        "it changes the light wavelength"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -94,7 +102,10 @@
         "order number",
         "fringe order"
       ],
-      "reject": [],
+      "reject": [
+        "n is number of slits",
+        "n is refractive index"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -118,7 +129,9 @@
         "s versus t squared",
         "distance fallen against time squared"
       ],
-      "reject": [],
+      "reject": [
+        "plot displacement against time"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -142,7 +155,9 @@
         "reduces reaction time error",
         "automatic timing avoids reaction delay"
       ],
-      "reject": [],
+      "reject": [
+        "it increases the delay in human reaction"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -166,7 +181,10 @@
         "young's modulus",
         "E"
       ],
-      "reject": [],
+      "reject": [
+        "strain is the gradient",
+        "stress is the gradient"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -189,7 +207,9 @@
         "A larger extension reduces percentage extension uncertainty.",
         "greater extension lowers relative uncertainty"
       ],
-      "reject": [],
+      "reject": [
+        "the longer wire has smaller extension"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -213,7 +233,10 @@
         "4 times the area",
         "four times"
       ],
-      "reject": [],
+      "reject": [
+        "area doubles",
+        "area halves"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -236,7 +259,10 @@
         "6%.",
         "6 percent"
       ],
-      "reject": [],
+      "reject": [
+        "3%",
+        "2%"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -260,7 +286,10 @@
         "emf",
         "electromotive force"
       ],
-      "reject": [],
+      "reject": [
+        "internal resistance",
+        "negative gradient"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -284,7 +313,10 @@
         "internal resistance",
         "negative gradient is -r"
       ],
-      "reject": [],
+      "reject": [
+        "electromotive force",
+        "intercept"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -307,7 +339,10 @@
         "(mₘₐₓ − mₘᵢₙ)/2.",
         "half the difference between maximum and minimum gradients"
       ],
-      "reject": [],
+      "reject": [
+        "maximum gradient minus minimum gradient",
+        "twice the gradient difference"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -330,7 +365,9 @@
         "Systematic error.",
         "a systematic error"
       ],
-      "reject": [],
+      "reject": [
+        "random error"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -353,7 +390,10 @@
         "To detect anomalies and estimate random uncertainty.",
         "identify anomalies and reduce the effect of random error"
       ],
-      "reject": [],
+      "reject": [
+        "eliminates systematic error",
+        "to change the mean"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -376,7 +416,9 @@
         "2 × % uncertainty in x + % uncertainty in y.",
         "twice the percentage uncertainty in x plus that in y"
       ],
-      "reject": [],
+      "reject": [
+        "percentage uncertainty in x plus y"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -400,7 +442,10 @@
         "quantity and units",
         "symbol and unit"
       ],
-      "reject": [],
+      "reject": [
+        "only quantity",
+        "only unit"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -423,7 +468,9 @@
         "It improves reliability of the trend and gradient.",
         "improves confidence in gradient and relation"
       ],
-      "reject": [],
+      "reject": [
+        "it makes the trend less reliable"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -446,7 +493,9 @@
         "Two well-separated points on the best-fit line.",
         "widely spaced points on the line"
       ],
-      "reject": [],
+      "reject": [
+        "two consecutive points from raw data"
+      ],
       "strictRecall": true,
       "priority": 2
     },
@@ -469,7 +518,9 @@
         "So only the independent variable explains a measured change.",
         "isolates the effect of the independent variable"
       ],
-      "reject": [],
+      "reject": [
+        "to ensure all variables change at the same time"
+      ],
       "strictRecall": true,
       "priority": 2
     }
