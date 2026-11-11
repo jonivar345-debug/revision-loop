@@ -29,7 +29,7 @@ for(const q of matrix.questionFamilies){
 assert.equal(matrix.questionFamilies.filter(q=>q.diagramDependent).length,8);
 const subjects=['3.1','3.2','3.3','3.4','3.5'];
 for(const prefix of subjects)assert(matrix.questionFamilies.some(q=>q.specRef.startsWith(prefix)),'Missed assessed AS strand '+prefix);
-assert(bank.cards.length===213);
+assert(bank.cards.length===218);
 assert(matrix.sources.originalQuestionPaper.includes('June%202024%20QP.pdf'));
 assert(matrix.sources.officialMarkScheme.includes('June%202024%20MS.pdf'));
 const recent=JSON.parse(fs.readFileSync('editorial/physics-paper2-recent-sources-v446.json'));
