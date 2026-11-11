@@ -1,0 +1,40 @@
+name: v439 Physics mock coverage, practical answers and marking
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'sw.js'
+      - 'physics_mock_practical_recall_v439.json'
+      - 'physics_mock_practical_exam_v439.json'
+      - 'tests/physics-mock-quality-v439.cjs'
+      - 'tests/physics-mock-browser-v439.mjs'
+      - '.github/workflows/physics-mock-quality-v439.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  physics-mock:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax, coverage, worked solutions and marking safety
+        run: |
+          node --check app.js
+          node --check tests/physics-mock-quality-v439.cjs
+          node --check tests/physics-mock-browser-v439.mjs
+          node tests/physics-mock-quality-v439.cjs
+          node tests/mobile-cloud-progress-v428.cjs
+          node tests/universal-study-actions-v432.cjs
+          node tests/flashcard-priority-v429.cjs
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Physics mock practice in 390px and desktop browsers
+        run: |
+          node tests/physics-mock-browser-v439.mjs
