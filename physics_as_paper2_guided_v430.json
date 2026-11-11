@@ -4270,6 +4270,360 @@
         "An up quark (strangeness 0)",
         "A down quark (strangeness 0)"
       ]
+    },
+    {
+      "id": "as_p2_v444_001",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.1.2",
+      "topic": "Timing bias and graph displacement",
+      "courseTopic": "Section A · Practicals & data",
+      "revisionTopic": "Section A · Practicals & data",
+      "paper2Section": "A",
+      "paper2Skill": "Timing bias and graph displacement",
+      "paper2Hint": "The distance s is fixed, but the recorded time is too large.",
+      "paper2Trap": "A consistent delay is systematic error, not random scatter.",
+      "front": "A free-fall timer starts early. On a graph of 2s against recorded t², where do points move for the same drop distance?",
+      "back": "To the right (larger t²).",
+      "accept": [
+        "right",
+        "towards larger t²",
+        "increased t squared"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "sourceStyle": {
+        "year": 2022,
+        "paper": "7407/2",
+        "question": "01.6",
+        "status": "original adaptation of verified skill; not original AQA wording"
+      }
+    },
+    {
+      "id": "as_p2_v444_002",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.5.1.4",
+      "topic": "Null-bridge ratios",
+      "courseTopic": "Section A · Practicals & data",
+      "revisionTopic": "Section A · Practicals & data",
+      "paper2Section": "A",
+      "paper2Skill": "Null-bridge ratios",
+      "paper2Hint": "Rearrange to R₄ = R₃R₂/R₁; keep the ratio's units consistent.",
+      "paper2Trap": "Inverting the bridge ratio gives the wrong resistance.",
+      "front": "At a balanced bridge R₁/R₂ = R₃/R₄. If R₁=2 kΩ, R₂=4 kΩ and R₃=8 Ω, find R₄.",
+      "back": "16 Ω.",
+      "accept": [
+        "16 ohms",
+        "16 Ω",
+        "16"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "sourceStyle": {
+        "year": 2022,
+        "paper": "7407/2",
+        "question": "02.2",
+        "status": "original adaptation of verified skill; not original AQA wording"
+      }
+    },
+    {
+      "id": "as_p2_v444_003",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.5.1.3",
+      "topic": "Resistivity ratio reasoning",
+      "courseTopic": "Section A · Practicals & data",
+      "revisionTopic": "Section A · Practicals & data",
+      "paper2Section": "A",
+      "paper2Skill": "Resistivity ratio reasoning",
+      "paper2Hint": "R/L = 4ρ/(πd²), so fixed R/L means d² is proportional to ρ.",
+      "paper2Trap": "Diameter scales with the square root, not directly with resistivity.",
+      "front": "Resistivity becomes 9 times larger. To keep a wire's resistance per metre unchanged, how must its diameter change?",
+      "back": "Triple (×3).",
+      "accept": [
+        "3 times",
+        "triple",
+        "increase diameter by factor of 3"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "sourceStyle": {
+        "year": 2022,
+        "paper": "7407/2",
+        "question": "02.6",
+        "status": "original adaptation of verified skill; not original AQA wording"
+      }
+    },
+    {
+      "id": "as_p2_v444_004",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.3.1.3",
+      "topic": "Testing inverse proportionality",
+      "courseTopic": "Section A · Practicals & data",
+      "revisionTopic": "Section A · Practicals & data",
+      "paper2Section": "A",
+      "paper2Skill": "Testing inverse proportionality",
+      "paper2Hint": "Calculate f×d twice: both products are 24 mm Hz.",
+      "paper2Trap": "A constant product supports inverse, not direct, proportionality.",
+      "front": "A vibrating wire gives f=60 Hz at d=0.40 mm and f=40 Hz at d=0.60 mm. What relationship do the results support?",
+      "back": "Frequency is inversely proportional to diameter.",
+      "accept": [
+        "f inversely proportional to d",
+        "f ∝ 1/d",
+        "frequency inverse to diameter"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "sourceStyle": {
+        "year": 2023,
+        "paper": "7407/2",
+        "question": "01.5",
+        "status": "original adaptation of verified skill; not original AQA wording"
+      }
+    },
+    {
+      "id": "as_p2_v444_005",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.3.1.3",
+      "topic": "Standing-wave tension changes",
+      "courseTopic": "Section A · Practicals & data",
+      "revisionTopic": "Section A · Practicals & data",
+      "paper2Section": "A",
+      "paper2Skill": "Standing-wave tension changes",
+      "paper2Hint": "f = (1/2L)√(T/μ), so f is proportional to √T.",
+      "paper2Trap": "Do not quadruple frequency when tension quadruples.",
+      "front": "A string's length and mass per metre stay fixed, but its tension becomes four times larger. What happens to its first harmonic frequency?",
+      "back": "It doubles.",
+      "accept": [
+        "double",
+        "twice",
+        "x2",
+        "2 times"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "sourceStyle": {
+        "year": 2023,
+        "paper": "7407/2",
+        "question": "01.6",
+        "status": "original adaptation of verified skill; not original AQA wording"
+      }
+    },
+    {
+      "id": "as_p2_v444_006",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.1.2",
+      "topic": "Finding a graph optimum",
+      "courseTopic": "Section A · Practicals & data",
+      "revisionTopic": "Section A · Practicals & data",
+      "paper2Section": "A",
+      "paper2Skill": "Finding a graph optimum",
+      "paper2Hint": "At fixed distance, shortest travel time corresponds to maximum average speed.",
+      "paper2Trap": "More points far from the minimum will not pinpoint the optimum.",
+      "front": "Travel time has a minimum on a graph against track angle. How should you locate the best angle more accurately?",
+      "back": "Read the minimum of a best-fit curve; sample more closely around it.",
+      "accept": [
+        "curve minimum and closer readings",
+        "find turning point and repeat near minimum",
+        "read minimum and take more nearby points"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "sourceStyle": {
+        "year": 2023,
+        "paper": "7407/2",
+        "question": "02.5",
+        "status": "original adaptation of verified skill; not original AQA wording"
+      }
+    },
+    {
+      "id": "as_p2_v444_007",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.3.2.1",
+      "topic": "Point-source path difference",
+      "courseTopic": "Section B · Linked applications",
+      "revisionTopic": "Section B · Linked applications",
+      "paper2Section": "B",
+      "paper2Skill": "Point-source path difference",
+      "paper2Hint": "Find the paths geometrically, then use destructive interference.",
+      "paper2Trap": "The small-angle double-slit formula need not apply to this geometry.",
+      "front": "At a first minimum from two coherent speakers, how can actual source-to-listener distances give wavelength?",
+      "back": "Calculate both path lengths; their difference equals λ/2.",
+      "accept": [
+        "path difference lambda/2",
+        "subtract actual distances and double for wavelength",
+        "difference of distances is half wavelength"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "sourceStyle": {
+        "year": 2022,
+        "paper": "7407/2",
+        "question": "03.4–03.5",
+        "status": "original adaptation of verified skill; not original AQA wording"
+      }
+    },
+    {
+      "id": "as_p2_v444_008",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.5.1.4",
+      "topic": "Battery energy over two time periods",
+      "courseTopic": "Section B · Linked applications",
+      "revisionTopic": "Section B · Linked applications",
+      "paper2Section": "B",
+      "paper2Skill": "Battery energy over two time periods",
+      "paper2Hint": "Energy stored = VIt = 24 Wh. Divide by the eight-hour use period.",
+      "paper2Trap": "Do not divide charging power by the charging time again.",
+      "front": "A 6 V battery charges at 2 A for 2 h and supplies a device for 8 h. Ignoring losses, what is its average output power?",
+      "back": "3 W.",
+      "accept": [
+        "3 watts",
+        "3 W",
+        "3"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "sourceStyle": {
+        "year": 2022,
+        "paper": "7407/2",
+        "question": "03.1",
+        "status": "original adaptation of verified skill; not original AQA wording"
+      }
+    },
+    {
+      "id": "as_p2_v444_009",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.3.2.1",
+      "topic": "Coherence conditions",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Coherence conditions",
+      "paper2Hint": "Coherence is a stable phase relationship, not necessarily zero phase difference.",
+      "paper2Trap": "Equal amplitude alone does not establish coherence.",
+      "front": "MCQ: which pair of properties must coherent sources have?",
+      "back": "Same frequency and a constant phase difference.",
+      "accept": [
+        "same frequency fixed phase difference",
+        "same frequency and fixed phase difference"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "sourceStyle": {
+        "year": 2022,
+        "paper": "7407/2",
+        "question": "03.3",
+        "status": "original adaptation of verified skill; not original AQA wording"
+      },
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "Same frequency and a constant phase difference.",
+        "Same amplitude and wavelength",
+        "Identical path lengths to the observer",
+        "Zero phase difference at every instant"
+      ]
+    },
+    {
+      "id": "as_p2_v444_010",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.1.2",
+      "topic": "Percentage timing uncertainty",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Percentage timing uncertainty",
+      "paper2Hint": "Percentage uncertainty = 100×absolute uncertainty/measured interval.",
+      "paper2Trap": "A longer interval does not increase the same absolute uncertainty.",
+      "front": "MCQ: timing uncertainty stays ±0.2 s. What happens to percentage uncertainty if the measured interval doubles?",
+      "back": "It halves.",
+      "accept": [
+        "halves",
+        "half original",
+        "50 percent of original"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "sourceStyle": {
+        "year": 2023,
+        "paper": "7407/2",
+        "question": "02.4",
+        "status": "original adaptation of verified skill; not original AQA wording"
+      },
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "It halves.",
+        "It doubles",
+        "It stays unchanged",
+        "It becomes four times larger"
+      ]
     }
   ],
   "mcqDesign": "Section C has four original answer options per card with plausible wrong choices. Responses are displayed in a rotated order per card.",
@@ -4291,5 +4645,22 @@
     "originalCardsPreserved": 132,
     "aim": "Add original guided practice where v430 had no direct topic-tag evidence: 3.1.3, 3.2.1.1, 3.2.1.5 and 3.2.1.7",
     "copyright": "Original coaching questions, not copied from AQA question papers."
+  },
+  "historicalStyleAudit": {
+    "version": "v444",
+    "date": "2026-11-11",
+    "auditedYears": [
+      2022,
+      2023
+    ],
+    "addedOriginalCards": 10,
+    "preexistingCards": 140,
+    "scope": "Targeted verified method families from official 7407/2 question papers and mark schemes, not a full 2018–2025 part-by-part audit",
+    "sources": [
+      "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74072-QP-JUN22.PDF",
+      "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74072-MS-JUN22.PDF",
+      "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-74072-QP-JUN23.PDF",
+      "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-74072-MS-JUN23.PDF"
+    ]
   }
 }
