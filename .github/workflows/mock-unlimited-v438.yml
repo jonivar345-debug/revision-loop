@@ -1,0 +1,38 @@
+name: v438 unlimited mock sessions
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'styles.css'
+      - 'sw.js'
+      - 'tests/mock-unlimited-v438.cjs'
+      - 'tests/mock-unlimited-browser-v438.mjs'
+      - '.github/workflows/mock-unlimited-v438.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  unlimited-mock:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify syntax, unlimited flow and safe progress
+        run: |
+          node --check app.js
+          node --check tests/mock-unlimited-v438.cjs
+          node --check tests/mock-unlimited-browser-v438.mjs
+          node tests/mock-unlimited-v438.cjs
+          node tests/mobile-cloud-progress-v428.cjs
+          node tests/universal-study-actions-v432.cjs
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Browser checks at phone and desktop width
+        run: |
+          node tests/mock-unlimited-browser-v438.mjs
