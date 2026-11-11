@@ -4024,6 +4024,13 @@ function mockEligibleCard(c){
 // of the first school Year 1 Pure mock, without removing general exam practice.
 // IDs are exact and separately source-audited; 'composite' in a proof remains valid.
 function mockEligibleQuestion(q){
+ // Include reviewed AQA AS Physics past-paper adaptations even where older
+ // imports omitted the mock flag. Preserve explicit exclusions and leave
+ // 2025 secondary-indexed/unverified entries for general exam practice.
+ if(q.subject==='Physics'&&q.level==='AS'&&q.mock!==false&&
+   q.sourceVerified===true&&q.originalMarkVerified===true&&
+   /^https:\/\/(?:filestore\.)?aqa\.org\.uk\//i.test(q.qpUrl||'')&&
+   /^https:\/\/(?:filestore\.)?aqa\.org\.uk\//i.test(q.msUrl||''))return true;
  if(q.mock!==true)return false;
  if(q.subject==='Chemistry'&&/(?:\bbuffers?\b|\bbuffered\b|\bbuffering\b|\bhenderson[\s-]*hasselbalch\b|\bhalf[\s-]*neutrali[sz]ation\b)/i.test(
   [q.topic,q.subtopic,q.courseTopic,q.revisionTopic,q.question,q.prompt]
