@@ -12,7 +12,7 @@
 ## New in v439
 - **20 brief, one-skill Physics flashcards** covering RP1–RP6 (two per practical) and eight data/evaluation/method facts. All have explicit correct and incorrect examples; they do not replace original cards, IDs, or progress records.
 - **Six original worked, 6-mark exam questions**, one per required practical. Each has six explicit reviewed mark points, a worked model answer, and checked numerical values.
-- Both banks are explicitly loaded into the ordinary Mock selector; the flashcard supplement is validated at the appended index 56 so it cannot be silently skipped.
+- Both banks are loaded into the ordinary Mock selector through a **separately validated optional add-on**, preserving the original 56 flashcard and 52 question supplement positions. New IDs are checked before insertion so they cannot silently overwrite older cards.
 - New files are cached for offline use and the main script cache is refreshed.
 
 ## Subject coverage and follow-up quality checks
