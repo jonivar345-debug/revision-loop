@@ -8,6 +8,9 @@ const coreQuestions=JSON.parse(fs.readFileSync('exam_questions.json','utf8')).qu
 const app=fs.readFileSync('app.js','utf8'),html=fs.readFileSync('index.html','utf8'),sw=fs.readFileSync('sw.js','utf8');
 assert.equal(cards.length,26);
 assert.equal(questions.length,12);
+const signedGradient=cards.find(c=>c.id==='v439_phy_rp6_02');
+assert(signedGradient&&signedGradient.back.includes('negative of the internal resistance'));
+assert(signedGradient.accept.includes('-r')&&!signedGradient.accept.includes('+r'));
 assert.equal(cards.filter(c=>/^v439_phy_data_/.test(c.id)).length,14);
 assert.equal(questions.filter(q=>/^v439_phy_exam_data0[1-6]$/.test(q.id)).length,6);
 const knownIds=new Set([...deck,...coreQuestions].map(x=>x.id));
@@ -65,7 +68,9 @@ assert(html.includes('app.js?v=430&physics=v439'));
 assert(sw.includes('v439-physics-mock-practicals'));
 assert(sw.includes("'./physics_mock_practical_recall_v439.json'")&&sw.includes("'./physics_mock_practical_exam_v439.json'"));
 assert(app.includes('function buildMockSessionItems('));
-assert(app.includes('const qAll=subjectExam(sub).filter(mockEligibleQuestion)'));
+assert(app.includes('const qAll=subjectExam(sub).filter(mockEligibleQuestion)')||
+  app.includes('const qAll=examQuestions.filter(q=>q.subject===sub&&q.standalone!==false&&mockEligibleQuestion(q))'),
+  'New Physics practical questions must remain eligible in mock selection');
 const approx=(a,b,tolerance)=>assert(Math.abs(a-b)<tolerance,'Calculated answer differs from reference');
 approx(2*0.8/4,0.4,0.01);
 approx(0.015*(30*0.4)**2,2.16,0.01);
