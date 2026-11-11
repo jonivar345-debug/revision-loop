@@ -70,6 +70,20 @@ try{
    assert.equal(check.model,'correct','Paper-style model answer rejected: '+check.id);
    if(check.section==='C')assert.equal(check.wrongChoice,'wrong','Paper-style distractor falsely accepted: '+check.id);
   }
+  const earlier=await page.evaluate(()=>{
+   const list=cards.filter(c=>/^as_p2_v445_\d{3}$/.test(c.id));
+   return list.map(c=>({id:c.id,year:c.sourceStyle?.year,section:c.paper2Section,
+    model:evaluateCard(c,c.back).status,
+    alternate:c.paper2Section!=='C'?evaluateCard(c,c.accept[0]).status:null,
+    wrongChoice:c.paper2Section==='C'?evaluateCard(c,c.paper2Choices[1]).status:null}));
+  });
+  assert.equal(earlier.length,20,'All twenty source-mapped early Paper 2 cards must load');
+  for(const check of earlier){
+   assert([2018,2019,2020,2021].includes(check.year),'Unexpected historical source year: '+check.id);
+   assert.equal(check.model,'correct','New model answer rejected by real marker: '+check.id);
+   if(check.section==='C')assert.equal(check.wrongChoice,'wrong','New MCQ distractor falsely credited: '+check.id);
+   else assert.equal(check.alternate,'correct','Valid alternative rejected by real marker: '+check.id);
+  }
   await page.locator('#paper2Section').selectOption('C');
   assert.match(await page.locator('#paper2CoachSummary').textContent(),/73 guided cards/);
   await page.locator('#paper2SessionCount').selectOption('10');
