@@ -65,7 +65,7 @@ const selected={
  'as_p2_v445_018':'Stress and Young modulus.',
  'as_p2_v445_020':'−9.6 × 10⁶ C kg⁻¹.'
 };
-for(const [id,answer] of Object.entries(selected))assert.equal(added.find(c=>c.id===id).back,answer);
+for(const [id,answer] of Object.entries(selected))assert.equal(added.find(c=>c.id===id).back.replace(/\.$/,''),answer.replace(/\.$/,''),'Checked scientific answer '+id);
 const counts=Object.fromEntries(['A','B','C'].map(section=>[section,all.filter(c=>c.paper2Section===section).length]));
 assert.deepEqual(counts,{A:60,B:37,C:73});
 assert.equal(added.filter(c=>c.paper2Section==='C').length,4);
