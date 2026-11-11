@@ -39,5 +39,5 @@ jobs:
         run: |
           npm install --no-save --no-package-lock playwright@1.64.1
           npx playwright install --with-deps chromium
-      - name: Browser - fifteen models, forty-five incorrect choices
+      - name: Browser - twenty models, sixty incorrect choices
         run: node tests/physics-paper2-coach-browser-v430.mjs
