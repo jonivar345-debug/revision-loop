@@ -10,7 +10,7 @@ assert.equal(data.cards.length,213);
 assert.equal(crypto.createHash('sha256').update(JSON.stringify(old)).digest('hex'),
  'e69a41dfcd57f198bacd132f6d2f929e2187b422922befb85affd2dacd0846ca','Every existing review, accepted answer and ID must remain unchanged');
 assert.equal(added.length,8);
-assert.equal(new Set(data.cards.map(c=>c.id)).size,198);
+assert.equal(new Set(data.cards.map(c=>c.id)).size,213);
 assert.deepEqual(added.map(c=>c.id),Array.from({length:8},(_,i)=>'as_p2_v447_'+String(i+1).padStart(3,'0')));
 assert.deepEqual(added.map(c=>c.sourceStyle.question),['09','10','11','15','18','19','25','26']);
 const original=matrix.questionFamilies.filter(f=>f.diagramDependent);
