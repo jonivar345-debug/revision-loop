@@ -58,6 +58,8 @@ const V367_CHEM_ALKANE_TREND_URL='./chemistry_alkane_trend_recall_v367.json';
 const V370_PHYSICS_HISTORY_URL='./physics_light_history_recall_v370.json';
 const V375_CHEM_KP_CATALYST_URL='./chemistry_kp_catalyst_recall_v375.json';
 const AS_P2_COACH_URL='./physics_as_paper2_guided_v430.json';
+const V439_PHYSICS_RECALL_URL='./physics_mock_practical_recall_v439.json';
+const V439_PHYSICS_EXAM_URL='./physics_mock_practical_exam_v439.json';
 // v372: five original first-mock AS Pure questions need actual multi-step self-review.
 const V372_YEAR1_PURE_MANUAL=Object.freeze([{"id":"task1_v271_maths_pure_q03","specRef":"3.11","prompt":"Points A, B and C have position vectors (1,2), (7,−1) and (−2,8). P is the midpoint of BC and Q is the midpoint of AC. (a) Find the position vectors of P and Q. (b) Show by vector methods that the points on AP and BQ two-thirds of the way from A and B respectively coincide. (c) Give their common position vector and the ratio AG:GP. [8 marks]","marks":8},{"id":"task1_v271_maths_pure_q04","specRef":"3.4","prompt":"A circle is given by x²+y²−4x−6y−12=0. (a) Find its centre and radius. (b) Verify that P=(5,7) lies on the circle. (c) Find an exact equation of the tangent to the circle at P. (d) Find both axis intercepts of this tangent. [7 marks]","marks":7},{"id":"task1_v271_maths_pure_q05","specRef":"3.3","prompt":"Let f(x)=x²−4x+1 and g(x)=−2f(1−2x)+3. (a) Complete the square for f. (b) Describe a valid ordered sequence of graph transformations giving y=g(x) from y=f(x). (c) Express g as a quadratic in x and find the turning point. (d) Find both exact x-intercepts of g. [9 marks]","marks":9},{"id":"task1_v271_maths_pure_q06","specRef":"3.5","prompt":"In the expansion of (1+ax)⁷, the coefficient of x² is 84 and the coefficient of x³ is negative. (a) Show that a²=4. (b) Find a. (c) Calculate the coefficients of x³ and x⁴, showing the binomial coefficients used. [7 marks]","marks":7},{"id":"task1_v271_maths_pure_q07","specRef":"3.9","prompt":"For y=x²−5x+6 over 0≤x≤4, calculate (a) the signed definite integral from 0 to 4 and (b) the total area between the curve and the x-axis. You must show where the graph lies below the axis and split the integral correctly. Give exact answers. [8 marks]","marks":8}]);
 function applyV372Year1PureManualReview(questions){
@@ -3769,7 +3771,7 @@ function evaluateCard(c,input){
  if(c.strictRecall===true){
   // v293: a Physics or Maths answer should not receive an unrelated ion/oxidation-state hint.
   // Preserve every older card's original feedback and strict grading.
-  const concise=c.id?.startsWith('task1_v293_');
+  const concise=c.id?.startsWith('task1_v293_')||c.id?.startsWith('v439_phy_');
   const hint=concise?(c.subject==='Maths'?'Check the calculation, transformation or mathematical notation.':
    c.subject==='Physics'?'Check the unit, direction or physical relationship.':
    'Check the chemical test, product or exact definition.'):'Check the exact ion or oxidation state against the accepted answer.';
@@ -4024,6 +4026,13 @@ function mockEligibleCard(c){
 // of the first school Year 1 Pure mock, without removing general exam practice.
 // IDs are exact and separately source-audited; 'composite' in a proof remains valid.
 function mockEligibleQuestion(q){
+ // Include reviewed AQA AS Physics past-paper adaptations even where older
+ // imports omitted the mock flag. Preserve explicit exclusions and leave
+ // 2025 secondary-indexed/unverified entries for general exam practice.
+ if(q.subject==='Physics'&&q.level==='AS'&&q.mock!==false&&
+   q.sourceVerified===true&&q.originalMarkVerified===true&&
+   /^https:\/\/(?:(?:filestore|www)\.)?aqa\.org\.uk\//i.test(q.qpUrl||'')&&
+   /^https:\/\/(?:(?:filestore|www)\.)?aqa\.org\.uk\//i.test(q.msUrl||''))return true;
  if(q.mock!==true)return false;
  if(q.subject==='Chemistry'&&/(?:\bbuffers?\b|\bbuffered\b|\bbuffering\b|\bhenderson[\s-]*hasselbalch\b|\bhalf[\s-]*neutrali[sz]ation\b)/i.test(
   [q.topic,q.subtopic,q.courseTopic,q.revisionTopic,q.question,q.prompt]
@@ -4042,7 +4051,8 @@ function mockEligibleQuestion(q){
 // Keep linked exam parts together and work through unseen material first.
 function buildMockSessionItems(sub,mode,count,seenCards=new Set(),seenGroups=new Set()){
  const cardPool=cards.filter(c=>c.active!==false&&c.subject===sub&&mockEligibleCard(c));
- const qAll=subjectExam(sub).filter(mockEligibleQuestion);
+ // Mock revision must not inherit the unrelated Exam Questions tab's AS/A-level filter.
+ const qAll=examQuestions.filter(q=>q.subject===sub&&q.standalone!==false&&mockEligibleQuestion(q));
  const groups=new Map();
  for(const q of qAll){if(!groups.has(q.groupId))groups.set(q.groupId,[]);groups.get(q.groupId).push(q)}
  for(const g of groups.values())g.sort((x,y)=>String(x.groupOrder).localeCompare(String(y.groupOrder),undefined,{numeric:true}));
@@ -4053,12 +4063,16 @@ function buildMockSessionItems(sub,mode,count,seenCards=new Set(),seenGroups=new
  const items=[];
  if(mode!=='exam'){
    const want=mode==='flash'?count:Math.max(1,Math.ceil(count*.6));
-   const picked=pickRecallCards(availableCards,Math.min(want,availableCards.length),c=>1+weakness(c)/5+(isDue(c)?4:0)+(1-memoryHealth(c))*3);
+   const n=Math.min(want,availableCards.length),score=c=>1+weakness(c)/5+(isDue(c)?4:0)+(1-memoryHealth(c))*3;
+   const balance=sub==='Physics'?window.RevisionPhysicsMockBalance:null;
+   const picked=balance?balance.pickBalanced(availableCards,n,score,pickRecallCards):pickRecallCards(availableCards,n,score);
    for(const c of picked){items.push({type:'card',id:c.id});seenCards.add(c.id)}
  }
  if(mode!=='flash'){
    const target=Math.max(1,count-items.length);
-   const pickedGroups=weightedPick(availableGroups,Math.min(target,availableGroups.length),g=>1+groupWeakness(g));
+   const n=Math.min(target,availableGroups.length),score=g=>1+groupWeakness(g);
+   const balance=sub==='Physics'?window.RevisionPhysicsMockBalance:null;
+   const pickedGroups=balance?balance.pickBalanced(availableGroups,n,score,weightedPick,{practicalFirst:true}):weightedPick(availableGroups,n,score);
    for(const g of pickedGroups){
      seenGroups.add(g[0].groupId);
      for(const q of g)items.push({type:'exam',id:q.id,groupId:q.groupId});
@@ -6539,7 +6553,35 @@ async function sync(manual=false){
   knownFlashIds.add(c.id);cards.push(c);
  }
  const added=[...(x.questions||[]),...extraBanks.flatMap(bank=>bank.questions||[])],seen=new Set();
- examQuestions=[...(e.questions||[]),...added].filter(q=>{
+ // v439 optional Physics practical/data additions. Keep the original 56
+ // flashcard and 52 exam supplement indices and all historical inventories stable.
+ let v439PhysicsRecall={cards:[]};
+ try{
+  const response=await fetch(V439_PHYSICS_RECALL_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(response.ok)v439PhysicsRecall=await response.json();
+ }catch{}
+ for(const c of v439PhysicsRecall.cards||[]){
+  if(!/^v439_phy_(?:rp[1-6]|data)_\d{2}$/.test(c.id||'')||
+     c.subject!=='Physics'||c.stage!=='AS'||c.mock!==true||c.taught!==true||
+     c.scope!=='mock'||c.active!==true||c.kind!=='short'||c.strictRecall!==true||
+     !['3.1.2','3.2.2','3.3.2','3.4','3.5','7.2 RP1','7.2 RP2','7.2 RP3','7.2 RP4','7.2 RP5','7.2 RP6'].includes(c.specRef)||
+     !Array.isArray(c.accept)||!Array.isArray(c.reject)||c.front.length>140||c.back.length>150||
+     knownFlashIds.has(c.id))continue;
+  knownFlashIds.add(c.id);cards.push(c);
+ }
+ let v439PhysicsExam={questions:[]};
+ try{
+  const response=await fetch(V439_PHYSICS_EXAM_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(response.ok)v439PhysicsExam=await response.json();
+ }catch{}
+ const validatedV439PhysicsExam=(v439PhysicsExam.questions||[]).filter(q=>
+  /^v439_phy_exam_(?:rp[1-6]|data0[1-6])$/.test(q.id||'')&&q.subject==='Physics'&&q.level==='AS'&&
+  q.mock===true&&q.taught===true&&q.standalone===true&&q.marks===6&&
+  /^(?:7\.2 RP[1-6]|3\.(?:1\.2|2\.2|3\.2|5))$/.test(q.specRef||'')&&Array.isArray(q.markPoints)&&
+  q.markPoints.length===6&&Array.isArray(q.markPointMarks)&&
+  q.markPointMarks.reduce((sum,n)=>sum+n,0)===6&&typeof q.modelAnswer==='string');
+
+ examQuestions=[...(e.questions||[]),...added,...validatedV439PhysicsExam].filter(q=>{
   if(seen.has(q.id))return false;seen.add(q.id);return true;
  });
  for(const q of examQuestions){
@@ -6614,7 +6656,9 @@ document.getElementById('flashSubject').onchange=()=>{flashTopics.clear();refres
  };
 document.querySelectorAll('[data-flash-preset]').forEach(b=>b.onclick=()=>applyFlashPreset(b.dataset.flashPreset));
 document.getElementById('startMock').onclick=startMockSession;
-document.getElementById('mockSubject').onchange=()=>{const hint=document.getElementById('mathsMockScopeNote');if(hint)hint.hidden=document.getElementById('mockSubject').value!=='Maths'};document.getElementById('startFlashcards').onclick=startFlashSession;
+document.getElementById('mockSubject').onchange=()=>{const subject=document.getElementById('mockSubject').value;
+ const maths=document.getElementById('mathsMockScopeNote');if(maths)maths.hidden=subject!=='Maths';
+ const physics=document.getElementById('physicsMockBreadthNote');if(physics)physics.hidden=subject!=='Physics';};document.getElementById('startFlashcards').onclick=startFlashSession;
 document.getElementById('paper2Section').onchange=renderTopicCounts;
 document.getElementById('startPaper2Coach').onclick=startPaper2CoachSession;
 document.getElementById('examDifficulty').onchange=renderTopicCounts;

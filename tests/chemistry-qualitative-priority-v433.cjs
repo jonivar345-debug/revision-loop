@@ -51,7 +51,7 @@ assert(app.includes('chemistry_qualitative_recall_v433.json?v=433'));
 assert(app.includes("c.mock!==(c.stage==='AS')"));
 assert(app.includes("cards.some(old=>old.id===c.id)"));
 assert(html.includes('flashcard-priority-v429.js?v=429&chem=v433'));
-assert(html.includes('app.js?v=430&chem=v433'));
+assert(/<script src="app\.js\?v=430[^"]*chem=v433[^"]*" defer><\/script>/.test(html),'Chemistry v433 script must still load even when other version flags are present');
 assert(sw.includes("'./chemistry_qualitative_recall_v433.json'"));
 assert(sw.includes('v433-chem-test-priority'));
 for(const pair of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(pair));

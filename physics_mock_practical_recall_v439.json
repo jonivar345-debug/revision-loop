@@ -1,0 +1,683 @@
+{
+  "version": "v439",
+  "scope": "AQA Physics AS mock first-year subject content and RP1–RP6",
+  "notes": "Original RP1–RP6 coverage plus applied AS Paper 2 practical, graph, uncertainty and cross-topic problem-solving. Model answers reviewed and no existing IDs replaced.",
+  "cards": [
+    {
+      "id": "v439_phy_rp1_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Practical skills",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "7.2 RP1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "RP1: If string length and mass per metre stay fixed, how does frequency change when tension is quadrupled?",
+      "back": "Frequency doubles.",
+      "accept": [
+        "Frequency doubles.",
+        "twice the original frequency",
+        "2 times the frequency"
+      ],
+      "reject": [
+        "frequency becomes four times as large",
+        "frequency halves"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_rp1_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Practical skills",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "7.2 RP1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "RP1: At fixed tension and mass per metre, what graph shows f ∝ 1/L?",
+      "back": "f against 1/L: straight line through the origin.",
+      "accept": [
+        "f against 1/L: straight line through the origin.",
+        "straight line through origin on f versus reciprocal length graph"
+      ],
+      "reject": [
+        "plot frequency against length as a straight line through the origin"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_rp2_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Practical skills",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "7.2 RP2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "RP2: Why measure fringe spacing across several fringes?",
+      "back": "It reduces the percentage uncertainty in the spacing.",
+      "accept": [
+        "It reduces the percentage uncertainty in the spacing.",
+        "reduces relative uncertainty",
+        "improves precision of average fringe width"
+      ],
+      "reject": [
+        "it increases the uncertainty",
+        "it changes the light wavelength"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_rp2_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Practical skills",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "7.2 RP2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "RP2: In the grating equation d sin θ = nλ, what does n represent?",
+      "back": "The diffraction order (integer).",
+      "accept": [
+        "The diffraction order (integer).",
+        "order number",
+        "fringe order"
+      ],
+      "reject": [
+        "n is number of slits",
+        "n is refractive index"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_rp3_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Practical skills",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "7.2 RP3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "RP3: What graph gives gradient g/2 for free fall from rest?",
+      "back": "Displacement s against time squared t².",
+      "accept": [
+        "Displacement s against time squared t².",
+        "s versus t squared",
+        "distance fallen against time squared"
+      ],
+      "reject": [
+        "plot displacement against time"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_rp3_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Practical skills",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "7.2 RP3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "RP3: Why use light gates instead of a handheld stopwatch?",
+      "back": "They reduce human reaction-time uncertainty.",
+      "accept": [
+        "They reduce human reaction-time uncertainty.",
+        "reduces reaction time error",
+        "automatic timing avoids reaction delay"
+      ],
+      "reject": [
+        "it increases the delay in human reaction"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_rp4_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Practical skills",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "7.2 RP4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "RP4: On a stress–strain graph, what is the elastic-region gradient?",
+      "back": "Young modulus.",
+      "accept": [
+        "Young modulus.",
+        "young's modulus",
+        "E"
+      ],
+      "reject": [
+        "strain is the gradient",
+        "stress is the gradient"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_rp4_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Practical skills",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "7.2 RP4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "RP4: Why use a long wire to measure Young modulus?",
+      "back": "A larger extension reduces percentage extension uncertainty.",
+      "accept": [
+        "A larger extension reduces percentage extension uncertainty.",
+        "greater extension lowers relative uncertainty"
+      ],
+      "reject": [
+        "the longer wire has smaller extension"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_rp5_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Practical skills",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "7.2 RP5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "RP5: What is the effect of doubling measured wire diameter on its calculated cross-sectional area?",
+      "back": "Area quadruples.",
+      "accept": [
+        "Area quadruples.",
+        "4 times the area",
+        "four times"
+      ],
+      "reject": [
+        "area doubles",
+        "area halves"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_rp5_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Practical skills",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "7.2 RP5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "RP5: Diameter has 3% uncertainty. What is the approximate percentage uncertainty in area?",
+      "back": "6%.",
+      "accept": [
+        "6%.",
+        "6 percent",
+        "6%",
+        "6 percent."
+      ],
+      "reject": [
+        "3%",
+        "2%"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_rp6_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Practical skills",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "7.2 RP6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "RP6: On V = ε − Ir, what does the V-axis intercept represent?",
+      "back": "The emf ε.",
+      "accept": [
+        "The emf ε.",
+        "emf",
+        "electromotive force"
+      ],
+      "reject": [
+        "internal resistance",
+        "negative gradient"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_rp6_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Practical skills",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "7.2 RP6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "On a graph of terminal p.d. V against current I, what is the signed gradient?",
+      "back": "−r, the negative of the internal resistance.",
+      "accept": [
+        "−r, the negative of the internal resistance.",
+        "-r",
+        "minus the internal resistance",
+        "negative internal resistance"
+      ],
+      "reject": [
+        "+r",
+        "positive internal resistance",
+        "emf",
+        "the V-axis intercept"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How is uncertainty in a straight-line gradient estimated using steepest and shallowest acceptable lines?",
+      "back": "(mₘₐₓ − mₘᵢₙ)/2.",
+      "accept": [
+        "(mₘₐₓ − mₘᵢₙ)/2.",
+        "half the difference between maximum and minimum gradients"
+      ],
+      "reject": [
+        "maximum gradient minus minimum gradient",
+        "twice the gradient difference"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Which type of error is indicated by a consistent zero offset?",
+      "back": "Systematic error.",
+      "accept": [
+        "Systematic error.",
+        "a systematic error"
+      ],
+      "reject": [
+        "random error"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_03",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why repeat measurements at each setting?",
+      "back": "To detect anomalies and estimate random uncertainty.",
+      "accept": [
+        "To detect anomalies and estimate random uncertainty.",
+        "identify anomalies and reduce the effect of random error"
+      ],
+      "reject": [
+        "eliminates systematic error",
+        "to change the mean"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For Q = x²y, how do percentage uncertainties approximately combine?",
+      "back": "2 × % uncertainty in x + % uncertainty in y.",
+      "accept": [
+        "2 × % uncertainty in x + % uncertainty in y.",
+        "twice the percentage uncertainty in x plus that in y"
+      ],
+      "reject": [
+        "percentage uncertainty in x plus y"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_05",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What should a physics graph axis label contain?",
+      "back": "Quantity (or symbol) and unit.",
+      "accept": [
+        "Quantity (or symbol) and unit.",
+        "quantity and units",
+        "symbol and unit"
+      ],
+      "reject": [
+        "only quantity",
+        "only unit"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_06",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why use a large range of independent-variable values?",
+      "back": "It improves reliability of the trend and gradient.",
+      "accept": [
+        "It improves reliability of the trend and gradient.",
+        "improves confidence in gradient and relation"
+      ],
+      "reject": [
+        "it makes the trend less reliable"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_07",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "When finding a best-fit gradient, which two points should be used?",
+      "back": "Two well-separated points on the best-fit line.",
+      "accept": [
+        "Two well-separated points on the best-fit line.",
+        "widely spaced points on the line"
+      ],
+      "reject": [
+        "two consecutive points from raw data"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_08",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why keep control variables constant in a practical?",
+      "back": "So only the independent variable explains a measured change.",
+      "accept": [
+        "So only the independent variable explains a measured change.",
+        "isolates the effect of the independent variable"
+      ],
+      "reject": [
+        "to ensure all variables change at the same time"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_09",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A micrometer reads +0.05 mm when closed. How do you correct a measured reading?",
+      "back": "Subtract 0.05 mm.",
+      "accept": [
+        "Subtract 0.05 mm.",
+        "subtract the positive zero offset"
+      ],
+      "reject": [
+        "add 0.05 mm"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_10",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Does repeating readings remove a fixed instrument zero error?",
+      "back": "No; calibrate or zero-correct it.",
+      "accept": [
+        "No; calibrate or zero-correct it.",
+        "No; systematic errors do not average out"
+      ],
+      "reject": [
+        "yes; calculate the mean"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_11",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What does the gradient of stopping potential against light frequency equal?",
+      "back": "h/e.",
+      "accept": [
+        "h/e.",
+        "Planck constant divided by electron charge"
+      ],
+      "reject": [
+        "h times e"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_12",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For an LDR in a series divider, what happens to its resistance as light increases?",
+      "back": "It decreases.",
+      "accept": [
+        "It decreases.",
+        "resistance goes down"
+      ],
+      "reject": [
+        "resistance increases"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_13",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "If a graph of fringe spacing against screen distance is linear, what is its gradient?",
+      "back": "Wavelength divided by slit separation (λ/a).",
+      "accept": [
+        "Wavelength divided by slit separation (λ/a).",
+        "lambda over slit separation"
+      ],
+      "reject": [
+        "slit separation over wavelength"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_14",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Mechanics & materials",
+      "courseTopic": "Mechanics & materials",
+      "revisionTopic": "Mechanics & materials",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For a graph with slope g/2, what is g when the gradient is 4.9 m s⁻²?",
+      "back": "9.8 m s⁻².",
+      "accept": [
+        "9.8 m s⁻².",
+        "twice 4.9"
+      ],
+      "reject": [
+        "4.9 metres per second squared"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    }
+  ]
+}
