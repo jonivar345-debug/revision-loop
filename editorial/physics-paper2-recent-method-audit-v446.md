@@ -50,6 +50,10 @@ All 2025 entries carry `sourceStyle.verification="2025_secondary_question_index_
 - Numeric answers, subject-specific options, phone/desktop layout, skip, override, unlimited sessions, offline cache and cloud/history protection require explicit regression checks.
 - Machine-readable mapping: `editorial/physics-paper2-recent-sources-v446.json`; the primary/provisional distinction must not be lost when future authors add further cards.
 
+## Full 2024 Section C question-family inventory
+
+The **30 source MCQs, 05–34**, now have a concise question-by-question assessed-method classification in `editorial/physics-paper2-mcq-2024-skill-matrix-v446.json`, based on the same original 2024 question paper and mark scheme. This **does not** reproduce the original exam items or answer key; nor does it certify the 190-card trainer reproduces every distinct 2024 MCQ style. Eight styles depend on original diagrams/graphs and are flagged for visual editorial review, particularly divider circuits, spring-energy graphs, fall-with-drag graphs, two-source interference, resistor networks, acceleration graphs, cable tensions and the resistance-wire divider. The regression `tests/physics-paper2-mcq-2024-audit-v446.cjs` requires exactly 30 consecutive question rows and these eight diagram-sensitive cases.
+
 ## Remaining work before Task 1 sign-off
 
 A full check of the **2025 original question paper and mark scheme**; a line-by-line paper coverage assessment for **each year from 2018 onwards**, especially every Section C MCQ; full AS specification practical-method and multi-mark answer calibration; and wider Maths/Chemistry mock topic work. Completing the coach does not guarantee a particular exam grade or replace timed official past-paper practice. Task 2's remaining photo/character quality work is separate.
