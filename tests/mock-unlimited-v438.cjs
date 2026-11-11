@@ -19,7 +19,7 @@ const controls={mockSubject:{value:'Physics'},mockMode:{value:'flash'},mockCount
 const banner={classList:{add(){},remove(){}},textContent:'',appendChild(button){this.button=button;}};
 let saved=0,renders=0,decision=true,confirmation='';
 const ctx={
- cards:sampleCards,activeSession:null,currentCardId:null,currentEvaluation:null,currentFlashAwarded:false,currentExamScore:0,
+ cards:sampleCards,examQuestions:sampleQuestions,activeSession:null,currentCardId:null,currentEvaluation:null,currentFlashAwarded:false,currentExamScore:0,
  document:{getElementById:id=>id==='sessionBanner'?banner:controls[id]||null,createElement:()=>({})},
  window:{confirm:message=>{confirmation=message;return decision},RevisionScan:{countFor:()=>0},RevisionSketch:{hasPendingInk:()=>false}},
  subjectExam:()=>sampleQuestions,mockEligibleCard:c=>c.mock===true,mockEligibleQuestion:q=>q.mock===true,
