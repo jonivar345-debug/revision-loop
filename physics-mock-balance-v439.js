@@ -26,7 +26,7 @@
    .filter(Boolean).join(' ').toLowerCase();
   // Order matters: "internal resistance" belongs to electricity, while
   // "energy levels" is particle physics, not the mechanics work-energy unit.
-  if(/electric|current|resistan|resistivity|circuit|diode|thermistor|potential div|emf|superconduct|ldr|sensor|i.v characteristics|i-v characteristics/.test(text))return STRANDS[4];
+  if(/\belectric(?:ity|al)?\b|\bcurrent\b|resistan|resistivity|circuit|diode|thermistor|potential div|\bemf\b|superconduct|\bldr\b|sensor|i.v characteristics|i-v characteristics/.test(text))return STRANDS[4];
   if(/particle|radiation|photoelectric|quantum|spectrum|spectra|pion|kaon|strange|baryon|meson|lepton|interaction|energy levels?|muon|antimatter|pair production|nuclear/.test(text))return STRANDS[1];
   if(/wave|sound|optical|light|interferen|diffract|refraction|fibre|stationary|polaris|superposition|young.s slit|total internal/.test(text))return STRANDS[2];
   if(/measur|uncertain|error|precision|accuracy|practical skills|data definitions|graph interpretation|estimation/.test(text))return STRANDS[0];
