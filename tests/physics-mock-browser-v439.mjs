@@ -28,12 +28,12 @@ try{
   await page.waitForFunction(()=>document.getElementById('syncState')?.textContent?.includes('flashcards'),null,{timeout:90000});
   const evidence=await page.evaluate(()=>{
    const extra=cards.filter(c=>/^v439_phy_(?:rp[1-6]|data)_\d\d$/.test(c.id));
-   const exam=examQuestions.filter(q=>/^v439_phy_exam_rp[1-6]$/.test(q.id));
+   const exam=examQuestions.filter(q=>/^v439_phy_exam_(?:rp[1-6]|data0[1-6])$/.test(q.id));
    return {flash:extra.length,exam:exam.length,wrongCards:extra.filter(c=>!mockEligibleCard(c)||c.subject!=='Physics').length,
      wrongExam:exam.filter(q=>!mockEligibleQuestion(q)||q.subject!=='Physics').length,
      flashUnique:new Set(extra.map(c=>c.id)).size,examUnique:new Set(exam.map(q=>q.id)).size};
   });
-  assert.deepEqual(evidence,{flash:20,exam:6,wrongCards:0,wrongExam:0,flashUnique:20,examUnique:6});
+  assert.deepEqual(evidence,{flash:26,exam:12,wrongCards:0,wrongExam:0,flashUnique:26,examUnique:12});
   await page.locator('#mockSubject').selectOption('Physics');
   await page.locator('#mockMode').selectOption('flash');
   await page.locator('#mockCount').selectOption('10');
@@ -51,13 +51,17 @@ try{
   assert.equal(checks.correct,'correct');
   assert.notEqual(checks.wrong,'correct');
   await page.locator('#skipCard').click();
+  // Applied AS Paper 2 questions must be fully available in ordinary Mock sessions.
+  await page.evaluate(()=>{activeSession={kind:'mock',items:[{type:'exam',id:'v439_phy_exam_data04',groupId:'v439_phy_exam_data04'}],index:0,title:'Paper 2 data QA'};renderAll()});
+  assert.match(await page.locator('#studyHost .question').innerText(),/stopping potential/i);
+  assert.equal(await page.evaluate(()=>examQuestions.find(q=>q.id==='v439_phy_exam_data04').marks),6);
   await page.evaluate(()=>{activeSession={kind:'mock',items:[{type:'exam',id:'v439_phy_exam_rp6',groupId:'v439_phy_exam_rp6'}],index:0,title:'Physics mock QA'};renderAll()});
   assert.match(await page.locator('#studyHost .question').innerText(),/1\.45/);
   assert.equal(await page.evaluate(()=>examQuestions.find(q=>q.id==='v439_phy_exam_rp6').marks),6);
   assert.equal(await page.locator('#skipExam').count(),1,'Existing exam skip stays available');
   const errorsUnexpected=errors.filter(x=>!/firebase/i.test(x));
   assert.deepEqual(errorsUnexpected,[]);
-  console.log('PASS v439 '+width+'px Physics Mock: 20 short cards, six 6-mark worked questions, marking, skip and responsive rendering.');
+  console.log('PASS v439 '+width+'px Physics Mock: 26 short cards, twelve 6-mark worked questions, marking, skip and responsive rendering.');
   await ctx.close();
  }
 }finally{await browser.close();await new Promise(resolve=>server.close(resolve))}
