@@ -19,6 +19,22 @@ for(const label of balance.STRANDS){
 }
 assert(cards.filter(c=>!balance.strand(c)).length<=10,'Unclassified original mock cards require manual review');
 assert.equal(questions.filter(q=>!balance.strand(q)).length,0);
+// Older AQA AS Physics imports omitted mock=true on 30 entries.
+// Promote only the 27 with checked official papers/mark schemes.
+const allPhysicsExam=JSON.parse(fs.readFileSync('exam_questions.json','utf8')).questions
+ .filter(q=>q.subject==='Physics'&&q.level==='AS');
+const missingFlag=allPhysicsExam.filter(q=>q.mock!==true);
+assert.equal(missingFlag.length,30);
+const eligibleStart=app.indexOf('function mockEligibleQuestion('),
+ eligibleEnd=app.indexOf('function buildMockSessionItems(',eligibleStart);
+assert(eligibleStart>=0&&eligibleEnd>eligibleStart);
+const eligibility={};
+vm.runInNewContext(app.slice(eligibleStart,eligibleEnd)+'\nthis.eligible=mockEligibleQuestion;',eligibility);
+const newlyEligible=missingFlag.filter(eligibility.eligible);
+assert.equal(newlyEligible.length,27,'Include officially source-verified AQA AS Physics entries');
+assert(newlyEligible.every(q=>q.sourceVerified===true&&q.originalMarkVerified===true));
+assert.equal(missingFlag.filter(q=>!eligibility.eligible(q)).length,3,'Do not promote secondary-indexed 2025 entries');
+
 const requiredPracticals=new Set(questions.map(balance.practical).filter(Boolean));
 assert.deepEqual([...requiredPracticals].sort(),[1,2,3,4,5,6],'All six required practicals need at least one eligible exam entry');
 assert.equal(balance.strand({courseTopic:'Mechanics & materials',topic:'Motion graphs'}),'Mechanics and materials');
@@ -51,7 +67,7 @@ const context={
  cards,examQuestions:questions,window:{RevisionPhysicsMockBalance:balance},
  settings:{recallMustKnowFirst:true},pickRecallCards:(pool,n)=>pool.slice(0,n),
  weightedPick:(pool,n)=>pool.slice(0,n),subjectExam:()=>{throw Error('Mock must ignore exam tab filter')},
- mockEligibleQuestion:q=>q.mock===true,mockEligibleCard:c=>c.mock===true,
+ mockEligibleQuestion:eligibility.eligible,mockEligibleCard:c=>c.mock===true,
  weakness:()=>0,isDue:()=>false,memoryHealth:()=>1,groupWeakness:()=>0,urgentRecallMustKnow:()=>false,
 };
 vm.runInNewContext(app.slice(begin,end)+'\nthis.make=buildMockSessionItems;',context);
