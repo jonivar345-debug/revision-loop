@@ -13,8 +13,7 @@
    'p2v447-divider':{
      title:'Potential divider: voltmeter across the lower resistor',
      svg:L(110,18,'12.0 V supply')+
-       line(100,28,240,28,'#64748b',2)+line(100,28,100,152,'#64748b',2)+line(240,28,240,152,'#64748b',2)+
-       line(100,152,240,152,'#64748b',2)+L(156,149,'0 V',11)+
+       line(170,28,170,52,'#64748b',2)+L(201,40,'12 V',12)+L(201,151,'0 V',12)+
        line(170,28,170,52,'#2563eb',3)+
        '<rect x="151" y="52" width="38" height="34" rx="3" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>'+
        L(198,74,'3 kΩ')+line(170,86,170,96)+
@@ -22,7 +21,7 @@
        L(198,115,'6 kΩ')+line(170,130,170,152)+
        line(170,90,78,90,'#64748b',2)+line(78,90,78,145,'#64748b',2)+
        '<circle cx="78" cy="116" r="17" fill="#fff" stroke="#334155" stroke-width="2"/>'+L(72,122,'V',15)+
-       line(78,145,100,145,'#64748b',2)+L(15,163,'Across lower 6 kΩ',11)
+       line(78,145,170,145,'#64748b',2)+L(15,163,'Across lower 6 kΩ',11)
    },
    'p2v447-elastic':{
      title:'Spring force against extension: straight line through the origin',
