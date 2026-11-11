@@ -1,0 +1,41 @@
+name: v439 Physics mock breadth, practicals and exam-scope isolation
+on:
+  pull_request:
+    paths:
+      - 'physics-mock-balance-v439.js'
+      - 'app.js'
+      - 'index.html'
+      - 'sw.js'
+      - 'tests/physics-mock-breadth-v439.cjs'
+      - 'tests/physics-mock-breadth-browser-v439.mjs'
+      - '.github/workflows/physics-mock-breadth-v439.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  physics-mock-breadth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax and AQA Physics coverage checks
+        run: |
+          node --check app.js
+          node --check physics-mock-balance-v439.js
+          node --check tests/physics-mock-breadth-v439.cjs
+          node --check tests/physics-mock-breadth-browser-v439.mjs
+          node tests/physics-mock-breadth-v439.cjs
+          node tests/mock-unlimited-v438.cjs
+          node tests/flashcard-priority-v429.cjs
+          node tests/physics-paper2-coach-v430.cjs
+          node tests/revision-backup.cjs
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Physics mock browser coverage on phone and desktop
+        run: |
+          node tests/physics-mock-breadth-browser-v439.mjs

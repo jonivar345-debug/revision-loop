@@ -1,0 +1,67 @@
+/* v440: distraction-free study layout, optional for every study session. */
+.study-focus-controls[hidden] { display:none !important; }
+.study-focus-controls {
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+  margin:9px 0 0; padding:8px 10px; border-radius:12px;
+  border:1px solid #cbd5e1; background:#f8fafc;
+}
+.study-focus-controls span { color:#475569; font-size:.75rem; line-height:1.4; }
+.study-focus-toggle {
+  flex:0 0 auto; min-height:42px; border-radius:10px; padding:9px 14px;
+  border:1px solid #1d4ed8; background:#1d4ed8; color:#fff;
+  font:inherit; font-size:.79rem; font-weight:800; cursor:pointer;
+}
+.study-focus-toggle:hover { background:#1e40af; }
+.study-focus-toggle:focus-visible { outline:3px solid #93c5fd; outline-offset:2px; }
+body.rl-study-focus { overflow:hidden; }
+body.rl-study-focus #study {
+  display:block !important; position:fixed; inset:0; z-index:600; overflow-y:auto;
+  overflow-x:hidden; overscroll-behavior:contain; box-sizing:border-box;
+  width:100%; max-width:none; height:100vh; height:100dvh;
+  padding:calc(env(safe-area-inset-top, 0px) + 10px) max(14px, 3vw)
+          calc(env(safe-area-inset-bottom, 0px) + 30px);
+  background:#f5f7fb;
+}
+body.rl-study-focus #study > .study-type,
+body.rl-study-focus #study > #mockControls,
+body.rl-study-focus #study > #flashControls,
+body.rl-study-focus #study > #examControls { display:none !important; }
+body.rl-study-focus #study > #studyFocusControls,
+body.rl-study-focus #study > #sessionBanner,
+body.rl-study-focus #study > #studyHost {
+  width:100%; max-width:1050px; margin-left:auto; margin-right:auto;
+}
+body.rl-study-focus #study > #studyFocusControls {
+  position:sticky; top:0; z-index:5; margin-top:0; margin-bottom:8px;
+  border-color:#94a3b8; background:rgba(248,250,252,.97);
+  box-shadow:0 5px 18px rgba(15,23,42,.12);
+}
+body.rl-study-focus #study #studyHost .review-card,
+body.rl-study-focus #study #studyHost .exam-card {
+  width:100%; margin:8px 0 0; border-radius:16px;
+}
+body.rl-study-focus #study #studyHost .card-body {
+  min-height:min(58vh, 560px); padding:clamp(16px, 2.5vw, 30px);
+}
+body.rl-study-focus #study #studyHost .question {
+  font-size:clamp(1.08rem, 1.6vw + .6rem, 1.45rem); line-height:1.5;
+}
+body.rl-study-focus #study #studyHost textarea,
+body.rl-study-focus #study #studyHost input,
+body.rl-study-focus #study #studyHost canvas,
+body.rl-study-focus #study #studyHost img {
+  max-width:100%;
+}
+body.rl-study-focus #toast {
+  position:fixed; z-index:650; left:50%; top:auto; transform:translateX(-50%);
+  bottom:calc(env(safe-area-inset-bottom, 0px) + 10px);
+}
+@media (max-width:520px) {
+  .study-focus-controls { padding:7px 8px; }
+  .study-focus-controls span { font-size:.69rem; }
+  .study-focus-toggle { padding:9px 11px; min-height:44px; }
+  body.rl-study-focus #study { padding-left:9px; padding-right:9px; }
+  body.rl-study-focus #study #studyHost .card-body { min-height:55vh; padding:13px 11px; }
+  body.rl-study-focus #study #studyHost .review-card,
+  body.rl-study-focus #study #studyHost .exam-card { border-radius:12px; }
+}

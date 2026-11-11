@@ -4026,6 +4026,13 @@ function mockEligibleCard(c){
 // of the first school Year 1 Pure mock, without removing general exam practice.
 // IDs are exact and separately source-audited; 'composite' in a proof remains valid.
 function mockEligibleQuestion(q){
+ // Include reviewed AQA AS Physics past-paper adaptations even where older
+ // imports omitted the mock flag. Preserve explicit exclusions and leave
+ // 2025 secondary-indexed/unverified entries for general exam practice.
+ if(q.subject==='Physics'&&q.level==='AS'&&q.mock!==false&&
+   q.sourceVerified===true&&q.originalMarkVerified===true&&
+   /^https:\/\/(?:(?:filestore|www)\.)?aqa\.org\.uk\//i.test(q.qpUrl||'')&&
+   /^https:\/\/(?:(?:filestore|www)\.)?aqa\.org\.uk\//i.test(q.msUrl||''))return true;
  if(q.mock!==true)return false;
  if(q.subject==='Chemistry'&&/(?:\bbuffers?\b|\bbuffered\b|\bbuffering\b|\bhenderson[\s-]*hasselbalch\b|\bhalf[\s-]*neutrali[sz]ation\b)/i.test(
   [q.topic,q.subtopic,q.courseTopic,q.revisionTopic,q.question,q.prompt]
@@ -4044,7 +4051,8 @@ function mockEligibleQuestion(q){
 // Keep linked exam parts together and work through unseen material first.
 function buildMockSessionItems(sub,mode,count,seenCards=new Set(),seenGroups=new Set()){
  const cardPool=cards.filter(c=>c.active!==false&&c.subject===sub&&mockEligibleCard(c));
- const qAll=subjectExam(sub).filter(mockEligibleQuestion);
+ // Mock revision must not inherit the unrelated Exam Questions tab's AS/A-level filter.
+ const qAll=examQuestions.filter(q=>q.subject===sub&&q.standalone!==false&&mockEligibleQuestion(q));
  const groups=new Map();
  for(const q of qAll){if(!groups.has(q.groupId))groups.set(q.groupId,[]);groups.get(q.groupId).push(q)}
  for(const g of groups.values())g.sort((x,y)=>String(x.groupOrder).localeCompare(String(y.groupOrder),undefined,{numeric:true}));
@@ -4055,12 +4063,16 @@ function buildMockSessionItems(sub,mode,count,seenCards=new Set(),seenGroups=new
  const items=[];
  if(mode!=='exam'){
    const want=mode==='flash'?count:Math.max(1,Math.ceil(count*.6));
-   const picked=pickRecallCards(availableCards,Math.min(want,availableCards.length),c=>1+weakness(c)/5+(isDue(c)?4:0)+(1-memoryHealth(c))*3);
+   const n=Math.min(want,availableCards.length),score=c=>1+weakness(c)/5+(isDue(c)?4:0)+(1-memoryHealth(c))*3;
+   const balance=sub==='Physics'?window.RevisionPhysicsMockBalance:null;
+   const picked=balance?balance.pickBalanced(availableCards,n,score,pickRecallCards):pickRecallCards(availableCards,n,score);
    for(const c of picked){items.push({type:'card',id:c.id});seenCards.add(c.id)}
  }
  if(mode!=='flash'){
    const target=Math.max(1,count-items.length);
-   const pickedGroups=weightedPick(availableGroups,Math.min(target,availableGroups.length),g=>1+groupWeakness(g));
+   const n=Math.min(target,availableGroups.length),score=g=>1+groupWeakness(g);
+   const balance=sub==='Physics'?window.RevisionPhysicsMockBalance:null;
+   const pickedGroups=balance?balance.pickBalanced(availableGroups,n,score,weightedPick,{practicalFirst:true}):weightedPick(availableGroups,n,score);
    for(const g of pickedGroups){
      seenGroups.add(g[0].groupId);
      for(const q of g)items.push({type:'exam',id:q.id,groupId:q.groupId});
@@ -6644,7 +6656,9 @@ document.getElementById('flashSubject').onchange=()=>{flashTopics.clear();refres
  };
 document.querySelectorAll('[data-flash-preset]').forEach(b=>b.onclick=()=>applyFlashPreset(b.dataset.flashPreset));
 document.getElementById('startMock').onclick=startMockSession;
-document.getElementById('mockSubject').onchange=()=>{const hint=document.getElementById('mathsMockScopeNote');if(hint)hint.hidden=document.getElementById('mockSubject').value!=='Maths'};document.getElementById('startFlashcards').onclick=startFlashSession;
+document.getElementById('mockSubject').onchange=()=>{const subject=document.getElementById('mockSubject').value;
+ const maths=document.getElementById('mathsMockScopeNote');if(maths)maths.hidden=subject!=='Maths';
+ const physics=document.getElementById('physicsMockBreadthNote');if(physics)physics.hidden=subject!=='Physics';};document.getElementById('startFlashcards').onclick=startFlashSession;
 document.getElementById('paper2Section').onchange=renderTopicCounts;
 document.getElementById('startPaper2Coach').onclick=startPaper2CoachSession;
 document.getElementById('examDifficulty').onchange=renderTopicCounts;

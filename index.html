@@ -8,6 +8,7 @@
   <title>Revision Loop</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css?v=173">
+  <link rel="stylesheet" href="study-focus-v440.css?v=440">
   <script src="layout-mode.js?v=120" defer></script>
 </head>
 <body>
@@ -123,6 +124,7 @@
         </div>
         <label class="recall-priority-option"><input type="checkbox" id="mockMustKnowFirst" checked><span><strong>Must memorise first</strong> — bring key definitions and equations not printed by AQA to the front of flashcard practice.</span></label>
         <div class="coverage-note">Uses only the topics currently tagged for your mock. Within flashcards, unlearned or due must-memorise facts are prioritised; exam questions remain mixed. Other flashcards remain available.</div>
+        <p id="physicsMockBreadthNote" class="maths-mock-scope"><strong>Physics mock breadth:</strong> short sessions are balanced across Measurements, Particles &amp; radiation, Waves, Mechanics &amp; materials and Electricity, with required practicals RP1–RP6 included in the bank. Exam-question practice is independent of the separate Exam questions tab's filters. Choose Unlimited to keep working through all available mock material before it repeats. For AQA AS Paper 2's practical/data, written and multiple-choice formats, also use the separate Paper 2 trainer under Flashcards.</p>
         <p id="mathsMockScopeNote" class="maths-mock-scope" hidden><strong>Maths first mock: Year 12/AS Pure only.</strong> Pure topics studied in Year 12, selected from both papers. No Statistics, Mechanics, radians or Year 13-only content. The separate Year 13 class paper is after the other mocks and is not included in this preset.</p>
         <button id="startMock" class="primary-btn full-btn">Start mock revision</button>
       </div>
@@ -205,6 +207,10 @@
       </div>
 
       <div id="sessionBanner" class="session-banner hidden"></div>
+      <div id="studyFocusControls" class="study-focus-controls" hidden>
+        <span>Study without the dashboard. Your answers and progress stay as they are.</span>
+        <button id="studyFocusToggle" class="study-focus-toggle" type="button" aria-pressed="false" aria-label="Open full-screen study view">Full screen</button>
+      </div>
       <div id="studyHost"></div>
     </section>
 
@@ -353,7 +359,9 @@
 <script src="chemistry-rates-marking-v210.js?v=210" defer></script>
 <script src="physics-concise-marking-v211.js?v=211" defer></script>
 <script src="physics-materials-divider-marking-v213.js?v=213" defer></script>
-<script src="app.js?v=430&physics=v439&chem=v433&data=6" defer></script>
+<script src="physics-mock-balance-v439.js?v=439" defer></script>
+<script src="app.js?v=430&physics=v439&chem=v433&data=6&focus=v440" defer></script>
+<script src="study-focus-v440.js?v=440" defer></script>
 <script src="world-zoom-helpers.js?v=61" defer></script>
 <script src="world-globe-article-bridge.js?v=73" defer></script>
 <script>

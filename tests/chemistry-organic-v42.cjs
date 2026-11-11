@@ -25,8 +25,10 @@ for(const c of newCards) {
  assert(c.front && c.back,'Incomplete flashcard: '+c.id);
  assert(c.front.length<=175&&c.back.length<=200,'Card too long: '+c.id);
 }
-const start=app.slice(app.indexOf('function startMockSession()'),app.indexOf('function selectedFlashCards()'));
+const start=app.slice(app.indexOf('function buildMockSessionItems('),app.indexOf('function selectedFlashCards()'));
+// v439 moved the selection pool into the bounded mock generator, retaining
+// the same weakness score and priority-first selection in pickRecallCards.
 assert(start.includes('mockEligibleCard(c)')&&app.includes("if(c.mock!==true)return false"),'Mock mode must include flagged cards via shared eligibility guard');
-assert(start.includes('pickRecallCards(cardPool') && start.includes('c=>1+weakness(c)/5') && app.includes('const selected=weightedPick(first') && app.includes('return selected.concat(weightedPick('), 'Mock flashcards must remain weighted by weakness within must-memorise and ordinary card pools');
+assert(start.includes('pickRecallCards(availableCards,n,score)') && start.includes('c=>1+weakness(c)/5') && app.includes('const selected=weightedPick(first') && app.includes('return selected.concat(weightedPick('), 'Mock flashcards must retain weakness weighting and the must-memorise selection policy');
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"),'Keep existing flashcard progress keys');
 console.log('PASS Chemistry organic v42: 86 mock flashcards, 10 topic groups, progress preserved');

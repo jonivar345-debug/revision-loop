@@ -1,0 +1,39 @@
+name: v440 full-screen flashcard and exam study
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'sw.js'
+      - 'study-focus-v440.js'
+      - 'study-focus-v440.css'
+      - 'tests/study-focus-v440.cjs'
+      - 'tests/study-focus-browser-v440.mjs'
+      - '.github/workflows/study-focus-v440.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  study-focus:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Source, syntax and progress-safety regressions
+        run: |
+          node --check study-focus-v440.js
+          node --check tests/study-focus-v440.cjs
+          node --check tests/study-focus-browser-v440.mjs
+          node tests/study-focus-v440.cjs
+          node tests/universal-study-actions-v432.cjs
+          node tests/mobile-cloud-progress-v428.cjs
+          node tests/mock-unlimited-v438.cjs
+          node tests/physics-paper2-coach-v430.cjs
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Phone and desktop full-screen study
+        run: node tests/study-focus-browser-v440.mjs
