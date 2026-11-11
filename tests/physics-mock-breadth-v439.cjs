@@ -83,7 +83,9 @@ for(const mode of ['flash','exam','mixed']){
  if(mode!=='flash')assert(batch.some(x=>x.type==='exam'),'Physics exam questions are not filtered out by unrelated controls');
  if(mode!=='exam')assert(batch.some(x=>x.type==='card'));
  if(mode==='exam'){
-  const ids=new Set(batch.filter(x=>x.type==='exam').map(x=>questions.find(q=>q.id===x.id)).map(balance.strand));
+  const ids=new Set(batch.filter(x=>x.type==='exam').map(x=>allPhysicsExam.find(q=>q.id===x.id)).map(balance.strand));
+  // Newly eligible source-verified parts lack the historic mock flag: classify
+  // against the full AS inventory, not the narrower original 240-item subset.
   for(const domain of balance.STRANDS)assert(ids.has(domain),'AS Physics strand missing in exam-only practice '+domain);
  }
 }
