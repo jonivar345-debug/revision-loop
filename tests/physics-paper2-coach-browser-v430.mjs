@@ -47,6 +47,17 @@ try{
    b:paper2CoachCards('B').length,c:paper2CoachCards('C').length
   }));
   assert.deepEqual(bank,{count:140,a:41,b:32,c:67},'Live Paper 2 loader must keep 132 original and eight new guided cards.');
+  const supplemental=await page.evaluate(()=>{
+   const list=cards.filter(c=>/^as_p2_v443_\d{3}$/.test(c.id));
+   return list.map(c=>({id:c.id,ref:c.specRef,section:c.paper2Section,
+     model:evaluateCard(c,c.back).status,
+     wrongChoice:c.paper2Section==='C'?evaluateCard(c,c.paper2Choices[1]).status:null}));
+  });
+  assert.equal(supplemental.length,8,'All eight new AS Paper 2 cards must load');
+  for(const check of supplemental){
+   assert.equal(check.model,'correct','New card model answer rejected: '+check.id);
+   if(check.section==='C')assert.equal(check.wrongChoice,'wrong','New MCQ distractor falsely accepted: '+check.id);
+  }
   await page.locator('#paper2Section').selectOption('C');
   assert.match(await page.locator('#paper2CoachSummary').textContent(),/67 guided cards/);
   await page.locator('#paper2SessionCount').selectOption('10');
