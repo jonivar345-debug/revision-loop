@@ -1,0 +1,42 @@
+name: v445 AS Physics Paper 2 historical method checks
+on:
+  pull_request:
+    paths:
+      - physics_as_paper2_guided_v430.json
+      - app.js
+      - index.html
+      - sw.js
+      - tests/physics-paper2-earlier-sources-v445.cjs
+      - tests/physics-paper2-coach-browser-v430.mjs
+      - editorial/physics-as-paper2-early-source-crosswalk-v445.json
+      - .github/workflows/physics-paper2-early-sources-v445.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  early-paper2-methods:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Source-to-skill and saved-history safety
+        run: |
+          node --check app.js
+          node tests/physics-paper2-earlier-sources-v445.cjs
+          node tests/physics-paper2-past-style-v444.cjs
+          node tests/physics-paper2-spec-v443.cjs
+          node tests/physics-paper2-coach-v430.cjs
+          node tests/physics-mock-breadth-v439.cjs
+          node tests/physics-mock-quality-v439.cjs
+          node tests/mock-unlimited-v438.cjs
+          node tests/mobile-cloud-progress-v428.cjs
+          node tests/study-focus-v440.cjs
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Browser correct answers, alternatives, MCQ distractors and progress
+        run: node tests/physics-paper2-coach-browser-v430.mjs
