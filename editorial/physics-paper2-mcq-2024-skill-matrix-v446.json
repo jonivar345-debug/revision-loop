@@ -80,12 +80,12 @@
     {
       "question": "11",
       "section": "C",
-      "specRef": "3.4.1.3",
+      "specRef": "3.4.1.5",
       "skill": "Interpreting a falling-body motion graph with drag",
       "examTechnique": "Check whether the vertical axis is displacement or speed",
       "diagramDependent": true,
       "reviewStatus": "source skill and scheme inspected; bank equivalence NOT certified",
-      "followUp": "Check exact original diagram and add/verify a distinct visual coaching task"
+      "followUp": "Original diagram-led terminal-speed and resistance coaching added in v447; check the source graphic before claiming exact card equivalence"
     },
     {
       "question": "12",
@@ -323,5 +323,19 @@
     "Prioritise diagram-dependent resistance networks, forces and wave graphs; text-only cues are insufficient for some techniques",
     "Audit the 2025 actual QP and MS before certifying the indexed 2025 styles",
     "Complete practical methods and extended written marks coverage separately"
-  ]
+  ],
+  "v447VisualBridge": {
+    "version": "v447",
+    "visualPromptIDs": [
+      "as_p2_v447_001",
+      "as_p2_v447_002",
+      "as_p2_v447_003",
+      "as_p2_v447_004",
+      "as_p2_v447_005",
+      "as_p2_v447_006",
+      "as_p2_v447_007",
+      "as_p2_v447_008"
+    ],
+    "reviewStatus": "Eight original SVG question analogues added and tested. These are not copies of the original AQA drawings or a mark-scheme equivalence certification."
+  }
 }
