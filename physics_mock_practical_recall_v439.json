@@ -1,7 +1,7 @@
 {
   "version": "v439",
   "scope": "AQA Physics AS mock first-year subject content and RP1–RP6",
-  "notes": "20 extra compact practical and data recall cards; no original ID replaced, no paper 2 trainer changes.",
+  "notes": "Original RP1–RP6 coverage plus applied AS Paper 2 practical, graph, uncertainty and cross-topic problem-solving. Model answers reviewed and no existing IDs replaced.",
   "cards": [
     {
       "id": "v439_phy_rp1_01",
@@ -520,6 +520,156 @@
       ],
       "reject": [
         "to ensure all variables change at the same time"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_09",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A micrometer reads +0.05 mm when closed. How do you correct a measured reading?",
+      "back": "Subtract 0.05 mm.",
+      "accept": [
+        "Subtract 0.05 mm.",
+        "subtract the positive zero offset"
+      ],
+      "reject": [
+        "add 0.05 mm"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_10",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements",
+      "courseTopic": "Measurements & practical skills",
+      "revisionTopic": "Measurements & practical skills",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Does repeating readings remove a fixed instrument zero error?",
+      "back": "No; calibrate or zero-correct it.",
+      "accept": [
+        "No; calibrate or zero-correct it.",
+        "No; systematic errors do not average out"
+      ],
+      "reject": [
+        "yes; calculate the mean"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_11",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What does the gradient of stopping potential against light frequency equal?",
+      "back": "h/e.",
+      "accept": [
+        "h/e.",
+        "Planck constant divided by electron charge"
+      ],
+      "reject": [
+        "h times e"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_12",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For an LDR in a series divider, what happens to its resistance as light increases?",
+      "back": "It decreases.",
+      "accept": [
+        "It decreases.",
+        "resistance goes down"
+      ],
+      "reject": [
+        "resistance increases"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_13",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "If a graph of fringe spacing against screen distance is linear, what is its gradient?",
+      "back": "Wavelength divided by slit separation (λ/a).",
+      "accept": [
+        "Wavelength divided by slit separation (λ/a).",
+        "lambda over slit separation"
+      ],
+      "reject": [
+        "slit separation over wavelength"
+      ],
+      "strictRecall": true,
+      "priority": 2
+    },
+    {
+      "id": "v439_phy_data_14",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Mechanics & materials",
+      "courseTopic": "Mechanics & materials",
+      "revisionTopic": "Mechanics & materials",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For a graph with slope g/2, what is g when the gradient is 4.9 m s⁻²?",
+      "back": "9.8 m s⁻².",
+      "accept": [
+        "9.8 m s⁻².",
+        "twice 4.9"
+      ],
+      "reject": [
+        "4.9 metres per second squared"
       ],
       "strictRecall": true,
       "priority": 2
