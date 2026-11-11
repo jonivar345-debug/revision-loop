@@ -1,0 +1,37 @@
+name: v442 World satellite and Task 2 preservation
+on:
+  pull_request:
+    paths:
+      - app.js
+      - tests/world-satellite-texture-v442.cjs
+      - tests/world-satellite-texture-browser-v442.mjs
+      - .github/workflows/world-satellite-v442.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  world-globe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: World and revision safety checks
+        run: |
+          node --check app.js
+          node tests/world-satellite-texture-v442.cjs
+          node tests/world-earth-geography.cjs
+          node tests/world-profile-preservation.cjs
+          node tests/world-streak-points-only-v94.cjs
+          node tests/world-fair-shop-v95.cjs
+          node tests/world-local-photos.cjs
+          node tests/physics-mock-breadth-v439.cjs
+          node tests/physics-mock-quality-v439.cjs
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Satellite image and offline fallback browser checks
+        run: node tests/world-satellite-texture-browser-v442.mjs
