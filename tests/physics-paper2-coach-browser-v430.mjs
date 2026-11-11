@@ -46,7 +46,7 @@ try{
    count:paper2CoachCards('all').length,a:paper2CoachCards('A').length,
    b:paper2CoachCards('B').length,c:paper2CoachCards('C').length
   }));
-  assert.deepEqual(bank,{count:140,a:41,b:32,c:67},'Live Paper 2 loader must keep 132 original and eight new guided cards.');
+  assert.deepEqual(bank,{count:150,a:47,b:34,c:69},'Live Paper 2 loader must retain 132 original cards, eight v443 and ten v444 additions.');
   const supplemental=await page.evaluate(()=>{
    const list=cards.filter(c=>/^as_p2_v443_\d{3}$/.test(c.id));
    return list.map(c=>({id:c.id,ref:c.specRef,section:c.paper2Section,
@@ -59,7 +59,7 @@ try{
    if(check.section==='C')assert.equal(check.wrongChoice,'wrong','New MCQ distractor falsely accepted: '+check.id);
   }
   await page.locator('#paper2Section').selectOption('C');
-  assert.match(await page.locator('#paper2CoachSummary').textContent(),/67 guided cards/);
+  assert.match(await page.locator('#paper2CoachSummary').textContent(),/69 guided cards/);
   await page.locator('#paper2SessionCount').selectOption('10');
   await page.locator('#startPaper2Coach').click();
   let session=await page.evaluate(()=>({
