@@ -6563,9 +6563,9 @@ async function sync(manual=false){
   if(response.ok)v439PhysicsExam=await response.json();
  }catch{}
  const validatedV439PhysicsExam=(v439PhysicsExam.questions||[]).filter(q=>
-  /^v439_phy_exam_rp[1-6]$/.test(q.id||'')&&q.subject==='Physics'&&q.level==='AS'&&
+  /^v439_phy_exam_(?:rp[1-6]|data0[1-6])$/.test(q.id||'')&&q.subject==='Physics'&&q.level==='AS'&&
   q.mock===true&&q.taught===true&&q.standalone===true&&q.marks===6&&
-  /^7\.2 RP[1-6]$/.test(q.specRef||'')&&Array.isArray(q.markPoints)&&
+  /^(?:7\.2 RP[1-6]|3\.(?:1\.2|2\.2|3\.2|5))$/.test(q.specRef||'')&&Array.isArray(q.markPoints)&&
   q.markPoints.length===6&&Array.isArray(q.markPointMarks)&&
   q.markPointMarks.reduce((sum,n)=>sum+n,0)===6&&typeof q.modelAnswer==='string');
 
