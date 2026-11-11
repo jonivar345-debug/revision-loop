@@ -1,0 +1,42 @@
+name: v444 AS Physics Paper 2 source-style checks
+on:
+  pull_request:
+    paths:
+      - physics_as_paper2_guided_v430.json
+      - app.js
+      - index.html
+      - sw.js
+      - tests/physics-paper2-coach-v430.cjs
+      - tests/physics-paper2-coach-browser-v430.mjs
+      - tests/physics-paper2-past-style-v444.cjs
+      - editorial/physics-as-paper2-selected-sources-v444.json
+      - .github/workflows/physics-paper2-sources-v444.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  paper2-source-methods:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Audit and safeguard source question-style mappings
+        run: |
+          node --check app.js
+          node tests/physics-paper2-past-style-v444.cjs
+          node tests/physics-paper2-spec-v443.cjs
+          node tests/physics-paper2-coach-v430.cjs
+          node tests/physics-mock-breadth-v439.cjs
+          node tests/physics-mock-quality-v439.cjs
+          node tests/mobile-cloud-progress-v428.cjs
+          node tests/study-focus-v440.cjs
+          node tests/world-satellite-texture-v442.cjs
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Real browser model answers and distractor tests
+        run: node tests/physics-paper2-coach-browser-v430.mjs
