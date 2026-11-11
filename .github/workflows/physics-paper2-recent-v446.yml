@@ -7,6 +7,8 @@ on:
       - index.html
       - sw.js
       - tests/physics-paper2-recent-sources-v446.cjs
+      - tests/physics-paper2-mcq-2024-audit-v446.cjs
+      - editorial/physics-paper2-mcq-2024-skill-matrix-v446.json
       - tests/physics-paper2-coach-browser-v430.mjs
       - editorial/physics-paper2-recent-sources-v446.json
       - .github/workflows/physics-paper2-recent-v446.yml
@@ -26,6 +28,7 @@ jobs:
         run: |
           node --check app.js
           node tests/physics-paper2-recent-sources-v446.cjs
+          node tests/physics-paper2-mcq-2024-audit-v446.cjs
           node tests/physics-paper2-earlier-sources-v445.cjs
           node tests/physics-paper2-past-style-v444.cjs
           node tests/physics-paper2-spec-v443.cjs
