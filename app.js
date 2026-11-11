@@ -4120,7 +4120,7 @@ function startFlashSession(){
 // v430: isolated Paper 2 coach; no changes to school mock eligibility or saved reviews.
 function paper2CoachCards(section='all'){
  return cards.filter(c=>c.active!==false&&c.subject==='Physics'&&
-  /^as_p2_v(?:430|443|444)_\d{3}$/.test(c.id||'')&&
+  /^as_p2_v(?:430|443|444|445)_\d{3}$/.test(c.id||'')&&
   (section==='all'||c.paper2Section===section));
 }
 function startPaper2CoachSession(){
@@ -6367,7 +6367,7 @@ async function sync(manual=false){
   if(res.ok){
    const bank=await res.json();
    for(const c of Array.isArray(bank.cards)?bank.cards:[]){
-    if(!c||!/^as_p2_v(?:430|443|444)_\d{3}$/.test(c.id||'')||c.subject!=='Physics'||
+    if(!c||!/^as_p2_v(?:430|443|444|445)_\d{3}$/.test(c.id||'')||c.subject!=='Physics'||
        c.stage!=='AS'||!['A','B','C'].includes(c.paper2Section)||
        typeof c.front!=='string'||typeof c.back!=='string'||!c.front.trim()||
        !c.back.trim()||c.active!==true||cards.some(old=>old.id===c.id))continue;
