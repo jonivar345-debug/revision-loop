@@ -51,7 +51,13 @@ for(const [label,pattern] of [
 }
 assert(app.includes("'./physics_mock_practical_recall_v439.json'"));
 assert(app.includes("'./physics_mock_practical_exam_v439.json'"));
-assert(app.includes('index===56'));
+assert(app.includes('V439_PHYSICS_RECALL_URL')&&app.includes('V439_PHYSICS_EXAM_URL'));
+assert(app.includes('validatedV439PhysicsExam')&&app.includes('knownFlashIds.add(c.id);cards.push(c)'));
+for(const [name,original] of [['EXTRA_FLASHCARD_URLS',56],['EXTRA_PRACTICE_URLS',52]]){
+ const m=app.match(new RegExp('const '+name+'=\\[([^\\]]+)\\];'));
+ assert(m,'Existing '+name+' manifest must exist');
+ assert.equal((m[1].match(/'\\.\\//g)||[]).length,original,'Historical supplement indices must remain fixed');
+}
 assert(app.includes('knownFlashIds.add(c.id);cards.push(c)'));
 assert(html.includes('app.js?v=430&physics=v439'));
 assert(sw.includes('v439-physics-mock-practicals'));
