@@ -46,7 +46,7 @@ try{
    count:paper2CoachCards('all').length,a:paper2CoachCards('A').length,
    b:paper2CoachCards('B').length,c:paper2CoachCards('C').length
   }));
-  assert.deepEqual(bank,{count:198,a:71,b:44,c:83},'Live Paper 2 trainer must retain 190 prior cards and load eight illustrated visual MCQs.');
+  assert.deepEqual(bank,{count:218,a:71,b:44,c:103},'Paper 2 trainer must retain 198 original cards and load twenty v448 MCQs.');
   const supplemental=await page.evaluate(()=>{
    const list=cards.filter(c=>/^as_p2_v443_\d{3}$/.test(c.id));
    return list.map(c=>({id:c.id,ref:c.specRef,section:c.paper2Section,
@@ -130,8 +130,20 @@ try{
    assert(view.bounds<=view.viewport+1,'Diagram causes horizontal overflow '+check.id);
    assert(!view.html.includes('aria-hidden="true"'),'Accessible visual must not be hidden '+check.id);
   }
+  const indexed2025=await page.evaluate(()=>{
+    const items=cards.filter(c=>/^as_p2_v448_\d{3}$/.test(c.id));
+    return items.map(c=>({id:c.id,provenance:c.sourceStyle?.verification,
+      model:evaluateCard(c,c.back).status,
+      wrong:c.paper2Choices.slice(1).map(choice=>evaluateCard(c,choice).status)}));
+  });
+  assert.equal(indexed2025.length,20,'All 20 original 2025-style items load');
+  for(const result of indexed2025){
+    assert(result.provenance.includes('official_mark_scheme_unreviewed'),'Do not claim unchecked 2025 scheme equivalence');
+    assert.equal(result.model,'correct','Model solution rejected: '+result.id);
+    assert(result.wrong.every(status=>status==='wrong'),'Incorrect MCQ option incorrectly credited: '+result.id);
+  }
   await page.locator('#paper2Section').selectOption('C');
-  assert.match(await page.locator('#paper2CoachSummary').textContent(),/83 guided cards/);
+  assert.match(await page.locator('#paper2CoachSummary').textContent(),/103 guided cards/);
   await page.locator('#paper2SessionCount').selectOption('10');
   await page.locator('#startPaper2Coach').click();
   let session=await page.evaluate(()=>({

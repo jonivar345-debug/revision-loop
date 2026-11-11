@@ -6429,6 +6429,826 @@
         "question": "26",
         "status": "original visual analogy based on a diagram-sensitive source skill; not a reproduction of AQA 2024 MCQ diagrams or original mark scheme text"
       }
+    },
+    {
+      "id": "as_p2_v448_001",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.2.2.4",
+      "topic": "de Broglie speed ratio",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "de Broglie speed ratio",
+      "paper2Hint": "Equal wavelength means equal momentum. At equal momentum, v is inversely proportional to particle mass.",
+      "paper2Trap": "The proton is about 1836 times more massive: speed ratio is near 10³, not 1.",
+      "front": "A non-relativistic electron and proton have the same de Broglie wavelength. Which is the nearest power of ten for speed ratio vₑ/vₚ?",
+      "back": "10³.",
+      "accept": [
+        "10³"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "10³.",
+        "10²",
+        "10⁴",
+        "1"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "06",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_002",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.3.1.1",
+      "topic": "Wave speed from quarter-cycle phase",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Wave speed from quarter-cycle phase",
+      "paper2Hint": "A quarter-cycle phase represents λ/4, so λ=0.32 m and v=fλ.",
+      "paper2Trap": "The 0.080 m is a quarter wavelength, not the whole wavelength.",
+      "front": "Two points 0.080 m apart have phase difference π/2 on a progressive 250 Hz wave. Find the wave speed.",
+      "back": "80 m s⁻¹.",
+      "accept": [
+        "80 m s⁻¹"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "80 m s⁻¹.",
+        "20 m s⁻¹",
+        "320 m s⁻¹",
+        "3.1 m s⁻¹"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "09",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_003",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.2.2.2",
+      "topic": "Photon frequency from transition energy",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Photon frequency from transition energy",
+      "paper2Hint": "Convert 3.0 eV to joules, then use f=E/h.",
+      "paper2Trap": "Do not substitute electronvolts directly into Planck's equation with h in joules.",
+      "front": "An atom emits a photon when it loses 3.0 eV. Find photon frequency; h=6.63×10⁻³⁴ J s.",
+      "back": "7.2 × 10¹⁴ Hz.",
+      "accept": [
+        "7.2 × 10¹⁴ Hz"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "7.2 × 10¹⁴ Hz.",
+        "4.8 × 10⁻¹⁹ Hz",
+        "2.0 × 10¹⁵ Hz",
+        "3.0 Hz"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "10",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_004",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.3.1.2",
+      "topic": "Aerial polarisation",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Aerial polarisation",
+      "paper2Hint": "The receiving aerial should align with the radio wave's electric field.",
+      "paper2Trap": "A horizontally aligned aerial is poorly matched to vertically polarised waves.",
+      "front": "A radio transmitter produces vertically polarised waves. What receiving aerial orientation gives the strongest signal?",
+      "back": "Vertical.",
+      "accept": [
+        "Vertical"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "Vertical.",
+        "Horizontal",
+        "45° to vertical",
+        "Orientation does not matter"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "12",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_005",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.3.1.3",
+      "topic": "Consecutive harmonics from node gaps",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Consecutive harmonics from node gaps",
+      "paper2Hint": "At the Nth harmonic, adjacent-node distance equals L/N.",
+      "paper2Trap": "Count node gaps, not nodes; the Nth harmonic has N half-wavelengths.",
+      "front": "A fixed string is 1.20 m long. Its node gap at harmonic N is 0.30 m, reducing to 0.24 m at N+1. Find N.",
+      "back": "4.",
+      "accept": [
+        "4"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "4.",
+        "3",
+        "5",
+        "6"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "16",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_006",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.4.1.6",
+      "topic": "Force-time impulse",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Force-time impulse",
+      "paper2Hint": "Impulse is the signed area of a force-time graph: FΔt=Δp.",
+      "paper2Trap": "Area under force-displacement gives work, not change in momentum.",
+      "front": "An 8.0 N force acts for 0.25 s. What change in momentum does the force cause?",
+      "back": "2.0 N s.",
+      "accept": [
+        "2.0 N s"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "2.0 N s.",
+        "32 N s",
+        "8.0 N s",
+        "0.031 N s"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "19",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_007",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.4.1.3",
+      "topic": "Free fall scaling",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Free fall scaling",
+      "paper2Hint": "From v²=u²+2as, with u=0 and a=g, v²=2gs.",
+      "paper2Trap": "Doubling distance does not double speed; speed scales with its square root.",
+      "front": "An object falls from rest with negligible air resistance. Which relationship links its speed v to distance fallen s?",
+      "back": "v ∝ √s.",
+      "accept": [
+        "v ∝ √s"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "v ∝ √s.",
+        "v ∝ s",
+        "v ∝ s²",
+        "v ∝ 1/s"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "20",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_008",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.4.2.2",
+      "topic": "Young modulus elastic energy",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Young modulus elastic energy",
+      "paper2Hint": "The rod's stiffness is k=EA/L, so stored energy is ½kx².",
+      "paper2Trap": "Do not confuse Young modulus E with the stored-energy quantity.",
+      "front": "A uniform elastic rod has Young modulus E, area A, length L and extension x. Which expression gives its stored energy?",
+      "back": "EAx²/(2L).",
+      "accept": [
+        "EAx²/(2L)"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "EAx²/(2L).",
+        "EAx/L",
+        "2EL/(Ax²)",
+        "EALx/2"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "24",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_009",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.5.1.4",
+      "topic": "Current at junctions",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Current at junctions",
+      "paper2Hint": "Kirchhoff's first law: currents into a junction equal currents out.",
+      "paper2Trap": "Subtract the known 1 A outgoing branch from the total entering 5 A.",
+      "front": "At a junction, currents of 2.0 A and 3.0 A enter. One branch carries 1.0 A away. What leaves through the remaining branch?",
+      "back": "4.0 A.",
+      "accept": [
+        "4.0 A"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "4.0 A.",
+        "6.0 A",
+        "2.0 A",
+        "1.0 A"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "26",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_010",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.2.1.6",
+      "topic": "Quark count in fluorine nucleus",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Quark count in fluorine nucleus",
+      "paper2Hint": "A proton is uud; a neutron is udd. Count 9×(uud) and 10×(udd).",
+      "paper2Trap": "There are three quarks in each nucleon, not one in each.",
+      "front": "A fluorine-19 nucleus contains 9 protons and 10 neutrons. How many up and down quarks does it contain?",
+      "back": "28 up and 29 down.",
+      "accept": [
+        "28 up and 29 down"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "28 up and 29 down.",
+        "29 up and 28 down",
+        "19 up and 19 down",
+        "38 up and 19 down"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "28",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_011",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.4.2.1",
+      "topic": "Mass of cylinders scaling",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Mass of cylinders scaling",
+      "paper2Hint": "Mass = density×cross-sectional area×length; area scales with diameter squared.",
+      "paper2Trap": "Doubling diameter makes cross-sectional area four times larger.",
+      "front": "Two uniform rods have equal length and density. Rod B has twice the diameter of rod A. What is mB/mA?",
+      "back": "4.",
+      "accept": [
+        "4"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "4.",
+        "2",
+        "8",
+        "16"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "29",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_012",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.4.1.7",
+      "topic": "Aircraft input power",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Aircraft input power",
+      "paper2Hint": "Useful power=Fv=1.0 MW, and input power=useful power/0.80.",
+      "paper2Trap": "Do not multiply by efficiency when calculating required input power.",
+      "front": "An aircraft flies steadily at 50 m s⁻¹ against drag of 20 kN. Propulsion efficiency is 80%. Find input power.",
+      "back": "1.25 MW.",
+      "accept": [
+        "1.25 MW"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "1.25 MW.",
+        "1.0 MW",
+        "0.80 MW",
+        "25 MW"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "31",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_013",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.2.1.4",
+      "topic": "Beta-plus nuclear transformation",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Beta-plus nuclear transformation",
+      "paper2Hint": "A proton becomes a neutron; proton number falls by one while A remains 15.",
+      "paper2Trap": "In β⁺ decay Z decreases; do not confuse it with β⁻ decay.",
+      "front": "Oxygen-15 has 8 protons. It emits a β⁺ particle. How many protons and neutrons are in its daughter nucleus?",
+      "back": "7 protons and 8 neutrons.",
+      "accept": [
+        "7 protons and 8 neutrons"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "7 protons and 8 neutrons.",
+        "8 protons and 7 neutrons",
+        "9 protons and 6 neutrons",
+        "7 protons and 7 neutrons"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "32",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_014",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.5.1.4",
+      "topic": "Real voltmeter loading",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Real voltmeter loading",
+      "paper2Hint": "The resistor takes 6/6=1.0 A; meter current is 0.5 A, so R=6/0.5.",
+      "paper2Trap": "A real voltmeter draws current and changes total current in the source.",
+      "front": "A 6 V supply feeds a 6 Ω resistor and a voltmeter in parallel. Total current is 1.5 A. What is the meter's resistance?",
+      "back": "12 Ω.",
+      "accept": [
+        "12 Ω"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "12 Ω.",
+        "4 Ω",
+        "6 Ω",
+        "9 Ω"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "33",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_015",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.4.1.7",
+      "topic": "Uphill power at constant speed",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Uphill power at constant speed",
+      "paper2Hint": "Driving force=mg sin5°+600 N; use power=driving force×speed.",
+      "paper2Trap": "Use the component of weight along the road, not full mg.",
+      "front": "A 1000 kg car climbs a 5° slope at 15 m s⁻¹. Resistance along slope is 600 N; g=10. Estimate engine useful power.",
+      "back": "22 kW.",
+      "accept": [
+        "22 kW"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "22 kW.",
+        "13 kW",
+        "9.0 kW",
+        "220 kW"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "34",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_016",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.4.1.5",
+      "topic": "Terminal-speed drag and mass",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Terminal-speed drag and mass",
+      "paper2Hint": "At terminal speed the resultant force is zero, so upward drag balances mg.",
+      "paper2Trap": "Terminal speed is not the same as zero drag or zero speed.",
+      "front": "Skydivers A and B have masses 60 kg and 90 kg and are each falling at terminal speed. Which has the greater upward drag force?",
+      "back": "B, because drag equals its greater weight.",
+      "accept": [
+        "B, because drag equals its greater weight"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "B, because drag equals its greater weight.",
+        "A, because lighter objects have greater drag",
+        "Both have zero drag",
+        "Both necessarily have equal drag"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "13",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_017",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.3.2.3",
+      "topic": "Wavelength in refractive glass",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Wavelength in refractive glass",
+      "paper2Hint": "Frequency is unchanged, but speed and wavelength divide by refractive index.",
+      "paper2Trap": "Do not multiply the wavelength by refractive index.",
+      "front": "Light has wavelength 600 nm in air. It enters glass with refractive index 1.50. What wavelength does it have in glass?",
+      "back": "400 nm.",
+      "accept": [
+        "400 nm"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "400 nm.",
+        "900 nm",
+        "600 nm",
+        "300 nm"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "14",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_018",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.1.1",
+      "topic": "Identify incorrect newton equivalent units",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Identify incorrect newton equivalent units",
+      "paper2Hint": "A newton is kg m s⁻², while joule is kg m² s⁻².",
+      "paper2Trap": "J m⁻¹ and Pa m² both reduce to N; keep the powers of length straight.",
+      "front": "Which unit is NOT equivalent to one newton?",
+      "back": "kg m² s⁻².",
+      "accept": [
+        "kg m² s⁻²"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "kg m² s⁻².",
+        "kg m s⁻²",
+        "J m⁻¹",
+        "Pa m²"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "17",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_019",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.4.2.2",
+      "topic": "Young modulus of different-sized wires",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Young modulus of different-sized wires",
+      "paper2Hint": "Stress divided by strain is Young modulus, a property of material under these conditions.",
+      "paper2Trap": "Different dimensions change stiffness, not Young modulus for the same material.",
+      "front": "Two wires of the same steel have different lengths and diameters. In their linear elastic range, compare stress/strain for each.",
+      "back": "Equal for both wires.",
+      "accept": [
+        "Equal for both wires"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "Equal for both wires.",
+        "Larger in the thicker wire",
+        "Larger in the longer wire",
+        "Zero in the shorter wire"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "21",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v448_020",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.5.1.4",
+      "topic": "Power in parallel resistor",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Power in parallel resistor",
+      "paper2Hint": "Parallel branches share the same potential difference: P=V²/R.",
+      "paper2Trap": "The other branch does not reduce the 6.0 V across the 12 Ω resistor.",
+      "front": "A 12 Ω resistor is in parallel with another resistor. Both are connected across 6.0 V. What power is dissipated in the 12 Ω resistor?",
+      "back": "3.0 W.",
+      "accept": [
+        "3.0 W"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "3.0 W.",
+        "0.50 W",
+        "6.0 W",
+        "12 W"
+      ],
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "30",
+        "status": "original authored practice, not an AQA question",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
     }
   ],
   "mcqDesign": "Section C has four original answer options per card with plausible wrong choices. Responses are displayed in a rotated order per card.",
@@ -6514,5 +7334,12 @@
     "scope": "Eight independent visual reasoning MCQs mapped to the diagram-sensitive technique list from 2024 Paper 2. Diagrams and numerical values are original, not AQA copies.",
     "sourceLedger": "editorial/physics-paper2-mcq-2024-skill-matrix-v446.json",
     "notes": "The 2024 actual graphic and examiner answers are not reproduced. This is a fresh diagram-based skill set."
+  },
+  "year2025McqAudit": {
+    "version": "v448",
+    "originalCardsPreserved": 198,
+    "addedOriginalCards": 20,
+    "matrix": "editorial/physics-paper2-2025-mcq-matrix-v448.json",
+    "evidence": "secondary 2025 topic index; original QP/mark scheme not independently reviewed"
   }
 }
