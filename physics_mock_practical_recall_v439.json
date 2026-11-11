@@ -306,16 +306,19 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "RP6: What does the negative V–I graph gradient represent?",
-      "back": "The internal resistance r.",
+      "front": "On a graph of terminal p.d. V against current I, what is the signed gradient?",
+      "back": "−r, the negative of the internal resistance.",
       "accept": [
-        "The internal resistance r.",
-        "internal resistance",
-        "negative gradient is -r"
+        "−r, the negative of the internal resistance.",
+        "-r",
+        "minus the internal resistance",
+        "negative internal resistance"
       ],
       "reject": [
-        "electromotive force",
-        "intercept"
+        "+r",
+        "positive internal resistance",
+        "emf",
+        "the V-axis intercept"
       ],
       "strictRecall": true,
       "priority": 2
