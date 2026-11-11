@@ -24,7 +24,7 @@ for(const c of cards){
  assert(c.front.length<=140&&c.back.length<=150,'Single-fact flashcard');
  assert(Array.isArray(c.accept)&&c.accept.includes(c.back)&&c.accept.length>=2);
  assert(Array.isArray(c.reject)&&c.reject.length>=1,'Wrong-answer probes');
- assert(/^(?:3\.(?:1\.2|2\.2|3\.2|4|5)|7\.2 RP[1-6])$/.test(c.specRef));
+ assert(['3.1.2','3.2.2','3.3.2','3.4','3.5',...Array.from({length:6},(_,i)=>'7.2 RP'+(i+1))].includes(c.specRef),'AS flashcard spec reference');
 }
 for(const q of questions){
  assert(/^v439_phy_exam_(?:rp[1-6]|data0[1-6])$/.test(q.id)&&!ids.has(q.id)&&!knownIds.has(q.id));
@@ -36,7 +36,7 @@ for(const q of questions){
  assert.equal(q.markPointMarks.reduce((a,b)=>a+b,0),q.marks);
  assert.equal(q.groupId,q.id);assert.equal(q.verificationLevel,'original-exam-style');
  assert(q.modelAnswer.length>60&&q.prompt.length>75);
- assert(/^(?:7\.2 RP[1-6]|3\.(?:1\.2|2\.2|3\.2|5))$/.test(q.specRef));
+ assert(['3.1.2','3.2.2','3.3.2','3.5',...Array.from({length:6},(_,i)=>'7.2 RP'+(i+1))].includes(q.specRef),'AS exam spec reference');
 }
 for(let n=1;n<=6;n++){
  assert.equal(cards.filter(c=>c.specRef==='7.2 RP'+n).length,2);
@@ -59,9 +59,9 @@ assert(app.includes("'./physics_mock_practical_exam_v439.json'"));
 assert(app.includes('V439_PHYSICS_RECALL_URL')&&app.includes('V439_PHYSICS_EXAM_URL'));
 assert(app.includes('validatedV439PhysicsExam')&&app.includes('knownFlashIds.add(c.id);cards.push(c)'));
 for(const [name,original] of [['EXTRA_FLASHCARD_URLS',56],['EXTRA_PRACTICE_URLS',52]]){
- const m=app.match(new RegExp('const '+name+'=\\[([^\\]]+)\\];'));
- assert(m,'Existing '+name+' manifest must exist');
- assert.equal((m[1].match(/'\\.\\//g)||[]).length,original,'Historical supplement indices must remain fixed');
+ const manifest=app.split('\n').find(line=>line.startsWith('const '+name+'=['));
+ assert(manifest,'Existing '+name+' manifest must exist');
+ assert.equal(manifest.split("'./").length-1,original,'Historical supplement indices must remain fixed');
 }
 assert(app.includes('knownFlashIds.add(c.id);cards.push(c)'));
 assert(html.includes('app.js?v=430&physics=v439'));
