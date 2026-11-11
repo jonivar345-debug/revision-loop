@@ -6552,7 +6552,7 @@ async function sync(manual=false){
   if(!/^v439_phy_(?:rp[1-6]|data)_\d{2}$/.test(c.id||'')||
      c.subject!=='Physics'||c.stage!=='AS'||c.mock!==true||c.taught!==true||
      c.scope!=='mock'||c.active!==true||c.kind!=='short'||c.strictRecall!==true||
-     !['3.1.2','7.2 RP1','7.2 RP2','7.2 RP3','7.2 RP4','7.2 RP5','7.2 RP6'].includes(c.specRef)||
+     !['3.1.2','3.2.2','3.3.2','3.4','3.5','7.2 RP1','7.2 RP2','7.2 RP3','7.2 RP4','7.2 RP5','7.2 RP6'].includes(c.specRef)||
      !Array.isArray(c.accept)||!Array.isArray(c.reject)||c.front.length>140||c.back.length>150||
      knownFlashIds.has(c.id))continue;
   knownFlashIds.add(c.id);cards.push(c);
