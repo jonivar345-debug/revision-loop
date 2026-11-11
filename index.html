@@ -8,6 +8,7 @@
   <title>Revision Loop</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css?v=173">
+  <link rel="stylesheet" href="study-focus-v440.css?v=440">
   <script src="layout-mode.js?v=120" defer></script>
 </head>
 <body>
@@ -205,6 +206,10 @@
       </div>
 
       <div id="sessionBanner" class="session-banner hidden"></div>
+      <div id="studyFocusControls" class="study-focus-controls" hidden>
+        <span>Study without the dashboard. Your answers and progress stay as they are.</span>
+        <button id="studyFocusToggle" class="study-focus-toggle" type="button" aria-pressed="false" aria-label="Open full-screen study view">Full screen</button>
+      </div>
       <div id="studyHost"></div>
     </section>
 
@@ -354,6 +359,7 @@
 <script src="physics-concise-marking-v211.js?v=211" defer></script>
 <script src="physics-materials-divider-marking-v213.js?v=213" defer></script>
 <script src="app.js?v=430&chem=v433" defer></script>
+<script src="study-focus-v440.js?v=440" defer></script>
 <script src="world-zoom-helpers.js?v=61" defer></script>
 <script src="world-globe-article-bridge.js?v=73" defer></script>
 <script>
