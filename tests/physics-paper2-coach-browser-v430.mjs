@@ -84,6 +84,21 @@ try{
    if(check.section==='C')assert.equal(check.wrongChoice,'wrong','New MCQ distractor falsely credited: '+check.id);
    else assert.equal(check.alternate,'correct','Valid alternative rejected by real marker: '+check.id);
   }
+  const recent=await page.evaluate(()=>{
+    const list=cards.filter(c=>/^as_p2_v446_\d{3}$/.test(c.id));
+    return list.map(c=>({id:c.id,year:c.sourceStyle?.year,section:c.paper2Section,
+      source:c.sourceStyle?.verification,model:evaluateCard(c,c.back).status,
+      alternate:c.paper2Section==='C'?null:evaluateCard(c,c.accept[0]).status,
+      wrongChoice:c.paper2Section==='C'?evaluateCard(c,c.paper2Choices[1]).status:null}));
+  });
+  assert.equal(recent.length,20,'All 20 new 2024/2025 guided-card examples must load');
+  for(const check of recent){
+    assert([2024,2025].includes(check.year));
+    assert.equal(check.model,'correct','New model answer rejected by real marker: '+check.id);
+    if(check.section==='C')assert.equal(check.wrongChoice,'wrong','New MCQ distractor falsely credited: '+check.id);
+    else assert.equal(check.alternate,'correct','Allowed equivalent rejected: '+check.id);
+    if(check.year===2025)assert(check.source.includes('mark_scheme_unverified'),'2025 must not claim mark-scheme sign-off');
+  }
   await page.locator('#paper2Section').selectOption('C');
   assert.match(await page.locator('#paper2CoachSummary').textContent(),/75 guided cards/);
   await page.locator('#paper2SessionCount').selectOption('10');
