@@ -36,7 +36,7 @@ for(const c of cards){
 assert(app.includes("'./atomic_structure_focus_v43.json'"),'Bank must load in app');
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"),'Progress data key must not change');
 assert(app.includes('const cardPool=cards.filter(c=>c.active!==false&&c.subject===sub&&mockEligibleCard(c))')&&app.includes('if(c.mock!==true)return false;'),'Mock flashcards must include flagged cards through scope-safe selection');
-assert(app.includes("const qAll=subjectExam(sub).filter(mockEligibleQuestion)") && app.includes("if(q.mock!==true)return false;"),'Mock exam questions must select explicitly eligible Chemistry questions');
+assert(app.includes("const qAll=examQuestions.filter(q=>q.subject===sub&&q.standalone!==false&&mockEligibleQuestion(q))") && app.includes("if(q.mock!==true)return false;"),'Mock exam questions must select explicitly eligible Chemistry questions');
 const p1=app.slice(app.indexOf('function normalise('),app.indexOf('function nextSchedule('));
 const p2=app.slice(app.indexOf('function evidenceRuleScore('),app.indexOf('function renderExam(',app.indexOf('function evidenceRuleScore(')));
 const score=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'+p1+p2+'return examSuggested')();
