@@ -4037,40 +4037,61 @@ function mockEligibleQuestion(q){
  return !/(?:\bradians?\b|π)/i.test(String(q.prompt||''));
 }
 
-function startMockSession(){
- const sub=document.getElementById('mockSubject').value,mode=document.getElementById('mockMode').value,count=Number(document.getElementById('mockCount').value);
+// Build a bounded batch. Unlimited sessions request new batches as needed rather
+// than allocating the entire mock bank or silently ending after 30 items.
+// Keep linked exam parts together and work through unseen material first.
+function buildMockSessionItems(sub,mode,count,seenCards=new Set(),seenGroups=new Set()){
  const cardPool=cards.filter(c=>c.active!==false&&c.subject===sub&&mockEligibleCard(c));
  const qAll=subjectExam(sub).filter(mockEligibleQuestion);
- const groups=new Map();for(const q of qAll){if(!groups.has(q.groupId))groups.set(q.groupId,[]);groups.get(q.groupId).push(q)}
+ const groups=new Map();
+ for(const q of qAll){if(!groups.has(q.groupId))groups.set(q.groupId,[]);groups.get(q.groupId).push(q)}
  for(const g of groups.values())g.sort((x,y)=>String(x.groupOrder).localeCompare(String(y.groupOrder),undefined,{numeric:true}));
+ let availableCards=cardPool.filter(c=>!seenCards.has(c.id));
+ if(cardPool.length&&!availableCards.length){seenCards.clear();availableCards=cardPool}
+ let availableGroups=[...groups.values()].filter(g=>!seenGroups.has(g[0].groupId));
+ if(groups.size&&!availableGroups.length){seenGroups.clear();availableGroups=[...groups.values()]}
  const items=[];
  if(mode!=='exam'){
    const want=mode==='flash'?count:Math.max(1,Math.ceil(count*.6));
-   const picked=pickRecallCards(cardPool,Math.min(want,cardPool.length),c=>1+weakness(c)/5+(isDue(c)?4:0)+(1-memoryHealth(c))*3);
-   picked.forEach(c=>items.push({type:'card',id:c.id}));
+   const picked=pickRecallCards(availableCards,Math.min(want,availableCards.length),c=>1+weakness(c)/5+(isDue(c)?4:0)+(1-memoryHealth(c))*3);
+   for(const c of picked){items.push({type:'card',id:c.id});seenCards.add(c.id)}
  }
  if(mode!=='flash'){
-   const target=Math.max(1,count-items.length),pickedGroups=weightedPick([...groups.values()],Math.min(target,groups.size),g=>1+groupWeakness(g));
-   for(const g of pickedGroups){for(const q of g){items.push({type:'exam',id:q.id,groupId:q.groupId})}}
+   const target=Math.max(1,count-items.length);
+   const pickedGroups=weightedPick(availableGroups,Math.min(target,availableGroups.length),g=>1+groupWeakness(g));
+   for(const g of pickedGroups){
+     seenGroups.add(g[0].groupId);
+     for(const q of g)items.push({type:'exam',id:q.id,groupId:q.groupId});
+   }
  }
- if(!items.length){showToast('No mock material is available for that selection yet');return}
  if(mode==='mixed'){
-   const blocks=[],seenGroups=new Set();
+   const blocks=[],seenGroupsInBatch=new Set();
    for(const item of items){
      if(item.type==='exam'&&item.groupId){
-       if(seenGroups.has(item.groupId))continue;
-       seenGroups.add(item.groupId);
+       if(seenGroupsInBatch.has(item.groupId))continue;
+       seenGroupsInBatch.add(item.groupId);
        blocks.push(items.filter(x=>x.type==='exam'&&x.groupId===item.groupId));
      }else blocks.push([item]);
    }
    blocks.sort(()=>Math.random()-.5);
    if(settings.recallMustKnowFirst!==false)blocks.sort((a,b)=>{
-    const important=x=>x[0]?.type==='card'&&urgentRecallMustKnow(cards.find(c=>c.id===x[0].id));
-    return Number(important(b))-Number(important(a));
+     const important=x=>x[0]?.type==='card'&&urgentRecallMustKnow(cards.find(c=>c.id===x[0].id));
+     return Number(important(b))-Number(important(a));
    });
    items.splice(0,items.length,...blocks.flat());
  }
- activeSession={kind:'mock',items,index:0,title:sub+' mock revision'};currentCardId=null;renderAll();
+ return items;
+}
+function startMockSession(){
+ const sub=document.getElementById('mockSubject').value,mode=document.getElementById('mockMode').value;
+ const selection=document.getElementById('mockCount').value,unlimited=selection==='unlimited';
+ const count=unlimited?15:(Number(selection)||15);
+ const seenCards=new Set(),seenGroups=new Set();
+ const items=buildMockSessionItems(sub,mode,count,seenCards,seenGroups);
+ if(!items.length){showToast('No mock material is available for that selection yet');return}
+ activeSession={kind:'mock',items,index:0,title:sub+' mock revision',
+  ...(unlimited?{unlimited:true,mockSubject:sub,mockMode:mode,seenCards,seenGroups}:{})};
+ currentCardId=null;renderAll();
 }
 function flashEligible(c){return flashScopeFilter==='mock'?mockEligibleCard(c):flashScopeFilter==='taught'?taughtCard(c):true}
 function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c)&&(!settings.recallMustKnowOnly||isRecallMustKnow(c)))}
@@ -4192,6 +4213,14 @@ function advanceSession(){
     showToast('Daily challenge complete · '+profile.challengeStreak+'-day streak'+(bonus?' · +'+bonus+' bonus point'+(bonus===1?'':'s'):''));
   }
  }if(s.skipped)showToast('Daily starter has skipped items. Repeat it to earn a streak.');activeSession=null}else activeSession={...activeSession,index:s.index};save()}
+ else if(activeSession.kind==='mock'&&activeSession.unlimited){
+   if(activeSession.index>=activeSession.items.length){
+     const next=buildMockSessionItems(activeSession.mockSubject,activeSession.mockMode,15,
+       activeSession.seenCards,activeSession.seenGroups);
+     if(next.length)activeSession.items.push(...next);
+     else activeSession={...activeSession,done:true};
+   }
+ }
  else if(activeSession.index>=activeSession.items.length)activeSession={...activeSession,done:true};
  renderAll();
 }
@@ -4689,7 +4718,34 @@ function renderTopicCounts(){
  if(label)label.textContent=count+' question parts across selected groups. Linked parts stay together, even when some are shorter.';
 }
 function renderStudyType(){document.querySelectorAll('.study-type-btn').forEach(b=>b.classList.toggle('active',b.dataset.study===studyType));document.getElementById('mockControls').classList.toggle('hidden',studyType!=='mock');document.getElementById('flashControls').classList.toggle('hidden',studyType!=='flashcards');document.getElementById('examControls').classList.toggle('hidden',studyType!=='exam')}
-function renderSessionBanner(){const e=document.getElementById('sessionBanner');if(!activeSession||activeSession.done){e.classList.add('hidden');return}e.classList.remove('hidden');e.textContent=activeSession.title+' · '+Math.min(activeSession.index+1,activeSession.items.length)+' / '+activeSession.items.length}
+function endUnlimitedMockSession(){
+ if(!activeSession||activeSession.kind!=='mock'||!activeSession.unlimited||activeSession.done)return;
+ const item=activeSession.items[activeSession.index];
+ const typed=document.getElementById(item?.type==='exam'?'examAnswer':'answerInput')?.value?.trim()||'';
+ const pendingInk=item?.type==='exam'&&((window.RevisionScan?.countFor?.(item.id)||0)>0||
+   window.RevisionSketch?.hasPendingInk?.()===true);
+ const pendingRating=item?.type==='card'&&currentFlashAwarded;
+ const warning=(typed||pendingInk||pendingRating)?
+   'The current unfinished answer, sketch or unsaved flashcard rating will not be recorded. ':'';
+ if(typeof window.confirm==='function'&&!window.confirm(warning+
+   'End this unlimited mock session? All answers and reviews already saved will be kept.'))return;
+ activeSession={...activeSession,done:true,endedEarly:true};
+ currentCardId=null;currentEvaluation=null;currentFlashAwarded=false;
+ save();renderAll();
+}
+function renderSessionBanner(){
+ const e=document.getElementById('sessionBanner');
+ if(!activeSession||activeSession.done){e.classList.add('hidden');return}
+ e.classList.remove('hidden');
+ if(activeSession.kind==='mock'&&activeSession.unlimited){
+   e.textContent=activeSession.title+' · Item '+(activeSession.index+1)+' · Unlimited';
+   const button=document.createElement('button');
+   button.id='endUnlimitedMock';button.type='button';button.className='session-end-btn';
+   button.textContent='End session';
+   button.onclick=endUnlimitedMockSession;
+   e.appendChild(button);
+ }else e.textContent=activeSession.title+' · '+Math.min(activeSession.index+1,activeSession.items.length)+' / '+activeSession.items.length;
+}
 function renderCard(c){
  currentCardId=c.id;currentEvaluation=null;currentFlashAwarded=false;const s=state(c.id),health=Math.round(memoryHealth(c)*100),diag=c.visual?diagram(c.visual):'',backDiag=c.visualBack?diagram(c.visualBack):'';
  const recallInfo=window.RevisionFlashPriority?.classify(c);
@@ -5633,7 +5689,7 @@ function beginManualExamReview(q){
 function renderScoreEditor(q,answer){const ed=document.getElementById('scoreEditor');ed.classList.add('show');const checks=[...document.querySelectorAll('[data-mp]')].map(el=>el.checked);const checkboxTotal=totalMarkingPoints(q,checks);const overridden=checkboxTotal!==currentExamScore;const missed=q.markPoints.filter((_,i)=>!document.querySelector('[data-mp="'+i+'"]')?.checked);ed.innerHTML='<div class="score-line"><strong>Reviewable mark: '+currentExamScore+'/'+q.marks+'</strong><span>Tick valid alternative steps or correct the total</span></div><p class="mark-fairness-note">Equivalent correct methods, valid labelled diagrams and working with a carried-forward error may deserve credit even if the checker missed them. Tick the corresponding mark point or change the total. Save your reviewed score.</p>'+(overridden?'<p class="copyright-note">'+(manualScoreOverride?'Manual total override':'Conservative automatic estimate')+': '+currentExamScore+'/'+q.marks+' differs from '+checkboxTotal+'/'+q.marks+' checked marking points. The ticked criteria were not changed by this total; review both before saving.</p>':'')+'<div class="mark-buttons">'+Array.from({length:q.marks+1},(_,i)=>'<button class="mark-btn '+(i===currentExamScore?'selected':'')+'" data-score="'+i+'">'+i+'</button>').join('')+'</div>'+(missed.length?'<div class="missed-summary"><b>Likely missing:</b> '+missed.map(esc).join(' • ')+'</div>':'<div class="feedback show correct">No mark-scheme point is currently flagged as missing.</div>')+'<button id="saveExamScore" class="primary-btn save-score">Save '+currentExamScore+'/'+q.marks+'</button>';document.querySelectorAll('[data-score]').forEach(b=>b.onclick=()=>{currentExamScore=Number(b.dataset.score);manualScoreOverride=true;renderScoreEditor(q,answer)});document.getElementById('saveExamScore').onclick=()=>{const mp=q.markPoints.filter((_,i)=>!document.querySelector('[data-mp="'+i+'"]')?.checked);awardExam(q,currentExamScore,answer,mp)}}
 function renderStudy(){
  renderStudyType();renderSessionBanner();
- if(activeSession?.done){document.getElementById('studyHost').innerHTML='<div class="empty-card"><h3>Session complete</h3><p>Your results have been saved into the memory and weakness model.</p><button id="endSession" class="primary-small">Finish</button></div>';document.getElementById('endSession').onclick=()=>{activeSession=null;renderAll()};return}
+ if(activeSession?.done){document.getElementById('studyHost').innerHTML='<div class="empty-card"><h3>'+(activeSession.endedEarly?'Session ended':'Session complete')+'</h3><p>Your completed results and reviews have been saved. Unfinished answers are not marked.</p><button id="endSession" class="primary-small">Finish</button></div>';document.getElementById('endSession').onclick=()=>{activeSession=null;renderAll()};return}
  if(!activeSession){document.getElementById('studyHost').innerHTML='<div class="empty-card"><h3>Choose what you want to revise</h3><p>Select multiple topics above, then start a random session. Weak areas are more likely to appear without making the order predictable.</p></div>';return}
  const item=activeSession.items[activeSession.index];if(!item){activeSession.done=true;renderStudy();return}const obj=item.type==='card'?cards.find(c=>c.id===item.id):examQuestions.find(q=>q.id===item.id);if(!obj){activeSession.index++;renderStudy();return}item.type==='card'?renderCard(obj):renderExam(obj)
 }

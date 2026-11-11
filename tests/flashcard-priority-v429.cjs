@@ -123,7 +123,7 @@ assert(sw.includes('v429-key-recall-priority'));
 assert(css.includes('.recall-priority-option'));
 assert(css.includes('.recall-priority-pill'));
 assert(app.includes('settings.recallMustKnowOnly')&&app.includes('settings.recallMustKnowFirst'));
-assert(app.includes('pickRecallCards(cardPool')&&app.includes('pickRecallCards(pool'));
+assert((app.includes('pickRecallCards(cardPool')||app.includes('pickRecallCards(availableCards'))&&app.includes('pickRecallCards(pool'), 'Must-memorise priority remains active for mock and flashcard sessions');
 assert(app.includes('urgentRecallMustKnow(b)')&&app.includes("const recallBadge="));
 assert(app.includes('revisionLoopProgress5')&&app.includes('revisionLoopProfile11')&&app.includes('revisionLoopSettings11'));
 assert(!app.includes('revisionLoopProgress6'),'Progress key must not be renamed.');
