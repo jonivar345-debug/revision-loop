@@ -3771,7 +3771,7 @@ function evaluateCard(c,input){
  if(c.strictRecall===true){
   // v293: a Physics or Maths answer should not receive an unrelated ion/oxidation-state hint.
   // Preserve every older card's original feedback and strict grading.
-  const concise=c.id?.startsWith('task1_v293_');
+  const concise=c.id?.startsWith('task1_v293_')||c.id?.startsWith('v439_phy_');
   const hint=concise?(c.subject==='Maths'?'Check the calculation, transformation or mathematical notation.':
    c.subject==='Physics'?'Check the unit, direction or physical relationship.':
    'Check the chemical test, product or exact definition.'):'Check the exact ion or oxidation state against the accepted answer.';
