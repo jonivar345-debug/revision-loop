@@ -3124,9 +3124,12 @@ nasaEarth.onload=()=>{
   const canvas=document.createElement('canvas');canvas.width=2048;canvas.height=1024;
   const c=canvas.getContext('2d',{willReadFrequently:true});
   c.drawImage(nasaEarth,0,0,2048,1024);
-  const pixels=c.getImageData(0,0,1024,512);
-  if(pixels?.data?.length===2048*1024*4){
-   earthPixels=pixels.data;earthW=2048;earthH=1024;earthTextureReady=true;
+  // Read the entire scaled canvas. The old 1024x512 sample could never
+  // satisfy the 2048x1024 byte-length check, so the optional satellite
+  // texture was silently rejected even when the browser loaded it.
+  const pixels=c.getImageData(0,0,canvas.width,canvas.height);
+  if(pixels?.data?.length===canvas.width*canvas.height*4){
+   earthPixels=pixels.data;earthW=canvas.width;earthH=canvas.height;earthTextureReady=true;
    satelliteReady=true;drawGlobe();
   }
  }catch(error){console.warn('Using offline Natural Earth globe instead of remote satellite imagery',error)}
