@@ -99,6 +99,37 @@ try{
     else assert.equal(check.alternate,'correct','Allowed equivalent rejected: '+check.id);
     if(check.year===2025)assert(check.source.includes('mark_scheme_unverified'),'2025 must not claim mark-scheme sign-off');
   }
+  const visualAudit=await page.evaluate(()=>{
+   const list=cards.filter(c=>/^as_p2_v447_\d{3}$/.test(c.id));
+   return list.map(c=>({id:c.id,section:c.paper2Section,visual:c.visual,
+     svg:window.RevisionPaper2Visuals?.render(c.visual)||'',
+     model:evaluateCard(c,c.back).status,
+     wrong:evaluateCard(c,c.paper2Choices[1]).status}));
+  });
+  assert.equal(visualAudit.length,8,'All eight visual MCQs must load with stable new IDs');
+  for(const check of visualAudit){
+   assert.equal(check.section,'C');
+   assert(check.svg.includes('role="img"')&&check.svg.includes('<title>'),'Visual asset missing or inaccessible: '+check.id);
+   assert.equal(check.model,'correct','Visual model answer rejected: '+check.id);
+   assert.equal(check.wrong,'wrong','Visual MCQ distractor wrongly awarded: '+check.id);
+   await page.evaluate(id=>{
+    activeSession={kind:'flash',items:[{type:'card',id}],index:0,title:'AS Physics visual Paper 2 QA'};
+    currentCardId=null;
+    renderAll();
+   },check.id);
+   assert.equal(await page.locator('.diagram svg[role="img"]').count(),1,check.id+' diagram not mounted');
+   assert(await page.locator('.paper2-diagram-caption').isVisible(),check.id+' visual description missing');
+   assert.equal(await page.locator('.paper2-mcq-option').count(),4,check.id+' four-choice MCQ missing');
+   const view=await page.locator('.diagram svg').evaluate(node=>({
+    aria:node.getAttribute('aria-label'),
+    bounds:node.getBoundingClientRect().width,
+    viewport:document.documentElement.clientWidth,
+    html:node.outerHTML
+   }));
+   assert(view.aria?.length>=20,'Description absent from visual '+check.id);
+   assert(view.bounds<=view.viewport+1,'Diagram causes horizontal overflow '+check.id);
+   assert(!view.html.includes('aria-hidden="true"'),'Accessible visual must not be hidden '+check.id);
+  }
   await page.locator('#paper2Section').selectOption('C');
   assert.match(await page.locator('#paper2CoachSummary').textContent(),/83 guided cards/);
   await page.locator('#paper2SessionCount').selectOption('10');
