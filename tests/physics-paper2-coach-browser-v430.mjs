@@ -46,7 +46,7 @@ try{
    count:paper2CoachCards('all').length,a:paper2CoachCards('A').length,
    b:paper2CoachCards('B').length,c:paper2CoachCards('C').length
   }));
-  assert.deepEqual(bank,{count:170,a:60,b:37,c:73},'Live Paper 2 trainer must retain the original 150 and load 20 v445 cards.');
+  assert.deepEqual(bank,{count:190,a:71,b:44,c:75},'Live Paper 2 trainer must retain prior 170 and load 20 v446 cards.');
   const supplemental=await page.evaluate(()=>{
    const list=cards.filter(c=>/^as_p2_v443_\d{3}$/.test(c.id));
    return list.map(c=>({id:c.id,ref:c.specRef,section:c.paper2Section,
@@ -85,7 +85,7 @@ try{
    else assert.equal(check.alternate,'correct','Valid alternative rejected by real marker: '+check.id);
   }
   await page.locator('#paper2Section').selectOption('C');
-  assert.match(await page.locator('#paper2CoachSummary').textContent(),/73 guided cards/);
+  assert.match(await page.locator('#paper2CoachSummary').textContent(),/75 guided cards/);
   await page.locator('#paper2SessionCount').selectOption('10');
   await page.locator('#startPaper2Coach').click();
   let session=await page.evaluate(()=>({
