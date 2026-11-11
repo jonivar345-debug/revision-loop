@@ -61,7 +61,7 @@ assert.deepEqual({A:cards.filter(c=>c.paper2Section==='A').length,
  C:cards.filter(c=>c.paper2Section==='C').length},{A:71,B:44,C:112});
 assert(data.specificationAudit?.version==='v443');
 assert(data.supplementAudit?.version==='v443');
-assert(app.match(/\^as_p2_v\(\?:430\|443\|444\|445\|446\|447\|448\)_\\d\{3\}\$/g)?.length===2,
+assert(app.match(/\^as_p2_v\(\?:430\|443\|444\|445\|446\|447\|448\|449\)_\\d\{3\}\$/g)?.length===2,
  'Selection and the loader must both accept new IDs');
 assert(html.includes('paper2=v449'));
 assert(sw.includes('v443-paper2-guidance'));
