@@ -46,7 +46,7 @@ try{
    count:paper2CoachCards('all').length,a:paper2CoachCards('A').length,
    b:paper2CoachCards('B').length,c:paper2CoachCards('C').length
   }));
-  assert.deepEqual(bank,{count:190,a:71,b:44,c:75},'Live Paper 2 trainer must retain prior 170 and load 20 v446 cards.');
+  assert.deepEqual(bank,{count:198,a:71,b:44,c:83},'Live Paper 2 trainer must retain 190 prior cards and load eight illustrated visual MCQs.');
   const supplemental=await page.evaluate(()=>{
    const list=cards.filter(c=>/^as_p2_v443_\d{3}$/.test(c.id));
    return list.map(c=>({id:c.id,ref:c.specRef,section:c.paper2Section,
@@ -100,7 +100,7 @@ try{
     if(check.year===2025)assert(check.source.includes('mark_scheme_unverified'),'2025 must not claim mark-scheme sign-off');
   }
   await page.locator('#paper2Section').selectOption('C');
-  assert.match(await page.locator('#paper2CoachSummary').textContent(),/75 guided cards/);
+  assert.match(await page.locator('#paper2CoachSummary').textContent(),/83 guided cards/);
   await page.locator('#paper2SessionCount').selectOption('10');
   await page.locator('#startPaper2Coach').click();
   let session=await page.evaluate(()=>({
