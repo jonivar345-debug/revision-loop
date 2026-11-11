@@ -46,9 +46,9 @@ try{
    count:paper2CoachCards('all').length,a:paper2CoachCards('A').length,
    b:paper2CoachCards('B').length,c:paper2CoachCards('C').length
   }));
-  assert.deepEqual(bank,{count:132,a:39,b:30,c:63},'Live Paper 2 loader must preserve 132 unique cards.');
+  assert.deepEqual(bank,{count:140,a:41,b:32,c:67},'Live Paper 2 loader must keep 132 original and eight new guided cards.');
   await page.locator('#paper2Section').selectOption('C');
-  assert.match(await page.locator('#paper2CoachSummary').textContent(),/63 guided cards/);
+  assert.match(await page.locator('#paper2CoachSummary').textContent(),/67 guided cards/);
   await page.locator('#paper2SessionCount').selectOption('10');
   await page.locator('#startPaper2Coach').click();
   let session=await page.evaluate(()=>({
