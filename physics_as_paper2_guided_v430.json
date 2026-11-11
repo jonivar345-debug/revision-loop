@@ -6086,6 +6086,349 @@
         "8%",
         "13%"
       ]
+    },
+    {
+      "id": "as_p2_v447_001",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.5.1.5",
+      "topic": "Voltage across the lower divider resistor",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Voltage across the lower divider resistor",
+      "paper2Hint": "The lower branch shares the 12 V in the ratio 6/(3+6).",
+      "paper2Trap": "The meter is across 6 kΩ, not 3 kΩ.",
+      "front": "The supply is 12 V. What does the voltmeter read across the 6 kΩ resistor?",
+      "back": "8.0 V.",
+      "accept": [
+        "8 V",
+        "8 volts"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "8.0 V.",
+        "4.0 V",
+        "6.0 V",
+        "12.0 V"
+      ],
+      "visual": "p2v447-divider",
+      "visualAlt": "A 12 V supply is across 3 kΩ and 6 kΩ series resistors; a voltmeter is across the lower 6 kΩ resistor.",
+      "sourceStyle": {
+        "year": 2024,
+        "paper": "7407/2",
+        "question": "09",
+        "status": "original visual analogy based on a diagram-sensitive source skill; not a reproduction of AQA 2024 MCQ diagrams or original mark scheme text"
+      }
+    },
+    {
+      "id": "as_p2_v447_002",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.4.2.1",
+      "topic": "Energy graph derived from Hooke's law",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Energy graph derived from Hooke's law",
+      "paper2Hint": "Stored energy = ½Fx = ½kx², so its gradient grows with x.",
+      "paper2Trap": "A linear F–x graph does not mean the energy–x graph is linear.",
+      "front": "The diagram shows F against extension for a spring. What shape is the graph of stored energy against extension?",
+      "back": "Curves upwards with increasing gradient.",
+      "accept": [
+        "upward parabola",
+        "quadratic curve",
+        "curves upwards"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "Curves upwards with increasing gradient.",
+        "Straight line through the origin",
+        "Horizontal straight line",
+        "Curve flattening towards a constant energy"
+      ],
+      "visual": "p2v447-elastic",
+      "visualAlt": "Force increases linearly with extension from the origin for a Hooke's-law spring.",
+      "sourceStyle": {
+        "year": 2024,
+        "paper": "7407/2",
+        "question": "10",
+        "status": "original visual analogy based on a diagram-sensitive source skill; not a reproduction of AQA 2024 MCQ diagrams or original mark scheme text"
+      }
+    },
+    {
+      "id": "as_p2_v447_003",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.4.1.5",
+      "topic": "Distinguishing speed-time curve from displacement-time",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Distinguishing speed-time curve from displacement-time",
+      "paper2Hint": "The gradient decreases towards zero as resistive force approaches weight.",
+      "paper2Trap": "The graph is speed, not distance; do not infer constant acceleration from its final flat section.",
+      "front": "Which statement best explains the speed–time graph of an object falling through air?",
+      "back": "It approaches terminal speed as air resistance grows.",
+      "accept": [
+        "approaches terminal speed",
+        "air resistance increases",
+        "speed tends to constant"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "It approaches terminal speed as air resistance grows.",
+        "It accelerates at a constant rate indefinitely",
+        "The flat section means the object stops moving",
+        "There is no air resistance"
+      ],
+      "visual": "p2v447-drag",
+      "visualAlt": "Speed rises rapidly before levelling off at a positive terminal value.",
+      "sourceStyle": {
+        "year": 2024,
+        "paper": "7407/2",
+        "question": "11",
+        "status": "original visual analogy based on a diagram-sensitive source skill; not a reproduction of AQA 2024 MCQ diagrams or original mark scheme text"
+      }
+    },
+    {
+      "id": "as_p2_v447_004",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.3.2.1",
+      "topic": "Geometrical path difference for two coherent sources",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Geometrical path difference for two coherent sources",
+      "paper2Hint": "Path difference = 1.50−1.20 = 0.30 m = λ/2 at the first minimum.",
+      "paper2Trap": "Use the labelled whole path lengths, not the small-angle double-slit relation.",
+      "front": "At P the sources interfere destructively at the first minimum. What wavelength is consistent with the labelled distances?",
+      "back": "0.60 m.",
+      "accept": [
+        "0.6 m",
+        "60 cm",
+        "0.60"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "0.60 m.",
+        "0.30 m",
+        "1.20 m",
+        "0.15 m"
+      ],
+      "visual": "p2v447-interference",
+      "visualAlt": "Not-to-scale paths from S1 and S2 to detector P are 1.20 m and 1.50 m respectively.",
+      "sourceStyle": {
+        "year": 2024,
+        "paper": "7407/2",
+        "question": "15",
+        "status": "original visual analogy based on a diagram-sensitive source skill; not a reproduction of AQA 2024 MCQ diagrams or original mark scheme text"
+      }
+    },
+    {
+      "id": "as_p2_v447_005",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.5.1.4",
+      "topic": "Parallel circuit resistance and total current",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Parallel circuit resistance and total current",
+      "paper2Hint": "I₁ = 9/6 = 1.5 A and I₂ = 9/3 = 3.0 A; add branch currents.",
+      "paper2Trap": "The supply is across each branch, not split 6 V and 3 V.",
+      "front": "Two parallel resistors are across 9.0 V as shown. What total current leaves the supply?",
+      "back": "4.5 A.",
+      "accept": [
+        "4.5 amps",
+        "4.5 A",
+        "4.5"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "4.5 A.",
+        "1.5 A",
+        "3.0 A",
+        "2.0 A"
+      ],
+      "visual": "p2v447-network",
+      "visualAlt": "Two resistors of 6 Ω and 3 Ω are connected in parallel across 9.0 V.",
+      "sourceStyle": {
+        "year": 2024,
+        "paper": "7407/2",
+        "question": "18",
+        "status": "original visual analogy based on a diagram-sensitive source skill; not a reproduction of AQA 2024 MCQ diagrams or original mark scheme text"
+      }
+    },
+    {
+      "id": "as_p2_v447_006",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.4.1.3",
+      "topic": "Velocity change from positive and negative acceleration areas",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Velocity change from positive and negative acceleration areas",
+      "paper2Hint": "Change in velocity = (2×3)+(−1×2) = +4 m s⁻¹; add initial 1.",
+      "paper2Trap": "Negative acceleration after 3 s reduces velocity, but need not reverse it.",
+      "front": "An object starts at +1.0 m s⁻¹. Use the graph to find its velocity at 5 s.",
+      "back": "+5.0 m s⁻¹.",
+      "accept": [
+        "5 m/s",
+        "+5 m s^-1",
+        "5"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "+5.0 m s⁻¹.",
+        "+9.0 m s⁻¹",
+        "+7.0 m s⁻¹",
+        "−1.0 m s⁻¹"
+      ],
+      "visual": "p2v447-accel",
+      "visualAlt": "Acceleration is +2 m s⁻² from 0 to 3 s then −1 m s⁻² from 3 to 5 s.",
+      "sourceStyle": {
+        "year": 2024,
+        "paper": "7407/2",
+        "question": "19",
+        "status": "original visual analogy based on a diagram-sensitive source skill; not a reproduction of AQA 2024 MCQ diagrams or original mark scheme text"
+      }
+    },
+    {
+      "id": "as_p2_v447_007",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.4.1.1",
+      "topic": "Resolve tensions on a symmetric hanging load",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Resolve tensions on a symmetric hanging load",
+      "paper2Hint": "Vertical equilibrium: 2T sin30° = 4.0×10 = 40 N.",
+      "paper2Trap": "Each cable provides a vertical component T sin30°, not its full tension.",
+      "front": "A 4.0 kg mass hangs in equilibrium on two equal cables, each 30° above horizontal. If g=10, find T in each.",
+      "back": "40 N.",
+      "accept": [
+        "40 newtons",
+        "40 N",
+        "40"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "40 N.",
+        "20 N",
+        "80 N",
+        "10 N"
+      ],
+      "visual": "p2v447-tensions",
+      "visualAlt": "Two equal suspension cables form 30° to the horizontal above a 4.0 kg load.",
+      "sourceStyle": {
+        "year": 2024,
+        "paper": "7407/2",
+        "question": "25",
+        "status": "original visual analogy based on a diagram-sensitive source skill; not a reproduction of AQA 2024 MCQ diagrams or original mark scheme text"
+      }
+    },
+    {
+      "id": "as_p2_v447_008",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.5.1.5",
+      "topic": "Potential divider along a uniform resistance wire",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Potential divider along a uniform resistance wire",
+      "paper2Hint": "For a uniform wire at constant current, V_AC/V_AB = length AC/length AB.",
+      "paper2Trap": "Use the marked segment from A to C, not the remaining 0.70 m.",
+      "front": "A uniform wire AB has 10.0 V across its 1.00 m length. What p.d. is measured between A and C, 0.30 m from A?",
+      "back": "3.0 V.",
+      "accept": [
+        "3 V",
+        "3.0 volts",
+        "3"
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "3.0 V.",
+        "7.0 V",
+        "10.0 V",
+        "0.30 V"
+      ],
+      "visual": "p2v447-wire",
+      "visualAlt": "A uniform 1.00 m resistance wire runs from A (0 V) to B (10.0 V), with C located 0.30 m from A.",
+      "sourceStyle": {
+        "year": 2024,
+        "paper": "7407/2",
+        "question": "26",
+        "status": "original visual analogy based on a diagram-sensitive source skill; not a reproduction of AQA 2024 MCQ diagrams or original mark scheme text"
+      }
     }
   ],
   "mcqDesign": "Section C has four original answer options per card with plausible wrong choices. Responses are displayed in a rotated order per card.",
@@ -6162,5 +6505,14 @@
       "https://questionvault.co.uk/past-paper-questions/aqa-as-level-physics/papers/2025-june-7407-paper-2/"
     ],
     "importantLimit": "2025 paper context index inspected but full 2025 QP and MS not yet accessible to independently certify marks, numerical routes or exact question-part mapping."
+  },
+  "visualStyleAudit": {
+    "version": "v447",
+    "date": "2026-11-11",
+    "originalVisualCards": 8,
+    "priorCards": 190,
+    "scope": "Eight independent visual reasoning MCQs mapped to the diagram-sensitive technique list from 2024 Paper 2. Diagrams and numerical values are original, not AQA copies.",
+    "sourceLedger": "editorial/physics-paper2-mcq-2024-skill-matrix-v446.json",
+    "notes": "The 2024 actual graphic and examiner answers are not reproduced. This is a fresh diagram-based skill set."
   }
 }
