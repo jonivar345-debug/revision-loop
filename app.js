@@ -4029,8 +4029,8 @@ function mockEligibleQuestion(q){
  // 2025 secondary-indexed/unverified entries for general exam practice.
  if(q.subject==='Physics'&&q.level==='AS'&&q.mock!==false&&
    q.sourceVerified===true&&q.originalMarkVerified===true&&
-   /^https:\/\/(?:filestore\.)?aqa\.org\.uk\//i.test(q.qpUrl||'')&&
-   /^https:\/\/(?:filestore\.)?aqa\.org\.uk\//i.test(q.msUrl||''))return true;
+   /^https:\/\/(?:(?:filestore|www)\.)?aqa\.org\.uk\//i.test(q.qpUrl||'')&&
+   /^https:\/\/(?:(?:filestore|www)\.)?aqa\.org\.uk\//i.test(q.msUrl||''))return true;
  if(q.mock!==true)return false;
  if(q.subject==='Chemistry'&&/(?:\bbuffers?\b|\bbuffered\b|\bbuffering\b|\bhenderson[\s-]*hasselbalch\b|\bhalf[\s-]*neutrali[sz]ation\b)/i.test(
   [q.topic,q.subtopic,q.courseTopic,q.revisionTopic,q.question,q.prompt]
