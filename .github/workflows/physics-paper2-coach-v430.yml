@@ -15,6 +15,10 @@ on:
       - 'flashcard-priority-v429.js'
       - 'tests/chemistry-qualitative-priority-v433.cjs'
       - 'tests/core-essentials-priority-v434.cjs'
+      - 'physics_mock_practical_recall_v439.json'
+      - 'physics_mock_practical_exam_v439.json'
+      - 'tests/physics-mock-quality-v439.cjs'
+      - 'tests/physics-mock-browser-v439.mjs'
       - 'tests/chemistry-qualitative-priority-browser-v433.mjs'
       - '.github/workflows/physics-paper2-coach-v430.yml'
   workflow_dispatch:
@@ -42,6 +46,8 @@ jobs:
           node tests/chemistry-qualitative-priority-v433.cjs
           node --check tests/core-essentials-priority-v434.cjs
           node tests/core-essentials-priority-v434.cjs
+          node --check tests/physics-mock-quality-v439.cjs
+          node tests/physics-mock-quality-v439.cjs
           node tests/physics-paper2-coach-v430.cjs
       - name: Existing priority, saved progress and marking checks
         run: |
@@ -60,3 +66,4 @@ jobs:
           node tests/physics-paper2-coach-browser-v430.mjs
           node tests/universal-study-actions-browser-v432.mjs
           node tests/chemistry-qualitative-priority-browser-v433.mjs
+          node tests/physics-mock-browser-v439.mjs
