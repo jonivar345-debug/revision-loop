@@ -69,6 +69,18 @@ try{
     stored:localStorage.getItem('revisionLoopProgress5')
   }));
   assert.deepEqual(after,before,'Toggling focus must not change progress or question');
+  // Using the normal Skip button in focus must advance without closing the overlay.
+  await page.locator('#answerInput').fill('');
+  await page.locator('#studyFocusToggle').click();
+  const oldId=await page.evaluate(()=>activeSession.items[activeSession.index].id);
+  await page.locator('#skipCard').click();
+  const advanced=await page.evaluate(()=>({
+    id:activeSession.items[activeSession.index].id,focused:RevisionStudyFocus.isActive(),
+    cardVisible:Boolean(document.querySelector('#studyHost .review-card'))
+  }));
+  assert.notEqual(advanced.id,oldId);
+  assert(advanced.focused && advanced.cardVisible);
+  await page.locator('#studyFocusToggle').click();
 
   // The same optional focus button must work on the full exam marking interface.
   await page.evaluate(()=>{
