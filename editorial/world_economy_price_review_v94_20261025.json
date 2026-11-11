@@ -1,0 +1,98 @@
+{
+  "schema": "revision-loop-task2-economy-price-audit-v1",
+  "date": "2026-10-25",
+  "basis": "Read live-main app.js city tier reassignment and world-geographic-destinations.js additional world pins after World v94 publication",
+  "status": "EDITORIAL REVIEW ONLY; proposed prices not deployed or charged. No browser progress, account data, or purchase history accessed.",
+  "actualPrices": {
+    "originalLocations": {
+      "total": 161,
+      "starterFree": 1,
+      "regular": {
+        "count": 119,
+        "min": 100,
+        "max": 170
+      },
+      "major": {
+        "count": 20,
+        "min": 175,
+        "max": 215
+      },
+      "iconic": {
+        "count": 21,
+        "min": 230,
+        "max": 250
+      },
+      "meanAmong160Paid": 155.8125
+    },
+    "extraWorld": {
+      "countries": {
+        "count": 196,
+        "cost": 75
+      },
+      "oceans": {
+        "count": 5,
+        "cost": 70
+      },
+      "seas": {
+        "count": 17,
+        "cost": 60
+      }
+    },
+    "characters": {
+      "count": 116,
+      "starterFree": 1,
+      "minorPriceRange": [
+        30,
+        40
+      ],
+      "featuredPriceRange": [
+        40,
+        50
+      ]
+    },
+    "outfits": {
+      "count": 928,
+      "defaultFreeCount": 116,
+      "paidCount": 812,
+      "allPaidCost": 15
+    }
+  },
+  "previousPreferredRanges": {
+    "destinations": "roughly 50–100 points for most destinations",
+    "characters": "roughly 10–20 points",
+    "outfits": "roughly 5 points"
+  },
+  "proposalNotYetImplemented": {
+    "historicalCities": {
+      "starter": 0,
+      "regular": 50,
+      "major": 75,
+      "iconic": 100
+    },
+    "extraWorld": {
+      "countries": 75,
+      "oceans": 70,
+      "seas": 60
+    },
+    "characters": {
+      "starter": 0,
+      "standard": 10,
+      "popular": 15,
+      "featured": 20
+    },
+    "outfits": {
+      "default": 0,
+      "nonDefault": 5
+    },
+    "why": "makes destination collecting accessible and aligns character/outfit earning pace with user's previously expressed ranges"
+  },
+  "releaseSafeguards": [
+    "Keep every saved XP/points balance exactly as it is unless the user explicitly requests another policy",
+    "Never rename or discard owned location, country, sea, ocean, character or outfit IDs; preserve alias families",
+    "Repricing affects only future purchases; preserve already owned items and worn outfits",
+    "Do not retroactively charge for purchases; consider whether to reimburse previous high-priced purchases separately, before implementing any policy",
+    "Test empty/old/fully purchased profiles, future unknown purchases, offline startup, multi-buy prevention and points never negative",
+    "Change app.js prices and any country/ocean/sea price sources in one versioned release, update price-oriented tests, refresh browser and service worker",
+    "Avoid touching the AQA scanner regression or photo curations in the pricing PR"
+  ]
+}
