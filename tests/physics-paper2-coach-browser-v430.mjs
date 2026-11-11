@@ -142,8 +142,33 @@ try{
     assert.equal(result.model,'correct','Model solution rejected: '+result.id);
     assert(result.wrong.every(status=>status==='wrong'),'Incorrect MCQ option incorrectly credited: '+result.id);
   }
+  const newVisuals=await page.evaluate(()=>{
+    const entries=cards.filter(c=>/^as_p2_v449_\d{3}$/.test(c.id));
+    return entries.map(c=>({id:c.id,visual:c.visual,source:c.sourceStyle?.verification,
+      diagram:window.RevisionPaper2Visuals?.render(c.visual)||'',
+      right:evaluateCard(c,c.back).status,
+      wrong:c.paper2Choices.slice(1).map(x=>evaluateCard(c,x).status)}));
+  });
+  assert.equal(newVisuals.length,9,'Nine v449 visual Paper 2 questions must load');
+  for(const check of newVisuals){
+    assert(check.source.includes('official_mark_scheme_unreviewed'),'2025 source qualification missing: '+check.id);
+    assert.equal(check.right,'correct','Incorrect model answer: '+check.id);
+    assert(check.wrong.every(x=>x==='wrong'),'False MCQ credit: '+check.id);
+    assert(check.diagram.includes('role="img"')&&check.diagram.includes('<title>'),'Missing accessible diagram: '+check.id);
+    await page.evaluate(id=>{
+      activeSession={kind:'flash',items:[{type:'card',id}],index:0,title:'2025 visual method QA'};
+      currentCardId=null;renderAll();
+    },check.id);
+    assert.equal(await page.locator('.diagram svg[role="img"]').count(),1,'SVG not mounted: '+check.id);
+    assert.equal(await page.locator('.paper2-mcq-option').count(),4,'Four choices missing: '+check.id);
+    assert(await page.locator('.paper2-diagram-caption').isVisible(),'Diagram explanation missing: '+check.id);
+    const size=await page.locator('.diagram svg').evaluate(n=>({
+      x:n.getBoundingClientRect().width,screen:document.documentElement.clientWidth
+    }));
+    assert(size.x<=size.screen+1,'SVG overflows mobile viewport: '+check.id);
+  }
   await page.locator('#paper2Section').selectOption('C');
-  assert.match(await page.locator('#paper2CoachSummary').textContent(),/103 guided cards/);
+  assert.match(await page.locator('#paper2CoachSummary').textContent(),/112 guided cards/);
   await page.locator('#paper2SessionCount').selectOption('10');
   await page.locator('#startPaper2Coach').click();
   let session=await page.evaluate(()=>({
