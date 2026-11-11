@@ -64,13 +64,19 @@ for(const domain of balance.STRANDS)assert(chosen.some(g=>balance.strand(g[0])==
 const begin=app.indexOf('function buildMockSessionItems('),end=app.indexOf('function startMockSession(){',begin);
 assert(begin>=0&&end>begin);
 const context={
- cards,examQuestions:questions,window:{RevisionPhysicsMockBalance:balance},
+ cards,examQuestions:allPhysicsExam,window:{RevisionPhysicsMockBalance:balance},
  settings:{recallMustKnowFirst:true},pickRecallCards:(pool,n)=>pool.slice(0,n),
  weightedPick:(pool,n)=>pool.slice(0,n),subjectExam:()=>{throw Error('Mock must ignore exam tab filter')},
  mockEligibleQuestion:eligibility.eligible,mockEligibleCard:c=>c.mock===true,
  weakness:()=>0,isDue:()=>false,memoryHealth:()=>1,groupWeakness:()=>0,urgentRecallMustKnow:()=>false,
 };
 vm.runInNewContext(app.slice(begin,end)+'\nthis.make=buildMockSessionItems;',context);
+const exhaustive=context.make('Physics','exam',500).filter(x=>x.type==='exam');
+assert.equal(new Set(exhaustive.map(x=>x.id)).size,267,
+ 'Exhaustive mock practice should contain all 240 originally tagged and 27 newly promoted verified AS questions');
+for(const q of newlyEligible)assert(exhaustive.some(x=>x.id===q.id),'Verified AS past-paper part omitted '+q.id);
+for(const q of missingFlag.filter(q=>!eligibility.eligible(q)))assert(!exhaustive.some(x=>x.id===q.id),
+ 'Do not accidentally promote secondary-indexed part '+q.id);
 for(const mode of ['flash','exam','mixed']){
  const batch=context.make('Physics',mode,15);
  assert(batch.length>0,'Mock session should not be empty '+mode);
