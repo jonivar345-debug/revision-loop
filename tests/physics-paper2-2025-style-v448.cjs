@@ -1,18 +1,18 @@
 'use strict';
 /* v448: all 30 2025 7407/2 MCQ method families from a SECONDARY index,
-   plus 15 new authored questions. No actual AQA 2025 mark-scheme verification. */
+   plus 20 new authored questions. No actual AQA 2025 mark-scheme verification. */
 const assert=require('node:assert/strict'),fs=require('node:fs'),crypto=require('node:crypto');
 const bank=JSON.parse(fs.readFileSync('physics_as_paper2_guided_v430.json','utf8'));
 const matrix=JSON.parse(fs.readFileSync('editorial/physics-paper2-2025-mcq-matrix-v448.json','utf8'));
 const app=fs.readFileSync('app.js','utf8'),html=fs.readFileSync('index.html','utf8'),sw=fs.readFileSync('sw.js','utf8');
 const cards=bank.cards,old=cards.slice(0,198),added=cards.filter(c=>/^as_p2_v448_\d{3}$/.test(c.id));
-assert.equal(cards.length,213);
+assert.equal(cards.length,218);
 assert.equal(crypto.createHash('sha256').update(JSON.stringify(old)).digest('hex'),
  '8b1ae1eb57d02a9839eefedbd2e4b5b4d3971bb7d46fc053ce528ca890c63003',
  'All prior 198 cards (questions, explanations, accepted answers, IDs) must remain unchanged');
-assert.equal(added.length,15);
-assert.equal(new Set(cards.map(c=>c.id)).size,213);
-assert.deepEqual(added.map(c=>c.id),Array.from({length:15},(_,i)=>'as_p2_v448_'+String(i+1).padStart(3,'0')));
+assert.equal(added.length,20);
+assert.equal(new Set(cards.map(c=>c.id)).size,218);
+assert.deepEqual(added.map(c=>c.id),Array.from({length:20},(_,i)=>'as_p2_v448_'+String(i+1).padStart(3,'0')));
 assert.equal(matrix.questionCount,34);
 assert.equal(matrix.sectionC.questionCount,30);
 assert.equal(matrix.questions.length,30);
@@ -20,7 +20,7 @@ assert.deepEqual(matrix.questions.map(q=>q.question),Array.from({length:30},(_,i
 assert.equal(matrix.source.originalPaperVerified,false);
 assert.equal(matrix.source.officialMarkSchemeVerified,false);
 assert.equal(matrix.questions.filter(q=>q.diagramDependent).length,9);
-assert.equal(matrix.questions.filter(q=>q.newOriginalPracticeId).length,15);
+assert.equal(matrix.questions.filter(q=>q.newOriginalPracticeId).length,20);
 for(const q of matrix.questions){
  assert(q.specRef.startsWith('3.'));
  assert.equal(q.section,'C');
@@ -47,7 +47,7 @@ for(const c of added){
  assert(c.front.length<=175&&c.back.length<=165);
  assert(c.accept.length>=1);
 }
-assert.deepEqual(Object.fromEntries(['A','B','C'].map(s=>[s,cards.filter(c=>c.paper2Section===s).length])),{A:71,B:44,C:98});
+assert.deepEqual(Object.fromEntries(['A','B','C'].map(s=>[s,cards.filter(c=>c.paper2Section===s).length])),{A:71,B:44,C:103});
 function nearly(got,expected,tol){assert(Math.abs(got-expected)<=tol,got+' != '+expected)}
 nearly(250*(4*0.08),80,1e-9);
 nearly(3*1.6e-19/6.63e-34,7.24e14,1e12);
@@ -61,4 +61,4 @@ assert(app.includes('(?:430|443|444|445|446|447|448)'));
 assert(html.includes('paper2=v448'));
 assert(sw.includes('v448-2025-source-crosswalk'));
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
-console.log('PASS v448: 30 indexed 2025 MCQ skills, 9 pending visual checks, 15 original answer-verified MCQs, 198 original cards preserved, saved progress and offline intact');
+console.log('PASS v448: 30 indexed 2025 MCQ skills, 9 pending visual checks, 20 original answer-verified MCQs, 198 original cards preserved, saved progress and offline intact');
