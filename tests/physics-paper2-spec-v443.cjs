@@ -10,10 +10,10 @@ const sw=fs.readFileSync('sw.js','utf8');
 const cards=data.cards;
 const original=cards.filter(c=>/^as_p2_v430_\d{3}$/.test(c.id));
 const added=cards.filter(c=>/^as_p2_v443_\d{3}$/.test(c.id));
-assert.equal(cards.length,150);
+assert.equal(cards.length,170);
 assert.equal(original.length,132);
 assert.equal(added.length,8);
-assert.equal(new Set(cards.map(c=>c.id)).size,150);
+assert.equal(new Set(cards.map(c=>c.id)).size,170);
 assert.equal(crypto.createHash('sha256').update(JSON.stringify(original.map(({specRef,...rest})=>rest))).digest('hex'),
  '19fa55eb4dbfee8d9c5115e5fd1daeffc40e3419c7688f2707a024c30e34ddf9',
  'All 132 legacy card prompts, accepted answers, MCQ choices, traps, hints and ID metadata are immutable');
@@ -58,14 +58,14 @@ for(const [ref,section] of [['3.1.3','A'],['3.2.1.1','B'],['3.2.1.5','C'],['3.2.
 }
 assert.deepEqual({A:cards.filter(c=>c.paper2Section==='A').length,
  B:cards.filter(c=>c.paper2Section==='B').length,
- C:cards.filter(c=>c.paper2Section==='C').length},{A:47,B:34,C:69});
+ C:cards.filter(c=>c.paper2Section==='C').length},{A:60,B:37,C:73});
 assert(data.specificationAudit?.version==='v443');
 assert(data.supplementAudit?.version==='v443');
-assert(app.match(/\^as_p2_v\(\?:430\|443\|444\)_\\d\{3\}\$/g)?.length===2,
+assert(app.match(/\^as_p2_v\(\?:430\|443\|444\|445\)_\\d\{3\}\$/g)?.length===2,
  'Selection and the loader must both accept new IDs');
-assert(html.includes('paper2=v444'));
+assert(html.includes('paper2=v445'));
 assert(sw.includes('v443-paper2-guidance'));
 assert(sw.includes("'./physics_as_paper2_guided_v430.json'"));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
-console.log('PASS v444: 36 AQA AS tags represented; original 132 prompts unchanged, eight v443 cards and ten source-audited v444 cards, 47/34/69 sections, offline + progress safeguards');
+console.log('PASS v445: all 36 AQA AS tags represented; 132 original prompts unchanged, eight v443, ten v444, twenty v445 guided cards; 60/37/73, offline + progress safeguards');
