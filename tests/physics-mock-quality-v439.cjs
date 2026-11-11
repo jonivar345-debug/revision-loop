@@ -8,6 +8,8 @@ const coreQuestions=JSON.parse(fs.readFileSync('exam_questions.json','utf8')).qu
 const app=fs.readFileSync('app.js','utf8'),html=fs.readFileSync('index.html','utf8'),sw=fs.readFileSync('sw.js','utf8');
 assert.equal(cards.length,26);
 assert.equal(questions.length,12);
+assert.equal(cards.filter(c=>/^v439_phy_data_/.test(c.id)).length,14);
+assert.equal(questions.filter(q=>/^v439_phy_exam_data0[1-6]$/.test(q.id)).length,6);
 const knownIds=new Set([...deck,...coreQuestions].map(x=>x.id));
 const ids=new Set();
 for(const c of cards){
@@ -73,4 +75,14 @@ approx(Math.PI*(0.0005**2)/4,1.96e-7,1e-9);
 approx((10*2)/(Math.PI*(0.0005**2)/4*0.0005),2.04e11,2e9);
 approx(4*(Math.PI*0.0003**2/4)/1.5,1.88e-7,1e-9);
 approx((1.35-1.45)/(0.3-0.1),-0.5,0.001);
-console.log('PASS v439: five AS subject domains, RP1–RP6, 20 recall cards, six worked 6-mark questions, answer and loader audits.');
+// Independent arithmetic checks for six new data/analysis practice questions.
+approx((0.267-0.233)/2,0.017,1e-8);
+approx(0.017/0.250*100,6.8,1e-6);
+approx(Math.PI*(0.00045**2)/4,1.59e-7,1e-9);
+approx(0.2/10*100+2*(0.010/0.500*100)+0.01/1.50*100,6.6666667,1e-4);
+approx((1.23-0.40)/((8.0-6.0)*1e14)*1.60e-19,6.64e-34,1e-36);
+approx(6e14-0.40/((1.23-0.40)/(2e14)),5.04e14,5e11);
+approx(((0.0036-0.0024)/(1.20-0.80))*.0002,6e-7,1e-11);
+approx(6*2/(2+4),2,1e-9);
+approx(6*2/(2+1),4,1e-9);
+console.log('PASS v439: five AS strands, RP1–RP6, 26 recall cards, twelve 6-mark questions, worked answers and loader audits.');
