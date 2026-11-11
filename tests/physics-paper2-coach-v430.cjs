@@ -7,12 +7,12 @@ const html=fs.readFileSync('index.html','utf8');
 const css=fs.readFileSync('styles.css','utf8');
 const sw=fs.readFileSync('sw.js','utf8');
 assert.equal(deck.version,'v430');
-assert.equal(deck.cards.length,140);
+assert.equal(deck.cards.length,150);
 assert.equal(deck.cards.filter(c=>/^as_p2_v430_\d{3}$/.test(c.id)).length,132,'All original card IDs retained');
 assert.equal(deck.cards.filter(c=>/^as_p2_v443_\d{3}$/.test(c.id)).length,8,'New subtopic gap cards are distinct');
 const tally={A:0,B:0,C:0},ids=new Set(),fronts=new Set();
 for(const c of deck.cards){
- assert(/^as_p2_v(?:430|443)_\d{3}$/.test(c.id),'stable ID '+c.id);
+ assert(/^as_p2_v(?:430|443|444)_\d{3}$/.test(c.id),'stable ID '+c.id);
  assert(!ids.has(c.id),'duplicate id');ids.add(c.id);
  assert(!fronts.has(c.front),'duplicated question pattern');fronts.add(c.front);
  assert.equal(c.subject,'Physics');assert.equal(c.stage,'AS');
@@ -29,7 +29,7 @@ for(const c of deck.cards){
   assert.equal(new Set(c.paper2Choices.map(x=>x.toLowerCase().replace(/[\s.,!]/g,''))).size,4);
  }else assert(!c.paper2Choices,'free-text coaching in A and B');
 }
-assert.deepEqual(tally,{A:41,B:32,C:67});
+assert.deepEqual(tally,{A:47,B:34,C:69});
 assert.equal(deck.sources.length,10);
 assert(app.includes("const AS_P2_COACH_URL='./physics_as_paper2_guided_v430.json'"));
 assert(app.includes("const res=await fetch(AS_P2_COACH_URL"));
@@ -57,4 +57,4 @@ assert(source.includes("paper2Choices.length===4")&&source.includes("status:'wro
 new Function(app);
 const examples=[0,38,39,68,69,85,131].map(i=>deck.cards[i]);
 assert(examples.every(c=>c.paper2Hint&&c.paper2Trap));
-console.log('PASS v443: all original 132 AS Physics Paper 2 cards retained, eight targeted additions; A41/B32/C67 (67 four-option MCQs); independent session, support, offline and unchanged XP/progress keys.');
+console.log('PASS v444: original 132 AS Physics Paper 2 cards retained, eight v443 and ten v444 additions; A47/B34/C69 (69 four-option MCQs); independent session, support, offline and unchanged XP/progress keys.');
