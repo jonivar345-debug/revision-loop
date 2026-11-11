@@ -6,8 +6,8 @@ const questions=JSON.parse(fs.readFileSync('physics_mock_practical_exam_v439.jso
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8')).cards;
 const coreQuestions=JSON.parse(fs.readFileSync('exam_questions.json','utf8')).questions;
 const app=fs.readFileSync('app.js','utf8'),html=fs.readFileSync('index.html','utf8'),sw=fs.readFileSync('sw.js','utf8');
-assert.equal(cards.length,20);
-assert.equal(questions.length,6);
+assert.equal(cards.length,26);
+assert.equal(questions.length,12);
 const knownIds=new Set([...deck,...coreQuestions].map(x=>x.id));
 const ids=new Set();
 for(const c of cards){
@@ -22,7 +22,7 @@ for(const c of cards){
  assert(/^3\.1\.2$|^7\.2 RP[1-6]$/.test(c.specRef));
 }
 for(const q of questions){
- assert(/^v439_phy_exam_rp[1-6]$/.test(q.id)&&!ids.has(q.id)&&!knownIds.has(q.id));
+ assert(/^v439_phy_exam_(?:rp[1-6]|data0[1-6])$/.test(q.id)&&!ids.has(q.id)&&!knownIds.has(q.id));
  ids.add(q.id);
  assert.equal(q.subject,'Physics');assert.equal(q.level,'AS');assert.equal(q.mock,true);
  assert.equal(q.taught,true);assert.equal(q.standalone,true);
@@ -31,7 +31,7 @@ for(const q of questions){
  assert.equal(q.markPointMarks.reduce((a,b)=>a+b,0),q.marks);
  assert.equal(q.groupId,q.id);assert.equal(q.verificationLevel,'original-exam-style');
  assert(q.modelAnswer.length>60&&q.prompt.length>75);
- assert(/^7\.2 RP[1-6]$/.test(q.specRef));
+ assert(/^(?:7\.2 RP[1-6]|3\.(?:1\.2|2\.2|3\.2|5))$/.test(q.specRef));
 }
 for(let n=1;n<=6;n++){
  assert.equal(cards.filter(c=>c.specRef==='7.2 RP'+n).length,2);
