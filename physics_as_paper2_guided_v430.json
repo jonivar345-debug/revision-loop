@@ -7249,6 +7249,393 @@
         "status": "original authored practice, not an AQA question",
         "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
       }
+    },
+    {
+      "id": "as_p2_v449_001",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.5.1.4",
+      "topic": "Balanced resistance bridge slider",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Balanced resistance bridge slider",
+      "paper2Hint": "At balance, Rleft/Rright = AS/SB. Increasing the left ratio requires a longer AS segment.",
+      "paper2Trap": "The sliding contact changes the ratio of wire lengths. The side with larger resistance needs a longer wire segment.",
+      "front": "A bridge balances with a 2 Ω left resistor and 4 Ω right resistor. The left resistor is changed to 3 Ω. Which way must contact S move?",
+      "back": "Towards B (to the right).",
+      "accept": [
+        "Towards B (to the right)."
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "Towards B (to the right).",
+        "Towards A (to the left)",
+        "S stays in the same place",
+        "No position can balance the bridge"
+      ],
+      "visual": "p2v449-bridge",
+      "visualAlt": "A balanced slide-wire bridge: 2 ohms on the top left, 4 ohms on the right, galvanometer between their junction and contact S on a uniform wire from A to B.",
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "07",
+        "status": "original diagram-led method practice; not a reproduction of AQA 2025 paper",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v449_002",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.2.1.4",
+      "topic": "Electron capture weak-interaction exchange",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Electron capture weak-interaction exchange",
+      "paper2Hint": "e⁻ → νₑ + W⁻ and p + W⁻ → n. Charge and lepton number are conserved.",
+      "paper2Trap": "Electron capture changes a proton into a neutron, so this is weak, not electromagnetic scattering by a photon.",
+      "front": "An electron combines with a proton to form a neutron and an electron neutrino. Which exchange boson belongs on the diagram's wavy line?",
+      "back": "W⁻ boson.",
+      "accept": [
+        "W⁻ boson."
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "W⁻ boson.",
+        "Virtual photon γ",
+        "W⁺ boson",
+        "Gluon"
+      ],
+      "visual": "p2v449-weak",
+      "visualAlt": "Feynman-style interaction: incoming electron changes to electron neutrino, and incoming proton to neutron, connected by a downward W-minus exchange line.",
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "08",
+        "status": "original diagram-led method practice; not a reproduction of AQA 2025 paper",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v449_003",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.4.1.5",
+      "topic": "Terminal drag compared across masses",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Terminal drag compared across masses",
+      "paper2Hint": "At terminal speed, drag balances mg separately for each skydiver. Ratio = 90/60.",
+      "paper2Trap": "Their terminal speeds may differ, but in each case the net vertical force is zero.",
+      "front": "Two falling skydivers A (60 kg) and B (90 kg) have each reached terminal speed. How does B's upward drag compare with A's?",
+      "back": "B's drag is 1.5 times A's.",
+      "accept": [
+        "B's drag is 1.5 times A's."
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "B's drag is 1.5 times A's.",
+        "Both drag forces are equal",
+        "B's drag is two thirds of A's",
+        "Both drag forces are zero"
+      ],
+      "visual": "p2v449-terminal",
+      "visualAlt": "Two separately labelled falling skydivers, 60 kg and 90 kg, each shown with upward drag and downward weight arrows at terminal speed.",
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "13",
+        "status": "original diagram-led method practice; not a reproduction of AQA 2025 paper",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v449_004",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.3.1.1",
+      "topic": "Reflected circular wavefront",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Reflected circular wavefront",
+      "paper2Hint": "Travel distance = 0.30 m. It reaches the wall after 0.20 m and reflects, then returns 0.10 m inwards.",
+      "paper2Trap": "The wavefront is not a radius of 0.30 m outside the beaker: account for reflection at its boundary.",
+      "front": "A circular ripple starts at the centre of a beaker of radius 0.20 m. Wave speed is 0.30 m/s. After 1.0 s, what is its radius and direction?",
+      "back": "0.10 m, travelling inwards.",
+      "accept": [
+        "0.10 m, travelling inwards."
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "0.10 m, travelling inwards.",
+        "0.10 m, travelling outwards",
+        "0.30 m, travelling outwards",
+        "0.20 m, stationary at the wall"
+      ],
+      "visual": "p2v449-ripple",
+      "visualAlt": "Top view of a circular beaker of radius 0.20 metre, smaller reflected concentric ripple inside, and arrow pointing towards the centre.",
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "15",
+        "status": "original diagram-led method practice; not a reproduction of AQA 2025 paper",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v449_005",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.5.1.2",
+      "topic": "Ohmic conductor resistance from V–I gradient",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Ohmic conductor resistance from V–I gradient",
+      "paper2Hint": "On a V against I graph, the gradient V/I is resistance. Look for the shallowest line.",
+      "paper2Trap": "On an I against V graph the steepest line would be the lowest R. Read these particular axes first.",
+      "front": "The graph shows V on the vertical axis and I horizontally. Three straight lines A, B and C pass through the origin. Which is the smallest resistance?",
+      "back": "Line C (smallest V–I gradient).",
+      "accept": [
+        "Line C (smallest V–I gradient)."
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "Line C (smallest V–I gradient).",
+        "Line A (steepest gradient)",
+        "Line B (middle gradient)",
+        "All three resistances are equal"
+      ],
+      "visual": "p2v449-iv",
+      "visualAlt": "Potential difference V vertical against current I horizontal, with three straight lines from the origin: A steep, B medium, and C shallow.",
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "18",
+        "status": "original diagram-led method practice; not a reproduction of AQA 2025 paper",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v449_006",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.4.1.2",
+      "topic": "Disc in equilibrium with an applied couple",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Disc in equilibrium with an applied couple",
+      "paper2Hint": "The upward force at the right edge produces anticlockwise moment 10 × 0.20 = 2.0 N m.",
+      "paper2Trap": "Weight and pivot reaction act through the centre, so their moments about the pivot are zero.",
+      "front": "A disc is pivoted at its centre. An upward tension of 10 N acts at the right edge 0.20 m from the pivot. What balancing couple is needed?",
+      "back": "2.0 N m clockwise.",
+      "accept": [
+        "2.0 N m clockwise."
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "2.0 N m clockwise.",
+        "2.0 N m anticlockwise",
+        "0.50 N m clockwise",
+        "10 N m clockwise"
+      ],
+      "visual": "p2v449-disc",
+      "visualAlt": "A circular disc pivoted at its centre has an upward 10-newton force on the right rim, radius 0.20 m and weight acting downward at its centre.",
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "23",
+        "status": "original diagram-led method practice; not a reproduction of AQA 2025 paper",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v449_007",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.4.1.1",
+      "topic": "Vector equilibrium with horizontal pull",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Vector equilibrium with horizontal pull",
+      "paper2Hint": "Vertical: T sin30° = 20 N, hence T=40 N. Horizontal: P=T cos30°=34.6 N.",
+      "paper2Trap": "The cord angle is to the horizontal, so its vertical component is T sin30°, not T cos30°.",
+      "front": "A 2.0 kg mass is held by a cord at 30° above horizontal and a horizontal pull P. In equilibrium, find P using g = 10.",
+      "back": "34.6 N (about 35 N).",
+      "accept": [
+        "34.6 N (about 35 N)."
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "34.6 N (about 35 N).",
+        "20 N",
+        "40 N",
+        "11.5 N"
+      ],
+      "visual": "p2v449-vector",
+      "visualAlt": "A hanging mass at a junction has a cord pulling up and left at 30 degrees above horizontal, a horizontal pull P rightward, and its weight downwards.",
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "25",
+        "status": "original diagram-led method practice; not a reproduction of AQA 2025 paper",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v449_008",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.5.1.4",
+      "topic": "Kirchhoff law through two junctions",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Kirchhoff law through two junctions",
+      "paper2Hint": "J1 carries 3+2=5 A into J2. At J2, 5 = 1.5 + I_W.",
+      "paper2Trap": "Kirchhoff's first law applies at each junction. Don't count a current again after it has joined another.",
+      "front": "At J1, 3.0 A and 2.0 A join and flow to J2. At J2, 1.5 A leaves in one branch. What current leaves through wire W?",
+      "back": "3.5 A.",
+      "accept": [
+        "3.5 A."
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "3.5 A.",
+        "1.5 A",
+        "5.0 A",
+        "6.5 A"
+      ],
+      "visual": "p2v449-junctions",
+      "visualAlt": "Circuit arrows indicate currents 3.0 A and 2.0 A joining at J1, then reaching J2 where 1.5 A and unknown W branch out.",
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "26",
+        "status": "original diagram-led method practice; not a reproduction of AQA 2025 paper",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
+    },
+    {
+      "id": "as_p2_v449_009",
+      "subject": "Physics",
+      "stage": "AS",
+      "specRef": "3.5.1.4",
+      "topic": "Real voltmeter resistance in parallel",
+      "courseTopic": "Section C · Multiple-choice traps",
+      "revisionTopic": "Section C · Multiple-choice traps",
+      "paper2Section": "C",
+      "paper2Skill": "Real voltmeter resistance in parallel",
+      "paper2Hint": "8 Ω branch takes 12/8=1.5 A; voltmeter takes 0.5 A. Hence R_V=12/0.5=24 Ω.",
+      "paper2Trap": "The total current includes the voltmeter branch. Do not treat a real voltmeter as drawing no current.",
+      "front": "A 12 V supply is across an 8.0 Ω resistor and a finite-resistance voltmeter in parallel. Total current is 2.0 A. Find the voltmeter resistance.",
+      "back": "24 Ω.",
+      "accept": [
+        "24 Ω."
+      ],
+      "active": true,
+      "taught": true,
+      "mock": false,
+      "scope": "full",
+      "kind": "short",
+      "format": "short",
+      "strictRecall": true,
+      "priority": 2,
+      "paper2Mode": "mcq",
+      "paper2Choices": [
+        "24 Ω.",
+        "6.0 Ω",
+        "8.0 Ω",
+        "12 Ω"
+      ],
+      "visual": "p2v449-meter",
+      "visualAlt": "Parallel circuit diagram with 12-volt supply across an 8-ohm resistor and a round voltmeter labelled V; total current before the split is 2 amperes.",
+      "sourceStyle": {
+        "year": 2025,
+        "sitting": "June",
+        "paper": "7407/2",
+        "question": "33",
+        "status": "original diagram-led method practice; not a reproduction of AQA 2025 paper",
+        "verification": "secondary_2025_index_only_official_mark_scheme_unreviewed"
+      }
     }
   ],
   "mcqDesign": "Section C has four original answer options per card with plausible wrong choices. Responses are displayed in a rotated order per card.",
@@ -7341,5 +7728,23 @@
     "addedOriginalCards": 20,
     "matrix": "editorial/physics-paper2-2025-mcq-matrix-v448.json",
     "evidence": "secondary 2025 topic index; original QP/mark scheme not independently reviewed"
+  },
+  "year2025VisualAudit": {
+    "version": "v449",
+    "originalCardsPreserved": 218,
+    "addedOriginalCards": 9,
+    "secondaryIndexSource": "https://questionvault.co.uk/past-paper-questions/aqa-as-level-physics/papers/2025-june-7407-paper-2/",
+    "questionNumbers": [
+      "07",
+      "08",
+      "13",
+      "15",
+      "18",
+      "23",
+      "25",
+      "26",
+      "33"
+    ],
+    "note": "Nine independent visual analogues for 2025 diagram-sensitive method families, not actual AQA diagrams; official question paper and mark scheme not reviewed."
   }
 }
