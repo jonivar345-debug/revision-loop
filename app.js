@@ -61,6 +61,7 @@ const AS_P2_COACH_URL='./physics_as_paper2_guided_v430.json';
 const V439_PHYSICS_RECALL_URL='./physics_mock_practical_recall_v439.json';
 const V439_PHYSICS_EXAM_URL='./physics_mock_practical_exam_v439.json';
 const V450_YEAR13_PURE_URL='./maths_year13_pure_v450.json';
+const V462_MATHS_MEMORY_URL='./maths_must_memorise_v462.json';
 const V451_PURE_METHODS_URL='./maths_pure_past_methods_v451.json';
 const V451_AQA_PAPER_INDEX_URL='./editorial/aqa-maths-pure-7357-paper-index-v451.json';
 const V452_2024_P1_URL='./maths_pure_2024_p1_v452.json';
@@ -4058,7 +4059,7 @@ function mockEligibleQuestion(q){
 // Historical mockEligibleCard/Question remain for legacy evidence and earlier review IDs;
 // all current mock and mock-focus screens below use these intentionally narrow gates.
 function currentYear13PureMockCard(c){
- return Boolean(c&&/^y13_v450_card_\d{3}$/.test(c.id||'')&&c.subject==='Maths'&&
+ return Boolean(c&&/^y13_v(?:450|462)_card_\d{3}$/.test(c.id||'')&&c.subject==='Maths'&&
   c.stage==='A2'&&c.courseTopic==='Year 13 Pure · taught mock'&&
   c.year13PureMock===true&&c.mock===true&&c.taught===true&&c.active===true&&
   c.scope==='mock'&&c.specRef&&/^3\.(?:2|3|5|6|7|8|9)$/.test(c.specRef));
@@ -6703,6 +6704,29 @@ async function sync(manual=false){
      c.subject!=='Maths'||c.stage!=='A2'||!allowedV450Refs.has(c.specRef)||
      c.active!==true||typeof c.front!=='string'||typeof c.back!=='string'||!c.front||!c.back||
      c.year13PureMock!==true&&c.year13Optional!==true)continue;
+  knownFlashIds.add(c.id);cards.push(c);
+ }
+
+ // v462: user-selected 'Must memorise first' for the current taught Year 13
+ // Pure mock. Existing v450 cards retain their original IDs and review history.
+ // New cards are only the previously missing facts; no Physics/Chemistry change.
+ let v462Maths={cards:[]};
+ try{
+  const response=await fetch(V462_MATHS_MEMORY_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(response.ok)v462Maths=await response.json();
+ }catch(error){console.warn('Optional Year 13 Pure memorisation pack unavailable',error)}
+ const v462Cards=Array.isArray(v462Maths.cards)&&v462Maths.version==='v462'&&
+  v462Maths.totalSelected===89&&v462Maths.newCount===66?v462Maths.cards:[];
+ for(const c of v462Cards){
+  if(!c||!/^y13_v462_card_\d{3}$/.test(c.id||'')||knownFlashIds.has(c.id)||
+    c.subject!=='Maths'||c.stage!=='A2'||!allowedV450Refs.has(c.specRef)||
+    c.active!==true||c.mock!==true||c.taught!==true||c.year13PureMock!==true||
+    c.year13Optional!==false||c.scope!=='mock'||c.priority!==5||
+    c.courseTopic!=='Year 13 Pure · taught mock'||c.memoryPriority!=='user-curated-2026-11-15'||
+    typeof c.front!=='string'||typeof c.back!=='string'||c.front.length<10||
+    c.front.length>170||!c.back||c.back.length>180||
+    !Array.isArray(c.accept)||c.accept.length!==1||c.accept[0]!==c.back||
+    !Array.isArray(c.reject)||c.reject.length!==0)continue;
   knownFlashIds.add(c.id);cards.push(c);
  }
  const validatedV450Questions=(Array.isArray(v450Maths.questions)?v450Maths.questions:[]).filter(q=>
