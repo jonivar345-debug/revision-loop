@@ -20,8 +20,8 @@ for(const id of ['characterPreview','shopPoints','characterCount','outfitCount',
 for(const id of ['shopCharactersSection','shopOutfitsSection','shopLocationsSection'])
  assert(html.includes('id="'+id+'"'));
 assert(html.includes('id="shopViewOutfits"'));
-assert(html.includes('shop-refresh-v455.css?v=455'));
-assert(html.includes('ui-refresh-v453.js?v=455'));
+assert(/shop-refresh-v455\.css\?v=45[56]/.test(html));
+assert(/ui-refresh-v453\.js\?v=45[56]/.test(html));
 assert(css.includes('.shop-section[hidden]{display:none!important}'));
 assert(css.includes(':root[data-theme="dark"]'));
 assert(css.includes('@media(max-width:610px)'));
