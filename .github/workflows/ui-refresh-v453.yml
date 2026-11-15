@@ -1,0 +1,41 @@
+name: v453 Navigation, appearance and cloud-key UI regression
+on:
+  pull_request:
+    paths:
+      - index.html
+      - cloud-sync.js
+      - ui-refresh-v453.js
+      - ui-refresh-v453.css
+      - sw.js
+      - tests/ui-refresh-v453.cjs
+      - tests/ui-refresh-browser-v453.mjs
+      - .github/workflows/ui-refresh-v453.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  ui-navigation-and-theme:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Source safety, existing school-mock and cloud regression
+        run: |
+          node --check app.js
+          node --check ui-refresh-v453.js
+          node --check cloud-sync.js
+          node tests/ui-refresh-v453.cjs
+          node tests/year13-pure-v450.cjs
+          node tests/aqa-maths-pure-2024-paper1-v452.cjs
+          node tests/physics-paper2-2025-visual-v449.cjs
+      - name: Install real Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Navigation, light/dark persistence, sync visibility and zero lost progress at 360, 390 and 1280 px
+        run: node tests/ui-refresh-browser-v453.mjs
+      - name: Recheck Year 13 Pure mock, exam questions, full-screen and original ID safety
+        run: node tests/year13-pure-browser-v450.mjs
