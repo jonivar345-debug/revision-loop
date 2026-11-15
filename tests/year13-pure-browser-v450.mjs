@@ -84,7 +84,7 @@ try{
    const obj=item.type==='card'?cards.find(x=>x.id===item.id):examQuestions.find(x=>x.id===item.id);
    return {id:item.id,type:item.type,subject:obj.subject,flag:obj.year13PureMock,level:obj.stage||obj.level};
   }));
-  assert(audit.every(x=>x.subject==='Maths'&&x.flag===true&&/^y13_v450_/.test(x.id)));
+  assert(audit.every(x=>x.subject==='Maths'&&x.flag===true&&/^y13_v45[01]_/.test(x.id)));
   assert(audit.some(x=>x.type==='card')&&audit.some(x=>x.type==='exam'));
   assert.equal((await page.evaluate(()=>buildMockSessionItems('Physics','mixed',10))).length,0);
   assert.equal((await page.evaluate(()=>buildMockSessionItems('Chemistry','mixed',10))).length,0);
@@ -118,7 +118,7 @@ try{
   await page.locator('#startExam').click();
   const examSession=await page.evaluate(()=>({
    kind:activeSession.kind,size:activeSession.items.length,
-   safe:activeSession.items.every(it=>it.type==='exam'&&it.id.startsWith('y13_v450_q_'))
+   safe:activeSession.items.every(it=>it.type==='exam'&&/^y13_v45[01]_q_/.test(it.id))
   }));
   assert.equal(examSession.kind,'exam');assert.equal(examSession.size,10);assert(examSession.safe);
   assert(await page.locator('#examAnswer').isVisible());
