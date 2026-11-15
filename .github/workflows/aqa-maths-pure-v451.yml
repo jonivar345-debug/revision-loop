@@ -1,0 +1,36 @@
+name: v451 AQA 7357 Pure paper archive and Year 13 methods QA
+on:
+  pull_request:
+    paths:
+      - maths_pure_past_methods_v451.json
+      - editorial/aqa-maths-pure-7357-paper-index-v451.json
+      - app.js
+      - index.html
+      - sw.js
+      - tests/aqa-maths-pure-archive-v451.cjs
+      - tests/year13-pure-browser-v450.mjs
+      - .github/workflows/aqa-maths-pure-v451.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pure-archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Source inventory, 2025 question crosswalk and v450 integrity
+        run: |
+          node --check app.js
+          node tests/aqa-maths-pure-archive-v451.cjs
+          node tests/year13-pure-v450.cjs
+          node tests/physics-paper2-2025-visual-v449.cjs
+      - name: Install Chromium for real phone and desktop checks
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Browser - 24 papers, 40 Pure topic links, 83 worked questions and mock scope
+        run: node tests/year13-pure-browser-v450.mjs
