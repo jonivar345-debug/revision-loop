@@ -55,6 +55,22 @@ try{
   }));
   assert.deepEqual(bank,{newCards:123,newQuestions:62,mockCards:110,mockQuestions:73,
    optionalCards:13,optionalExam:6,physicsPaper2:227,oldProgress:4,oldExam:3,xp:140});
+  const v451=await page.evaluate(()=>({
+   newWorked:examQuestions.filter(q=>/^y13_v451_q_\d{3}$/.test(q.id)).length,
+   optionalNew:examQuestions.filter(q=>/^y13_v451_q_\d{3}$/.test(q.id)&&q.year13Optional).length,
+   archived:aqaPurePaperArchive?.papers.length,
+   indexedPure:aqaPurePaperArchive?.topics2025.filter(q=>q.classification==='pure').length,
+   linkedOlder:aqaPurePaperArchive?.papers.filter(x=>x.year<2025).length
+  }));
+  assert.deepEqual(v451,{newWorked:21,optionalNew:4,archived:24,indexedPure:40,linkedOlder:21});
+  const archive=page.locator('#mathsPureArchiveV451');
+  await page.locator('.study-type-btn[data-study="exam"]').click();
+  assert(await archive.isVisible(),'AQA Pure archive should be visible in Maths exam mode');
+  assert.equal(await archive.locator('details.pure-paper-year').count(),11,'Eight archive years and three 2025 question-method panels');
+  const descriptions=await archive.innerText();
+  assert(descriptions.includes('24 public papers linked')&&descriptions.includes('question-by-question audit is still open')===false);
+  assert(descriptions.includes('2025')&&descriptions.includes('Q17'));
+  await page.locator('.study-type-btn[data-study="mock"]').click();
   assert.equal(await page.locator('#mockSubject option').count(),1);
   assert.equal(await page.locator('#mockSubject').inputValue(),'Maths');
   assert(await page.locator('#mathsMockScopeNote').isVisible());
