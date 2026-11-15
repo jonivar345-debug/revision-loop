@@ -54,7 +54,7 @@ try{
    xp:profile.lifetimeXp
   }));
   assert.deepEqual(bank,{newCards:123,newQuestions:62,mockCards:110,mockQuestions:73,
-   optionalCards:13,optionalExam:6,physicsPaper2:227,oldProgress:4,oldExam:3,xp:140});
+   optionalCards:13,optionalExam:10,physicsPaper2:227,oldProgress:4,oldExam:3,xp:140});
   const v451=await page.evaluate(()=>({
    newWorked:examQuestions.filter(q=>/^y13_v451_q_\d{3}$/.test(q.id)).length,
    optionalNew:examQuestions.filter(q=>/^y13_v451_q_\d{3}$/.test(q.id)&&q.year13Optional).length,
