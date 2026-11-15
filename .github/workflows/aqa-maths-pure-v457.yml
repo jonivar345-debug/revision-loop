@@ -1,0 +1,44 @@
+name: v457 AQA Year 13 Pure 2019-2025 source and 2024 P2 P3 practice
+on:
+  pull_request:
+    paths:
+      - app.js
+      - index.html
+      - sw.js
+      - maths_pure_2024_p2p3_v457.json
+      - tests/aqa-maths-pure-2024-p2p3-v457.cjs
+      - tests/year13-pure-browser-v450.mjs
+      - tests/aqa-maths-pure-2024-paper1-v452.cjs
+      - tests/aqa-maths-pure-archive-v451.cjs
+      - .github/workflows/aqa-maths-pure-v457.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  maths-source-and-mock-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Maths source audits, strict mock eligibility and unchanged legacy banks
+        run: |
+          node --check app.js
+          node tests/aqa-maths-pure-2024-p2p3-v457.cjs
+          node tests/aqa-maths-pure-2024-paper1-v452.cjs
+          node tests/aqa-maths-pure-archive-v451.cjs
+          node tests/year13-pure-v450.cjs
+          node tests/ui-refresh-v453.cjs
+          node tests/shop-flow-v456.cjs
+      - name: Install Chromium for actual phone and desktop QA
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Real browser Maths mock and paper archive at 360, 390, 1280px
+        run: node tests/year13-pure-browser-v450.mjs
+      - name: UI, Shop and cloud regression after Pure bank changes
+        run: |
+          node tests/ui-refresh-browser-v453.mjs
+          node tests/shop-flow-browser-v456.mjs
