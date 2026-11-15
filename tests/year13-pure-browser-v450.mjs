@@ -70,7 +70,7 @@ try{
   assert.equal(await archive.locator('details.pure-paper-year').count(),14,'Seven target years, audited 2023 Paper 1, 2024 methods and 2025 topic panels');
   const descriptions=await archive.innerText();
   assert(descriptions.includes('21 public papers indexed')&&descriptions.includes('2024 Paper 2/3 Pure Section A methods')&&descriptions.includes('2023 Paper 1'));
-  await archive.locator('details.pure-paper-year').nth(10).locator('summary').click();
+  await archive.locator('details.pure-paper-year').nth(11).locator('summary').click();
   const questionText=await archive.innerText();
   assert(questionText.includes('2025')&&questionText.includes('Q17'));
   await page.locator('.study-type-btn[data-study="mock"]').click();
