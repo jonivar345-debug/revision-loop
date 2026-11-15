@@ -2125,7 +2125,7 @@ let progress=load(PROGRESS_KEY,{});
 let profile=load(PROFILE_KEY,{});
 let settings=load(SETTINGS_KEY,{});
 let studyType='mock',activeSession=null,currentCardId=null,currentEvaluation=null,currentFlashAwarded=false,currentExamScore=0,manualScoreOverride=false,currentExamMarkingRoute='suggested',toastTimer=null;
-let flashScopeFilter='taught',flashTopics=new Set(),examTopics=new Set(),examYears=new Set(),examTypes=new Set(),globeLon=0,globeLat=5,dragging=false,lastPointer=null,dragDistance=0,selectedLocation='london',openLocationId=null,locationVisibleLimit=24;
+let flashScopeFilter='taught',flashTopics=new Set(),examTopics=new Set(),examYears=new Set(),examTypes=new Set(),examYear13PurePreset=false,globeLon=0,globeLat=5,dragging=false,lastPointer=null,dragDistance=0,selectedLocation='london',openLocationId=null,locationVisibleLimit=24;
 
 const CHARACTERS=[
  {id:'lelouch',name:'Lelouch',series:'Code Geass',cost:0,skin:'#efd0b5',hair:'#111827',hair2:'#312e81',style:'swept',eye:'#5b21b6'},
@@ -4171,7 +4171,8 @@ function startPaper2CoachSession(){
 function examGroups(){
  const sub=document.getElementById('examSubject').value,level=document.getElementById('examLevel').value;
  const difficulty=document.getElementById('examDifficulty')?.value||'all';
- const all=subjectExam(sub).filter(q=>level==='both'||q.level===level);
+ const all=subjectExam(sub).filter(q=>(level==='both'||q.level===level)&&
+  (!examYear13PurePreset||currentYear13PureMockQuestion(q)));
  if(!examYears.size||!examTopics.size||!examTypes.size)return [];
  // Select a group by eligible member, then retain every linked part.
  // Parts dependent on an earlier part are never silently separated.
@@ -4863,7 +4864,7 @@ function refreshExamFilters(defaultIfEmpty=false){
  audit.innerHTML=indexedFromPapers+' source-linked parts, '+practiceOnly+' original practice parts; '+gap+' current-specification year(s) without an indexed question for this selection. This is not a complete archive of every AQA question. Missing years stay disabled for random questions, but their full original papers can be found through the paper archive below. <a href="https://www.aqa.org.uk/past-papers-and-mark-schemes-finder" target="_blank" rel="noopener noreferrer">Find official AQA papers and mark schemes ↗</a>';
  document.getElementById('examTopics').innerHTML=groupedTopicPicker(sub,'exam',examTopics);
  document.getElementById('examTypes').innerHTML=types.map(t=>'<label class="check-item"><input type="checkbox" data-exam-type="'+esc(t)+'" '+(examTypes.has(t)?'checked':'')+'><span>'+esc(t)+'</span></label>').join('');
- document.querySelectorAll('[data-exam-year]').forEach(el=>el.onchange=()=>{el.checked?examYears.add(el.dataset.examYear==='Practice'?'Practice':Number(el.dataset.examYear)):examYears.delete(el.dataset.examYear==='Practice'?'Practice':Number(el.dataset.examYear));renderTopicCounts()});
+ document.querySelectorAll('[data-exam-year]').forEach(el=>el.onchange=()=>{examYear13PurePreset=false;el.checked?examYears.add(el.dataset.examYear==='Practice'?'Practice':Number(el.dataset.examYear)):examYears.delete(el.dataset.examYear==='Practice'?'Practice':Number(el.dataset.examYear));renderTopicCounts()});
  document.querySelectorAll('[data-exam-topic]').forEach(el=>el.onchange=()=>{if(el.checked)examTopics.add(el.dataset.examTopic);else examTopics.delete(el.dataset.examTopic);renderTopicCounts()});
  bindTopicGroupControls('exam');document.querySelectorAll('[data-exam-type]').forEach(el=>el.onchange=()=>{el.checked?examTypes.add(el.dataset.examType):examTypes.delete(el.dataset.examType)});
  renderTopicCounts();
@@ -4873,6 +4874,8 @@ function refreshExamFilters(defaultIfEmpty=false){
  document.getElementById('examCoverage').textContent='Self-contained bank: '+base.length+' question parts (including separately labelled practice)'+(yearCounts?' · '+yearCounts:'')+'. Related subparts are grouped; missing-context questions are excluded. Coverage counts refer to app topic categories, not every individual specification requirement. Years with no indexed parts are visible but disabled; 2015 and earlier reform-era papers are in the separate legacy archive. Official past-paper coverage remains incomplete.';
 }
 function renderTopicCounts(){
+ const preset=document.getElementById('examYear13Preset');
+ if(preset)preset.setAttribute('aria-pressed',examYear13PurePreset?'true':'false');
  const chosen=selectedFlashCards();
  const mustOnly=settings.recallMustKnowFirst!==false;
  const mockModeSelect=document.getElementById('mockMode');
@@ -7115,15 +7118,16 @@ document.getElementById('mockSubject').onchange=()=>{const subject=document.getE
 document.getElementById('paper2Section').onchange=renderTopicCounts;
 document.getElementById('startPaper2Coach').onclick=startPaper2CoachSession;
 document.getElementById('examDifficulty').onchange=renderTopicCounts;
-document.getElementById('examLevel').onchange=()=>{examTopics.clear();examYears.clear();examTypes.clear();refreshExamFilters(true);renderTopicCounts()};
-document.getElementById('examSubject').onchange=()=>{examYears.clear();examTopics.clear();examTypes.clear();refreshExamFilters(true);renderAll()};
-document.getElementById('yearsAll').onclick=()=>{examYears=new Set(subjectExam(document.getElementById('examSubject').value).map(q=>q.year));refreshExamFilters(false)};
-document.getElementById('yearsRecent').onclick=()=>{const ys=[...new Set(subjectExam(document.getElementById('examSubject').value).map(q=>q.year))].sort((a,b)=>b-a);examYears=new Set(ys.slice(0,2));refreshExamFilters(false)};
-document.getElementById('yearsClear').onclick=()=>{examYears.clear();refreshExamFilters(false)};
-document.getElementById('examTopicsAll').onclick=()=>{examTopics=new Set(subjectExam(document.getElementById('examSubject').value).map(examTopicLabel));refreshExamFilters(false)};
-document.getElementById('examTopicsWeak').onclick=()=>{const sub=document.getElementById('examSubject').value,exam=subjectExam(sub),ts=[...new Set(exam.map(examTopicLabel))].sort((a,b)=>{const strength=t=>exam.filter(q=>examTopicLabel(q)===t).reduce((n,q)=>n+(profile.topicWeakness[topicKey(sub,q.revisionTopic||q.topic)]||0)+(profile.errorLog.some(z=>z.id===q.id)?2:0),0);return strength(b)-strength(a)});examTopics=new Set(ts.slice(0,Math.max(1,Math.ceil(ts.length/3))));refreshExamFilters(false)};
-document.getElementById('examTopicsClear').onclick=()=>{examTopics.clear();refreshExamFilters(false)};
+document.getElementById('examLevel').onchange=()=>{examYear13PurePreset=false;examTopics.clear();examYears.clear();examTypes.clear();refreshExamFilters(true);renderTopicCounts()};
+document.getElementById('examSubject').onchange=()=>{examYear13PurePreset=false;examYears.clear();examTopics.clear();examTypes.clear();refreshExamFilters(true);renderAll()};
+document.getElementById('yearsAll').onclick=()=>{examYear13PurePreset=false;examYears=new Set(subjectExam(document.getElementById('examSubject').value).map(q=>q.year));refreshExamFilters(false)};
+document.getElementById('yearsRecent').onclick=()=>{examYear13PurePreset=false;const ys=[...new Set(subjectExam(document.getElementById('examSubject').value).map(q=>q.year))].sort((a,b)=>b-a);examYears=new Set(ys.slice(0,2));refreshExamFilters(false)};
+document.getElementById('yearsClear').onclick=()=>{examYear13PurePreset=false;examYears.clear();refreshExamFilters(false)};
+document.getElementById('examTopicsAll').onclick=()=>{examYear13PurePreset=false;examTopics=new Set(subjectExam(document.getElementById('examSubject').value).map(examTopicLabel));refreshExamFilters(false)};
+document.getElementById('examTopicsWeak').onclick=()=>{examYear13PurePreset=false;const sub=document.getElementById('examSubject').value,exam=subjectExam(sub),ts=[...new Set(exam.map(examTopicLabel))].sort((a,b)=>{const strength=t=>exam.filter(q=>examTopicLabel(q)===t).reduce((n,q)=>n+(profile.topicWeakness[topicKey(sub,q.revisionTopic||q.topic)]||0)+(profile.errorLog.some(z=>z.id===q.id)?2:0),0);return strength(b)-strength(a)});examTopics=new Set(ts.slice(0,Math.max(1,Math.ceil(ts.length/3))));refreshExamFilters(false)};
+document.getElementById('examTopicsClear').onclick=()=>{examYear13PurePreset=false;examTopics.clear();refreshExamFilters(false)};
 document.getElementById('examYear13Preset').onclick=()=>{
+ examYear13PurePreset=true;
  document.getElementById('examSubject').value='Maths';
  document.getElementById('examLevel').value='A-level';
  document.getElementById('examDifficulty').value='all';
