@@ -35,7 +35,8 @@
   const target=doc.getElementById(id),view=doc.defaultView;
   if(!target||!view||target.closest('.panel:not(.active)'))return false;
   const tabs=doc.querySelector('.tabs');
-  const offset=(tabs?.getBoundingClientRect().height||0)+18;
+  const shopNavigation=target.closest?.('.shop-section')?doc.querySelector('.shop-category-switch'):null;
+  const offset=(tabs?.getBoundingClientRect().height||0)+(shopNavigation?.getBoundingClientRect().height||0)+18;
   const top=Math.max(0,target.getBoundingClientRect().top+view.scrollY-offset);
   const reduced=typeof view.matchMedia==='function'&&view.matchMedia('(prefers-reduced-motion: reduce)').matches;
   view.scrollTo({top,behavior:animated&&!reduced?'smooth':'instant'});
@@ -92,12 +93,12 @@
   toggle?.addEventListener('click',()=>applyTheme(doc,storage,doc.documentElement.dataset.theme==='dark'?'light':'dark'));
   applyShopView(doc,storage,getShopView(storage));
   doc.querySelectorAll('[data-shop-view]').forEach(button=>button.addEventListener('click',()=>{
-   applyShopView(doc,storage,button.dataset.shopView);
-   scrollToSection(doc,'shopTitle');
+   const view=applyShopView(doc,storage,button.dataset.shopView);
+   scrollToSection(doc,view==='places'?'shopLocationsSection':view==='outfits'?'shopOutfitsSection':'shopCharactersSection');
   }));
   doc.getElementById('shopViewOutfits')?.addEventListener('click',()=>{
    applyShopView(doc,storage,'outfits');
-   scrollToSection(doc,'shopTitle');
+   scrollToSection(doc,'shopOutfitsSection');
   });
   doc.querySelectorAll('.tab').forEach(button=>button.addEventListener('click',()=>{
    refreshNavigation(doc);
