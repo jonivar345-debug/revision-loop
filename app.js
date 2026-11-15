@@ -4746,7 +4746,7 @@ function refreshExamFilters(defaultIfEmpty=false){
  const sub=document.getElementById('examSubject').value,level=document.getElementById('examLevel').value,base=subjectExam(sub).filter(q=>level==='both'||q.level===level),
  years=[...new Set(base.map(q=>q.year))].sort((a,b)=>a==='Practice'?1:b==='Practice'?-1:b-a),
  yearOptions=[...Array.from({length:11},(_,i)=>2025-i),'Practice'],
- topics=[...new Set(subjectCards(sub).map(flashTopicLabel))],
+ topics=[...new Set([...subjectCards(sub).map(flashTopicLabel),...base.filter(q=>sub==='Maths'&&currentYear13PureMockQuestion(q)).map(examTopicLabel)])],
  types=[...new Set(base.map(q=>q.questionType).filter(Boolean))].sort();
  examYears=new Set([...examYears].filter(y=>years.includes(y)));examTopics=new Set([...examTopics].filter(t=>topics.includes(t)));examTypes=new Set([...examTypes].filter(t=>types.includes(t)));
  if(defaultIfEmpty&&sub==='Maths'&&level==='A-level'&&
