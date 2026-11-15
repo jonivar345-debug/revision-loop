@@ -65,11 +65,14 @@ try{
   assert.deepEqual(v451,{newWorked:21,optionalNew:4,archived:24,indexedPure:40,linkedOlder:21});
   const archive=page.locator('#mathsPureArchiveV451');
   await page.locator('.study-type-btn[data-study="exam"]').click();
+  await page.locator('details.paper-library > summary').click();
   assert(await archive.isVisible(),'AQA Pure archive should be visible in Maths exam mode');
   assert.equal(await archive.locator('details.pure-paper-year').count(),11,'Eight archive years and three 2025 question-method panels');
   const descriptions=await archive.innerText();
-  assert(descriptions.includes('24 public papers linked')&&descriptions.includes('question-by-question audit is still open')===false);
-  assert(descriptions.includes('2025')&&descriptions.includes('Q17'));
+  assert(descriptions.includes('24 public papers linked')&&descriptions.includes('question-level verification is still open'));
+  await archive.locator('details.pure-paper-year').nth(8).locator('summary').click();
+  const questionText=await archive.innerText();
+  assert(questionText.includes('2025')&&questionText.includes('Q17'));
   await page.locator('.study-type-btn[data-study="mock"]').click();
   assert.equal(await page.locator('#mockSubject option').count(),1);
   assert.equal(await page.locator('#mockSubject').inputValue(),'Maths');
