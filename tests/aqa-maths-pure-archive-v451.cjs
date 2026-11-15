@@ -64,7 +64,7 @@ for(const value of [
  "function renderAqaPureArchive()"
 ])assert(app.includes(value),value);
 assert(html.includes('id="mathsPureArchiveV451"'));
-assert(/papers=v45[1278]/.test(html),'The archive must use a current Pure source-audit app version');
+assert(/papers=v45[12789]/.test(html),'The archive must use a current Pure source-audit app version');
 assert(sw.includes('maths_pure_past_methods_v451.json'));
 assert(sw.includes('aqa-maths-pure-7357-paper-index-v451.json'));
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
