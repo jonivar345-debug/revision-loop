@@ -9,7 +9,9 @@ const practiceNames=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].
 assert.equal(core.cards.length,3345);assert.equal(questions.questions.length,1268);
 assert(flashNames.length>=53);assert(practiceNames.length>=43);
 const banks=flashNames.map(path=>j(path));
-const pos=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),end=app.indexOf(' const added=[',pos);
+const pos=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),
+ end=app.indexOf(' // v450: append-only Year 13 Pure Maths revision pack.',pos);
+// End this legacy base-bank audit before the separately awaited Year 13 loaders.
 assert(pos>=0&&end>pos);
 const loadCards=new Function('cards','extraFlashBanks',app.slice(pos,end)+'\nreturn cards;');
 const actual=loadCards([...core.cards],banks),base=new Set(core.cards.map(c=>c.id));

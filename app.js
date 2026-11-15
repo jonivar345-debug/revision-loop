@@ -61,6 +61,7 @@ const AS_P2_COACH_URL='./physics_as_paper2_guided_v430.json';
 const V439_PHYSICS_RECALL_URL='./physics_mock_practical_recall_v439.json';
 const V439_PHYSICS_EXAM_URL='./physics_mock_practical_exam_v439.json';
 const V450_YEAR13_PURE_URL='./maths_year13_pure_v450.json';
+const V462_MATHS_MEMORY_URL='./maths_must_memorise_v462.json';
 const V451_PURE_METHODS_URL='./maths_pure_past_methods_v451.json';
 const V451_AQA_PAPER_INDEX_URL='./editorial/aqa-maths-pure-7357-paper-index-v451.json';
 const V452_2024_P1_URL='./maths_pure_2024_p1_v452.json';
@@ -3181,8 +3182,9 @@ function ensureProfile(){
   profile.economyVersion=2;
  }
  settings.dailyNew=settings.dailyNew||18;settings.physicsUnits=settings.physicsUnits||{};
-  settings.recallMustKnowFirst=settings.recallMustKnowFirst!==false;
-  settings.recallMustKnowOnly=settings.recallMustKnowOnly===true;
+  // Migrate the old second, duplicate 'only' setting to the single visible switch.
+  settings.recallMustKnowFirst=settings.recallMustKnowOnly===true||settings.recallMustKnowFirst!==false;
+  settings.recallMustKnowOnly=false;
 }
 function now(){return Date.now()}
 function dateKey(t=Date.now()){
@@ -4058,10 +4060,11 @@ function mockEligibleQuestion(q){
 // Historical mockEligibleCard/Question remain for legacy evidence and earlier review IDs;
 // all current mock and mock-focus screens below use these intentionally narrow gates.
 function currentYear13PureMockCard(c){
- return Boolean(c&&/^y13_v450_card_\d{3}$/.test(c.id||'')&&c.subject==='Maths'&&
+ return Boolean(c&&/^y13_v(?:450|462)_card_\d{3}$/.test(c.id||'')&&c.subject==='Maths'&&
   c.stage==='A2'&&c.courseTopic==='Year 13 Pure · taught mock'&&
   c.year13PureMock===true&&c.mock===true&&c.taught===true&&c.active===true&&
-  c.scope==='mock'&&c.specRef&&/^3\.(?:2|3|5|6|7|8|9)$/.test(c.specRef));
+  c.scope==='mock'&&c.specRef&&(/^3\.(?:2|3|5|6|7|8|9)$/.test(c.specRef)||
+   (/^y13_v462_card_\d{3}$/.test(c.id||'')&&c.specRef==='3.4')));
 }
 function currentYear13PureMockQuestion(q){
  return Boolean(q&&/^y13_v(?:450|451|452|457)_q_\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&
@@ -4076,9 +4079,12 @@ function currentYear13PureMockQuestion(q){
 // than allocating the entire mock bank or silently ending after 30 items.
 // Keep linked exam parts together and work through unseen material first.
 function buildMockSessionItems(sub,mode,count,seenCards=new Set(),seenGroups=new Set()){
- const cardPool=sub==='Maths'?cards.filter(currentYear13PureMockCard):[];
- // Mock revision must not inherit the unrelated Exam Questions tab's AS/A-level filter.
- const qAll=sub==='Maths'?examQuestions.filter(currentYear13PureMockQuestion):[];
+ const mustOnly=sub==='Maths'&&settings.recallMustKnowFirst!==false;
+ const effectiveMode=mustOnly?'flash':mode;
+ const cardPool=sub==='Maths'?cards.filter(c=>currentYear13PureMockCard(c)&&(!mustOnly||isRecallMustKnow(c))):[];
+ // Strict memorisation excludes both ordinary flashcards and exam questions.
+ // Mock revision does not inherit the Exam Questions tab's separate filter.
+ const qAll=sub==='Maths'&&!mustOnly?examQuestions.filter(currentYear13PureMockQuestion):[];
  const groups=new Map();
  for(const q of qAll){if(!groups.has(q.groupId))groups.set(q.groupId,[]);groups.get(q.groupId).push(q)}
  for(const g of groups.values())g.sort((x,y)=>String(x.groupOrder).localeCompare(String(y.groupOrder),undefined,{numeric:true}));
@@ -4087,14 +4093,14 @@ function buildMockSessionItems(sub,mode,count,seenCards=new Set(),seenGroups=new
  let availableGroups=[...groups.values()].filter(g=>!seenGroups.has(g[0].groupId));
  if(groups.size&&!availableGroups.length){seenGroups.clear();availableGroups=[...groups.values()]}
  const items=[];
- if(mode!=='exam'){
-   const want=mode==='flash'?count:Math.max(1,Math.ceil(count*.6));
+ if(effectiveMode!=='exam'){
+   const want=effectiveMode==='flash'?count:Math.max(1,Math.ceil(count*.6));
    const n=Math.min(want,availableCards.length),score=c=>1+weakness(c)/5+(isDue(c)?4:0)+(1-memoryHealth(c))*3;
    const balance=sub==='Physics'?window.RevisionPhysicsMockBalance:null;
    const picked=balance?balance.pickBalanced(availableCards,n,score,pickRecallCards):pickRecallCards(availableCards,n,score);
    for(const c of picked){items.push({type:'card',id:c.id});seenCards.add(c.id)}
  }
- if(mode!=='flash'){
+ if(effectiveMode!=='flash'){
    const target=Math.max(1,count-items.length);
    const n=Math.min(target,availableGroups.length),score=g=>1+groupWeakness(g);
    const balance=sub==='Physics'?window.RevisionPhysicsMockBalance:null;
@@ -4104,7 +4110,7 @@ function buildMockSessionItems(sub,mode,count,seenCards=new Set(),seenGroups=new
      for(const q of g)items.push({type:'exam',id:q.id,groupId:q.groupId});
    }
  }
- if(mode==='mixed'){
+ if(effectiveMode==='mixed'){
    const blocks=[],seenGroupsInBatch=new Set();
    for(const item of items){
      if(item.type==='exam'&&item.groupId){
@@ -4123,22 +4129,23 @@ function buildMockSessionItems(sub,mode,count,seenCards=new Set(),seenGroups=new
  return items;
 }
 function startMockSession(){
- const sub='Maths',mode=document.getElementById('mockMode').value;
+ const sub='Maths',mustOnly=settings.recallMustKnowFirst!==false;
+ const mode=mustOnly?'flash':document.getElementById('mockMode').value;
  const selection=document.getElementById('mockCount').value,unlimited=selection==='unlimited';
  const count=unlimited?15:(Number(selection)||15);
  const seenCards=new Set(),seenGroups=new Set();
  const items=buildMockSessionItems(sub,mode,count,seenCards,seenGroups);
  if(!items.length){showToast('No mock material is available for that selection yet');return}
- activeSession={kind:'mock',items,index:0,title:'Year 13 Pure Maths · taught mock',
+ activeSession={kind:'mock',items,index:0,title:mustOnly?'Must memorise · Year 13 Pure Maths':'Year 13 Pure Maths · taught mock',
   ...(unlimited?{unlimited:true,mockSubject:sub,mockMode:mode,seenCards,seenGroups}:{})};
  currentCardId=null;renderAll();
 }
 function flashEligible(c){return flashScopeFilter==='mock'?currentYear13PureMockCard(c):flashScopeFilter==='taught'?taughtCard(c):true}
-function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c)&&(!settings.recallMustKnowOnly||isRecallMustKnow(c)))}
+function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c)&&(settings.recallMustKnowFirst===false||isRecallMustKnow(c)))}
 function startFlashSession(){
- const count=Number(document.getElementById('flashCount').value),pool=selectedFlashCards();if(!pool.length){showToast(settings.recallMustKnowOnly?'No must-memorise cards in those topics':'Pick at least one topic');return}
+ const count=Number(document.getElementById('flashCount').value),pool=selectedFlashCards();if(!pool.length){showToast(settings.recallMustKnowFirst!==false?'No selected must-memorise cards in these topics':'Pick at least one topic');return}
  const picked=pickRecallCards(pool,Math.min(count,pool.length),c=>1+weakness(c)/6+(isDue(c)?4:0)+(isNew(c)?1:0));
- activeSession={kind:'flash',items:picked.map(c=>({type:'card',id:c.id})),index:0,title:settings.recallMustKnowOnly?'Must memorise · key recall':'Random flashcards'};currentCardId=null;renderAll();
+ activeSession={kind:'flash',items:picked.map(c=>({type:'card',id:c.id})),index:0,title:settings.recallMustKnowFirst!==false?'Must memorise · key recall':'Random flashcards'};currentCardId=null;renderAll();
 }
 // v430: isolated Paper 2 coach; no changes to school mock eligibility or saved reviews.
 function paper2CoachCards(section='all'){
@@ -4817,13 +4824,26 @@ function refreshExamFilters(defaultIfEmpty=false){
 }
 function renderTopicCounts(){
  const chosen=selectedFlashCards();
- document.getElementById('flashTopicCount').textContent=flashTopics.size+' topics · '+chosen.length+' eligible cards · '+(flashScopeFilter==='mock'?'mock only':flashScopeFilter==='taught'?'taught so far':'full A-level');
+ const mustOnly=settings.recallMustKnowFirst!==false;
+ const mockModeSelect=document.getElementById('mockMode');
+ const mockStartButton=document.getElementById('startMock');
+ if(mockStartButton)mockStartButton.textContent=mustOnly?'Start must-memorise cards':'Start mock revision';
+ if(mockModeSelect){
+   if(mustOnly){
+     if(!mockModeSelect.disabled)mockModeSelect.dataset.beforeMemorise=mockModeSelect.value;
+     mockModeSelect.value='flash';mockModeSelect.disabled=true;
+   }else if(mockModeSelect.disabled){
+     mockModeSelect.disabled=false;
+     mockModeSelect.value=mockModeSelect.dataset.beforeMemorise||'mixed';
+   }
+ }
+ document.getElementById('flashTopicCount').textContent=flashTopics.size+' topics · '+chosen.length+' '+(mustOnly?'must-memorise':'eligible')+' cards · '+(flashScopeFilter==='mock'?'mock only':flashScopeFilter==='taught'?'taught so far':'full A-level');
  const all=subjectCards(document.getElementById('flashSubject').value).filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c));
  const essentials=all.filter(isRecallMustKnow).length;
  const info=document.getElementById('flashMustKnowCount');
- if(info)info.textContent=essentials+' key-definition / missing-equation cards in selected topics'+(settings.recallMustKnowOnly?' · only these will be shown.':'. Other cards remain in normal sessions.');
+ if(info)info.textContent=essentials+' selected priority cards in these topics'+(mustOnly?' · only these will appear.':' · switch on Must memorise only to study just these.');
  for(const id of ['mockMustKnowFirst','flashMustKnowFirst']){const control=document.getElementById(id);if(control)control.checked=settings.recallMustKnowFirst!==false}
- const only=document.getElementById('flashMustKnowOnly');if(only)only.checked=settings.recallMustKnowOnly===true;
+ const only=document.getElementById('flashMustKnowOnly');if(only)only.checked=mustOnly;
  const coachCount=document.getElementById('paper2CoachSummary');
  if(coachCount){
   const p2=paper2CoachCards(document.getElementById('paper2Section').value);
@@ -4870,6 +4890,7 @@ function renderSessionBanner(){
 function renderCard(c){
  currentCardId=c.id;currentEvaluation=null;currentFlashAwarded=false;const s=state(c.id),health=Math.round(memoryHealth(c)*100),diag=c.visual?diagram(c.visual):'',backDiag=c.visualBack?diagram(c.visualBack):'';
  const recallInfo=window.RevisionFlashPriority?.classify(c);
+ const selectedPureRecall=currentYear13PureMockCard(c)&&isRecallMustKnow(c);
  const recallBadge=recallInfo?'<span class="recall-priority-pill" title="High-priority knowledge for recall">'+esc(recallInfo.label)+'</span>':'';
  const p2Label=c.paper2Section?'<span class="paper2-card-badge">AS Paper 2 · '+esc(c.paper2Section)+'</span>':'';
  const p2Hint=c.paper2Hint?'<div class="paper2-card-hint"><button type="button" id="paper2HintBtn" aria-expanded="false">Show first-step hint</button><p id="paper2HintText" hidden>'+esc(c.paper2Hint)+'</p></div>':'';
@@ -4879,7 +4900,7 @@ function renderCard(c){
   [...c.paper2Choices.slice(rotate),...c.paper2Choices.slice(0,rotate)]:null;
  const p2OptionHtml=p2Options?'<div class="paper2-mcq" role="group" aria-label="Select one multiple-choice answer">'+
   p2Options.map((option,i)=>'<button type="button" class="paper2-mcq-option" data-paper2-choice="'+i+'" aria-pressed="false"><span class="paper2-choice-letter">'+String.fromCharCode(65+i)+'</span><span>'+esc(option)+'</span></button>').join('')+'</div>':'';
- document.getElementById('studyHost').innerHTML='<article class="review-card"><div class="card-meta"><div class="meta-left"><span class="badge">'+esc(c.subject)+' · '+esc(c.courseTopic||c.topic)+'</span><span class="badge">'+esc(c.format==='cloze'?'fill in the gap':c.kind==='content'?'knowledge':c.kind)+'</span></div>'+recallBadge+p2Label+'<span class="queue-pos">memory '+health+'%</span></div><div class="card-body">'+(diag?'<div class="diagram">'+diag+'</div>': '')+(diag&&c.visualAlt?'<p class="paper2-diagram-caption">Original practice diagram · '+esc(c.visualAlt)+'</p>':'')+'<div class="question">'+esc(c.front)+'</div>'+p2Hint+p2OptionHtml+(p2Options?'<input id="answerInput" type="hidden">':'<textarea id="answerInput" class="answer-input" placeholder="Type your answer from memory…"></textarea>')+'<div class="answer-actions"><button id="checkCard" class="check-btn">Check answer</button><button id="revealCard" class="show-btn">Just reveal</button></div><div class="quick-review-actions" role="group" aria-label="Flashcard navigation and self-rating"><button id="skipCard" type="button" class="quick-review-btn">Skip</button><button id="knowCard" type="button" class="quick-review-btn quick-review-known">I know this</button></div><p class="quick-review-note">Skip leaves this unmarked. I know this saves a self-rated Good review without XP.</p><div id="feedback" class="feedback"></div><div id="modelAnswer" class="model-answer"><b>Model answer:</b> '+esc(c.back)+(backDiag?'<div class="diagram diagram-answer">'+backDiag+'</div>':'')+'<div id="missingIdeas"></div>'+p2Debrief+'</div><button id="overrideBtn" class="override-btn">My answer was actually correct</button><p class="flash-save-explainer">Correct checked answers earn +1 XP. Choose Again, Hard, Good or Easy to save your review, even if your answer was incorrect.</p><div id="ratings" class="ratings"><button class="rating again" data-rating="again">Again<small>~10 min</small></button><button class="rating hard" data-rating="hard">Hard<small>~1 day</small></button><button class="rating good" data-rating="good">Good<small>longer gap</small></button><button class="rating easy" data-rating="easy">Easy<small>much longer</small></button></div></div></article>';
+ document.getElementById('studyHost').innerHTML='<article class="review-card'+(selectedPureRecall?' maths-memorise-card':'')+'"><div class="card-meta"><div class="meta-left"><span class="badge">'+esc(c.subject)+' · '+esc(c.courseTopic||c.topic)+'</span><span class="badge">'+esc(c.format==='cloze'?'fill in the gap':c.kind==='content'?'knowledge':c.kind)+'</span></div>'+recallBadge+p2Label+'<span class="queue-pos">memory '+health+'%</span></div><div class="card-body">'+(diag?'<div class="diagram">'+diag+'</div>': '')+(diag&&c.visualAlt?'<p class="paper2-diagram-caption">Original practice diagram · '+esc(c.visualAlt)+'</p>':'')+'<div class="question'+(selectedPureRecall?' maths-memorise-question':'')+'">'+esc(c.front)+'</div>'+p2Hint+p2OptionHtml+(p2Options?'<input id="answerInput" type="hidden">':'<textarea id="answerInput" class="answer-input" placeholder="Type your answer from memory…"></textarea>')+'<div class="answer-actions"><button id="checkCard" class="check-btn">Check answer</button><button id="revealCard" class="show-btn">Just reveal</button></div><div class="quick-review-actions" role="group" aria-label="Flashcard navigation and self-rating"><button id="skipCard" type="button" class="quick-review-btn">Skip</button><button id="knowCard" type="button" class="quick-review-btn quick-review-known">I know this</button></div><p class="quick-review-note">Skip leaves this unmarked. I know this saves a self-rated Good review without XP.</p><div id="feedback" class="feedback"></div><div id="modelAnswer" class="model-answer'+(selectedPureRecall?' maths-memorise-answer':'')+'"><b>Model answer:</b> '+(selectedPureRecall?'<span class="maths-memorise-answer-text">'+esc(c.back)+'</span>':esc(c.back))+(backDiag?'<div class="diagram diagram-answer">'+backDiag+'</div>':'')+'<div id="missingIdeas"></div>'+p2Debrief+'</div><button id="overrideBtn" class="override-btn">My answer was actually correct</button><p class="flash-save-explainer">Correct checked answers earn +1 XP. Choose Again, Hard, Good or Easy to save your review, even if your answer was incorrect.</p><div id="ratings" class="ratings"><button class="rating again" data-rating="again">Again<small>~10 min</small></button><button class="rating hard" data-rating="hard">Hard<small>~1 day</small></button><button class="rating good" data-rating="good">Good<small>longer gap</small></button><button class="rating easy" data-rating="easy">Easy<small>much longer</small></button></div></div></article>';
  const reveal=(check)=>{const input=document.getElementById('answerInput').value;currentEvaluation=check?evaluateCard(c,input):{status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};if(currentEvaluation.status==='correct')awardFlashIfCorrect();const f=document.getElementById('feedback');f.className='feedback show '+currentEvaluation.status;f.textContent=currentEvaluation.text+(currentEvaluation.status==='correct'?' +1 XP awarded. Choose a rating to record the review.':currentEvaluation.status==='partial'?' Review recorded when you choose a rating; no XP awarded for a partly correct answer.':' Choose a rating to save your review; no XP awarded for this check.');document.getElementById('modelAnswer').classList.add('show');if(currentEvaluation.missing?.length)document.getElementById('missingIdeas').innerHTML='<ul class="missing-list">'+currentEvaluation.missing.map(x=>'<li>Missing: '+esc(x)+'</li>').join('')+'</ul>';document.getElementById('ratings').classList.add('show');if(currentEvaluation.status!=='correct')document.getElementById('overrideBtn').classList.add('show')};
  if(p2Options)document.querySelectorAll('[data-paper2-choice]').forEach(btn=>btn.onclick=()=>{
    const choice=Number(btn.dataset.paper2Choice);
@@ -6705,6 +6726,29 @@ async function sync(manual=false){
      c.year13PureMock!==true&&c.year13Optional!==true)continue;
   knownFlashIds.add(c.id);cards.push(c);
  }
+
+ // v462: user-selected 'Must memorise first' for the current taught Year 13
+ // Pure mock. Existing v450 cards retain their original IDs and review history.
+ // New cards are only the previously missing facts; no Physics/Chemistry change.
+ let v462Maths={cards:[]};
+ try{
+  const response=await fetch(V462_MATHS_MEMORY_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(response.ok)v462Maths=await response.json();
+ }catch(error){console.warn('Optional Year 13 Pure memorisation pack unavailable',error)}
+ const v462Cards=Array.isArray(v462Maths.cards)&&v462Maths.version==='v462'&&
+  v462Maths.totalSelected===89&&v462Maths.newCount===66?v462Maths.cards:[];
+ for(const c of v462Cards){
+  if(!c||!/^y13_v462_card_\d{3}$/.test(c.id||'')||knownFlashIds.has(c.id)||
+    c.subject!=='Maths'||c.stage!=='A2'||!allowedV450Refs.has(c.specRef)||
+    c.active!==true||c.mock!==true||c.taught!==true||c.year13PureMock!==true||
+    c.year13Optional!==false||c.scope!=='mock'||c.priority!==5||
+    c.courseTopic!=='Year 13 Pure · taught mock'||c.memoryPriority!=='user-curated-2026-11-15'||
+    typeof c.front!=='string'||typeof c.back!=='string'||c.front.length<10||
+    c.front.length>170||!c.back||c.back.length>180||
+    !Array.isArray(c.accept)||c.accept.length!==1||c.accept[0]!==c.back||
+    !Array.isArray(c.reject)||c.reject.length!==0)continue;
+  knownFlashIds.add(c.id);cards.push(c);
+ }
  const validatedV450Questions=(Array.isArray(v450Maths.questions)?v450Maths.questions:[]).filter(q=>
   q&&/^y13_v450_q_\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&q.level==='A-level'&&
   allowedV450Refs.has(q.specRef)&&q.year==='Practice'&&q.standalone===true&&
@@ -6887,8 +6931,11 @@ document.getElementById('flashSubject').onchange=()=>{flashTopics.clear();refres
    save();renderTopicCounts();
   };
  }
- document.getElementById('flashMustKnowOnly').onchange=e=>{
-  settings.recallMustKnowOnly=e.target.checked;
+ // Hidden compatibility input for older settings; the visible switch now controls filtering.
+ const legacyOnly=document.getElementById('flashMustKnowOnly');
+ if(legacyOnly)legacyOnly.onchange=e=>{
+  settings.recallMustKnowFirst=e.target.checked;
+  settings.recallMustKnowOnly=false;
   save();renderTopicCounts();
  };
 document.querySelectorAll('[data-flash-preset]').forEach(b=>b.onclick=()=>applyFlashPreset(b.dataset.flashPreset));
