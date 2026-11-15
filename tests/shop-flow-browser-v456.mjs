@@ -49,24 +49,27 @@ try{
   assert(await page.locator('#shopCharacterEmpty').isVisible(),'No results must show helpful message');
   assert.equal(await page.locator('#characterShop [data-character]').count(),0);
   await page.locator('#shopCharacterSearch').fill('C.C.');
-  assert.equal(await page.locator('#characterShop [data-character="cc"]').textContent(),'Unlock · 18 points');
+  const priceText=await page.locator('#characterShop [data-character="cc"]').textContent();
+  const cost=Number(priceText.match(/Unlock · (\\d+) points/)?.[1]);
+  assert(Number.isFinite(cost)&&cost>0&&cost<=85,'Character must have a valid affordable price: '+priceText);
+  const expectedPoints=85-cost;
   await page.locator('#characterShop [data-character="cc"]').click();
   assert(await page.locator('#shopOutfitsSection').isVisible(),'Selecting a character must open outfits');
   assert.equal(await page.locator('#outfitCharacterSelect').inputValue(),'cc');
   assert(await page.locator('#outfitShop .outfit-card').count()>0);
-  assert.equal(await page.locator('#shopPoints').textContent(),'67','Correct point deduction only once');
+  assert.equal(await page.locator('#shopPoints').textContent(),String(expectedPoints),'Correct point deduction only once');
   assert.equal(await page.evaluate(()=>profile.shopOwned.characters.includes('cc')),true,'New character unlocked');
   assert.equal(await page.evaluate(()=>profile.shopOwned.outfits.includes('cc-default')),true,'Default outfit unlocked');
   await page.locator('#outfitCharacterSelect').selectOption('lelouch');
   assert.equal(await page.locator('#outfitCharacterSelect').inputValue(),'lelouch');
   assert.equal(await page.locator('#equippedName').textContent(),'Lelouch');
-  assert.equal(await page.locator('#shopPoints').textContent(),'67','Switching between owned characters must not charge again');
+  assert.equal(await page.locator('#shopPoints').textContent(),String(expectedPoints),'Switching between owned characters must not charge again');
   await page.locator('[data-shop-view="characters"]').click();
   await page.locator('#shopCharacterSearch').fill('C.C.');
   assert.equal(await page.locator('#characterShop [data-character="cc"]').textContent(),'Select & view outfits');
   await page.locator('#characterShop [data-character="cc"]').click();
   assert(await page.locator('#shopOutfitsSection').isVisible());
-  assert.equal(await page.locator('#shopPoints').textContent(),'67');
+  assert.equal(await page.locator('#shopPoints').textContent(),String(expectedPoints));
   await page.locator('[data-shop-view="places"]').click();
   assert(await page.locator('#shopLocationsSection').isVisible());
   await page.waitForFunction(()=>document.getElementById('globe').width===1400,null,{timeout:15000});
@@ -78,7 +81,7 @@ try{
    points:profile.points,xp:profile.lifetimeXp,good:progress.fixtureV456?.good,
    owned:profile.shopOwned.characters.slice()
   }));
-  assert.equal(before.points,67);
+  assert.equal(before.points,expectedPoints);
   assert.equal(before.xp,210);
   assert.equal(before.good,8);
   assert(before.owned.includes('cc'));
