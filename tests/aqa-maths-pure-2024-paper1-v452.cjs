@@ -79,7 +79,7 @@ for(const s of [
  '2024 Paper 1 · 20 questions · text and marks checked',
  '...validatedV452Questions'
 ])assert(app.includes(s),s);
-assert(/papers=v45[27]/.test(html),'2024 Paper 1 audit stays available in the refreshed maths UI');
+assert(/papers=v45[278]/.test(html),'2024 Paper 1 audit stays available in the refreshed maths UI');
 assert(sw.includes("'./maths_pure_2024_p1_v452.json'"));
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
 console.log('PASS v452: primary June 2024 P1 20Q/100 marks, 11 original method questions, 82 taught mock questions total, separate optional topics, existing progress and subjects preserved');
