@@ -1,0 +1,37 @@
+name: v462 Year 13 Pure Maths user-selected memory priority QA
+on:
+  pull_request:
+    paths:
+      - app.js
+      - flashcard-priority-v429.js
+      - maths_must_memorise_v462.json
+      - index.html
+      - sw.js
+      - tests/maths-must-memorise-v462.cjs
+      - tests/year13-pure-browser-v450.mjs
+      - .github/workflows/maths-must-memorise-v462.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  maths-priority-and-regressions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Static priority, original v429 science, and v450 mock regression
+        run: |
+          node --check app.js
+          node --check flashcard-priority-v429.js
+          node tests/maths-must-memorise-v462.cjs
+          node tests/flashcard-priority-v429.cjs
+          node tests/year13-pure-v450.cjs
+      - name: Install Chromium for phone and desktop QA
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Year 13 Pure browser and saved-profile acceptance
+        run: node tests/year13-pure-browser-v450.mjs
