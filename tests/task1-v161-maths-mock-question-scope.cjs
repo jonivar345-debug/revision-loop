@@ -10,8 +10,9 @@ const audit=JSON.parse(fs.readFileSync('editorial/task1-v161-maths-mock-question
 const match=app.match(/function mockEligibleQuestion\(q\)\{[\s\S]*?\n\}/);
 assert(match,'Central mock scope predicate is missing');
 const eligible=vm.runInNewContext(match[0]+'\nmockEligibleQuestion');
-assert.match(app,/const qAll=subjectExam\(sub\)\.filter\(mockEligibleQuestion\)/);
-assert.match(app,/if\(scope==='mock'\)q=q\.filter\(mockEligibleQuestion\)/);
+// The current Year 13 Pure mock has a separate, stricter source/eligibility gate.
+assert(app.includes("const qAll=sub==='Maths'&&!mustOnly?examQuestions.filter(currentYear13PureMockQuestion):[]"));
+assert(app.includes("if(scope==='mock')q=q.filter(currentYear13PureMockQuestion)"));
 assert(!app.includes("q.mock===true||q.level==='AS'"));
 assert(!app.includes("x.mock===true||x.level==='AS'"));
 
