@@ -4699,6 +4699,39 @@ function renderPaperArchive(){
  for(const [group,topics] of all)for(const [topic,n] of topics)if(n.cards>0&&!sourced.get(topic))notSourced.push(topic);
  document.getElementById('topicOutsideResources').innerHTML='<p class="archive-label">Topics without an indexed past-paper part: '+notSourced.length+'. These use independently written practice in the app, which should not be mistaken for original AQA questions. <a href="'+PMT_BY_TOPIC[subject]+'" target="_blank" rel="noopener noreferrer">Explore original AQA questions on PMT ↗</a></p>';
 }
+// v451: honest original-source archive for 7357; no copied exam questions.
+// The archive is a catalogue, not a claim that every past question is in the app.
+function renderAqaPureArchive(){
+ const root=document.getElementById('mathsPureArchiveV451');
+ if(!root)return;
+ const maths=document.getElementById('examSubject')?.value==='Maths';
+ root.hidden=!maths;
+ if(!maths)return;
+ const data=aqaPurePaperArchive;
+ if(!data){root.textContent='AQA Pure paper index unavailable offline until the optional archive is cached. The rest of your questions still work.';return}
+ const link=(url,label)=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+'</a>';
+ const yearSeries=[2025,2024,2023,2022,2021,2020,2019,2018];
+ const papersHtml=yearSeries.map(year=>{
+  const rows=data.papers.filter(p=>p.year===year).sort((a,b)=>a.paper-b.paper);
+  const entries=rows.map(p=>'<li><b>7357/'+p.paper+'</b> · '+esc(p.paperContent)+' · '+
+    link(p.sourceIndex,p.year>=2024?'Question-topic index':'Paper and mark-scheme catalogue')+
+    ' <small>('+esc(p.year===2025?'2025 topics indexed':p.year===2024?'2024 mapping incomplete':'question-by-question audit outstanding')+')</small></li>').join('');
+  return '<details class="pure-paper-year" '+(year===2025?'open':'')+'><summary>'+esc(rows[0]?.sitting||'')+' '+year+' · 3 papers</summary><ul>'+entries+'</ul></details>';
+ }).join('');
+ const sourceRows=[1,2,3].map(paper=>{
+  const rows=data.topics2025.filter(t=>t.paper===paper&&t.classification==='pure');
+  const list=rows.map(q=>'<li><b>Q'+q.question+'</b> · '+esc(q.skill)+
+   (q.currentMockRecommended?' <small>taught-method practice</small>':' <small>additional or unconfirmed for this mock</small>')+'</li>').join('');
+  const page=rows[0]?.source||'https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/assessment-resources';
+  return '<details class="pure-paper-year"><summary>June 2025 · Paper '+paper+' · '+rows.length+' Pure method entries</summary>'+
+    '<p>'+link(page,'Open the indexed source questions')+'</p><ul>'+list+'</ul></details>';
+ }).join('');
+ root.innerHTML='<h4>AQA 7357 · Pure questions across all three papers</h4>'+
+  '<p><strong>24 public papers linked</strong> (2018–2025). Only the 2025 index has been classified here question by question. The full original papers and mark schemes remain on external source pages; 2024 and earlier question-level verification is still open.</p>'+
+  papersHtml+
+  '<h4>June 2025 · Pure question-topic audit</h4><p>40 Pure entries from a secondary topic index, and one separate mixed Mechanics-context entry. These are method labels, not original question text or verified mark-scheme copies.</p>'+
+  sourceRows+'<p>'+link('https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/specification-at-a-glance','AQA specification and three-paper structure')+'</p>';
+}
 function refreshExamFilters(defaultIfEmpty=false){
  const sub=document.getElementById('examSubject').value,level=document.getElementById('examLevel').value,base=subjectExam(sub).filter(q=>level==='both'||q.level===level),
  years=[...new Set(base.map(q=>q.year))].sort((a,b)=>a==='Practice'?1:b==='Practice'?-1:b-a),
@@ -4742,6 +4775,7 @@ function refreshExamFilters(defaultIfEmpty=false){
  bindTopicGroupControls('exam');document.querySelectorAll('[data-exam-type]').forEach(el=>el.onchange=()=>{el.checked?examTypes.add(el.dataset.examType):examTypes.delete(el.dataset.examType)});
  renderTopicCounts();
  renderPaperArchive();
+ renderAqaPureArchive();
  const yearCounts=years.map(y=>y+': '+base.filter(q=>q.year===y).length).join(' · ');
  document.getElementById('examCoverage').textContent='Self-contained bank: '+base.length+' question parts (including separately labelled practice)'+(yearCounts?' · '+yearCounts:'')+'. Related subparts are grouped; missing-context questions are excluded. Coverage counts refer to app topic categories, not every individual specification requirement. Years with no indexed parts are visible but disabled; 2015 and earlier reform-era papers are in the separate legacy archive. Official past-paper coverage remains incomplete.';
 }
