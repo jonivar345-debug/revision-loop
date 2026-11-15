@@ -4062,7 +4062,8 @@ function currentYear13PureMockCard(c){
  return Boolean(c&&/^y13_v(?:450|462)_card_\d{3}$/.test(c.id||'')&&c.subject==='Maths'&&
   c.stage==='A2'&&c.courseTopic==='Year 13 Pure · taught mock'&&
   c.year13PureMock===true&&c.mock===true&&c.taught===true&&c.active===true&&
-  c.scope==='mock'&&c.specRef&&(/^3\.(?:2|3|5|6|7|8|9)$/.test(c.specRef)||\n   (/^y13_v462_card_\d{3}$/.test(c.id||'')&&c.specRef==='3.4')));
+  c.scope==='mock'&&c.specRef&&(/^3\.(?:2|3|5|6|7|8|9)$/.test(c.specRef)||
+   (/^y13_v462_card_\d{3}$/.test(c.id||'')&&c.specRef==='3.4')));
 }
 function currentYear13PureMockQuestion(q){
  return Boolean(q&&/^y13_v(?:450|451|452|457)_q_\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&
