@@ -78,7 +78,7 @@ assert(app.includes("const V461_2022_P1_URL='./maths_pure_2022_p1_v461.json'"));
 assert(app.includes('aqaPure2022P1Audit=v461Pack.version'));
 assert(app.includes('...validatedV461Questions'));
 assert(app.includes('2022 Paper 1 · 15 questions'));
-assert(html.includes('papers=v461'));
+assert(html.includes('papers=v465'));
 assert(sw.includes("'./maths_pure_2022_p1_v461.json'"));
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
 console.log('PASS v461: June 2022 AQA Pure Paper 1 all 15 Qs/100 marks method audit, 14 original worked, 156 total / 126 taught / 30 optional; preserved IDs, progress keys and no copied AQA text');
