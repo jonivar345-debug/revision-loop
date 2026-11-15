@@ -50,7 +50,7 @@ try{
   assert.equal(await page.locator('#characterShop [data-character]').count(),0);
   await page.locator('#shopCharacterSearch').fill('C.C.');
   const priceText=await page.locator('#characterShop [data-character="cc"]').textContent();
-  const cost=Number(priceText.match(/Unlock · (\\d+) points/)?.[1]);
+  const cost=Number(priceText.match(/Unlock · (\d+) points/)?.[1]);
   assert(Number.isFinite(cost)&&cost>0&&cost<=85,'Character must have a valid affordable price: '+priceText);
   const expectedPoints=85-cost;
   await page.locator('#characterShop [data-character="cc"]').click();
