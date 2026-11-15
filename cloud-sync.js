@@ -46,6 +46,21 @@ function buttons(){
   visible('cloudResetAll',!!user&&phase!=='loading'&&phase!=='resetting'&&phase!=='blocked');
   if(el('cloudAccountLabel'))el('cloudAccountLabel').textContent=user?
     'Connected progress account: '+(user.email?.endsWith('@example.com')?'private key':(user.email||'signed in')):'Not signed in. Browser saving remains available.';
+  // v453: collapse the top key instructions only after a genuinely active
+  // cloud connection. Setup, conflict, restore and error states stay visible.
+  const quick=el('cloudQuickAccess'),manage=el('cloudManageToggle');
+  const connected=!!user&&phase==='active';
+  if(quick){
+    const wasConnected=quick.dataset.connected==='true';
+    quick.dataset.connected=String(connected);
+    if(!connected||!wasConnected)quick.classList.remove('expanded');
+  }
+  if(manage){
+    manage.hidden=!connected;
+    const expanded=!!quick?.classList.contains('expanded');
+    manage.setAttribute('aria-expanded',String(expanded));
+    manage.textContent=expanded?'Hide sync settings':'Manage sync';
+  }
 }
 function changePhase(next,text){phase=next;message(text);buttons();}
 function checkpoint(){
