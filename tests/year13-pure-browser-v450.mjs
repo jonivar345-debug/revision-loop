@@ -53,8 +53,27 @@ try{
    oldProgress:progress.historic_math?.good,oldExam:profile.examResults.oldExam?.last?.marks,
    xp:profile.lifetimeXp
   }));
-  assert.deepEqual(bank,{newCards:123,newQuestions:62,mockCards:110,mockQuestions:56,
-   optionalCards:13,optionalExam:6,physicsPaper2:227,oldProgress:4,oldExam:3,xp:140});
+  assert.deepEqual(bank,{newCards:123,newQuestions:62,mockCards:110,mockQuestions:73,
+   optionalCards:13,optionalExam:10,physicsPaper2:227,oldProgress:4,oldExam:3,xp:140});
+  const v451=await page.evaluate(()=>({
+   newWorked:examQuestions.filter(q=>/^y13_v451_q_\d{3}$/.test(q.id)).length,
+   optionalNew:examQuestions.filter(q=>/^y13_v451_q_\d{3}$/.test(q.id)&&q.year13Optional).length,
+   archived:aqaPurePaperArchive?.papers.length,
+   indexedPure:aqaPurePaperArchive?.topics2025.filter(q=>q.classification==='pure').length,
+   linkedOlder:aqaPurePaperArchive?.papers.filter(x=>x.year<2025).length
+  }));
+  assert.deepEqual(v451,{newWorked:21,optionalNew:4,archived:24,indexedPure:40,linkedOlder:21});
+  const archive=page.locator('#mathsPureArchiveV451');
+  await page.locator('.study-type-btn[data-study="exam"]').click();
+  await page.locator('details.paper-library > summary').click();
+  assert(await archive.isVisible(),'AQA Pure archive should be visible in Maths exam mode');
+  assert.equal(await archive.locator('details.pure-paper-year').count(),11,'Eight archive years and three 2025 question-method panels');
+  const descriptions=await archive.innerText();
+  assert(descriptions.includes('24 public papers linked')&&descriptions.includes('question-level verification is still open'));
+  await archive.locator('details.pure-paper-year').nth(8).locator('summary').click();
+  const questionText=await archive.innerText();
+  assert(questionText.includes('2025')&&questionText.includes('Q17'));
+  await page.locator('.study-type-btn[data-study="mock"]').click();
   assert.equal(await page.locator('#mockSubject option').count(),1);
   assert.equal(await page.locator('#mockSubject').inputValue(),'Maths');
   assert(await page.locator('#mathsMockScopeNote').isVisible());
@@ -65,7 +84,7 @@ try{
    const obj=item.type==='card'?cards.find(x=>x.id===item.id):examQuestions.find(x=>x.id===item.id);
    return {id:item.id,type:item.type,subject:obj.subject,flag:obj.year13PureMock,level:obj.stage||obj.level};
   }));
-  assert(audit.every(x=>x.subject==='Maths'&&x.flag===true&&/^y13_v450_/.test(x.id)));
+  assert(audit.every(x=>x.subject==='Maths'&&x.flag===true&&/^y13_v45[01]_/.test(x.id)));
   assert(audit.some(x=>x.type==='card')&&audit.some(x=>x.type==='exam'));
   assert.equal((await page.evaluate(()=>buildMockSessionItems('Physics','mixed',10))).length,0);
   assert.equal((await page.evaluate(()=>buildMockSessionItems('Chemistry','mixed',10))).length,0);
@@ -95,11 +114,11 @@ try{
    years:[...examYears],size:examGroups().length,
    safe:examGroups().every(g=>g.every(currentYear13PureMockQuestion))
   }));
-  assert.deepEqual(exam,{sub:'Maths',level:'A-level',years:['Practice'],size:56,safe:true});
+  assert.deepEqual(exam,{sub:'Maths',level:'A-level',years:['Practice'],size:73,safe:true});
   await page.locator('#startExam').click();
   const examSession=await page.evaluate(()=>({
    kind:activeSession.kind,size:activeSession.items.length,
-   safe:activeSession.items.every(it=>it.type==='exam'&&it.id.startsWith('y13_v450_q_'))
+   safe:activeSession.items.every(it=>it.type==='exam'&&/^y13_v45[01]_q_/.test(it.id))
   }));
   assert.equal(examSession.kind,'exam');assert.equal(examSession.size,10);assert(examSession.safe);
   assert(await page.locator('#examAnswer').isVisible());
@@ -117,7 +136,7 @@ try{
   assert(geometry.scroll<=geometry.screen+3, 'Horizontal page overflow at '+width+'px');
   const severe=errors.filter(e=>!/firebase/i.test(e));
   assert.deepEqual(severe,[]);
-  console.log('PASS v450 '+width+'px: 123 cards/62 worked problems, 110+56 mock-only, optional exclusions, Paper 2 intact, unlimited, skip, exam preset, cloud/Xp preservation');
+  console.log('PASS v450 '+width+'px: 123 cards/83 worked problems, 110+73 mock-only, optional exclusions, Paper 2 intact, unlimited, skip, exam preset, cloud/Xp preservation');
   await ctx.close();
  }
 }finally{
