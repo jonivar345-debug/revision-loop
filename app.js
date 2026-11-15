@@ -61,6 +61,8 @@ const AS_P2_COACH_URL='./physics_as_paper2_guided_v430.json';
 const V439_PHYSICS_RECALL_URL='./physics_mock_practical_recall_v439.json';
 const V439_PHYSICS_EXAM_URL='./physics_mock_practical_exam_v439.json';
 const V450_YEAR13_PURE_URL='./maths_year13_pure_v450.json';
+const V451_PURE_METHODS_URL='./maths_pure_past_methods_v451.json';
+const V451_AQA_PAPER_INDEX_URL='./editorial/aqa-maths-pure-7357-paper-index-v451.json';
 // v372: five original first-mock AS Pure questions need actual multi-step self-review.
 const V372_YEAR1_PURE_MANUAL=Object.freeze([{"id":"task1_v271_maths_pure_q03","specRef":"3.11","prompt":"Points A, B and C have position vectors (1,2), (7,−1) and (−2,8). P is the midpoint of BC and Q is the midpoint of AC. (a) Find the position vectors of P and Q. (b) Show by vector methods that the points on AP and BQ two-thirds of the way from A and B respectively coincide. (c) Give their common position vector and the ratio AG:GP. [8 marks]","marks":8},{"id":"task1_v271_maths_pure_q04","specRef":"3.4","prompt":"A circle is given by x²+y²−4x−6y−12=0. (a) Find its centre and radius. (b) Verify that P=(5,7) lies on the circle. (c) Find an exact equation of the tangent to the circle at P. (d) Find both axis intercepts of this tangent. [7 marks]","marks":7},{"id":"task1_v271_maths_pure_q05","specRef":"3.3","prompt":"Let f(x)=x²−4x+1 and g(x)=−2f(1−2x)+3. (a) Complete the square for f. (b) Describe a valid ordered sequence of graph transformations giving y=g(x) from y=f(x). (c) Express g as a quadratic in x and find the turning point. (d) Find both exact x-intercepts of g. [9 marks]","marks":9},{"id":"task1_v271_maths_pure_q06","specRef":"3.5","prompt":"In the expansion of (1+ax)⁷, the coefficient of x² is 84 and the coefficient of x³ is negative. (a) Show that a²=4. (b) Find a. (c) Calculate the coefficients of x³ and x⁴, showing the binomial coefficients used. [7 marks]","marks":7},{"id":"task1_v271_maths_pure_q07","specRef":"3.9","prompt":"For y=x²−5x+6 over 0≤x≤4, calculate (a) the signed definite integral from 0 to 4 and (b) the total area between the curve and the x-axis. You must show where the graph lies below the axis and split the integral correctly. Give exact answers. [8 marks]","marks":8}]);
 function applyV372Year1PureManualReview(questions){
@@ -2111,7 +2113,7 @@ function applyV221RpCorrections(deckCards){
 /* v221 RP correction block end */
 const PIN_HASH='02a80993805958408c14d68623a229c86777980c55403d0c2fecf46904fe367c';
 const PROGRESS_KEY='revisionLoopProgress5',PROFILE_KEY='revisionLoopProfile11',SETTINGS_KEY='revisionLoopSettings11';
-let cards=[],examQuestions=[],deckMeta={},coverage={},deckVersion=0,bankVersion=0;
+let cards=[],examQuestions=[],deckMeta={},coverage={},deckVersion=0,bankVersion=0,aqaPurePaperArchive=null;
 let progress=load(PROGRESS_KEY,{});
 let profile=load(PROFILE_KEY,{});
 let settings=load(SETTINGS_KEY,{});
@@ -4060,7 +4062,7 @@ function currentYear13PureMockCard(c){
   c.scope==='mock'&&c.specRef&&/^3\.(?:2|3|5|6|7|8|9)$/.test(c.specRef));
 }
 function currentYear13PureMockQuestion(q){
- return Boolean(q&&/^y13_v450_q_\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&
+ return Boolean(q&&/^y13_v45[01]_q_\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&
   q.level==='A-level'&&q.courseTopic==='Year 13 Pure · taught mock'&&
   q.year13PureMock===true&&q.mock===true&&q.taught===true&&
   q.standalone===true&&q.requiresWorking===true&&q.manualWorkingReview===true&&
@@ -6611,7 +6613,29 @@ async function sync(manual=false){
   Array.isArray(q.markPointMarks)&&q.markPointMarks.length===q.marks&&
   q.markPointMarks.every(m=>m===1)&&typeof q.prompt==='string'&&
   typeof q.modelAnswer==='string'&&(q.year13PureMock===true||q.year13Optional===true));
- const added=[...(x.questions||[]),...extraBanks.flatMap(bank=>bank.questions||[]),...validatedV450Questions],seen=new Set();
+ // v451: original method variants are append-only. Source-index metadata never
+ // stands in for a question paper, mark scheme, or a claim of past-paper equivalence.
+ let v451Methods={questions:[]},v451Index=null;
+ try{
+  const [qr,ir]=await Promise.all([
+   fetch(V451_PURE_METHODS_URL+'?v='+Date.now(),{cache:'no-store'}),
+   fetch(V451_AQA_PAPER_INDEX_URL+'?v='+Date.now(),{cache:'no-store'})
+  ]);
+  if(qr.ok)v451Methods=await qr.json();
+  if(ir.ok)v451Index=await ir.json();
+ }catch(error){console.warn('Optional AQA Pure archive or method pack unavailable',error)}
+ aqaPurePaperArchive=v451Index?.version==='v451'&&Array.isArray(v451Index.papers)&&v451Index.papers.length===24?
+  v451Index:null;
+ const validatedV451Questions=(Array.isArray(v451Methods.questions)?v451Methods.questions:[]).filter(q=>
+  q&&/^y13_v451_q_\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&q.level==='A-level'&&
+  allowedV450Refs.has(q.specRef)&&q.year==='Practice'&&q.standalone===true&&
+  q.requiresWorking===true&&q.manualWorkingReview===true&&q.verificationLevel==='original-exam-style'&&
+  Number.isInteger(q.marks)&&q.marks>=3&&q.marks<=8&&
+  Array.isArray(q.markPoints)&&q.markPoints.length===q.marks&&
+  Array.isArray(q.markPointMarks)&&q.markPointMarks.length===q.marks&&
+  q.markPointMarks.every(m=>m===1)&&typeof q.prompt==='string'&&
+  typeof q.modelAnswer==='string'&&(q.year13PureMock===true||q.year13Optional===true));
+ const added=[...(x.questions||[]),...extraBanks.flatMap(bank=>bank.questions||[]),...validatedV450Questions,...validatedV451Questions],seen=new Set();
  // v439 optional Physics practical/data additions. Keep the original 56
  // flashcard and 52 exam supplement indices and all historical inventories stable.
  let v439PhysicsRecall={cards:[]};
