@@ -4065,7 +4065,7 @@ function currentYear13PureMockCard(c){
   c.scope==='mock'&&c.specRef&&/^3\.(?:2|3|5|6|7|8|9)$/.test(c.specRef));
 }
 function currentYear13PureMockQuestion(q){
- return Boolean(q&&/^y13_v(?:450|451|452|457)_q_\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&
+ return Boolean(q&&/^y13_v(?:450|451|452|457|458)_q_\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&
   q.level==='A-level'&&q.courseTopic==='Year 13 Pure · taught mock'&&
   q.year13PureMock===true&&q.mock===true&&q.taught===true&&
   q.standalone===true&&q.requiresWorking===true&&q.manualWorkingReview===true&&
