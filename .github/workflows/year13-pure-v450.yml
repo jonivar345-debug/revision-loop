@@ -1,0 +1,34 @@
+name: v450 Year 13 Pure Maths mock and content QA
+on:
+  pull_request:
+    paths:
+      - maths_year13_pure_v450.json
+      - app.js
+      - index.html
+      - sw.js
+      - tests/year13-pure-v450.cjs
+      - tests/year13-pure-browser-v450.mjs
+      - .github/workflows/year13-pure-v450.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  maths-year13-pure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Source and mark-scheme validity
+        run: |
+          node --check app.js
+          node tests/year13-pure-v450.cjs
+          node tests/physics-paper2-2025-visual-v449.cjs
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Year 13 only mock, flash, exam, optional topics and saved progress in Chromium
+        run: node tests/year13-pure-browser-v450.mjs

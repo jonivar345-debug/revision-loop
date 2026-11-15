@@ -60,6 +60,7 @@ const V375_CHEM_KP_CATALYST_URL='./chemistry_kp_catalyst_recall_v375.json';
 const AS_P2_COACH_URL='./physics_as_paper2_guided_v430.json';
 const V439_PHYSICS_RECALL_URL='./physics_mock_practical_recall_v439.json';
 const V439_PHYSICS_EXAM_URL='./physics_mock_practical_exam_v439.json';
+const V450_YEAR13_PURE_URL='./maths_year13_pure_v450.json';
 // v372: five original first-mock AS Pure questions need actual multi-step self-review.
 const V372_YEAR1_PURE_MANUAL=Object.freeze([{"id":"task1_v271_maths_pure_q03","specRef":"3.11","prompt":"Points A, B and C have position vectors (1,2), (7,−1) and (−2,8). P is the midpoint of BC and Q is the midpoint of AC. (a) Find the position vectors of P and Q. (b) Show by vector methods that the points on AP and BQ two-thirds of the way from A and B respectively coincide. (c) Give their common position vector and the ratio AG:GP. [8 marks]","marks":8},{"id":"task1_v271_maths_pure_q04","specRef":"3.4","prompt":"A circle is given by x²+y²−4x−6y−12=0. (a) Find its centre and radius. (b) Verify that P=(5,7) lies on the circle. (c) Find an exact equation of the tangent to the circle at P. (d) Find both axis intercepts of this tangent. [7 marks]","marks":7},{"id":"task1_v271_maths_pure_q05","specRef":"3.3","prompt":"Let f(x)=x²−4x+1 and g(x)=−2f(1−2x)+3. (a) Complete the square for f. (b) Describe a valid ordered sequence of graph transformations giving y=g(x) from y=f(x). (c) Express g as a quadratic in x and find the turning point. (d) Find both exact x-intercepts of g. [9 marks]","marks":9},{"id":"task1_v271_maths_pure_q06","specRef":"3.5","prompt":"In the expansion of (1+ax)⁷, the coefficient of x² is 84 and the coefficient of x³ is negative. (a) Show that a²=4. (b) Find a. (c) Calculate the coefficients of x³ and x⁴, showing the binomial coefficients used. [7 marks]","marks":7},{"id":"task1_v271_maths_pure_q07","specRef":"3.9","prompt":"For y=x²−5x+6 over 0≤x≤4, calculate (a) the signed definite integral from 0 to 4 and (b) the total area between the curve and the x-axis. You must show where the graph lies below the axis and split the integral correctly. Give exact answers. [8 marks]","marks":8}]);
 function applyV372Year1PureManualReview(questions){
@@ -4049,13 +4050,31 @@ function mockEligibleQuestion(q){
  return !/(?:\bradians?\b|π)/i.test(String(q.prompt||''));
 }
 
+// v450: the sole remaining current school mock is the taught Year 13 Pure Maths paper.
+// Historical mockEligibleCard/Question remain for legacy evidence and earlier review IDs;
+// all current mock and mock-focus screens below use these intentionally narrow gates.
+function currentYear13PureMockCard(c){
+ return Boolean(c&&/^y13_v450_card_\d{3}$/.test(c.id||'')&&c.subject==='Maths'&&
+  c.stage==='A2'&&c.courseTopic==='Year 13 Pure · taught mock'&&
+  c.year13PureMock===true&&c.mock===true&&c.taught===true&&c.active===true&&
+  c.scope==='mock'&&c.specRef&&/^3\.(?:2|3|5|6|7|8|9)$/.test(c.specRef));
+}
+function currentYear13PureMockQuestion(q){
+ return Boolean(q&&/^y13_v450_q_\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&
+  q.level==='A-level'&&q.courseTopic==='Year 13 Pure · taught mock'&&
+  q.year13PureMock===true&&q.mock===true&&q.taught===true&&
+  q.standalone===true&&q.requiresWorking===true&&q.manualWorkingReview===true&&
+  Array.isArray(q.markPoints)&&q.markPoints.length===q.marks&&
+  /^3\.(?:2|3|5|6|7|8|9)$/.test(q.specRef||''));
+}
+
 // Build a bounded batch. Unlimited sessions request new batches as needed rather
 // than allocating the entire mock bank or silently ending after 30 items.
 // Keep linked exam parts together and work through unseen material first.
 function buildMockSessionItems(sub,mode,count,seenCards=new Set(),seenGroups=new Set()){
- const cardPool=cards.filter(c=>c.active!==false&&c.subject===sub&&mockEligibleCard(c));
+ const cardPool=sub==='Maths'?cards.filter(currentYear13PureMockCard):[];
  // Mock revision must not inherit the unrelated Exam Questions tab's AS/A-level filter.
- const qAll=examQuestions.filter(q=>q.subject===sub&&q.standalone!==false&&mockEligibleQuestion(q));
+ const qAll=sub==='Maths'?examQuestions.filter(currentYear13PureMockQuestion):[];
  const groups=new Map();
  for(const q of qAll){if(!groups.has(q.groupId))groups.set(q.groupId,[]);groups.get(q.groupId).push(q)}
  for(const g of groups.values())g.sort((x,y)=>String(x.groupOrder).localeCompare(String(y.groupOrder),undefined,{numeric:true}));
@@ -4100,17 +4119,17 @@ function buildMockSessionItems(sub,mode,count,seenCards=new Set(),seenGroups=new
  return items;
 }
 function startMockSession(){
- const sub=document.getElementById('mockSubject').value,mode=document.getElementById('mockMode').value;
+ const sub='Maths',mode=document.getElementById('mockMode').value;
  const selection=document.getElementById('mockCount').value,unlimited=selection==='unlimited';
  const count=unlimited?15:(Number(selection)||15);
  const seenCards=new Set(),seenGroups=new Set();
  const items=buildMockSessionItems(sub,mode,count,seenCards,seenGroups);
  if(!items.length){showToast('No mock material is available for that selection yet');return}
- activeSession={kind:'mock',items,index:0,title:sub+' mock revision',
+ activeSession={kind:'mock',items,index:0,title:'Year 13 Pure Maths · taught mock',
   ...(unlimited?{unlimited:true,mockSubject:sub,mockMode:mode,seenCards,seenGroups}:{})};
  currentCardId=null;renderAll();
 }
-function flashEligible(c){return flashScopeFilter==='mock'?mockEligibleCard(c):flashScopeFilter==='taught'?taughtCard(c):true}
+function flashEligible(c){return flashScopeFilter==='mock'?currentYear13PureMockCard(c):flashScopeFilter==='taught'?taughtCard(c):true}
 function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c)&&(!settings.recallMustKnowOnly||isRecallMustKnow(c)))}
 function startFlashSession(){
  const count=Number(document.getElementById('flashCount').value),pool=selectedFlashCards();if(!pool.length){showToast(settings.recallMustKnowOnly?'No must-memorise cards in those topics':'Pick at least one topic');return}
@@ -4168,8 +4187,8 @@ function awardExam(q,marks,answer,missedPoints){
  award(marks,'exam');save();advanceSession();
 }
 
-function challengeCards(sub,scope){let a=cards.filter(c=>c.active!==false&&(!sub||c.subject===sub));return scope==='mock'?a.filter(mockEligibleCard):a.filter(taughtCard)}
-function challengeQuestions(sub,scope){let q=examQuestions.filter(x=>x.standalone!==false&&(!sub||x.subject===sub));if(scope==='mock')q=q.filter(mockEligibleQuestion);return q}
+function challengeCards(sub,scope){let a=cards.filter(c=>c.active!==false&&(!sub||c.subject===sub));return scope==='mock'?a.filter(currentYear13PureMockCard):a.filter(taughtCard)}
+function challengeQuestions(sub,scope){let q=examQuestions.filter(x=>x.standalone!==false&&(!sub||x.subject===sub));if(scope==='mock')q=q.filter(currentYear13PureMockQuestion);return q}
 function makeChallenge(sub,scope){
  const key=dateKey()+'|'+(sub||'All')+'|'+scope;if(profile.dailyChallenges[key])return {key,...profile.dailyChallenges[key]};
  const cpool=challengeCards(sub,scope),weak=[...cpool].sort((a,b)=>
@@ -4529,7 +4548,10 @@ function refreshFlashTopics(defaultIfEmpty=false){
  const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);
  const topics=[...new Set(base.map(flashTopicLabel))];
  flashTopics=new Set([...flashTopics].filter(t=>topics.includes(t)));
- if(defaultIfEmpty&&!flashTopics.size){flashScopeFilter='taught';base.filter(taughtCard).forEach(c=>flashTopics.add(flashTopicLabel(c)));}
+ if(defaultIfEmpty&&!flashTopics.size){
+  flashScopeFilter=sub==='Maths'?'mock':'taught';
+  base.filter(sub==='Maths'?currentYear13PureMockCard:taughtCard).forEach(c=>flashTopics.add(flashTopicLabel(c)));
+ }
  document.getElementById('flashTopics').innerHTML=groupedTopicPicker(sub,'flash',flashTopics);
  document.querySelectorAll('[data-flash-topic]').forEach(el=>el.onchange=()=>{el.checked?flashTopics.add(el.dataset.flashTopic):flashTopics.delete(el.dataset.flashTopic);renderTopicCounts()});bindTopicGroupControls('flash');
  renderTopicCounts();
@@ -4537,7 +4559,7 @@ function refreshFlashTopics(defaultIfEmpty=false){
 function applyFlashPreset(p){
  flashScopeFilter=['mock','taught','all'].includes(p)?p:'all';
  const base=subjectCards(document.getElementById('flashSubject').value);flashTopics.clear();
- if(p!=='clear'){const filtered=p==='mock'?base.filter(mockEligibleCard):p==='taught'?base.filter(taughtCard):base;filtered.forEach(c=>flashTopics.add(flashTopicLabel(c)))}
+ if(p!=='clear'){const filtered=p==='mock'?base.filter(currentYear13PureMockCard):p==='taught'?base.filter(taughtCard):base;filtered.forEach(c=>flashTopics.add(flashTopicLabel(c)))}
  refreshFlashTopics(false);
 }
 const PMT_PAPER_INDEX={
@@ -4682,6 +4704,15 @@ function refreshExamFilters(defaultIfEmpty=false){
  topics=[...new Set(subjectCards(sub).map(flashTopicLabel))],
  types=[...new Set(base.map(q=>q.questionType).filter(Boolean))].sort();
  examYears=new Set([...examYears].filter(y=>years.includes(y)));examTopics=new Set([...examTopics].filter(t=>topics.includes(t)));examTypes=new Set([...examTypes].filter(t=>types.includes(t)));
+ if(defaultIfEmpty&&sub==='Maths'&&level==='A-level'&&
+    !examYears.size&&!examTopics.size&&!examTypes.size){
+  const current=base.filter(currentYear13PureMockQuestion);
+  if(current.length){
+   examYears=new Set(['Practice']);
+   examTopics=new Set(current.map(examTopicLabel));
+   examTypes=new Set(current.map(q=>q.questionType));
+  }
+ }
  if(defaultIfEmpty&&!examYears.size)years.forEach(y=>examYears.add(y));
  if(defaultIfEmpty&&!examTopics.size)base.forEach(q=>examTopics.add(examTopicLabel(q)));
  if(defaultIfEmpty&&!examTypes.size)types.forEach(t=>examTypes.add(t));
@@ -6556,7 +6587,31 @@ async function sync(manual=false){
   }else continue;
   knownFlashIds.add(c.id);cards.push(c);
  }
- const added=[...(x.questions||[]),...extraBanks.flatMap(bank=>bank.questions||[])],seen=new Set();
+ // v450: append-only Year 13 Pure Maths revision pack. No historic file indices or saved IDs change.
+ // Mock topics are deliberately limited to taught Year 13 Pure; uncertainty topics remain in general A-level practice.
+ let v450Maths={cards:[],questions:[]};
+ try{
+  const response=await fetch(V450_YEAR13_PURE_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(response.ok)v450Maths=await response.json();
+ }catch(error){console.warn('Optional Year 13 Pure Maths pack unavailable',error)}
+ const allowedV450Refs=new Set(['3.2','3.3','3.5','3.6','3.7','3.8','3.9','3.10','3.11']);
+ for(const c of Array.isArray(v450Maths.cards)?v450Maths.cards:[]){
+  if(!c||!/^y13_v450_card_\d{3}$/.test(c.id||'')||knownFlashIds.has(c.id)||
+     c.subject!=='Maths'||c.stage!=='A2'||!allowedV450Refs.has(c.specRef)||
+     c.active!==true||typeof c.front!=='string'||typeof c.back!=='string'||!c.front||!c.back||
+     c.year13PureMock!==true&&c.year13Optional!==true)continue;
+  knownFlashIds.add(c.id);cards.push(c);
+ }
+ const validatedV450Questions=(Array.isArray(v450Maths.questions)?v450Maths.questions:[]).filter(q=>
+  q&&/^y13_v450_q_\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&q.level==='A-level'&&
+  allowedV450Refs.has(q.specRef)&&q.year==='Practice'&&q.standalone===true&&
+  q.requiresWorking===true&&q.manualWorkingReview===true&&q.verificationLevel==='original-exam-style'&&
+  Number.isInteger(q.marks)&&q.marks>=3&&q.marks<=9&&
+  Array.isArray(q.markPoints)&&q.markPoints.length===q.marks&&
+  Array.isArray(q.markPointMarks)&&q.markPointMarks.length===q.marks&&
+  q.markPointMarks.every(m=>m===1)&&typeof q.prompt==='string'&&
+  typeof q.modelAnswer==='string'&&(q.year13PureMock===true||q.year13Optional===true));
+ const added=[...(x.questions||[]),...extraBanks.flatMap(bank=>bank.questions||[]),...validatedV450Questions],seen=new Set();
  // v439 optional Physics practical/data additions. Keep the original 56
  // flashcard and 52 exam supplement indices and all historical inventories stable.
  let v439PhysicsRecall={cards:[]};
@@ -6674,8 +6729,30 @@ document.getElementById('yearsClear').onclick=()=>{examYears.clear();refreshExam
 document.getElementById('examTopicsAll').onclick=()=>{examTopics=new Set(subjectExam(document.getElementById('examSubject').value).map(examTopicLabel));refreshExamFilters(false)};
 document.getElementById('examTopicsWeak').onclick=()=>{const sub=document.getElementById('examSubject').value,exam=subjectExam(sub),ts=[...new Set(exam.map(examTopicLabel))].sort((a,b)=>{const strength=t=>exam.filter(q=>examTopicLabel(q)===t).reduce((n,q)=>n+(profile.topicWeakness[topicKey(sub,q.revisionTopic||q.topic)]||0)+(profile.errorLog.some(z=>z.id===q.id)?2:0),0);return strength(b)-strength(a)});examTopics=new Set(ts.slice(0,Math.max(1,Math.ceil(ts.length/3))));refreshExamFilters(false)};
 document.getElementById('examTopicsClear').onclick=()=>{examTopics.clear();refreshExamFilters(false)};
+document.getElementById('examYear13Preset').onclick=()=>{
+ document.getElementById('examSubject').value='Maths';
+ document.getElementById('examLevel').value='A-level';
+ document.getElementById('examDifficulty').value='all';
+ const current=examQuestions.filter(currentYear13PureMockQuestion);
+ examYears=new Set(['Practice']);
+ examTopics=new Set(current.map(examTopicLabel));
+ examTypes=new Set(current.map(q=>q.questionType));
+ refreshExamFilters(false);renderAll();
+};
 document.getElementById('startExam').onclick=startExamSession;
-document.getElementById('startChallenge').onclick=startChallenge;document.getElementById('challengeSubject').onchange=renderChallenge;document.getElementById('challengeScope').onchange=renderChallenge;
+document.getElementById('startChallenge').onclick=startChallenge;
+document.getElementById('challengeSubject').onchange=()=>{
+ if(document.getElementById('challengeScope').value==='mock'){
+  document.getElementById('challengeSubject').value='Maths';
+ }
+ renderChallenge();
+};
+document.getElementById('challengeScope').onchange=()=>{
+ if(document.getElementById('challengeScope').value==='mock'){
+  document.getElementById('challengeSubject').value='Maths';
+ }
+ renderChallenge();
+};
 document.getElementById('reviewWeakBtn').onclick=buildWeakSession;document.getElementById('redoMistakesBtn').onclick=startMistakes;
 document.getElementById('locationRegion').onchange=()=>{locationVisibleLimit=24;renderLocationGallery();drawGlobe()};document.getElementById('showAllGlobePins').onchange=drawGlobe;document.getElementById('moreLocations').onclick=()=>{locationVisibleLimit+=24;renderLocationGallery()};document.getElementById('moreCharacters').onclick=()=>{characterVisibleLimit+=16;renderShop()};document.getElementById('characterSeries').onchange=()=>{characterVisibleLimit=16;renderShop()};document.getElementById('characterOwnedFilter').onchange=()=>{characterVisibleLimit=16;renderShop()};document.getElementById('specSubject').onchange=renderSyllabusCoverage;document.getElementById('syncBtn').onclick=()=>sync(true);document.getElementById('lockBtn').onclick=lockApp;
 
