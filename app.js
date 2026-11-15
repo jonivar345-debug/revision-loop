@@ -4710,38 +4710,63 @@ function renderAqaPureArchive(){
  root.hidden=!maths;
  if(!maths)return;
  const data=aqaPurePaperArchive;
- if(!data){root.textContent='AQA Pure paper index unavailable offline until the optional archive is cached. The rest of your questions still work.';return}
+ if(!data){root.textContent='AQA Pure paper index unavailable offline until the optional archive is cached. Your practice questions still work.';return}
  const link=(url,label)=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+'</a>';
- const yearSeries=[2025,2024,2023,2022,2021,2020,2019,2018];
- const papersHtml=yearSeries.map(year=>{
+ const verified24=aqaPure2024P2P3Audit;
+ const statusFor=p=>{
+  if(p.year===2024&&p.paper===1&&aqaPure2024P1Audit)return 'Question-paper text and mark-scheme audit; some diagrams pending';
+  if(p.year===2024&&p.paper>1&&verified24)return 'Pure Section A methods checked; full mark-scheme / diagrams pending';
+  if(p.year===2025)return 'Secondary Pure question-topic index only; original paper audit pending';
+  return 'Paper linked; question-by-question Pure method audit pending';
+ };
+ const urlFor=p=>{
+  if(p.year===2024&&p.paper===1&&aqaPure2024P1Audit)return aqaPure2024P1Audit.sourceQuestionPaper;
+  if(p.year===2024&&p.paper>1&&verified24)return verified24.papers.find(x=>x.paper==='7357/'+p.paper)?.sourceQuestionPaper||p.sourceIndex;
+  return p.sourceIndex;
+ };
+ const yearSeries=[2025,2024,2023,2022,2021,2020,2019];
+ const paperYears=yearSeries.map(year=>{
   const rows=data.papers.filter(p=>p.year===year).sort((a,b)=>a.paper-b.paper);
-  const entries=rows.map(p=>'<li><b>7357/'+p.paper+'</b> · '+esc(p.paperContent)+' · '+
-    link(p.year===2024&&p.paper===1&&aqaPure2024P1Audit?aqaPure2024P1Audit.sourceQuestionPaper:p.sourceIndex,p.year===2024&&p.paper===1&&aqaPure2024P1Audit?'Verified 2024 question paper':p.year>=2024?'Question-topic index':'Paper and mark-scheme catalogue')+
-    ' <small>('+esc(p.year===2025?'2025 topics indexed':p.year===2024&&p.paper===1&&aqaPure2024P1Audit?'2024 Paper 1 methods text-audited':p.year===2024?'2024 Paper 2/3 pending':'question-by-question audit outstanding')+')</small></li>').join('');
-  return '<details class="pure-paper-year" '+(year===2025?'open':'')+'><summary>'+esc(rows[0]?.sitting||'')+' '+year+' · 3 papers</summary><ul>'+entries+'</ul></details>';
+  const labels=rows.map(p=>'<li><b>7357/'+p.paper+'</b> · '+esc(p.paperContent)+' · '+link(urlFor(p),'Open paper/source')+
+   ' <small>· '+esc(statusFor(p))+'</small></li>').join('');
+  return '<details class="pure-paper-year" '+(year===2024?'open':'')+'><summary>'+
+   esc(rows[0]?.sitting||'')+' '+year+' · '+rows.length+' papers</summary><ul>'+labels+'</ul></details>';
  }).join('');
  const sourceRows=[1,2,3].map(paper=>{
   const rows=data.topics2025.filter(t=>t.paper===paper&&t.classification==='pure');
   const list=rows.map(q=>'<li><b>Q'+q.question+'</b> · '+esc(q.skill)+
-   (q.currentMockRecommended?' <small>taught-method practice</small>':' <small>additional or unconfirmed for this mock</small>')+'</li>').join('');
+   '<small> · '+esc(q.currentMockRecommended?'Taught Pure method':'Optional or unconfirmed for mock')+'</small></li>').join('');
   const page=rows[0]?.source||'https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/assessment-resources';
-  return '<details class="pure-paper-year"><summary>June 2025 · Paper '+paper+' · '+rows.length+' Pure method entries</summary>'+
-    '<p>'+link(page,'Open the indexed source questions')+'</p><ul>'+list+'</ul></details>';
+  return '<details class="pure-paper-year"><summary>2025 Paper '+paper+' · '+rows.length+' secondary Pure topic entries</summary>'+
+   '<p>'+link(page,'Topic-source listing')+'</p><ul>'+list+'</ul></details>';
  }).join('');
- const audit24=aqaPure2024P1Audit;
- const rows24=audit24?.inventory||[];
- const audit24Html=audit24?
-  '<h4>June 2024 · Paper 1 audited methods (20 questions, 100 marks)</h4>'+
-  '<p>Original question paper and final AQA mark scheme have been reviewed for the text of all 20 questions and their marks. Diagram-dependent visual equivalence is still pending; the 11 added problems are separately authored practice, not past-paper copies. Paper 2 and Paper 3 audits remain open. '+link(audit24.sourceQuestionPaper,'Question paper')+' · '+link(audit24.sourceMarkScheme,'Final mark scheme')+'</p>'+
-  '<details class="pure-paper-year"><summary>Show 20 June 2024 Paper 1 methods and mock eligibility</summary><ul>'+
-  rows24.map(q=>'<li><b>Q'+q.question+' ('+q.marks+' marks)</b> · '+esc(q.method)+
-   '<small> · '+esc(q.currentMockRecommended?'taught-method focus':'background / unconfirmed, outside mock')+'</small></li>').join('')+
+ const p1=aqaPure2024P1Audit;
+ const paper1Html=p1?'<details class="pure-paper-year"><summary>2024 Paper 1 · 20 questions · text and marks checked</summary>'+
+  '<p>Question paper and mark scheme text checked for 20 questions (100 marks). Diagram-dependent visual verification remains incomplete. '+
+  link(p1.sourceQuestionPaper,'Original paper')+' · '+link(p1.sourceMarkScheme,'AQA mark scheme')+'</p><ul>'+
+  p1.inventory.map(q=>'<li><b>Q'+q.question+'</b> · '+esc(q.method)+
+   '<small> · '+esc(q.currentMockRecommended?'Taught Pure method':'Background or outside mock')+'</small></li>').join('')+
   '</ul></details>':'';
- root.innerHTML='<h4>AQA 7357 · Pure questions across all three papers</h4>'+
-  '<p><strong>24 public papers linked</strong> (2018–2025). The 2025 method index is secondary evidence; June 2024 Paper 1 has a separate 20-question text-and-mark-scheme audit. Other 2024 and earlier papers remain open. Original papers and mark schemes are linked externally.</p>'+
-  papersHtml+
-  '<h4>June 2025 · Pure question-topic audit</h4><p>40 Pure entries from a secondary topic index, and one separate mixed Mechanics-context entry. These are method labels, not original question text or verified mark-scheme copies.</p>'+
-  sourceRows+audit24Html+'<p>'+link('https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/specification-at-a-glance','AQA specification and three-paper structure')+'</p>';
+ const paper23Html=verified24?verified24.papers.map(p=>{
+  const originallyAuthored=verified24.questions.filter(q=>q.sourceStyle.methodPaper===Number(p.paper.slice(-1)));
+  return '<details class="pure-paper-year"><summary>2024 Paper '+p.paper.slice(-1)+
+   ' · Pure Section A Q1–11 reviewed · '+originallyAuthored.length+' new worked practices</summary>'+
+   '<p>Only Section A is Pure. Mechanics/Statistics in Section B is excluded from this mock. The original question paper was reviewed for methods; a complete final mark-scheme and diagram audit is still pending. New questions are independently authored. '+
+   link(p.sourceQuestionPaper,'Original paper')+' · '+link(p.sourceMarkScheme,'Mark scheme')+'</p><ul>'+
+   p.inventory.map(q=>'<li><b>Q'+q.question+'</b> · '+esc(q.method)+
+    '<small> · '+esc(q.currentMockRecommended?'Taught method':'Background/optional')+
+    (q.markSchemeChecked?' · Selected mark-scheme method checked':' · Mark-scheme check pending')+'</small></li>').join('')+
+   '</ul></details>';
+ }).join(''):'';
+ root.innerHTML='<h4>AQA 7357 Pure · 2019–2025 paper coverage</h4>'+
+  '<p><strong>21 public papers indexed</strong> (seven exam series × three papers). These are links to the AQA source papers or catalogues, not claims that every original question has been copied into Revision Loop. June 2026 is not publicly released.</p>'+
+  '<p><strong>Source checks so far:</strong> 2024 Paper 1 text and marks; 2024 Paper 2/3 Pure Section A methods; and a secondary index of 2025 topics. The 2019–2023 question-by-question audit and the remaining 2025 primary-paper checks are still outstanding.</p>'+
+  paperYears+
+  '<h4>2024 · independently checked Pure methods</h4>'+paper1Html+paper23Html+
+  '<h4>2025 · secondary topic index (not a full paper audit)</h4>'+
+  '<p>40 Pure method entries, plus one separately classified Mechanics-context entry. The question text and mark schemes have not been individually certified.</p>'+
+  sourceRows+
+  '<p>2018 papers are also available from the wider '+link('https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/assessment-resources','AQA assessment resources')+' catalogue. This mock only uses topics confirmed as taught.</p>';
 }
 function refreshExamFilters(defaultIfEmpty=false){
  const sub=document.getElementById('examSubject').value,level=document.getElementById('examLevel').value,base=subjectExam(sub).filter(q=>level==='both'||q.level===level),
@@ -6761,7 +6786,7 @@ async function sync(manual=false){
   typeof q.prompt==='string'&&typeof q.modelAnswer==='string'&&q.modelAnswer===q.markPoints.join(' ')&&
   v457Papers.some(p=>p.paper==='7357/'+q.sourceStyle?.methodPaper&&
    p.inventory.some(row=>row.question===q.sourceStyle?.methodQuestion&&
-    row.classification==='pure'&&row.currentMockRecommended===q.mock))&&
+    row.classification==='pure'&&(!q.mock||row.currentMockRecommended===true)))&&
   (q.year13PureMock===true||q.year13Optional===true)&&
   q.taught===q.mock&&q.courseTopic===(q.mock?'Year 13 Pure · taught mock':'Year 13 Pure · additional practice'));
  const added=[...(x.questions||[]),...extraBanks.flatMap(bank=>bank.questions||[]),...validatedV450Questions,...validatedV451Questions,...validatedV452Questions,...validatedV457Questions],seen=new Set();
