@@ -114,7 +114,7 @@ try{
    years:[...examYears],size:examGroups().length,
    safe:examGroups().every(g=>g.every(currentYear13PureMockQuestion))
   }));
-  assert.deepEqual(exam,{sub:'Maths',level:'A-level',years:['Practice'],size:95,safe:true});
+  assert.deepEqual(exam,{sub:'Maths',level:'A-level',years:['Practice'],size:102,safe:true});
   await page.locator('#startExam').click();
   const examSession=await page.evaluate(()=>({
    kind:activeSession.kind,size:activeSession.items.length,
@@ -136,7 +136,7 @@ try{
   assert(geometry.scroll<=geometry.screen+3, 'Horizontal page overflow at '+width+'px');
   const severe=errors.filter(e=>!/firebase/i.test(e));
   assert.deepEqual(severe,[]);
-  console.log('PASS v450 '+width+'px: 123 cards/112 worked problems, 110+95 mock-only, optional exclusions, Paper 2 intact, unlimited, skip, exam preset, cloud/Xp preservation');
+  console.log('PASS v450 '+width+'px: 123 cards/123 worked problems, 110+102 mock-only, optional exclusions, Paper 2 intact, unlimited, skip, exam preset, cloud/Xp preservation');
   await ctx.close();
  }
 }finally{
