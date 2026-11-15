@@ -78,7 +78,7 @@ assert(app.includes("const V459_2023_P2_URL='./maths_pure_2023_p2_v459.json'"));
 assert(app.includes('aqaPure2023P2Audit=v459Pack.version'));
 assert(app.includes('...validatedV459Questions'));
 assert(app.includes('2023 Paper 2 · Pure Section A Q1–10'));
-assert(html.includes('papers=v459'));
+assert(html.includes('papers=v460'));
 assert(sw.includes("'./maths_pure_2023_p2_v459.json'"));
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])
  assert(app.includes(key));
