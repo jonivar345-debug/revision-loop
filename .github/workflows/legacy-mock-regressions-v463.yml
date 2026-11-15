@@ -1,0 +1,30 @@
+name: v463 Legacy school mock regression boundaries
+on:
+  pull_request:
+    paths:
+      - tests/task1-v161-maths-mock-question-scope.cjs
+      - tests/task1-v301-school-mock-scope.cjs
+      - tests/task1-v311-partial-skill-marking.cjs
+      - .github/workflows/legacy-mock-regressions-v463.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  legacy-scope-and-v462:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Legacy AS and science scope, marking, Year 13 strict-only
+        run: |
+          node --check app.js
+          node tests/task1-v161-maths-mock-question-scope.cjs
+          node tests/task1-v301-school-mock-scope.cjs
+          node tests/task1-v311-partial-skill-marking.cjs
+          node tests/task1-v282-full-flashcard-answer-audit.cjs
+          node tests/maths-must-memorise-v462.cjs
+          node tests/year13-pure-v450.cjs
+          node tests/flashcard-priority-v429.cjs

@@ -10,8 +10,9 @@ const audit=JSON.parse(fs.readFileSync('editorial/task1-v161-maths-mock-question
 const match=app.match(/function mockEligibleQuestion\(q\)\{[\s\S]*?\n\}/);
 assert(match,'Central mock scope predicate is missing');
 const eligible=vm.runInNewContext(match[0]+'\nmockEligibleQuestion');
-assert.match(app,/const qAll=subjectExam\(sub\)\.filter\(mockEligibleQuestion\)/);
-assert.match(app,/if\(scope==='mock'\)q=q\.filter\(mockEligibleQuestion\)/);
+// The current Year 13 Pure mock has a separate, stricter source/eligibility gate.
+assert(app.includes("const qAll=sub==='Maths'&&!mustOnly?examQuestions.filter(currentYear13PureMockQuestion):[]"));
+assert(app.includes("if(scope==='mock')q=q.filter(currentYear13PureMockQuestion)"));
 assert(!app.includes("q.mock===true||q.level==='AS'"));
 assert(!app.includes("x.mock===true||x.level==='AS'"));
 
@@ -35,7 +36,15 @@ assert.equal(historicalSelected.filter(q=>!eligible(q)).length,10);
 assert(selected.every(q=>q.mock===true&&q.level==='AS'));
 assert(selected.every(q=>!['statistics','mechanics'].includes(String(q.topic||'').toLowerCase())));
 assert(selected.every(q=>!/(?:\bradians?\b|π)/i.test(q.prompt||'')));
-assert.equal(bank.questions.filter(q=>q.subject==='Physics'&&eligible(q)).length,240);
+const historicalPhysics=bank.questions.filter(q=>q.subject==='Physics'&&q.mock===true);
+const currentPhysics=bank.questions.filter(q=>q.subject==='Physics'&&eligible(q));
+const promotedPhysics=currentPhysics.filter(q=>q.mock!==true);
+assert.equal(historicalPhysics.length,240,'Historical Physics selection must not be lost');
+assert.equal(currentPhysics.length,267,'240 historical + 27 separately verified AS Physics questions');
+assert.equal(promotedPhysics.length,27);
+assert(promotedPhysics.every(q=>q.level==='AS'&&q.sourceVerified===true&&q.originalMarkVerified===true&&
+ /^https:\/\/(?:(?:filestore|www)\.)?aqa\.org\.uk\//i.test(q.qpUrl||'')&&
+ /^https:\/\/(?:(?:filestore|www)\.)?aqa\.org\.uk\//i.test(q.msUrl||'')));
 assert.equal(bank.questions.filter(q=>q.subject==='Chemistry'&&eligible(q)).length,249);
 
 for(const id of audit.exclusionEvidence.asWithoutExplicitMockFlag.ids){

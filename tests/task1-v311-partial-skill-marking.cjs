@@ -3,8 +3,10 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
 const read=p=>fs.readFileSync(p,'utf8'),j=p=>JSON.parse(read(p));
 const app=read('app.js'),core=j('deck.json');
 const bankUrls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1]);
-const start=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),end=app.indexOf(' const added=[',start);
-assert(start>0&&end>start,'Must exercise the actual live loader');
+const start=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),
+ end=app.indexOf(' // v450: append-only Year 13 Pure Maths revision pack.',start);
+// Historical AS/Science bank audit deliberately excludes separately awaited Year 13 loaders.
+assert(start>0&&end>start&&!app.slice(start,end).includes('await '),'Audit the real synchronous legacy-bank loader, excluding async Year 13 packs');
 const all=new Function('cards','extraFlashBanks',app.slice(start,end)+'\nreturn cards;')([...core.cards],bankUrls.map(j));
 const a=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),b=app.indexOf('function startMockSession(){',a);
 const eligible=new Function(app.slice(a,b)+'\nreturn mockEligibleCard;')();

@@ -2,8 +2,10 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),j=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const app=fs.readFileSync('app.js','utf8');
 const urls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1]);
-const begin=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),end=app.indexOf(' const added=[',begin);
-assert(begin>=0&&end>begin);
+const begin=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),
+ end=app.indexOf(' // v450: append-only Year 13 Pure Maths revision pack.',begin);
+// Audit legacy school-mock cards only; separately fetched Year 13 packs have their own gates.
+assert(begin>=0&&end>begin&&!app.slice(begin,end).includes('await '));
 const all=new Function('cards','extraFlashBanks',app.slice(begin,end)+'\nreturn cards;')([...j('deck.json').cards],urls.map(j));
 const a=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),b=app.indexOf('function startMockSession(){',a);
 const mockEligibleCard=new Function(app.slice(a,b)+'\nreturn mockEligibleCard;')();
