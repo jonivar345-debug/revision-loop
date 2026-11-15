@@ -40,6 +40,7 @@ jobs:
           node tests/task1-v161-maths-mock-question-scope.cjs
           node tests/task1-v301-school-mock-scope.cjs
           node tests/task1-v311-partial-skill-marking.cjs
+          node tests/task1-v282-full-flashcard-answer-audit.cjs
           node tests/ui-refresh-v453.cjs
           node tests/shop-flow-v456.cjs
       - name: Install Chromium for phone and desktop
