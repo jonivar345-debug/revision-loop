@@ -62,7 +62,7 @@ assert(app.includes("const V457_2024_P2P3_URL='./maths_pure_2024_p2p3_v457.json'
 assert(app.includes('validatedV457Questions'));
 assert(app.includes('...validatedV457Questions'));
 assert(app.includes('aqaPure2024P2P3Audit=v457Pack.version'));
-assert(app.includes('2024 Paper 2/3 Pure Section A methods'));
+assert(app.includes('2024 Paper 2/3 Pure methods'));
 assert(app.includes('21 public papers indexed'));
 assert(html.includes('papers=v460'));
 assert(sw.includes("'./maths_pure_2024_p2p3_v457.json'"));
