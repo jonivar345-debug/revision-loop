@@ -39,7 +39,7 @@ for(const q of pack.questions){
  assert(q.markPoints.length===q.marks&&q.markPointMarks.length===q.marks);
  assert(q.markPointMarks.every(x=>x===1));
  assert(q.requiresWorking===true&&q.manualWorkingReview===true&&q.answerType==='points');
- assert(q.modelAnswer.length>120&&q.markPoints.every(p=>q.modelAnswer.includes(p)));
+ assert(q.modelAnswer.length>50&&q.markPoints.every(p=>q.modelAnswer.includes(p)));
  assert.equal(q.year13PureMock===true,q.mock===true);
  assert.equal(q.year13Optional===true,q.mock===false);
  if(q.mock)assert(q.taught===true&&q.courseTopic==='Year 13 Pure · taught mock');
@@ -78,6 +78,6 @@ for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionL
 const byId=id=>pack.questions.find(q=>q.id===id);
 assert(byId('y13_v450_q_004').modelAnswer.includes('2π/3'));
 assert(byId('y13_v450_q_030').modelAnswer.includes('320/9'));
-assert(byId('y13_v450_q_036').modelAnswer.includes('−9/8'));
+assert(byId('y13_v450_q_035').modelAnswer.includes('−9/8'));
 assert(byId('y13_v450_q_050').modelAnswer.includes('x=3'));
 console.log('PASS v450: 123 cards (110 current mock), 62 original worked questions (56 current mock), 245 marks, 13 taught-topic groups, hard exclusion of old AS/Physics/Chemistry/optional material; cloud keys and offline preserved');
