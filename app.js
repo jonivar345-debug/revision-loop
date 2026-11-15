@@ -4822,7 +4822,7 @@ function renderTopicCounts(){
  const all=subjectCards(document.getElementById('flashSubject').value).filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c));
  const essentials=all.filter(isRecallMustKnow).length;
  const info=document.getElementById('flashMustKnowCount');
- if(info)info.textContent=essentials+' key-definition / missing-equation cards in selected topics'+(settings.recallMustKnowOnly?' · only these will be shown.':'. Other cards remain in normal sessions.');
+ if(info)info.textContent=essentials+' selected key facts, identities and equations in these topics'+(settings.recallMustKnowOnly?' · only these will be shown.':'. Other cards remain in normal sessions.');
  for(const id of ['mockMustKnowFirst','flashMustKnowFirst']){const control=document.getElementById(id);if(control)control.checked=settings.recallMustKnowFirst!==false}
  const only=document.getElementById('flashMustKnowOnly');if(only)only.checked=settings.recallMustKnowOnly===true;
  const coachCount=document.getElementById('paper2CoachSummary');
