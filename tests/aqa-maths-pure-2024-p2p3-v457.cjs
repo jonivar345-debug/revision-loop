@@ -1,0 +1,76 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs'),vm=require('node:vm');
+const pack=JSON.parse(fs.readFileSync('maths_pure_2024_p2p3_v457.json','utf8'));
+const base=JSON.parse(fs.readFileSync('maths_year13_pure_v450.json','utf8'));
+const p451=JSON.parse(fs.readFileSync('maths_pure_past_methods_v451.json','utf8'));
+const p452=JSON.parse(fs.readFileSync('maths_pure_2024_p1_v452.json','utf8'));
+const index=JSON.parse(fs.readFileSync('editorial/aqa-maths-pure-7357-paper-index-v451.json','utf8'));
+const app=fs.readFileSync('app.js','utf8');
+const html=fs.readFileSync('index.html','utf8');
+const sw=fs.readFileSync('sw.js','utf8');
+assert.equal(pack.version,'v457');
+assert.equal(pack.questions.length,18);
+assert.equal(pack.questions.filter(q=>q.mock).length,13);
+assert.equal(pack.questions.filter(q=>!q.mock).length,5);
+assert.deepEqual(pack.papers.map(p=>p.paper),['7357/2','7357/3']);
+for(const p of pack.papers){
+ assert.equal(p.pureSection,'Section A, Questions 1–11');
+ assert.equal(p.inventory.length,11);
+ assert.deepEqual(p.inventory.map(q=>q.question),Array.from({length:11},(_,i)=>i+1));
+ assert(p.sectionBoundaryChecked===true&&p.primaryPaperTextReviewed===true);
+ assert(!p.fullMarkSchemeCrosswalkComplete&&!p.diagramVisualCrosswalkComplete,'Do not claim unverified completion');
+ assert(p.inventory.every(q=>q.classification==='pure'&&q.questionPaperChecked&&!q.equivalentPracticeGuaranteed));
+ assert(p.sourceQuestionPaper.startsWith('https://'));
+ assert(p.sourceMarkScheme.startsWith('https://'));
+}
+const ids=[...base.questions,...p451.questions,...p452.questions,...pack.questions].map(q=>q.id);
+assert.equal(new Set(ids).size,112,'All original problems must have stable unique identifiers');
+const ctx={};
+const st=app.indexOf('function currentYear13PureMockCard('),ed=app.indexOf('// Build a bounded batch.',st);
+assert(st>=0&&ed>st);
+vm.runInNewContext(app.slice(st,ed)+'\nthis.isQuestion=currentYear13PureMockQuestion;',ctx);
+for(const [i,q] of pack.questions.entries()){
+ assert.equal(q.id,'y13_v457_q_'+String(i+1).padStart(3,'0'));
+ assert.equal(q.subject,'Maths');
+ assert.equal(q.level,'A-level');
+ assert.equal(q.year,'Practice');
+ assert(q.sourceVerified===false&&q.verificationLevel==='original-exam-style');
+ assert(q.standalone&&q.requiresWorking&&q.manualWorkingReview);
+ assert(q.prompt.endsWith('['+q.marks+' marks]'));
+ assert.equal(q.markPoints.length,q.marks);
+ assert.equal(q.markPointMarks.length,q.marks);
+ assert(q.markPointMarks.every(m=>m===1));
+ assert.equal(q.modelAnswer,q.markPoints.join(' '));
+ assert(q.sourceStyle.methodYear===2024);
+ assert([2,3].includes(q.sourceStyle.methodPaper));
+ assert(q.sourceStyle.methodQuestion>=1&&q.sourceStyle.methodQuestion<=11);
+ assert(!q.sourceStyle.provenance.toLowerCase().includes('copied'));
+ assert.equal(q.taught,q.mock);
+ assert.equal(q.year13PureMock,q.mock);
+ assert.equal(q.year13Optional,!q.mock);
+ assert.equal(ctx.isQuestion(q),q.mock,'Wrong mock eligibility '+q.id);
+}
+assert.equal([...base.questions,...p451.questions,...p452.questions,...pack.questions].filter(ctx.isQuestion).length,95);
+for(const year of [2019,2020,2021,2022,2023,2024,2025]){
+ const papers=index.papers.filter(p=>p.year===year);
+ assert.deepEqual(papers.map(p=>p.paper),[1,2,3]);
+}
+assert.equal(index.papers.filter(p=>p.year>=2019&&p.year<=2025).length,21);
+assert(index.papers.every(p=>p.year!==2026));
+assert(app.includes("const V457_2024_P2P3_URL='./maths_pure_2024_p2p3_v457.json'"));
+assert(app.includes('validatedV457Questions'));
+assert(app.includes('...validatedV457Questions'));
+assert(app.includes('aqaPure2024P2P3Audit=v457Pack.version'));
+assert(app.includes('2024 Paper 2/3 Pure Section A methods'));
+assert(app.includes('21 public papers indexed'));
+assert(html.includes('papers=v457'));
+assert(sw.includes("'./maths_pure_2024_p2p3_v457.json'"));
+for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
+const q=i=>pack.questions[i-1];
+assert(Math.abs((1+Math.log(150)/Math.log(7))/2-1.787478585927717)<1e-9);
+assert(q(6).markPoints.some(m=>m.includes('13/8')));
+assert(Math.abs(120*1.005*(1.005**6-1)/.005-732.7055265)<1e-6);
+assert(q(12).markPoints.some(m=>m.includes('24π−36√3')));
+assert(q(18).modelAnswer.includes('(e²+1)/4'));
+console.log('PASS v457: 21 AQA paper entries 2019–2025, 22 audited 2024 P2/P3 Pure methods, 18 fully worked original questions, 95 taught mock / 17 optional and 112 overall original questions');
