@@ -79,7 +79,7 @@ for(const v of ['459','460','461']){
  assert(app.includes('...validatedV'+v+'Questions'),'v'+v+' not appended');
  assert(sw.includes("'./maths_pure_"+(v==='461'?'2022_p1':'2023_p'+(v==='459'?'2':'3'))+"_v"+v+".json'"));
 }
-assert(html.includes('papers=v465'));
+assert(html.includes('papers=v466'));
 assert(app.includes('2023 · all three Pure paper methods reviewed'));
 assert(app.includes('2022 Paper 1 · 15 questions'));
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'",
