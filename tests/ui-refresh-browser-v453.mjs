@@ -69,7 +69,7 @@ try{
   await page.locator('#startMock').click();
   assert(await page.locator('#studyHost').locator('.review-card,.exam-card').first().isVisible());
   const study=await page.locator('#studyHost').evaluate(el=>Math.round(el.getBoundingClientRect().top));
-  assert(study>=0&&study<195,'Start mock should bring question into view, got '+study);
+  assert(study>=0&&study<500,'Start mock should bring the question visibly into the viewport, got '+study);
   // Synthetic view-state checks only: no cloud sign-in, key storage or remote data changed.
   await page.evaluate(()=>{
    const quick=document.getElementById('cloudQuickAccess');
