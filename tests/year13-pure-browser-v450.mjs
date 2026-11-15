@@ -53,8 +53,8 @@ try{
    oldProgress:progress.historic_math?.good,oldExam:profile.examResults.oldExam?.last?.marks,
    xp:profile.lifetimeXp
   }));
-  assert.deepEqual(bank,{newCards:123,newQuestions:62,mockCards:110,mockQuestions:95,
-   optionalCards:13,optionalExam:17,physicsPaper2:227,oldProgress:4,oldExam:3,xp:140});
+  assert.deepEqual(bank,{newCards:123,newQuestions:62,mockCards:110,mockQuestions:102,
+   optionalCards:13,optionalExam:21,physicsPaper2:227,oldProgress:4,oldExam:3,xp:140});
   const v451=await page.evaluate(()=>({
    newWorked:examQuestions.filter(q=>/^y13_v451_q_\d{3}$/.test(q.id)).length,
    optionalNew:examQuestions.filter(q=>/^y13_v451_q_\d{3}$/.test(q.id)&&q.year13Optional).length,
@@ -67,9 +67,9 @@ try{
   await page.locator('.study-type-btn[data-study="exam"]').click();
   await page.locator('details.paper-library > summary').click();
   assert(await archive.isVisible(),'AQA Pure archive should be visible in Maths exam mode');
-  assert.equal(await archive.locator('details.pure-paper-year').count(),13,'Seven target years, 2024 source audits for three papers, three 2025 topic panels');
+  assert.equal(await archive.locator('details.pure-paper-year').count(),14,'Seven target years, audited 2023 Paper 1, 2024 methods and 2025 topic panels');
   const descriptions=await archive.innerText();
-  assert(descriptions.includes('21 public papers indexed')&&descriptions.includes('2024 Paper 2/3 Pure Section A methods'));
+  assert(descriptions.includes('21 public papers indexed')&&descriptions.includes('2024 Paper 2/3 Pure Section A methods')&&descriptions.includes('2023 Paper 1'));
   await archive.locator('details.pure-paper-year').nth(10).locator('summary').click();
   const questionText=await archive.innerText();
   assert(questionText.includes('2025')&&questionText.includes('Q17'));
@@ -84,7 +84,7 @@ try{
    const obj=item.type==='card'?cards.find(x=>x.id===item.id):examQuestions.find(x=>x.id===item.id);
    return {id:item.id,type:item.type,subject:obj.subject,flag:obj.year13PureMock,level:obj.stage||obj.level};
   }));
-  assert(audit.every(x=>x.subject==='Maths'&&x.flag===true&&/^y13_v(?:450|451|452|457)_/.test(x.id)));
+  assert(audit.every(x=>x.subject==='Maths'&&x.flag===true&&/^y13_v(?:450|451|452|457|458)_/.test(x.id)));
   assert(audit.some(x=>x.type==='card')&&audit.some(x=>x.type==='exam'));
   assert.equal((await page.evaluate(()=>buildMockSessionItems('Physics','mixed',10))).length,0);
   assert.equal((await page.evaluate(()=>buildMockSessionItems('Chemistry','mixed',10))).length,0);
@@ -118,7 +118,7 @@ try{
   await page.locator('#startExam').click();
   const examSession=await page.evaluate(()=>({
    kind:activeSession.kind,size:activeSession.items.length,
-   safe:activeSession.items.every(it=>it.type==='exam'&&/^y13_v(?:450|451|452|457)_q_/.test(it.id))
+   safe:activeSession.items.every(it=>it.type==='exam'&&/^y13_v(?:450|451|452|457|458)_q_/.test(it.id))
   }));
   assert.equal(examSession.kind,'exam');assert.equal(examSession.size,10);assert(examSession.safe);
   assert(await page.locator('#examAnswer').isVisible());
