@@ -53,7 +53,7 @@ try{
    oldProgress:progress.historic_math?.good,oldExam:profile.examResults.oldExam?.last?.marks,
    xp:profile.lifetimeXp
   }));
-  assert.deepEqual(bank,{newCards:123,newQuestions:62,mockCards:110,mockQuestions:95,
+  assert.deepEqual(bank,{newCards:123,newQuestions:62,mockCards:176,mockQuestions:95,
    optionalCards:13,optionalExam:17,physicsPaper2:227,oldProgress:4,oldExam:3,xp:140});
   const v451=await page.evaluate(()=>({
    newWorked:examQuestions.filter(q=>/^y13_v451_q_\d{3}$/.test(q.id)).length,
@@ -84,7 +84,7 @@ try{
    const obj=item.type==='card'?cards.find(x=>x.id===item.id):examQuestions.find(x=>x.id===item.id);
    return {id:item.id,type:item.type,subject:obj.subject,flag:obj.year13PureMock,level:obj.stage||obj.level};
   }));
-  assert(audit.every(x=>x.subject==='Maths'&&x.flag===true&&/^y13_v(?:450|451|452|457)_/.test(x.id)));
+  assert(audit.every(x=>x.subject==='Maths'&&x.flag===true&&/^y13_v(?:450|451|452|457|462)_/.test(x.id)));
   assert(audit.some(x=>x.type==='card')&&audit.some(x=>x.type==='exam'));
   assert.equal((await page.evaluate(()=>buildMockSessionItems('Physics','mixed',10))).length,0);
   assert.equal((await page.evaluate(()=>buildMockSessionItems('Chemistry','mixed',10))).length,0);
@@ -92,7 +92,7 @@ try{
   await page.locator('#mockCount').selectOption('unlimited');
   await page.locator('#startMock').click();
   const mock=await page.evaluate(()=>({kind:activeSession.kind,items:activeSession.items.length,
-   unlimited:activeSession.unlimited,all:activeSession.items.every(x=>x.type==='card'&&x.id.startsWith('y13_v450_card_'))}));
+   unlimited:activeSession.unlimited,all:activeSession.items.every(x=>x.type==='card'&&/^y13_v(?:450|462)_card_/.test(x.id))}));
   assert.equal(mock.kind,'mock');assert.equal(mock.items,15);assert(mock.unlimited&&mock.all);
   assert(await page.locator('#endUnlimitedMock').isVisible());
   await page.locator('#skipCard').click();
@@ -101,11 +101,21 @@ try{
   assert.equal(await page.locator('#flashSubject').inputValue(),'Maths');
   const flash=await page.evaluate(()=>({scope:flashScopeFilter,count:selectedFlashCards().length,
    selected:selectedFlashCards().every(c=>currentYear13PureMockCard(c))}));
-  assert.deepEqual(flash,{scope:'mock',count:110,selected:true});
+  assert.deepEqual(flash,{scope:'mock',count:176,selected:true});
+  await page.locator('#flashMustKnowOnly').check();
+  const mustKnow=await page.evaluate(()=>({
+   count:selectedFlashCards().length,
+   exact:selectedFlashCards().every(c=>isRecallMustKnow(c)&&currentYear13PureMockCard(c)),
+   excluded:['y13_v450_card_052','y13_v450_card_107','y13_v450_card_108'].every(id=>
+     selectedFlashCards().every(c=>c.id!==id))
+  }));
+  assert.deepEqual(mustKnow,{count:89,exact:true,excluded:true},
+    'Only the 89 explicitly selected Maths memorisation cards should appear');
+  await page.locator('#flashMustKnowOnly').uncheck();
   await page.locator('[data-flash-preset="taught"]').click();
-  assert((await page.evaluate(()=>selectedFlashCards().length))>=110);
+  assert((await page.evaluate(()=>selectedFlashCards().length))>=176);
   await page.locator('[data-flash-preset="mock"]').click();
-  assert.equal((await page.evaluate(()=>selectedFlashCards().length)),110);
+  assert.equal((await page.evaluate(()=>selectedFlashCards().length)),176);
   await page.locator('.study-type-btn[data-study="exam"]').click();
   await page.locator('#examYear13Preset').click();
   const exam=await page.evaluate(()=>({
@@ -136,7 +146,7 @@ try{
   assert(geometry.scroll<=geometry.screen+3, 'Horizontal page overflow at '+width+'px');
   const severe=errors.filter(e=>!/firebase/i.test(e));
   assert.deepEqual(severe,[]);
-  console.log('PASS v450 '+width+'px: 123 cards/112 worked problems, 110+95 mock-only, optional exclusions, Paper 2 intact, unlimited, skip, exam preset, cloud/Xp preservation');
+  console.log('PASS v450 '+width+'px: 189 cards/112 worked problems, 176+95 mock-only, optional exclusions, Paper 2 intact, unlimited, skip, exam preset, cloud/Xp preservation');
   await ctx.close();
  }
 }finally{
