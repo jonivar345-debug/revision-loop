@@ -4054,18 +4054,18 @@ function mockEligibleQuestion(q){
 // Historical mockEligibleCard/Question remain for legacy evidence and earlier review IDs;
 // all current mock and mock-focus screens below use these intentionally narrow gates.
 function currentYear13PureMockCard(c){
- return Boolean(c&&/^y13_v450_card_\\d{3}$/.test(c.id||'')&&c.subject==='Maths'&&
+ return Boolean(c&&/^y13_v450_card_\d{3}$/.test(c.id||'')&&c.subject==='Maths'&&
   c.stage==='A2'&&c.courseTopic==='Year 13 Pure · taught mock'&&
   c.year13PureMock===true&&c.mock===true&&c.taught===true&&c.active===true&&
-  c.scope==='mock'&&c.specRef&&/^3\\.(?:2|3|5|6|7|8|9)$/.test(c.specRef));
+  c.scope==='mock'&&c.specRef&&/^3\.(?:2|3|5|6|7|8|9)$/.test(c.specRef));
 }
 function currentYear13PureMockQuestion(q){
- return Boolean(q&&/^y13_v450_q_\\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&
+ return Boolean(q&&/^y13_v450_q_\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&
   q.level==='A-level'&&q.courseTopic==='Year 13 Pure · taught mock'&&
   q.year13PureMock===true&&q.mock===true&&q.taught===true&&
   q.standalone===true&&q.requiresWorking===true&&q.manualWorkingReview===true&&
   Array.isArray(q.markPoints)&&q.markPoints.length===q.marks&&
-  /^3\\.(?:2|3|5|6|7|8|9)$/.test(q.specRef||''));
+  /^3\.(?:2|3|5|6|7|8|9)$/.test(q.specRef||''));
 }
 
 // Build a bounded batch. Unlimited sessions request new batches as needed rather
@@ -6584,14 +6584,14 @@ async function sync(manual=false){
  }catch(error){console.warn('Optional Year 13 Pure Maths pack unavailable',error)}
  const allowedV450Refs=new Set(['3.2','3.3','3.5','3.6','3.7','3.8','3.9','3.10','3.11']);
  for(const c of Array.isArray(v450Maths.cards)?v450Maths.cards:[]){
-  if(!c||!/^y13_v450_card_\\d{3}$/.test(c.id||'')||knownFlashIds.has(c.id)||
+  if(!c||!/^y13_v450_card_\d{3}$/.test(c.id||'')||knownFlashIds.has(c.id)||
      c.subject!=='Maths'||c.stage!=='A2'||!allowedV450Refs.has(c.specRef)||
      c.active!==true||typeof c.front!=='string'||typeof c.back!=='string'||!c.front||!c.back||
      c.year13PureMock!==true&&c.year13Optional!==true)continue;
   knownFlashIds.add(c.id);cards.push(c);
  }
  const validatedV450Questions=(Array.isArray(v450Maths.questions)?v450Maths.questions:[]).filter(q=>
-  q&&/^y13_v450_q_\\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&q.level==='A-level'&&
+  q&&/^y13_v450_q_\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&q.level==='A-level'&&
   allowedV450Refs.has(q.specRef)&&q.year==='Practice'&&q.standalone===true&&
   q.requiresWorking===true&&q.manualWorkingReview===true&&q.verificationLevel==='original-exam-style'&&
   Number.isInteger(q.marks)&&q.marks>=3&&q.marks<=9&&
