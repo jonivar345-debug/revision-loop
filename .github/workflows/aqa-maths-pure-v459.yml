@@ -1,0 +1,44 @@
+name: v459 June 2023 AQA Paper 2 Pure method and original practice tests
+on:
+  pull_request:
+    paths:
+      - app.js
+      - index.html
+      - sw.js
+      - maths_pure_2023_p2_v459.json
+      - tests/aqa-maths-pure-2023-paper2-v459.cjs
+      - tests/year13-pure-browser-v450.mjs
+      - .github/workflows/aqa-maths-pure-v459.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-and-year13-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Maths source and stability tests
+        run: |
+          node --check app.js
+          node tests/aqa-maths-pure-2023-paper2-v459.cjs
+          node tests/aqa-maths-pure-2023-paper1-v458.cjs
+          node tests/aqa-maths-pure-2024-p2p3-v457.cjs
+          node tests/aqa-maths-pure-2024-paper1-v452.cjs
+          node tests/aqa-maths-pure-archive-v451.cjs
+          node tests/year13-pure-v450.cjs
+          node tests/ui-refresh-v453.cjs
+          node tests/shop-flow-v456.cjs
+      - name: Install Chromium for responsive tests
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Full mock, archive and original practice at phone and desktop sizes
+        run: node tests/year13-pure-browser-v450.mjs
+      - name: Theme, Shop and cloud regression
+        run: |
+          node tests/ui-refresh-browser-v453.mjs
+          node tests/shop-flow-browser-v456.mjs
