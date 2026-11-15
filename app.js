@@ -4826,6 +4826,8 @@ function renderTopicCounts(){
  const chosen=selectedFlashCards();
  const mustOnly=settings.recallMustKnowFirst!==false;
  const mockModeSelect=document.getElementById('mockMode');
+ const mockStartButton=document.getElementById('startMock');
+ if(mockStartButton)mockStartButton.textContent=mustOnly?'Start must-memorise cards':'Start mock revision';
  if(mockModeSelect){
    if(mustOnly){
      if(!mockModeSelect.disabled)mockModeSelect.dataset.beforeMemorise=mockModeSelect.value;
