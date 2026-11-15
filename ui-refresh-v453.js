@@ -1,4 +1,4 @@
-/* Revision Loop v453: device-local appearance and direct section navigation.
+/* Revision Loop v454: device-local appearance and one hierarchical navigation.
    Does not touch cloud credentials, saved revision progress or study IDs. */
 (function(root,factory){
  'use strict';
@@ -39,20 +39,20 @@
   view.scrollTo({top,behavior:animated&&!reduced?'smooth':'instant'});
   return true;
  }
- function refreshQuickActive(doc){
-  const selected=doc.querySelector('.tab.active')?.dataset.panel||'study';
-  const type=doc.querySelector('.study-type-btn.active')?.dataset.study||'mock';
-  const destination=selected==='study'?(type==='flashcards'?'flashcards':type==='exam'?'exam':'mock'):selected;
-  doc.querySelectorAll('[data-jump]').forEach(button=>{
-   if(button.dataset.jump===destination)button.setAttribute('aria-current','page');
+ function refreshNavigation(doc){
+  doc.querySelectorAll('.tab').forEach(button=>{
+   if(button.classList.contains('active'))button.setAttribute('aria-current','page');
+   else button.removeAttribute('aria-current');
+  });
+  doc.querySelectorAll('.study-type-btn').forEach(button=>{
+   if(button.classList.contains('active'))button.setAttribute('aria-current','page');
    else button.removeAttribute('aria-current');
   });
  }
  function jumpTo(doc,destination){
+  // One visible navigation system: four main tabs, with three study modes.
   const modes={mock:'mock',flashcards:'flashcards',exam:'exam'};
-  let panel=destination;
   if(Object.prototype.hasOwnProperty.call(modes,destination)){
-   panel='study';
    doc.querySelector('.tab[data-panel="study"]')?.click();
    doc.querySelector('.study-type-btn[data-study="'+modes[destination]+'"]')?.click();
   }else{
@@ -60,8 +60,8 @@
    if(!tab)return false;
    tab.click();
   }
-  refreshQuickActive(doc);
-  scrollToSection(doc,panel);
+  refreshNavigation(doc);
+  scrollToSection(doc,Object.prototype.hasOwnProperty.call(modes,destination)?'studyModes':destination);
   return true;
  }
  function boot(){
@@ -69,14 +69,13 @@
   applyTheme(doc,storage,getTheme(storage));
   const toggle=doc.getElementById('themeToggle');
   toggle?.addEventListener('click',()=>applyTheme(doc,storage,doc.documentElement.dataset.theme==='dark'?'light':'dark'));
-  doc.querySelectorAll('[data-jump]').forEach(button=>button.addEventListener('click',()=>jumpTo(doc,button.dataset.jump)));
   doc.querySelectorAll('.tab').forEach(button=>button.addEventListener('click',()=>{
-   refreshQuickActive(doc);
-   scrollToSection(doc,button.dataset.panel);
+   refreshNavigation(doc);
+   scrollToSection(doc,button.dataset.panel==='study'?'studyModes':button.dataset.panel);
   }));
   doc.querySelectorAll('.study-type-btn').forEach(button=>button.addEventListener('click',()=>{
-   refreshQuickActive(doc);
-   scrollToSection(doc,'study');
+   refreshNavigation(doc);
+   scrollToSection(doc,'studyModes');
   }));
   for(const id of ['startMock','startFlashcards','startExam','startPaper2Coach','startChallenge','reviewWeakBtn','redoMistakesBtn']){
    doc.getElementById(id)?.addEventListener('click',()=>{
@@ -91,11 +90,11 @@
    manage.setAttribute('aria-expanded',String(expanded));
    manage.textContent=expanded?'Hide sync settings':'Manage sync';
   });
-  refreshQuickActive(doc);
+  refreshNavigation(doc);
  }
  if(typeof document!=='undefined'){
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);
   else boot();
  }
- return Object.freeze({THEME_KEY,normaliseTheme,getTheme,applyTheme,scrollToSection,jumpTo,refreshQuickActive});
+ return Object.freeze({THEME_KEY,normaliseTheme,getTheme,applyTheme,scrollToSection,jumpTo,refreshNavigation});
 });
