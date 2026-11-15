@@ -36,7 +36,15 @@ assert.equal(historicalSelected.filter(q=>!eligible(q)).length,10);
 assert(selected.every(q=>q.mock===true&&q.level==='AS'));
 assert(selected.every(q=>!['statistics','mechanics'].includes(String(q.topic||'').toLowerCase())));
 assert(selected.every(q=>!/(?:\bradians?\b|π)/i.test(q.prompt||'')));
-assert.equal(bank.questions.filter(q=>q.subject==='Physics'&&eligible(q)).length,240);
+const historicalPhysics=bank.questions.filter(q=>q.subject==='Physics'&&q.mock===true);
+const currentPhysics=bank.questions.filter(q=>q.subject==='Physics'&&eligible(q));
+const promotedPhysics=currentPhysics.filter(q=>q.mock!==true);
+assert.equal(historicalPhysics.length,240,'Historical Physics selection must not be lost');
+assert.equal(currentPhysics.length,267,'240 historical + 27 separately verified AS Physics questions');
+assert.equal(promotedPhysics.length,27);
+assert(promotedPhysics.every(q=>q.level==='AS'&&q.sourceVerified===true&&q.originalMarkVerified===true&&
+ /^https:\/\/(?:(?:filestore|www)\.)?aqa\.org\.uk\//i.test(q.qpUrl||'')&&
+ /^https:\/\/(?:(?:filestore|www)\.)?aqa\.org\.uk\//i.test(q.msUrl||'')));
 assert.equal(bank.questions.filter(q=>q.subject==='Chemistry'&&eligible(q)).length,249);
 
 for(const id of audit.exclusionEvidence.asWithoutExplicitMockFlag.ids){
