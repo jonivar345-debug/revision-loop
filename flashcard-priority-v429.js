@@ -30,6 +30,20 @@
   return card.subject==='Physics'?PRACTICAL_FACT:card.subject==='Maths'?MATHS_FACT:CHEMISTRY_FACT;
  }
 
+ // v462: explicit user choices for the taught Year 13 Pure Maths mock.
+ // This is a selected revision priority, NOT a claim that every formula is
+ // missing from the printed AQA booklet. Ordinary Maths cards remain in the
+ // deck, but are never promoted to the mock's selected-priority list.
+ const YEAR13_PURE_USER_PRIORITY=new Set(["y13_v450_card_002","y13_v450_card_003","y13_v450_card_006","y13_v450_card_010","y13_v450_card_011","y13_v450_card_012","y13_v450_card_015","y13_v450_card_013","y13_v450_card_014","y13_v450_card_028","y13_v450_card_103","y13_v450_card_104","y13_v450_card_042","y13_v450_card_043","y13_v450_card_055","y13_v450_card_056","y13_v450_card_058","y13_v450_card_059","y13_v450_card_080","y13_v450_card_076","y13_v450_card_082","y13_v450_card_083","y13_v450_card_030"]);
+ const YEAR13_PURE_SELECTED_FACT=Object.freeze({kind:'maths-fact',label:'Selected Year 13 Pure recall'});
+ function curatedYear13Pure(card){
+  if(!card||card.subject!=='Maths'||card.year13PureMock!==true||
+    !/^y13_v(?:450|462)_card_\d{3}$/.test(card.id||''))return undefined;
+  if(/^y13_v462_card_\d{3}$/.test(card.id||'')){
+   return card.memoryPriority==='user-curated-2026-11-15'?YEAR13_PURE_SELECTED_FACT:null;
+  }
+  return YEAR13_PURE_USER_PRIORITY.has(card.id)?YEAR13_PURE_SELECTED_FACT:null;
+ }
  const EQUATION=Object.freeze({kind:'equation',label:'Equation to memorise'});
  const CHEMICAL_TEST=Object.freeze({kind:'chemical-test',label:'Chemical test to know'});
  // v433: test results and identification facts matter for AQA 7405 RP4/RP6/RP11,
@@ -93,6 +107,8 @@
   if(!card||card.active===false||!subjects.has(card.subject))return null;
   const front=String(card.front||'').trim(),back=String(card.back||'').trim();
   if(!front||!back)return null;
+  const year13Selection=curatedYear13Pure(card);
+  if(year13Selection!==undefined)return year13Selection;
   if(card.subject==='Maths'&&/\bfirst.principles (?:definition|formula) of f[′']\(x\)|\bfirst.principles definition of f[′']\(x\)/i.test(front))return null;
   if(card.memoryPriority==='definition')return DEFINITION;
   if(card.subject==='Chemistry'&&card.memoryPriority==='chemical-test')return CHEMICAL_TEST;
