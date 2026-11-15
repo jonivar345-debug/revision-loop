@@ -53,8 +53,8 @@ try{
    oldProgress:progress.historic_math?.good,oldExam:profile.examResults.oldExam?.last?.marks,
    xp:profile.lifetimeXp
   }));
-  assert.deepEqual(bank,{newCards:123,newQuestions:62,mockCards:176,mockQuestions:126,
-   optionalCards:13,optionalExam:30,physicsPaper2:227,oldProgress:4,oldExam:3,xp:140});
+  assert.deepEqual(bank,{newCards:123,newQuestions:62,mockCards:176,mockQuestions:141,
+   optionalCards:13,optionalExam:35,physicsPaper2:227,oldProgress:4,oldExam:3,xp:140});
   const v451=await page.evaluate(()=>({
    newWorked:examQuestions.filter(q=>/^y13_v451_q_\d{3}$/.test(q.id)).length,
    optionalNew:examQuestions.filter(q=>/^y13_v451_q_\d{3}$/.test(q.id)&&q.year13Optional).length,
@@ -67,10 +67,10 @@ try{
   await page.locator('.study-type-btn[data-study="exam"]').click();
   await page.locator('details.paper-library > summary').click();
   assert(await archive.isVisible(),'AQA Pure archive should be visible in Maths exam mode');
-  assert.equal(await archive.locator('details.pure-paper-year').count(),17,'Seven target years, 2022 P1, all 2023 Pure sections, 2024 methods and 2025 topics');
+  assert.equal(await archive.locator('details.pure-paper-year').count(),19,'Seven target years, all three 2022 Pure methods, 2023 sections, 2024 methods and 2025 topics');
   const descriptions=await archive.innerText();
-  assert(descriptions.includes('21 public papers indexed')&&descriptions.includes('2024 Paper 2/3 Pure methods')&&descriptions.includes('2023 Paper 1')&&descriptions.includes('2023 Paper 2')&&descriptions.includes('2023 Paper 3')&&descriptions.includes('2022 Paper 1'));
-  await archive.locator('details.pure-paper-year').nth(14).locator('summary').click();
+  assert(descriptions.includes('21 public papers indexed')&&descriptions.includes('2024 Paper 2/3 Pure methods')&&descriptions.includes('2023 Paper 1')&&descriptions.includes('2023 Paper 2')&&descriptions.includes('2023 Paper 3')&&descriptions.includes('2022 Paper 1')&&descriptions.includes('2022 Paper 2')&&descriptions.includes('2022 Paper 3'));
+  await archive.locator('details.pure-paper-year').nth(16).locator('summary').click();
   const questionText=await archive.innerText();
   assert(questionText.includes('2025')&&questionText.includes('Q17'));
   await page.locator('.study-type-btn[data-study="mock"]').click();
@@ -139,11 +139,11 @@ try{
    years:[...examYears],size:examGroups().length,
    safe:examGroups().every(g=>g.every(currentYear13PureMockQuestion))
   }));
-  assert.deepEqual(exam,{sub:'Maths',level:'A-level',years:['Practice'],size:126,safe:true});
+  assert.deepEqual(exam,{sub:'Maths',level:'A-level',years:['Practice'],size:141,safe:true});
   await page.locator('#startExam').click();
   const examSession=await page.evaluate(()=>({
    kind:activeSession.kind,size:activeSession.items.length,
-   safe:activeSession.items.every(it=>it.type==='exam'&&/^y13_v(?:450|451|452|457|458|459|460|461)_q_/.test(it.id))
+   safe:activeSession.items.every(it=>it.type==='exam'&&/^y13_(?:v(?:450|451|452|457|458|459|460|461)_q_|v466_p[23]_q_)/.test(it.id))
   }));
   assert.equal(examSession.kind,'exam');assert.equal(examSession.size,10);assert(examSession.safe);
   assert(await page.locator('#examAnswer').isVisible());
@@ -161,7 +161,7 @@ try{
   assert(geometry.scroll<=geometry.screen+3, 'Horizontal page overflow at '+width+'px');
   const severe=errors.filter(e=>!/firebase/i.test(e));
   assert.deepEqual(severe,[]);
-  console.log('PASS v450 '+width+'px: 189 cards/156 worked problems, 176+126 mock-only, optional exclusions, Paper 2 intact, unlimited, skip, exam preset, cloud/Xp preservation');
+  console.log('PASS v450 '+width+'px: 189 cards/176 worked problems, 176+141 mock-only, optional exclusions, Paper 2 intact, unlimited, skip, exam preset, cloud/Xp preservation');
   await ctx.close();
  }
 }finally{
