@@ -1862,10 +1862,10 @@
       "stage": "A2",
       "specRef": "3.2",
       "topic": "Year 13 Pure Maths",
-      "courseTopic": "Year 13 Pure · taught mock",
-      "revisionTopic": "Proof",
-      "year13PureMock": true,
-      "year13Optional": false,
+      "courseTopic": "Year 13 Pure · additional practice",
+      "revisionTopic": "Proof (additional practice)",
+      "year13PureMock": false,
+      "year13Optional": true,
       "front": "State the structure of induction (if included later).",
       "back": "Base case; assume n = k; prove n = k + 1",
       "accept": [
@@ -1873,13 +1873,13 @@
       ],
       "reject": [],
       "active": true,
-      "taught": true,
-      "mock": true,
-      "scope": "mock",
+      "taught": false,
+      "mock": false,
+      "scope": "full",
       "kind": "short",
       "format": "short",
       "strictRecall": true,
-      "priority": 3
+      "priority": 1
     },
     {
       "id": "y13_v450_card_076",
