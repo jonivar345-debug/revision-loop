@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="theme-color" content="#f3f6fc">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('revisionLoopThemeV1')==='dark'?'dark':'light'}catch{document.documentElement.dataset.theme='light'}</script>
   <meta name="description" content="Adaptive AQA A-level revision">
   <title>Revision Loop</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css?v=173">
   <link rel="stylesheet" href="study-focus-v440.css?v=440">
+  <link rel="stylesheet" href="ui-refresh-v453.css?v=453">
   <script src="layout-mode.js?v=120" defer></script>
 </head>
 <body>
@@ -38,15 +40,28 @@
     </div>
     <div class="top-actions">
       <div id="miniAvatar" class="mini-avatar" title="Equipped character"></div>
+      <button id="themeToggle" class="icon-btn theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Dark mode">☾</button>
       <button id="syncBtn" class="icon-btn" aria-label="Sync revision content" title="Sync">↻</button>
       <button id="lockBtn" class="icon-btn" aria-label="Lock app" title="Lock">⌁</button>
     </div>
   </header>
-  <section class="sync-quick-access" aria-label="Cross-device progress" style="margin:10px 0;padding:12px;border:1px solid #64748b;border-radius:12px">
-    <strong>Keep your progress on every computer</strong>
+  <nav class="quick-nav" aria-label="Jump directly to a revision section">
+    <button type="button" class="quick-nav-btn" data-jump="mock">Year 13 mock</button>
+    <button type="button" class="quick-nav-btn" data-jump="flashcards">Flashcards</button>
+    <button type="button" class="quick-nav-btn" data-jump="exam">Exam questions</button>
+    <button type="button" class="quick-nav-btn" data-jump="weaknesses">Weak topics</button>
+    <button type="button" class="quick-nav-btn" data-jump="progress">Progress</button>
+    <button type="button" class="quick-nav-btn" data-jump="shop">World</button>
+  </nav>
+  <section id="cloudQuickAccess" class="sync-quick-access" aria-label="Cross-device progress" data-connected="false">
+    <div class="cloud-quick-head">
+      <div class="cloud-quick-heading"><span class="cloud-status-icon" aria-hidden="true">↻</span><strong>Progress across devices</strong></div>
+      <button type="button" id="cloudManageToggle" class="mini-btn" aria-expanded="false" aria-controls="cloudQuickDetails" hidden>Manage sync</button>
+    </div>
     <p id="cloudQuickStatus" role="status" aria-live="polite">Unlock the website, then use your private progress key on each new browser. Google sign-in is optional.</p>
-    <button type="button" id="cloudQuickSignIn" class="mini-btn">Connect progress with Google</button>
-    <div class="private-key-access" style="margin-top:12px">
+    <div id="cloudQuickDetails" class="cloud-quick-details">
+      <button type="button" id="cloudQuickSignIn" class="mini-btn">Connect progress with Google</button>
+      <div class="private-key-access">
       <label for="cloudPrivateKey"><strong>Or use a private progress key (no Google login on new computers)</strong></label>
       <p><strong>First computer:</strong> select <strong>Generate 16-character key</strong>, copy it somewhere safe, then select <strong>Set up key</strong>. You can begin with zero progress. <strong>Other computers:</strong> enter the same key and select <strong>Load progress</strong>. No Google account is needed.</p>
       <input id="cloudPrivateKey" type="password" autocomplete="off" spellcheck="false" minlength="8" maxlength="29" placeholder="Your private progress key" aria-describedby="cloudPrivateStatus" style="width:100%;max-width:390px">
@@ -57,6 +72,7 @@
         <button type="button" id="cloudPrivateSignIn" class="mini-btn">Load progress</button>
       </div>
       <p id="cloudPrivateStatus" role="status" aria-live="polite">Never share your key or enter it on an untrusted computer. Keep this generated key private. It cannot be recovered if lost.</p>
+      </div>
     </div>
   </section>
   <div class="top-layout-switch"><div class="layout-switch" role="group" aria-label="Choose display layout">
@@ -367,6 +383,7 @@
 <script src="physics-paper2-visuals-v449.js?v=449" defer></script>
 <script src="app.js?v=430&physics=v439&chem=v433&data=6&focus=v440&world=v442&paper2=v449&year13=v450&papers=v452" defer></script>
 <script src="study-focus-v440.js?v=440" defer></script>
+<script src="ui-refresh-v453.js?v=453" defer></script>
 <script src="world-zoom-helpers.js?v=61" defer></script>
 <script src="world-globe-article-bridge.js?v=73" defer></script>
 <script>
