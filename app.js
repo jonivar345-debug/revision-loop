@@ -70,6 +70,8 @@ const V458_2023_P1_URL='./maths_pure_2023_p1_v458.json';
 const V459_2023_P2_URL='./maths_pure_2023_p2_v459.json';
 const V460_2023_P3_URL='./maths_pure_2023_p3_v460.json';
 const V461_2022_P1_URL='./maths_pure_2022_p1_v461.json';
+const V466_2022_P2_URL='./maths_pure_2022_p2_v466.json';
+const V466_2022_P3_URL='./maths_pure_2022_p3_v466.json';
 // v372: five original first-mock AS Pure questions need actual multi-step self-review.
 const V372_YEAR1_PURE_MANUAL=Object.freeze([{"id":"task1_v271_maths_pure_q03","specRef":"3.11","prompt":"Points A, B and C have position vectors (1,2), (7,−1) and (−2,8). P is the midpoint of BC and Q is the midpoint of AC. (a) Find the position vectors of P and Q. (b) Show by vector methods that the points on AP and BQ two-thirds of the way from A and B respectively coincide. (c) Give their common position vector and the ratio AG:GP. [8 marks]","marks":8},{"id":"task1_v271_maths_pure_q04","specRef":"3.4","prompt":"A circle is given by x²+y²−4x−6y−12=0. (a) Find its centre and radius. (b) Verify that P=(5,7) lies on the circle. (c) Find an exact equation of the tangent to the circle at P. (d) Find both axis intercepts of this tangent. [7 marks]","marks":7},{"id":"task1_v271_maths_pure_q05","specRef":"3.3","prompt":"Let f(x)=x²−4x+1 and g(x)=−2f(1−2x)+3. (a) Complete the square for f. (b) Describe a valid ordered sequence of graph transformations giving y=g(x) from y=f(x). (c) Express g as a quadratic in x and find the turning point. (d) Find both exact x-intercepts of g. [9 marks]","marks":9},{"id":"task1_v271_maths_pure_q06","specRef":"3.5","prompt":"In the expansion of (1+ax)⁷, the coefficient of x² is 84 and the coefficient of x³ is negative. (a) Show that a²=4. (b) Find a. (c) Calculate the coefficients of x³ and x⁴, showing the binomial coefficients used. [7 marks]","marks":7},{"id":"task1_v271_maths_pure_q07","specRef":"3.9","prompt":"For y=x²−5x+6 over 0≤x≤4, calculate (a) the signed definite integral from 0 to 4 and (b) the total area between the curve and the x-axis. You must show where the graph lies below the axis and split the integral correctly. Give exact answers. [8 marks]","marks":8}]);
 function applyV372Year1PureManualReview(questions){
@@ -2120,7 +2122,7 @@ function applyV221RpCorrections(deckCards){
 /* v221 RP correction block end */
 const PIN_HASH='02a80993805958408c14d68623a229c86777980c55403d0c2fecf46904fe367c';
 const PROGRESS_KEY='revisionLoopProgress5',PROFILE_KEY='revisionLoopProfile11',SETTINGS_KEY='revisionLoopSettings11';
-let cards=[],examQuestions=[],deckMeta={},coverage={},deckVersion=0,bankVersion=0,aqaPurePaperArchive=null,aqaPure2024P1Audit=null,aqaPure2024P2P3Audit=null,aqaPure2023P1Audit=null,aqaPure2023P2Audit=null,aqaPure2023P3Audit=null,aqaPure2022P1Audit=null;
+let cards=[],examQuestions=[],deckMeta={},coverage={},deckVersion=0,bankVersion=0,aqaPurePaperArchive=null,aqaPure2024P1Audit=null,aqaPure2024P2P3Audit=null,aqaPure2023P1Audit=null,aqaPure2023P2Audit=null,aqaPure2023P3Audit=null,aqaPure2022P1Audit=null,aqaPure2022P2Audit=null,aqaPure2022P3Audit=null;
 let progress=load(PROGRESS_KEY,{});
 let profile=load(PROFILE_KEY,{});
 let settings=load(SETTINGS_KEY,{});
@@ -4071,7 +4073,7 @@ function currentYear13PureMockCard(c){
    (/^y13_v462_card_\d{3}$/.test(c.id||'')&&c.specRef==='3.4')));
 }
 function currentYear13PureMockQuestion(q){
- return Boolean(q&&/^y13_v(?:450|451|452|457|458|459|460|461)_q_\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&
+ return Boolean(q&&/^y13_(?:v(?:450|451|452|457|458|459|460|461)_q_|v466_p[23]_q_)\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&
   q.level==='A-level'&&q.courseTopic==='Year 13 Pure · taught mock'&&
   q.year13PureMock===true&&q.mock===true&&q.taught===true&&
   q.standalone===true&&q.requiresWorking===true&&q.manualWorkingReview===true&&
@@ -4729,6 +4731,8 @@ function renderAqaPureArchive(){
  const verified23P2=aqaPure2023P2Audit;
  const verified23P3=aqaPure2023P3Audit;
  const verified22P1=aqaPure2022P1Audit;
+ const mapped22P2=aqaPure2022P2Audit;
+ const mapped22P3=aqaPure2022P3Audit;
  const statusFor=p=>{
   if(p.year===2024&&p.paper===1&&aqaPure2024P1Audit)return 'Question-paper text and mark-scheme audit; some diagrams pending';
   if(p.year===2024&&p.paper>1&&verified24)return 'Pure Section A methods checked; full mark-scheme / diagrams pending';
@@ -4736,6 +4740,7 @@ function renderAqaPureArchive(){
   if(p.year===2023&&p.paper===2&&verified23P2)return 'AQA Pure Section A Q1–10 checked; Mechanics Section B excluded';
   if(p.year===2023&&p.paper===3&&verified23P3)return 'AQA Pure Section A Q1–9 checked; Statistics Section B excluded';
   if(p.year===2022&&p.paper===1&&verified22P1)return 'Original 15 question texts and mark-scheme methods indexed; diagram checks pending';
+  if(p.year===2022&&p.paper>1&&(p.paper===2?mapped22P2:mapped22P3))return 'Provisional Pure method crosswalk; full question/diagram audit pending';
   if(p.year===2025)return 'Secondary Pure question-topic index only; original paper audit pending';
   return 'Paper linked; question-by-question Pure method audit pending';
  };
@@ -4746,6 +4751,8 @@ function renderAqaPureArchive(){
   if(p.year===2023&&p.paper===2&&verified23P2)return verified23P2.sourceQuestionPaper;
   if(p.year===2023&&p.paper===3&&verified23P3)return verified23P3.sourceQuestionPaper;
   if(p.year===2022&&p.paper===1&&verified22P1)return verified22P1.sourceQuestionPaper;
+  if(p.year===2022&&p.paper===2&&mapped22P2)return mapped22P2.sourceQuestionPaper;
+  if(p.year===2022&&p.paper===3&&mapped22P3)return mapped22P3.sourceQuestionPaper;
   return p.sourceIndex;
  };
  const yearSeries=[2025,2024,2023,2022,2021,2020,2019];
@@ -4814,13 +4821,21 @@ function renderAqaPureArchive(){
     '<small> · '+esc(q.currentMockRecommended?'Taught submethod':'Background or additional-only')+
     (q.diagramVisualCheck==='pending_manual_visual_comparison'?' · visual check pending':'')+'</small></li>').join('')+
   '</ul></details>':'';
+ const mapped2022Html=[mapped22P2,mapped22P3].filter(Boolean).map(pack=>
+  '<details class="pure-paper-year"><summary>2022 Paper '+pack.paper.slice(-1)+' · Pure Section A Q1–10 · '+pack.questions.length+' original practices</summary>'+
+  '<p>Provisional Pure question-topic and marks crosswalk only; some mark-scheme subparts and diagram-dependent questions still require direct checking. The new questions are independently written and are not reproductions of the AQA paper. Mechanics/Statistics Section B is excluded from Year 13 Pure revision. '+
+  link(pack.sourceQuestionPaper,'AQA question paper')+' · '+link(pack.sourceMarkScheme,'AQA mark scheme')+'</p><ul>'+
+  pack.inventory.map(q=>'<li><b>Q'+q.question+'</b> · '+esc(q.method)+
+   '<small> · '+esc(q.currentMockRecommended?'Taught Pure method':'Optional or unconfirmed')+
+   (q.diagramVisualCheck==='pending_manual_visual_comparison'?' · original visual check pending':'')+'</small></li>').join('')+
+  '</ul></details>').join('');
  root.innerHTML='<h4>AQA 7357 Pure · 2019–2025 paper coverage</h4>'+
   '<p><strong>21 public papers indexed</strong> (seven exam series × three papers). These are links to the AQA source papers or catalogues, not claims that every original question has been copied into Revision Loop. June 2026 is not publicly released.</p>'+
-  '<p><strong>Source checks so far:</strong> 2022 Paper 1 and all 2023 Pure paper methods; 2024 Paper 1 text/marks and 2024 Paper 2/3 Pure methods; plus a secondary 2025 topic index. Audits of 2019–2021, 2022 Papers 2/3, remaining diagram/scheme details and 2025 primary papers are outstanding.</p>'+
+  '<p><strong>Source checks so far:</strong> 2022 Paper 1 and all 2023 Pure paper methods; provisional 2022 Papers 2/3 Pure Section A topic crosswalks; 2024 Paper 1 text/marks and 2024 Paper 2/3 Pure methods; plus a secondary 2025 topic index. Full audits of 2019–2021, remaining 2022 diagrams/mark-scheme parts and 2025 primary papers are outstanding.</p>'+
   paperYears+
   '<h4>2024 · independently checked Pure methods</h4>'+paper1Html+paper23Html+
   '<h4>2023 · all three Pure paper methods reviewed</h4>'+paper2023Html+paper2023P2Html+paper2023P3Html+
-  '<h4>2022 · Paper 1 primary Pure methods</h4>'+paper2022P1Html+
+  '<h4>2022 · Pure paper methods</h4>'+paper2022P1Html+mapped2022Html+
   '<h4>2025 · secondary topic index (not a full paper audit)</h4>'+
   '<p>40 Pure method entries, plus one separately classified Mechanics-context entry. The question text and mark schemes have not been individually certified.</p>'+
   sourceRows+
@@ -7005,7 +7020,233 @@ async function sync(manual=false){
   q.sourceStyle?.methodPaper===1&&q.sourceStyle?.methodYear===2022&&
   q.year13PureMock===q.mock&&q.year13Optional===!q.mock&&q.taught===q.mock&&
   q.courseTopic===(q.mock?'Year 13 Pure · taught mock':'Year 13 Pure · additional practice'));
- const added=[...(x.questions||[]),...extraBanks.flatMap(bank=>bank.questions||[]),...validatedV450Questions,...validatedV451Questions,...validatedV452Questions,...validatedV457Questions,...validatedV458Questions,...validatedV459Questions,...validatedV460Questions,...validatedV461Questions],seen=new Set();
+
+ // v466: provisional 2022 Paper 2/3 Pure Section A crosswalks (10 questions,
+ // 50 marks each). The original AQA paper and final scheme are linked but
+ // diagram equivalence and some individual mark-scheme parts are NOT certified.
+ // New practices are independently written and are isolated from Mechanics/Stats.
+ let v466P2={inventory:[],questions:[]},v466P3={inventory:[],questions:[]};
+ try{
+  const [p2,p3]=await Promise.all([
+   fetch(V466_2022_P2_URL+'?v='+Date.now(),{cache:'no-store'}),
+   fetch(V466_2022_P3_URL+'?v='+Date.now(),{cache:'no-store'})
+  ]);
+  if(p2.ok)v466P2=await p2.json();
+  if(p3.ok)v466P3=await p3.json();
+ }catch(error){console.warn('Optional 2022 Pure Paper 2/3 method practice unavailable',error)}
+ const validV466Pack=(pack,paper)=>{
+  const inv=Array.isArray(pack.inventory)?pack.inventory:[];
+  return pack.version==='v466'&&pack.paperId==='7357-2022-'+paper&&pack.paper==='7357/'+paper&&
+   pack.pureSection==='Section A, Questions 1–10'&&pack.pureQuestionCount===10&&
+   pack.pureMarks===50&&pack.fullVisualAuditComplete===false&&
+   pack.fullMarkSchemeAuditComplete===false&&pack.sourceAuditStatus==='provisional-method-crosswalk'&&
+   /^https:\/\/filestore\.aqa\.org\.uk\//.test(pack.sourceQuestionPaper||'')&&
+   /^https:\/\/filestore\.aqa\.org\.uk\//.test(pack.sourceMarkScheme||'')&&
+   inv.length===10&&inv.reduce((n,x)=>n+(Number(x.marks)||0),0)===50&&
+   inv.every((x,i)=>x.question===i+1&&x.classification==='pure'&&x.textQuoted===false)&&
+   Array.isArray(pack.questions)&&pack.questions.length===10;
+ };
+ aqaPure2022P2Audit=validV466Pack(v466P2,2)?v466P2:null;
+ aqaPure2022P3Audit=validV466Pack(v466P3,3)?v466P3:null;
+ const validV466Questions=(pack,paper)=>((pack?.questions)||[]).filter(q=>
+  q&&new RegExp('^y13_v466_p'+paper+'_q_\\d{3}
+ // v439 optional Physics practical/data additions. Keep the original 56
+ // flashcard and 52 exam supplement indices and all historical inventories stable.
+ let v439PhysicsRecall={cards:[]};
+ try{
+  const response=await fetch(V439_PHYSICS_RECALL_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(response.ok)v439PhysicsRecall=await response.json();
+ }catch{}
+ for(const c of v439PhysicsRecall.cards||[]){
+  if(!/^v439_phy_(?:rp[1-6]|data)_\d{2}$/.test(c.id||'')||
+     c.subject!=='Physics'||c.stage!=='AS'||c.mock!==true||c.taught!==true||
+     c.scope!=='mock'||c.active!==true||c.kind!=='short'||c.strictRecall!==true||
+     !['3.1.2','3.2.2','3.3.2','3.4','3.5','7.2 RP1','7.2 RP2','7.2 RP3','7.2 RP4','7.2 RP5','7.2 RP6'].includes(c.specRef)||
+     !Array.isArray(c.accept)||!Array.isArray(c.reject)||c.front.length>140||c.back.length>150||
+     knownFlashIds.has(c.id))continue;
+  knownFlashIds.add(c.id);cards.push(c);
+ }
+ let v439PhysicsExam={questions:[]};
+ try{
+  const response=await fetch(V439_PHYSICS_EXAM_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(response.ok)v439PhysicsExam=await response.json();
+ }catch{}
+ const validatedV439PhysicsExam=(v439PhysicsExam.questions||[]).filter(q=>
+  /^v439_phy_exam_(?:rp[1-6]|data0[1-6])$/.test(q.id||'')&&q.subject==='Physics'&&q.level==='AS'&&
+  q.mock===true&&q.taught===true&&q.standalone===true&&q.marks===6&&
+  /^(?:7\.2 RP[1-6]|3\.(?:1\.2|2\.2|3\.2|5))$/.test(q.specRef||'')&&Array.isArray(q.markPoints)&&
+  q.markPoints.length===6&&Array.isArray(q.markPointMarks)&&
+  q.markPointMarks.reduce((sum,n)=>sum+n,0)===6&&typeof q.modelAnswer==='string');
+
+ examQuestions=[...(e.questions||[]),...added,...validatedV439PhysicsExam].filter(q=>{
+  if(seen.has(q.id))return false;seen.add(q.id);return true;
+ });
+ for(const q of examQuestions){
+  if(Object.prototype.hasOwnProperty.call(corrections.modelAnswers||{},q.id))q.modelAnswer=corrections.modelAnswers[q.id];
+  const changes=corrections.questionCorrections?.[q.id];
+  if(changes&&typeof changes==='object'){
+   for(const key of ['prompt','modelAnswer','markPoints','markPointMarks','markingMode','markEvidenceRules','numericAnswer','tolerance']){
+    if(Object.prototype.hasOwnProperty.call(changes,key))q[key]=changes[key];
+   }
+  }
+ }
+ // Apply exact manual-working protection after any published question corrections.
+ applyV372Year1PureManualReview(examQuestions);
+ applyV377PhysicsWavesManualReview(examQuestions);
+ applyV382MathsWorkedExamManualReview(examQuestions);
+ applyV383MathsTrigDifferentiationManualReview(examQuestions);
+ applyV384PhysicsSixWorkingReview(examQuestions);
+ applyV385ChemistryTenWorkingReview(examQuestions);
+ applyV386Chemistry25WorkingReview(examQuestions);
+ applyV390Physics19WorkingReview(examQuestions);
+ applyV391Maths19WorkingReview(examQuestions);
+ applyV393PhysicsOriginal12Manual(examQuestions);
+ applyV394ChemistryOriginal17Manual(examQuestions);
+ applyV395Organic13ManualDiagramReview(examQuestions);
+ applyV396PhysicsOriginal18Manual(examQuestions);
+ applyV398ChemistryOriginal24Manual(examQuestions);
+ applyV399MathsOriginal15Manual(examQuestions);
+ applyV400Physics8MethodManual(examQuestions);
+ applyV402Original21ManualReview(examQuestions);
+ applyV403Original82ManualReview(examQuestions);
+ applyV405ShortSemanticManualReview(examQuestions);
+ // v412: The 2016–17 and 52 extra practice banks are outside the original-bank
+ // v403 source-locked 208-item manual audit. Protect their mock-eligible
+ // multi-mark questions from guessed keyword marks; the visible mark-point
+ // editor already starts at zero and supports reviewing valid alternative work.
+ // Do not touch original-question flags, card IDs, saved scores or profile data.
+ const originalQuestionIds=new Set((e.questions||[]).map(q=>q.id));
+ for(const q of examQuestions){
+  if(originalQuestionIds.has(q.id)||q.standalone===false||
+     !mockEligibleQuestion(q)||!Number.isInteger(q.marks)||q.marks<3)continue;
+  if(q.manualWorkingReview===true||q.manualDiagramReview===true)continue;
+  q.manualWorkingReview=true;
+  q.v412SupplementManualRequired=true;
+ }
+ deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
+}
+function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}
+// Deep links from the retired article-preview page open the actual shop.
+window.addEventListener('DOMContentLoaded',()=>{if(window.location.hash==='#shop')switchPanel('shop')});
+function buildWeakSession(){const top=cards.filter(c=>c.active!==false).sort((a,b)=>weakness(b)-weakness(a)).slice(0,20);activeSession={kind:'flash',items:top.map(c=>({type:'card',id:c.id})),index:0,title:'Weak-topic flashcards'};switchPanel('study');renderAll()}
+
+ensureProfile();
+// Keep the world shop and unlocked locations usable even when the exam-bank
+// sync is offline or temporarily unavailable. A later successful sync rerenders.
+try{renderShop();drawGlobe()}catch(error){console.warn('World panel could not initialise',error)}
+document.getElementById('pinForm').onsubmit=async e=>{e.preventDefault();const ok=await unlock(document.getElementById('pinInput').value,document.getElementById('rememberPin').checked);document.getElementById('pinError').textContent=ok?'':'Incorrect code';if(ok)sync()};
+document.getElementById('pinInput').oninput=e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,4)};
+if(localStorage.getItem('rl_auth')==='1'||sessionStorage.getItem('rl_auth')==='1'){document.getElementById('authGate').classList.add('hidden');document.getElementById('app').classList.remove('app-locked');sync()}else document.getElementById('pinInput').focus();
+
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>switchPanel(b.dataset.panel));
+document.querySelectorAll('.study-type-btn').forEach(b=>b.onclick=()=>{studyType=b.dataset.study;activeSession=null;renderAll()});
+document.getElementById('flashSubject').onchange=()=>{flashTopics.clear();refreshFlashTopics(true);renderAll()};
+ for(const id of ['flashMustKnowFirst','mockMustKnowFirst']){
+  document.getElementById(id).onchange=e=>{
+   settings.recallMustKnowFirst=e.target.checked;
+   save();renderTopicCounts();
+  };
+ }
+ // Hidden compatibility input for older settings; the visible switch now controls filtering.
+ const legacyOnly=document.getElementById('flashMustKnowOnly');
+ if(legacyOnly)legacyOnly.onchange=e=>{
+  settings.recallMustKnowFirst=e.target.checked;
+  settings.recallMustKnowOnly=false;
+  save();renderTopicCounts();
+ };
+document.querySelectorAll('[data-flash-preset]').forEach(b=>b.onclick=()=>applyFlashPreset(b.dataset.flashPreset));
+document.getElementById('startMock').onclick=startMockSession;
+document.getElementById('mockSubject').onchange=()=>{const subject=document.getElementById('mockSubject').value;
+ const maths=document.getElementById('mathsMockScopeNote');if(maths)maths.hidden=subject!=='Maths';
+ const physics=document.getElementById('physicsMockBreadthNote');if(physics)physics.hidden=subject!=='Physics';};document.getElementById('startFlashcards').onclick=startFlashSession;
+document.getElementById('paper2Section').onchange=renderTopicCounts;
+document.getElementById('startPaper2Coach').onclick=startPaper2CoachSession;
+document.getElementById('examDifficulty').onchange=renderTopicCounts;
+document.getElementById('examLevel').onchange=()=>{examYear13PurePreset=false;examTopics.clear();examYears.clear();examTypes.clear();refreshExamFilters(true);renderTopicCounts()};
+document.getElementById('examSubject').onchange=()=>{examYear13PurePreset=false;examYears.clear();examTopics.clear();examTypes.clear();refreshExamFilters(true);renderAll()};
+document.getElementById('yearsAll').onclick=()=>{examYear13PurePreset=false;examYears=new Set(subjectExam(document.getElementById('examSubject').value).map(q=>q.year));refreshExamFilters(false)};
+document.getElementById('yearsRecent').onclick=()=>{examYear13PurePreset=false;const ys=[...new Set(subjectExam(document.getElementById('examSubject').value).map(q=>q.year))].sort((a,b)=>b-a);examYears=new Set(ys.slice(0,2));refreshExamFilters(false)};
+document.getElementById('yearsClear').onclick=()=>{examYear13PurePreset=false;examYears.clear();refreshExamFilters(false)};
+document.getElementById('examTopicsAll').onclick=()=>{examYear13PurePreset=false;examTopics=new Set(subjectExam(document.getElementById('examSubject').value).map(examTopicLabel));refreshExamFilters(false)};
+document.getElementById('examTopicsWeak').onclick=()=>{examYear13PurePreset=false;const sub=document.getElementById('examSubject').value,exam=subjectExam(sub),ts=[...new Set(exam.map(examTopicLabel))].sort((a,b)=>{const strength=t=>exam.filter(q=>examTopicLabel(q)===t).reduce((n,q)=>n+(profile.topicWeakness[topicKey(sub,q.revisionTopic||q.topic)]||0)+(profile.errorLog.some(z=>z.id===q.id)?2:0),0);return strength(b)-strength(a)});examTopics=new Set(ts.slice(0,Math.max(1,Math.ceil(ts.length/3))));refreshExamFilters(false)};
+document.getElementById('examTopicsClear').onclick=()=>{examYear13PurePreset=false;examTopics.clear();refreshExamFilters(false)};
+document.getElementById('examYear13Preset').onclick=()=>{
+ examYear13PurePreset=true;
+ document.getElementById('examSubject').value='Maths';
+ document.getElementById('examLevel').value='A-level';
+ document.getElementById('examDifficulty').value='all';
+ const current=examQuestions.filter(currentYear13PureMockQuestion);
+ examYears=new Set(['Practice']);
+ examTopics=new Set(current.map(examTopicLabel));
+ examTypes=new Set(current.map(q=>q.questionType));
+ refreshExamFilters(false);renderAll();
+};
+document.getElementById('startExam').onclick=startExamSession;
+document.getElementById('startChallenge').onclick=startChallenge;
+document.getElementById('challengeSubject').onchange=()=>{
+ if(document.getElementById('challengeScope').value==='mock'){
+  document.getElementById('challengeSubject').value='Maths';
+ }
+ renderChallenge();
+};
+document.getElementById('challengeScope').onchange=()=>{
+ if(document.getElementById('challengeScope').value==='mock'){
+  document.getElementById('challengeSubject').value='Maths';
+ }
+ renderChallenge();
+};
+document.getElementById('reviewWeakBtn').onclick=buildWeakSession;document.getElementById('redoMistakesBtn').onclick=startMistakes;
+document.getElementById('locationRegion').onchange=()=>{locationVisibleLimit=24;renderLocationGallery();drawGlobe()};document.getElementById('showAllGlobePins').onchange=drawGlobe;document.getElementById('moreLocations').onclick=()=>{locationVisibleLimit+=24;renderLocationGallery()};document.getElementById('moreCharacters').onclick=()=>{characterVisibleLimit+=16;renderShop()};document.getElementById('characterSeries').onchange=()=>{characterVisibleLimit=16;renderShop()};document.getElementById('characterOwnedFilter').onchange=()=>{characterVisibleLimit=16;renderShop()};document.getElementById('shopCharacterSearch').oninput=()=>{characterVisibleLimit=16;renderShop()};document.getElementById('outfitCharacterSelect').onchange=e=>{const id=e.target.value;if(profile.shopOwned.characters.includes(id)&&id!==profile.equippedCharacter)buy('character',id)};document.getElementById('specSubject').onchange=renderSyllabusCoverage;document.getElementById('syncBtn').onclick=()=>sync(true);document.getElementById('lockBtn').onclick=lockApp;
+
+const globe=document.getElementById('globe');
+globe.addEventListener('pointerdown',e=>{dragging=true;dragDistance=0;lastPointer={x:e.clientX,y:e.clientY};globe.setPointerCapture(e.pointerId)});
+globe.addEventListener('pointermove',e=>{if(window.RevisionWorldGlobeGesture?.isPinching()){dragging=false;return}if(!dragging)return;const dx=e.clientX-lastPointer.x,dy=e.clientY-lastPointer.y;dragDistance+=Math.hypot(dx,dy);globeLon=(globeLon-dx*.45+540)%360-180;globeLat=clamp(globeLat+dy*.3,-65,65);lastPointer={x:e.clientX,y:e.clientY};drawGlobe()});
+globe.addEventListener('pointerup',e=>{if(window.RevisionWorldGlobeGesture?.isPinching()){dragging=false;return}if(dragging&&dragDistance<10){const p=globePointer(e),l=nearestPin(p.x,p.y);if(l)setLocationInfo(l.id)}dragging=false});
+globe.addEventListener('pointercancel',()=>{dragging=false});
+if(window.RevisionWorldGlobeGesture)window.RevisionWorldGlobeGesture.onComplete=()=>{dragging=false};
+
+const globeFindInput=document.getElementById('globePlaceSearch');
+const globeFindButton=document.getElementById('globeFindPlace');
+const globeOptions=document.getElementById('globePlaceOptions');
+if(globeFindInput&&globeFindButton&&globeOptions){
+ const entries=window.RevisionWorldProfileSafety?.distinctLocations(LOCATIONS)||LOCATIONS;
+ const fragment=document.createDocumentFragment();
+ for(const place of entries){
+   const option=document.createElement('option');
+   option.value=place.name;
+   fragment.append(option);
+ }
+ globeOptions.append(fragment);
+ const locate=()=>{
+   const query=globeFindInput.value.trim().toLowerCase();
+   const match=entries.find(l=>l.name.toLowerCase()===query||l.id.toLowerCase()===query);
+   if(!match){showToast('Choose a destination from the suggestions');return}
+   focusOnGlobeLocation(match.id,true);
+ };
+ globeFindButton.onclick=locate;
+ globeFindInput.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();locate()}});
+}
+
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
+).test(q.id||'')&&
+  q.subject==='Maths'&&q.level==='A-level'&&q.stage==='A2'&&
+  allowedV450Refs.has(q.specRef)&&q.year==='Practice'&&
+  q.standalone===true&&q.requiresWorking===true&&q.manualWorkingReview===true&&
+  q.sourceVerified===false&&q.verificationLevel==='original-exam-style'&&
+  Number.isInteger(q.marks)&&q.marks>=3&&q.marks<=9&&
+  Array.isArray(q.markPoints)&&q.markPoints.length===q.marks&&
+  Array.isArray(q.markPointMarks)&&q.markPointMarks.length===q.marks&&
+  q.markPointMarks.every(m=>m===1)&&q.modelAnswer===q.markPoints.join(' ')&&
+  pack.inventory.some(r=>r.question===q.sourceStyle?.methodQuestion&&
+   r.classification==='pure'&&r.currentMockRecommended===q.mock)&&
+  q.sourceStyle.methodPaper===paper&&q.sourceStyle.methodYear===2022&&
+  q.sourceStyle.questionPaper===pack.sourceQuestionPaper&&
+  q.sourceStyle.markScheme===pack.sourceMarkScheme&&
+  q.year13PureMock===q.mock&&q.year13Optional===!q.mock&&q.taught===q.mock&&
+  q.courseTopic===(q.mock?'Year 13 Pure · taught mock':'Year 13 Pure · additional practice'));
+ const validatedV466P2=validV466Questions(aqaPure2022P2Audit,2);
+ const validatedV466P3=validV466Questions(aqaPure2022P3Audit,3);
+ const added=[...(x.questions||[]),...extraBanks.flatMap(bank=>bank.questions||[]),...validatedV450Questions,...validatedV451Questions,...validatedV452Questions,...validatedV457Questions,...validatedV458Questions,...validatedV459Questions,...validatedV460Questions,...validatedV461Questions,...validatedV466P2,...validatedV466P3],seen=new Set();
  // v439 optional Physics practical/data additions. Keep the original 56
  // flashcard and 52 exam supplement indices and all historical inventories stable.
  let v439PhysicsRecall={cards:[]};
