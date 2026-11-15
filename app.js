@@ -4548,7 +4548,10 @@ function refreshFlashTopics(defaultIfEmpty=false){
  const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);
  const topics=[...new Set(base.map(flashTopicLabel))];
  flashTopics=new Set([...flashTopics].filter(t=>topics.includes(t)));
- if(defaultIfEmpty&&!flashTopics.size){flashScopeFilter='taught';base.filter(taughtCard).forEach(c=>flashTopics.add(flashTopicLabel(c)));}
+ if(defaultIfEmpty&&!flashTopics.size){
+  flashScopeFilter=sub==='Maths'?'mock':'taught';
+  base.filter(sub==='Maths'?currentYear13PureMockCard:taughtCard).forEach(c=>flashTopics.add(flashTopicLabel(c)));
+ }
  document.getElementById('flashTopics').innerHTML=groupedTopicPicker(sub,'flash',flashTopics);
  document.querySelectorAll('[data-flash-topic]').forEach(el=>el.onchange=()=>{el.checked?flashTopics.add(el.dataset.flashTopic):flashTopics.delete(el.dataset.flashTopic);renderTopicCounts()});bindTopicGroupControls('flash');
  renderTopicCounts();
@@ -4701,6 +4704,15 @@ function refreshExamFilters(defaultIfEmpty=false){
  topics=[...new Set(subjectCards(sub).map(flashTopicLabel))],
  types=[...new Set(base.map(q=>q.questionType).filter(Boolean))].sort();
  examYears=new Set([...examYears].filter(y=>years.includes(y)));examTopics=new Set([...examTopics].filter(t=>topics.includes(t)));examTypes=new Set([...examTypes].filter(t=>types.includes(t)));
+ if(defaultIfEmpty&&sub==='Maths'&&level==='A-level'&&
+    !examYears.size&&!examTopics.size&&!examTypes.size){
+  const current=base.filter(currentYear13PureMockQuestion);
+  if(current.length){
+   examYears=new Set(['Practice']);
+   examTopics=new Set(current.map(examTopicLabel));
+   examTypes=new Set(current.map(q=>q.questionType));
+  }
+ }
  if(defaultIfEmpty&&!examYears.size)years.forEach(y=>examYears.add(y));
  if(defaultIfEmpty&&!examTopics.size)base.forEach(q=>examTopics.add(examTopicLabel(q)));
  if(defaultIfEmpty&&!examTypes.size)types.forEach(t=>examTypes.add(t));
@@ -6717,8 +6729,30 @@ document.getElementById('yearsClear').onclick=()=>{examYears.clear();refreshExam
 document.getElementById('examTopicsAll').onclick=()=>{examTopics=new Set(subjectExam(document.getElementById('examSubject').value).map(examTopicLabel));refreshExamFilters(false)};
 document.getElementById('examTopicsWeak').onclick=()=>{const sub=document.getElementById('examSubject').value,exam=subjectExam(sub),ts=[...new Set(exam.map(examTopicLabel))].sort((a,b)=>{const strength=t=>exam.filter(q=>examTopicLabel(q)===t).reduce((n,q)=>n+(profile.topicWeakness[topicKey(sub,q.revisionTopic||q.topic)]||0)+(profile.errorLog.some(z=>z.id===q.id)?2:0),0);return strength(b)-strength(a)});examTopics=new Set(ts.slice(0,Math.max(1,Math.ceil(ts.length/3))));refreshExamFilters(false)};
 document.getElementById('examTopicsClear').onclick=()=>{examTopics.clear();refreshExamFilters(false)};
+document.getElementById('examYear13Preset').onclick=()=>{
+ document.getElementById('examSubject').value='Maths';
+ document.getElementById('examLevel').value='A-level';
+ document.getElementById('examDifficulty').value='all';
+ const current=examQuestions.filter(currentYear13PureMockQuestion);
+ examYears=new Set(['Practice']);
+ examTopics=new Set(current.map(examTopicLabel));
+ examTypes=new Set(current.map(q=>q.questionType));
+ refreshExamFilters(false);renderAll();
+};
 document.getElementById('startExam').onclick=startExamSession;
-document.getElementById('startChallenge').onclick=startChallenge;document.getElementById('challengeSubject').onchange=renderChallenge;document.getElementById('challengeScope').onchange=renderChallenge;
+document.getElementById('startChallenge').onclick=startChallenge;
+document.getElementById('challengeSubject').onchange=()=>{
+ if(document.getElementById('challengeScope').value==='mock'){
+  document.getElementById('challengeSubject').value='Maths';
+ }
+ renderChallenge();
+};
+document.getElementById('challengeScope').onchange=()=>{
+ if(document.getElementById('challengeScope').value==='mock'){
+  document.getElementById('challengeSubject').value='Maths';
+ }
+ renderChallenge();
+};
 document.getElementById('reviewWeakBtn').onclick=buildWeakSession;document.getElementById('redoMistakesBtn').onclick=startMistakes;
 document.getElementById('locationRegion').onchange=()=>{locationVisibleLimit=24;renderLocationGallery();drawGlobe()};document.getElementById('showAllGlobePins').onchange=drawGlobe;document.getElementById('moreLocations').onclick=()=>{locationVisibleLimit+=24;renderLocationGallery()};document.getElementById('moreCharacters').onclick=()=>{characterVisibleLimit+=16;renderShop()};document.getElementById('characterSeries').onchange=()=>{characterVisibleLimit=16;renderShop()};document.getElementById('characterOwnedFilter').onchange=()=>{characterVisibleLimit=16;renderShop()};document.getElementById('specSubject').onchange=renderSyllabusCoverage;document.getElementById('syncBtn').onclick=()=>sync(true);document.getElementById('lockBtn').onclick=lockApp;
 
