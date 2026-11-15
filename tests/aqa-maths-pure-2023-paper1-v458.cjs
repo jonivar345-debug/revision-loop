@@ -87,7 +87,7 @@ assert(app.includes('validatedV458Questions'));
 assert(app.includes('...validatedV458Questions'));
 assert(app.includes('aqaPure2023P1Audit=v458Pack.version'));
 assert(app.includes('2023 Paper 1 · 16 questions'));
-assert(html.includes('papers=v459'));
+assert(html.includes('papers=v460'));
 assert(sw.includes("'./maths_pure_2023_p1_v458.json'"));
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'",
  "PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])
