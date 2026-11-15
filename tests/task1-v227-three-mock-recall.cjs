@@ -54,7 +54,7 @@ for(const bank of banks)for(const c of bank.cards){
  assert.equal(judge(c,'').status,'neutral');
 }
 assert(accept>=135,'Original 135 correct answer checks remain');assert(reject>=90,'Original 90 rejected answer checks remain');
-const lstart=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),lend=app.indexOf(' const added=[',lstart);
+const lstart=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),lend=app.indexOf(' // v450: append-only Year 13 Pure Maths revision pack.',lstart);
 assert(lstart>=0&&lend>lstart);
 const loader=app.slice(lstart,lend);for(const i of [20,21,22])assert(loader.includes('else if(index==='+i+')'));
 const load=new Function('cards','extraFlashBanks',loader+'\nreturn cards;');
