@@ -94,6 +94,7 @@
   applyShopView(doc,storage,getShopView(storage));
   doc.querySelectorAll('[data-shop-view]').forEach(button=>button.addEventListener('click',()=>{
    const view=applyShopView(doc,storage,button.dataset.shopView);
+   if(view==='places')doc.defaultView?.requestAnimationFrame(()=>doc.defaultView.RevisionLoopDrawGlobe?.());
    scrollToSection(doc,view==='places'?'shopLocationsSection':view==='outfits'?'shopOutfitsSection':'shopCharactersSection');
   }));
   doc.getElementById('shopViewOutfits')?.addEventListener('click',()=>{
