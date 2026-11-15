@@ -53,7 +53,7 @@ try{
    oldProgress:progress.historic_math?.good,oldExam:profile.examResults.oldExam?.last?.marks,
    xp:profile.lifetimeXp
   }));
-  assert.deepEqual(bank,{newCards:123,newQuestions:62,mockCards:110,mockQuestions:56,
+  assert.deepEqual(bank,{newCards:123,newQuestions:62,mockCards:110,mockQuestions:73,
    optionalCards:13,optionalExam:6,physicsPaper2:227,oldProgress:4,oldExam:3,xp:140});
   assert.equal(await page.locator('#mockSubject option').count(),1);
   assert.equal(await page.locator('#mockSubject').inputValue(),'Maths');
@@ -95,7 +95,7 @@ try{
    years:[...examYears],size:examGroups().length,
    safe:examGroups().every(g=>g.every(currentYear13PureMockQuestion))
   }));
-  assert.deepEqual(exam,{sub:'Maths',level:'A-level',years:['Practice'],size:56,safe:true});
+  assert.deepEqual(exam,{sub:'Maths',level:'A-level',years:['Practice'],size:73,safe:true});
   await page.locator('#startExam').click();
   const examSession=await page.evaluate(()=>({
    kind:activeSession.kind,size:activeSession.items.length,
@@ -117,7 +117,7 @@ try{
   assert(geometry.scroll<=geometry.screen+3, 'Horizontal page overflow at '+width+'px');
   const severe=errors.filter(e=>!/firebase/i.test(e));
   assert.deepEqual(severe,[]);
-  console.log('PASS v450 '+width+'px: 123 cards/62 worked problems, 110+56 mock-only, optional exclusions, Paper 2 intact, unlimited, skip, exam preset, cloud/Xp preservation');
+  console.log('PASS v450 '+width+'px: 123 cards/83 worked problems, 110+73 mock-only, optional exclusions, Paper 2 intact, unlimited, skip, exam preset, cloud/Xp preservation');
   await ctx.close();
  }
 }finally{
