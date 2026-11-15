@@ -83,4 +83,57 @@ assert(sw.includes('v462-curated-maths-memorisation'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"));
+
+// Test the REAL mock and flashcard session selectors, not a rewritten approximation.
+const bankForSessions=[...old.cards,...pack.cards],examForSessions=old.questions;
+const mockPredicate=c=>ctx.isCard(c),examPredicate=q=>q.year13PureMock===true;
+const selectCards=(pool,n)=>pool.slice(0,n);
+const makeMockBuilder=new Function('cards','examQuestions','settings','currentYear13PureMockCard',
+  'currentYear13PureMockQuestion','isRecallMustKnow','weakness','isDue','memoryHealth',
+  'window','pickRecallCards','weightedPick','groupWeakness',
+  app.slice(app.indexOf('function buildMockSessionItems('),app.indexOf('function startMockSession('))+
+  '\nreturn buildMockSessionItems;');
+const prefs={recallMustKnowFirst:true};
+const build=makeMockBuilder(bankForSessions,examForSessions,prefs,mockPredicate,examPredicate,
+  recall.isMustKnow,()=>0,()=>false,()=>0.5,{},selectCards,selectCards,()=>0);
+const selectedMock=build('Maths','mixed',30);
+assert.equal(selectedMock.length,30);
+assert(selectedMock.every(x=>x.type==='card'&&want.has(x.id)),
+  'Strict mock must never mix in an ordinary Maths card or exam question');
+const deliberatelyExam=build('Maths','exam',10);
+assert.equal(deliberatelyExam.length,10);
+assert(deliberatelyExam.every(x=>x.type==='card'&&want.has(x.id)),
+  'Strict memorisation must override exam mode to flashcards only');
+const previous=new Set(),groupsSeen=new Set();
+const firstBatch=build('Maths','flash',50,previous,groupsSeen);
+const secondBatch=build('Maths','flash',50,previous,groupsSeen);
+assert.equal(firstBatch.length,50);
+assert.equal(secondBatch.length,39,'Use all selected cards before repeating in unlimited mode');
+assert([...firstBatch,...secondBatch].every(x=>x.type==='card'&&want.has(x.id)));
+const thirdBatch=build('Maths','flash',50,previous,groupsSeen);
+assert.equal(thirdBatch.length,50,'Once exhausted, only selected cards can repeat');
+assert(thirdBatch.every(x=>x.type==='card'&&want.has(x.id)));
+prefs.recallMustKnowFirst=false;
+const restored=build('Maths','mixed',30);
+assert(restored.some(x=>x.type==='card')&&restored.some(x=>x.type==='exam'),
+  'Switching off must memorise must restore ordinary mixed mock practice');
+const plainFlashSource=app.slice(app.indexOf('function selectedFlashCards('),app.indexOf('function startFlashSession('));
+const makeFlashSelector=new Function('document','subjectCards','flashTopics','flashTopicLabel',
+  'flashEligible','settings','isRecallMustKnow',plainFlashSource+'\nreturn selectedFlashCards;');
+const flashSelector=makeFlashSelector({getElementById:()=>({value:'Maths'})},
+  ()=>bankForSessions,new Set(bankForSessions.map(c=>c.revisionTopic)),
+  c=>c.revisionTopic,mockPredicate,prefs,recall.isMustKnow);
+assert.equal(flashSelector().length,176,'Normal flashcard scope must remain complete');
+prefs.recallMustKnowFirst=true;
+assert.equal(flashSelector().length,89,'Must memorise flashcard mode should show exactly 89 cards');
+assert(flashSelector().every(c=>want.has(c.id)));
+const styles=fs.readFileSync('styles.css','utf8');
+assert(styles.includes('.maths-memorise-card .maths-memorise-question'));
+assert(styles.includes('.maths-memorise-card .maths-memorise-answer-text'));
+assert(app.includes('selectedPureRecall?\' maths-memorise-card\''));
+assert(html.includes('<strong>Must memorise only</strong>'));
+assert(!html.includes('<strong>Must memorise first</strong>'));
+assert(html.includes('id="flashMustKnowOnly" hidden'),'Old extra switch remains hidden for profile compatibility');
+assert(app.includes("mustOnly?'Start must-memorise cards':'Start mock revision'"));
+
 console.log('PASS v462: 89 exact user priorities (23 existing+66 new), 176 taught-mock cards, 13 optional untouched, no declined log cards, science unchanged, saved keys stable');
