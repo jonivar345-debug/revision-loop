@@ -71,6 +71,10 @@ assert.equal(ids.size,89);
 assert(app.includes("const mustOnly=sub==='Maths'&&settings.recallMustKnowFirst!==false;"));
 assert(app.includes("const effectiveMode=mustOnly?'flash':mode;"));
 assert(app.includes("const qAll=sub==='Maths'&&!mustOnly?examQuestions.filter(currentYear13PureMockQuestion):[]"));
+assert(app.includes("(!examYear13PurePreset||currentYear13PureMockQuestion(q))"),
+ 'Year 13 exam preset must exclude legacy or optional Practice items that share a topic');
+assert(app.includes("examYear13PurePreset=true;"),
+ 'The Year 13 exam preset must enable its own strict question gate');
 for(const v of ['459','460','461']){
  assert(app.includes('...validatedV'+v+'Questions'),'v'+v+' not appended');
  assert(sw.includes("'./maths_pure_"+(v==='461'?'2022_p1':'2023_p'+(v==='459'?'2':'3'))+"_v"+v+".json'"));
