@@ -1,4 +1,4 @@
-name: v453 Navigation, appearance and cloud-key UI regression
+name: v454 Consolidated navigation, appearance and cloud-key regression
 on:
   pull_request:
     paths:
@@ -35,7 +35,7 @@ jobs:
         run: |
           npm install --no-save --no-package-lock playwright@1.64.1
           npx playwright install --with-deps chromium
-      - name: Navigation, light/dark persistence, sync visibility and zero lost progress at 360, 390 and 1280 px
+      - name: One navigation hierarchy, accurate section scrolling, light/dark, sync and progress at 360, 390 and 1280 px
         run: node tests/ui-refresh-browser-v453.mjs
       - name: Recheck Year 13 Pure mock, exam questions, full-screen and original ID safety
         run: node tests/year13-pure-browser-v450.mjs

@@ -1,4 +1,4 @@
-/* v453: phone/desktop UI navigation, theme and connected-key-panel browser QA. */
+/* v454: one navigation hierarchy, in-study overview, theme and cloud key browser QA. */
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -33,7 +33,10 @@ try{
   await page.goto(url,{waitUntil:'domcontentloaded',timeout:90000});
   await page.waitForFunction(()=>document.getElementById('syncState')?.textContent?.includes('flashcards'),null,{timeout:120000});
   assert.equal(await page.locator('html').getAttribute('data-theme'),'light');
-  assert.equal(await page.locator('.quick-nav-btn').count(),6);
+  assert.equal(await page.locator('.quick-nav-btn').count(),0,'Duplicate quick links must be gone');
+  assert.equal(await page.locator('.tab').count(),4,'Exactly four main sections');
+  assert.equal(await page.locator('.study-type-btn').count(),3,'Three study modes, only inside Revision');
+  assert(await page.locator('#studyOverview').isVisible(),'Dashboard available under Revision');
   assert(await page.locator('#cloudQuickDetails').isVisible(),'New browser must show private-key setup');
   const initial=await page.evaluate(()=>({
    overflow:document.documentElement.scrollWidth>innerWidth+1,
@@ -50,21 +53,23 @@ try{
   await page.reload({waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>document.getElementById('syncState')?.textContent?.includes('flashcards'),null,{timeout:120000});
   assert.equal(await page.locator('html').getAttribute('data-theme'),'dark','Dark mode should persist on device');
-  await page.locator('[data-jump="exam"]').click();
+  await page.locator('.study-type-btn[data-study="exam"]').click();
   assert(await page.locator('#study').evaluate(el=>el.classList.contains('active')));
   assert(await page.locator('#examControls').isVisible());
-  assert.equal(await page.locator('[data-jump="exam"]').getAttribute('aria-current'),'page');
-  const examPosition=await page.locator('#study').evaluate(el=>Math.round(el.getBoundingClientRect().top));
+  assert.equal(await page.locator('.study-type-btn[data-study="exam"]').getAttribute('aria-current'),'page');
+  const examPosition=await page.locator('#studyModes').evaluate(el=>Math.round(el.getBoundingClientRect().top));
   assert(examPosition>=0&&examPosition<200,'Exam jump must scroll to study section, got '+examPosition);
-  await page.locator('[data-jump="progress"]').click();
+  await page.locator('.tab[data-panel="progress"]').click();
   assert(await page.locator('#progress').isVisible());
+  assert(!(await page.locator('#studyOverview').isVisible()),'Study dashboard should not repeat on Progress');
   const pos=await page.locator('#progress').evaluate(el=>Math.round(el.getBoundingClientRect().top));
   assert(pos>=0&&pos<190,'Progress jump should reveal panel, got '+pos);
   await page.locator('.tab[data-panel="weaknesses"]').click();
   assert(await page.locator('#weaknesses').isVisible());
   const weak=await page.locator('#weaknesses').evaluate(el=>Math.round(el.getBoundingClientRect().top));
   assert(weak>=0&&weak<190,'Tab click should scroll to actual content, got '+weak);
-  await page.locator('[data-jump="mock"]').click();
+  await page.locator('.tab[data-panel="study"]').click();
+  await page.locator('.study-type-btn[data-study="mock"]').click();
   assert(await page.locator('#mockControls').isVisible());
   await page.locator('#startMock').click();
   assert(await page.locator('#studyHost').locator('.review-card,.exam-card').first().isVisible());
@@ -94,7 +99,7 @@ try{
   assert.equal(after.oldGood,3);
   assert(after.width<=after.viewWidth+1,'No mobile horizontal page overflow');
   assert.deepEqual(errors.filter(e=>!/firebase|dynamically imported module|Failed to fetch|network/i.test(e)),[]);
-  console.log('PASS v453 '+width+'px: quick navigation, in-view panels and questions, dark persistence, connected-only key collapse, saved progress, no overflow');
+  console.log('PASS v454 '+width+'px: one navigation hierarchy, direct-to-section scroll, nonduplicated dashboard, dark persistence, cloud key state, saved progress');
   await ctx.close();
  }
 }finally{

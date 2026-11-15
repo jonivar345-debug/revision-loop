@@ -10,7 +10,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css?v=173">
   <link rel="stylesheet" href="study-focus-v440.css?v=440">
-  <link rel="stylesheet" href="ui-refresh-v453.css?v=453">
+  <link rel="stylesheet" href="ui-refresh-v453.css?v=454">
   <script src="layout-mode.js?v=120" defer></script>
 </head>
 <body>
@@ -45,14 +45,6 @@
       <button id="lockBtn" class="icon-btn" aria-label="Lock app" title="Lock">⌁</button>
     </div>
   </header>
-  <nav class="quick-nav" aria-label="Jump directly to a revision section">
-    <button type="button" class="quick-nav-btn" data-jump="mock">Year 13 mock</button>
-    <button type="button" class="quick-nav-btn" data-jump="flashcards">Flashcards</button>
-    <button type="button" class="quick-nav-btn" data-jump="exam">Exam questions</button>
-    <button type="button" class="quick-nav-btn" data-jump="weaknesses">Weak topics</button>
-    <button type="button" class="quick-nav-btn" data-jump="progress">Progress</button>
-    <button type="button" class="quick-nav-btn" data-jump="shop">World</button>
-  </nav>
   <section id="cloudQuickAccess" class="sync-quick-access" aria-label="Cross-device progress" data-connected="false">
     <div class="cloud-quick-head">
       <div class="cloud-quick-heading"><span class="cloud-status-icon" aria-hidden="true">↻</span><strong>Progress across devices</strong></div>
@@ -82,6 +74,20 @@
         <button type="button" data-layout-choice="pc" aria-pressed="false">PC</button>
       </div></div>
 
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <nav class="tabs">
+    <button class="tab active" data-panel="study">Revision</button>
+    <button class="tab" data-panel="weaknesses">Weak topics</button>
+    <button class="tab" data-panel="progress">Progress</button>
+    <button class="tab" data-panel="shop">World</button>
+  </nav>
+
+  <main>
+    <section id="study" class="panel active">
+      <details class="study-overview" id="studyOverview" open>
+        <summary>Dashboard overview <span>Level, progress and daily starter</span></summary>
+        <div class="study-overview-inner">
   <section class="level-card">
     <div class="level-main">
       <div class="level-number"><span>LEVEL</span><strong id="levelNum">1</strong></div>
@@ -93,7 +99,6 @@
     <div class="xp-track"><div id="xpBar" class="xp-bar"></div></div>
   </section>
 
-  <div id="toast" class="toast" aria-live="polite"></div>
   <div id="syncState" class="sync-state">Loading latest revision content…</div>
 
   <section class="stats-grid">
@@ -117,17 +122,11 @@
     <div id="challengeStatus" class="starter-status"></div>
   </section>
 
-  <nav class="tabs">
-    <button class="tab active" data-panel="study">Study</button>
-    <button class="tab" data-panel="weaknesses">Weaknesses</button>
-    <button class="tab" data-panel="progress">Progress</button>
-    <button class="tab" data-panel="shop">Shop</button>
-  </nav>
+        </div>
+      </details>
 
-  <main>
-    <section id="study" class="panel active">
-      <div class="study-type">
-        <button class="study-type-btn active" data-study="mock">Year 13 Pure mock</button>
+      <div id="studyModes" class="study-type" aria-label="Choose revision mode">
+        <button class="study-type-btn active" data-study="mock">Year 13 mock</button>
         <button class="study-type-btn" data-study="flashcards">Flashcards</button>
         <button class="study-type-btn" data-study="exam">Exam questions</button>
       </div>
@@ -383,7 +382,7 @@
 <script src="physics-paper2-visuals-v449.js?v=449" defer></script>
 <script src="app.js?v=430&physics=v439&chem=v433&data=6&focus=v440&world=v442&paper2=v449&year13=v450&papers=v452" defer></script>
 <script src="study-focus-v440.js?v=440" defer></script>
-<script src="ui-refresh-v453.js?v=453" defer></script>
+<script src="ui-refresh-v453.js?v=454" defer></script>
 <script src="world-zoom-helpers.js?v=61" defer></script>
 <script src="world-globe-article-bridge.js?v=73" defer></script>
 <script>
