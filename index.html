@@ -10,7 +10,8 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css?v=173">
   <link rel="stylesheet" href="study-focus-v440.css?v=440">
-  <link rel="stylesheet" href="ui-refresh-v453.css?v=454">
+  <link rel="stylesheet" href="ui-refresh-v453.css?v=455">
+  <link rel="stylesheet" href="shop-refresh-v455.css?v=455">
   <script src="layout-mode.js?v=120" defer></script>
 </head>
 <body>
@@ -80,7 +81,7 @@
     <button class="tab active" data-panel="study">Revision</button>
     <button class="tab" data-panel="weaknesses">Weak topics</button>
     <button class="tab" data-panel="progress">Progress</button>
-    <button class="tab" data-panel="shop">World</button>
+    <button class="tab" data-panel="shop">Shop</button>
   </nav>
 
   <main>
@@ -294,25 +295,40 @@
       </section>
     </section>
 
-    <section id="shop" class="panel">
+    <section id="shop" class="panel" aria-labelledby="shopTitle">
+      <div class="shop-intro">
+        <span class="eyebrow">EARN POINTS BY REVISING</span>
+        <h2 id="shopTitle">Shop &amp; collection</h2>
+        <p>Unlock characters, collect outfits and explore places using your revision points.</p>
+      </div>
       <div class="shop-hero">
         <div id="characterPreview" class="character-preview"></div>
-        <div><span class="eyebrow">YOUR COLLECTION</span><h2 id="equippedName">Nova</h2><p><span id="equippedOutfitName">Default outfit</span> · <span id="equippedLocation">Home Desk</span></p><strong><span id="shopPoints">0</span> points available</strong></div>
+        <div class="shop-hero-copy"><span class="eyebrow">CURRENTLY EQUIPPED</span><h3 id="equippedName">Nova</h3><p><span id="equippedOutfitName">Default outfit</span> · <span id="equippedLocation">Home Desk</span></p><strong class="shop-points-balance"><span id="shopPoints">0</span> points available</strong><button type="button" id="shopViewOutfits" class="mini-btn shop-hero-action">Browse outfits</button></div>
       </div>
 
+      <div class="shop-category-switch" role="group" aria-label="Browse shop categories">
+        <button type="button" class="shop-category active" data-shop-view="characters" aria-pressed="true" aria-controls="shopCharactersSection">Characters</button>
+        <button type="button" class="shop-category" data-shop-view="outfits" aria-pressed="false" aria-controls="shopOutfitsSection">Outfits</button>
+        <button type="button" class="shop-category" data-shop-view="places" aria-pressed="false" aria-controls="shopLocationsSection">Places</button>
+      </div>
+      <section id="shopCharactersSection" class="shop-section" aria-label="Characters for unlocking">
       <div class="section-head"><div><h2>Characters</h2><p>Your first approved packs are live. Choose a series, unlock a character, then collect outfits for them.</p></div><strong id="characterCount">0 / 0</strong></div>
       <div class="character-filter">
         <select id="characterSeries"><option value="">All series</option></select>
         <select id="characterOwnedFilter"><option value="all">All characters</option><option value="owned">Unlocked only</option><option value="locked">Locked only</option></select>
       </div>
       <div id="characterShop" class="shop-grid"></div><button id="moreCharacters" class="mini-btn world-more hidden">Show more characters</button>
-      <section id="characterOutfitsPanel" class="character-outfits-panel">
+      </section>
+      <section id="shopOutfitsSection" class="shop-section" aria-label="Outfits for the selected character" hidden>
+        <section id="characterOutfitsPanel" class="character-outfits-panel">
         <div class="section-head"><div><h2 id="outfitHeading">Selected character's outfits</h2><p>Pick your character above, then select their outfit here.</p></div><strong id="outfitCount">0 / 0</strong></div>
         <p class="outfit-media-note">Outfit colours and cuts are concept previews, not official anime costume artwork. Choose a picture to give any outfit its own accurate appearance. Your picture stays on this device and is not uploaded or synced.</p>
         <div id="outfitShop" class="shop-grid"></div>
       </section>
 
-      <div class="section-head globe-head"><div><h2>World locations</h2><p>Unlock destinations, rotate a geographically accurate Earth, and open researched information by selecting an owned pin.</p></div><strong id="locationCount">0 / 0</strong></div>
+      </section>
+      <section id="shopLocationsSection" class="shop-section" aria-label="Collectable world locations" hidden>
+      <div class="section-head globe-head"><div><h2>Explore places</h2><p>Unlock destinations, rotate a geographically accurate Earth, and open researched information by selecting an owned pin.</p></div><strong id="locationCount">0 / 0</strong></div>
       <div class="world-photo-credits-access"><a href="editorial/reviews/world-photo-review.html" target="_blank" rel="noopener noreferrer" class="world-image-licences-btn" aria-label="Review locally hosted World photographs and cover crops">Review World photos</a> <button id="worldPhotoCreditsButton" type="button" class="world-image-licences-btn">Image licences</button></div>
       <div class="globe-card">
         <canvas id="globe" width="700" height="360" aria-label="Interactive globe showing collectable world locations"></canvas>
@@ -344,6 +360,7 @@
       </div>
       <div id="locationShop" class="shop-grid"></div>
       <button id="moreLocations" class="mini-btn world-more hidden">Show more locations</button>
+      </section>
     </section>
   </main>
   <dialog id="worldPhotoCreditsDialog" class="world-photo-credits-dialog" aria-labelledby="worldPhotoCreditsTitle">
@@ -382,7 +399,7 @@
 <script src="physics-paper2-visuals-v449.js?v=449" defer></script>
 <script src="app.js?v=430&physics=v439&chem=v433&data=6&focus=v440&world=v442&paper2=v449&year13=v450&papers=v452" defer></script>
 <script src="study-focus-v440.js?v=440" defer></script>
-<script src="ui-refresh-v453.js?v=454" defer></script>
+<script src="ui-refresh-v453.js?v=455" defer></script>
 <script src="world-zoom-helpers.js?v=61" defer></script>
 <script src="world-globe-article-bridge.js?v=73" defer></script>
 <script>
