@@ -60,7 +60,8 @@
    if(!tab)return false;
    tab.click();
   }
-  doc.defaultView?.requestAnimationFrame(()=>{refreshQuickActive(doc);scrollToSection(doc,panel)});
+  refreshQuickActive(doc);
+  scrollToSection(doc,panel);
   return true;
  }
  function boot(){
@@ -70,17 +71,17 @@
   toggle?.addEventListener('click',()=>applyTheme(doc,storage,doc.documentElement.dataset.theme==='dark'?'light':'dark'));
   doc.querySelectorAll('[data-jump]').forEach(button=>button.addEventListener('click',()=>jumpTo(doc,button.dataset.jump)));
   doc.querySelectorAll('.tab').forEach(button=>button.addEventListener('click',()=>{
-   doc.defaultView.requestAnimationFrame(()=>{refreshQuickActive(doc);scrollToSection(doc,button.dataset.panel)});
+   refreshQuickActive(doc);
+   scrollToSection(doc,button.dataset.panel);
   }));
   doc.querySelectorAll('.study-type-btn').forEach(button=>button.addEventListener('click',()=>{
-   doc.defaultView.requestAnimationFrame(()=>{refreshQuickActive(doc);scrollToSection(doc,'study')});
+   refreshQuickActive(doc);
+   scrollToSection(doc,'study');
   }));
   for(const id of ['startMock','startFlashcards','startExam','startPaper2Coach','startChallenge','reviewWeakBtn','redoMistakesBtn']){
    doc.getElementById(id)?.addEventListener('click',()=>{
-    doc.defaultView.requestAnimationFrame(()=>{
-     const host=doc.getElementById('studyHost');
-     if(host?.children.length&&doc.getElementById('study')?.classList.contains('active'))scrollToSection(doc,'studyHost');
-    });
+    const host=doc.getElementById('studyHost');
+    if(host?.children.length&&doc.getElementById('study')?.classList.contains('active'))scrollToSection(doc,'studyHost');
    });
   }
   const manage=doc.getElementById('cloudManageToggle'),quick=doc.getElementById('cloudQuickAccess');
