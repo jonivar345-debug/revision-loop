@@ -68,6 +68,7 @@ const V457_2024_P2P3_URL='./maths_pure_2024_p2p3_v457.json';
 const V458_2023_P1_URL='./maths_pure_2023_p1_v458.json';
 const V459_2023_P2_URL='./maths_pure_2023_p2_v459.json';
 const V460_2023_P3_URL='./maths_pure_2023_p3_v460.json';
+const V461_2022_P1_URL='./maths_pure_2022_p1_v461.json';
 // v372: five original first-mock AS Pure questions need actual multi-step self-review.
 const V372_YEAR1_PURE_MANUAL=Object.freeze([{"id":"task1_v271_maths_pure_q03","specRef":"3.11","prompt":"Points A, B and C have position vectors (1,2), (7,−1) and (−2,8). P is the midpoint of BC and Q is the midpoint of AC. (a) Find the position vectors of P and Q. (b) Show by vector methods that the points on AP and BQ two-thirds of the way from A and B respectively coincide. (c) Give their common position vector and the ratio AG:GP. [8 marks]","marks":8},{"id":"task1_v271_maths_pure_q04","specRef":"3.4","prompt":"A circle is given by x²+y²−4x−6y−12=0. (a) Find its centre and radius. (b) Verify that P=(5,7) lies on the circle. (c) Find an exact equation of the tangent to the circle at P. (d) Find both axis intercepts of this tangent. [7 marks]","marks":7},{"id":"task1_v271_maths_pure_q05","specRef":"3.3","prompt":"Let f(x)=x²−4x+1 and g(x)=−2f(1−2x)+3. (a) Complete the square for f. (b) Describe a valid ordered sequence of graph transformations giving y=g(x) from y=f(x). (c) Express g as a quadratic in x and find the turning point. (d) Find both exact x-intercepts of g. [9 marks]","marks":9},{"id":"task1_v271_maths_pure_q06","specRef":"3.5","prompt":"In the expansion of (1+ax)⁷, the coefficient of x² is 84 and the coefficient of x³ is negative. (a) Show that a²=4. (b) Find a. (c) Calculate the coefficients of x³ and x⁴, showing the binomial coefficients used. [7 marks]","marks":7},{"id":"task1_v271_maths_pure_q07","specRef":"3.9","prompt":"For y=x²−5x+6 over 0≤x≤4, calculate (a) the signed definite integral from 0 to 4 and (b) the total area between the curve and the x-axis. You must show where the graph lies below the axis and split the integral correctly. Give exact answers. [8 marks]","marks":8}]);
 function applyV372Year1PureManualReview(questions){
@@ -2118,7 +2119,7 @@ function applyV221RpCorrections(deckCards){
 /* v221 RP correction block end */
 const PIN_HASH='02a80993805958408c14d68623a229c86777980c55403d0c2fecf46904fe367c';
 const PROGRESS_KEY='revisionLoopProgress5',PROFILE_KEY='revisionLoopProfile11',SETTINGS_KEY='revisionLoopSettings11';
-let cards=[],examQuestions=[],deckMeta={},coverage={},deckVersion=0,bankVersion=0,aqaPurePaperArchive=null,aqaPure2024P1Audit=null,aqaPure2024P2P3Audit=null,aqaPure2023P1Audit=null,aqaPure2023P2Audit=null,aqaPure2023P3Audit=null;
+let cards=[],examQuestions=[],deckMeta={},coverage={},deckVersion=0,bankVersion=0,aqaPurePaperArchive=null,aqaPure2024P1Audit=null,aqaPure2024P2P3Audit=null,aqaPure2023P1Audit=null,aqaPure2023P2Audit=null,aqaPure2023P3Audit=null,aqaPure2022P1Audit=null;
 let progress=load(PROGRESS_KEY,{});
 let profile=load(PROFILE_KEY,{});
 let settings=load(SETTINGS_KEY,{});
@@ -4067,7 +4068,7 @@ function currentYear13PureMockCard(c){
   c.scope==='mock'&&c.specRef&&/^3\.(?:2|3|5|6|7|8|9)$/.test(c.specRef));
 }
 function currentYear13PureMockQuestion(q){
- return Boolean(q&&/^y13_v(?:450|451|452|457|458|459|460)_q_\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&
+ return Boolean(q&&/^y13_v(?:450|451|452|457|458|459|460|461)_q_\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&
   q.level==='A-level'&&q.courseTopic==='Year 13 Pure · taught mock'&&
   q.year13PureMock===true&&q.mock===true&&q.taught===true&&
   q.standalone===true&&q.requiresWorking===true&&q.manualWorkingReview===true&&
@@ -4719,12 +4720,14 @@ function renderAqaPureArchive(){
  const verified23=aqaPure2023P1Audit;
  const verified23P2=aqaPure2023P2Audit;
  const verified23P3=aqaPure2023P3Audit;
+ const verified22P1=aqaPure2022P1Audit;
  const statusFor=p=>{
   if(p.year===2024&&p.paper===1&&aqaPure2024P1Audit)return 'Question-paper text and mark-scheme audit; some diagrams pending';
   if(p.year===2024&&p.paper>1&&verified24)return 'Pure Section A methods checked; full mark-scheme / diagrams pending';
   if(p.year===2023&&p.paper===1&&verified23)return 'AQA paper and mark-scheme methods checked; diagram visuals pending';
   if(p.year===2023&&p.paper===2&&verified23P2)return 'AQA Pure Section A Q1–10 checked; Mechanics Section B excluded';
   if(p.year===2023&&p.paper===3&&verified23P3)return 'AQA Pure Section A Q1–9 checked; Statistics Section B excluded';
+  if(p.year===2022&&p.paper===1&&verified22P1)return 'Original 15 question texts and mark-scheme methods indexed; diagram checks pending';
   if(p.year===2025)return 'Secondary Pure question-topic index only; original paper audit pending';
   return 'Paper linked; question-by-question Pure method audit pending';
  };
@@ -4734,6 +4737,7 @@ function renderAqaPureArchive(){
   if(p.year===2023&&p.paper===1&&verified23)return verified23.sourceQuestionPaper;
   if(p.year===2023&&p.paper===2&&verified23P2)return verified23P2.sourceQuestionPaper;
   if(p.year===2023&&p.paper===3&&verified23P3)return verified23P3.sourceQuestionPaper;
+  if(p.year===2022&&p.paper===1&&verified22P1)return verified22P1.sourceQuestionPaper;
   return p.sourceIndex;
  };
  const yearSeries=[2025,2024,2023,2022,2021,2020,2019];
@@ -4794,12 +4798,21 @@ function renderAqaPureArchive(){
    '<small> · '+esc(q.currentMockRecommended?'Taught Year 13 Pure method':'Background or additional-only')+
    (q.diagramVisualCheck==='pending_manual_visual_comparison'?' · diagram check pending':'')+'</small></li>').join('')+
   '</ul></details>':'';
+
+ const paper2022P1Html=verified22P1?'<details class="pure-paper-year"><summary>2022 Paper 1 · 15 questions · 100 marks · source methods indexed</summary>'+
+  '<p>All 15 question topics and their mark totals are linked to the original AQA Paper 1 and mark scheme. Seven graph/diagram-dependent question visuals still need manual verification; this is not a full certified visual audit. Fourteen independently authored worked problems have been added, with 12 taught-mock eligible and two optional. In mixed AQA questions, the mock examples cover taught submethods only. '+
+  link(verified22P1.sourceQuestionPaper,'AQA question paper')+' · '+link(verified22P1.sourceMarkScheme,'AQA mark scheme')+'</p><ul>'+
+  verified22P1.inventory.map(q=>'<li><b>Q'+q.question+'</b> · '+esc(q.method)+
+    '<small> · '+esc(q.currentMockRecommended?'Taught submethod':'Background or additional-only')+
+    (q.diagramVisualCheck==='pending_manual_visual_comparison'?' · visual check pending':'')+'</small></li>').join('')+
+  '</ul></details>':'';
  root.innerHTML='<h4>AQA 7357 Pure · 2019–2025 paper coverage</h4>'+
   '<p><strong>21 public papers indexed</strong> (seven exam series × three papers). These are links to the AQA source papers or catalogues, not claims that every original question has been copied into Revision Loop. June 2026 is not publicly released.</p>'+
-  '<p><strong>Source checks so far:</strong> 2023 Papers 1/2/3 and 2024 Paper 1 text/marks; 2024 Paper 2/3 Pure methods; plus a secondary 2025 topic index. Audits of 2019–2022, remaining diagram/scheme details and 2025 primary papers are outstanding.</p>'+
+  '<p><strong>Source checks so far:</strong> 2022 Paper 1 and all 2023 Pure paper methods; 2024 Paper 1 text/marks and 2024 Paper 2/3 Pure methods; plus a secondary 2025 topic index. Audits of 2019–2021, 2022 Papers 2/3, remaining diagram/scheme details and 2025 primary papers are outstanding.</p>'+
   paperYears+
   '<h4>2024 · independently checked Pure methods</h4>'+paper1Html+paper23Html+
   '<h4>2023 · all three Pure paper methods reviewed</h4>'+paper2023Html+paper2023P2Html+paper2023P3Html+
+  '<h4>2022 · Paper 1 primary Pure methods</h4>'+paper2022P1Html+
   '<h4>2025 · secondary topic index (not a full paper audit)</h4>'+
   '<p>40 Pure method entries, plus one separately classified Mechanics-context entry. The question text and mark schemes have not been individually certified.</p>'+
   sourceRows+
@@ -6915,7 +6928,39 @@ async function sync(manual=false){
   q.sourceStyle?.methodPaper===3&&q.sourceStyle?.methodYear===2023&&
   q.year13PureMock===q.mock&&q.year13Optional===!q.mock&&q.taught===q.mock&&
   q.courseTopic===(q.mock?'Year 13 Pure · taught mock':'Year 13 Pure · additional practice'));
- const added=[...(x.questions||[]),...extraBanks.flatMap(bank=>bank.questions||[]),...validatedV450Questions,...validatedV451Questions,...validatedV452Questions,...validatedV457Questions,...validatedV458Questions,...validatedV459Questions,...validatedV460Questions],seen=new Set();
+
+ // v461: full original June 2022 Paper 1 (15 questions, 100 marks) topic and
+ // scheme-method inventory. Diagram-dependent equivalence is still pending.
+ // Where original questions combine mock/unconfirmed methods, practice isolates
+ // just the taught method instead of importing the full original.
+ let v461Pack={inventory:[],questions:[]};
+ try{
+  const response=await fetch(V461_2022_P1_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(response.ok)v461Pack=await response.json();
+ }catch(error){console.warn('Optional June 2022 Paper 1 practice unavailable',error)}
+ const v461Inventory=Array.isArray(v461Pack.inventory)?v461Pack.inventory:[];
+ aqaPure2022P1Audit=v461Pack.version==='v461'&&v461Pack.paperId==='7357-2022-1'&&
+  v461Pack.paper==='7357/1'&&v461Pack.totalPaperQuestions===15&&
+  v461Pack.totalPaperMarks===100&&v461Pack.fullVisualAuditComplete===false&&
+  v461Inventory.length===15&&
+  v461Inventory.reduce((n,r)=>n+(Number(r.marks)||0),0)===100&&
+  v461Inventory.every((r,i)=>r.question===i+1&&r.classification==='pure'&&
+   r.questionPaperChecked===true&&r.markSchemeTextReviewed===true)?v461Pack:null;
+ const validatedV461Questions=(aqaPure2022P1Audit?.questions||[]).filter(q=>
+  q&&/^y13_v461_q_\d{3}$/.test(q.id||'')&&q.subject==='Maths'&&
+  q.level==='A-level'&&allowedV450Refs.has(q.specRef)&&q.year==='Practice'&&
+  q.standalone===true&&q.requiresWorking===true&&q.manualWorkingReview===true&&
+  q.sourceVerified===false&&q.verificationLevel==='original-exam-style'&&
+  Number.isInteger(q.marks)&&q.marks>=3&&q.marks<=9&&
+  Array.isArray(q.markPoints)&&q.markPoints.length===q.marks&&
+  Array.isArray(q.markPointMarks)&&q.markPointMarks.length===q.marks&&
+  q.markPointMarks.every(m=>m===1)&&q.modelAnswer===q.markPoints.join(' ')&&
+  v461Inventory.some(row=>row.question===q.sourceStyle?.methodQuestion&&
+   row.classification==='pure'&&row.currentMockRecommended===q.mock)&&
+  q.sourceStyle?.methodPaper===1&&q.sourceStyle?.methodYear===2022&&
+  q.year13PureMock===q.mock&&q.year13Optional===!q.mock&&q.taught===q.mock&&
+  q.courseTopic===(q.mock?'Year 13 Pure · taught mock':'Year 13 Pure · additional practice'));
+ const added=[...(x.questions||[]),...extraBanks.flatMap(bank=>bank.questions||[]),...validatedV450Questions,...validatedV451Questions,...validatedV452Questions,...validatedV457Questions,...validatedV458Questions,...validatedV459Questions,...validatedV460Questions,...validatedV461Questions],seen=new Set();
  // v439 optional Physics practical/data additions. Keep the original 56
  // flashcard and 52 exam supplement indices and all historical inventories stable.
  let v439PhysicsRecall={cards:[]};
