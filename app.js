@@ -6630,7 +6630,7 @@ async function sync(manual=false){
   const response=await fetch(V450_YEAR13_PURE_URL+'?v='+Date.now(),{cache:'no-store'});
   if(response.ok)v450Maths=await response.json();
  }catch(error){console.warn('Optional Year 13 Pure Maths pack unavailable',error)}
- const allowedV450Refs=new Set(['3.2','3.3','3.5','3.6','3.7','3.8','3.9','3.10','3.11']);
+ const allowedV450Refs=new Set(['3.2','3.3','3.4','3.5','3.6','3.7','3.8','3.9','3.10','3.11']);
  for(const c of Array.isArray(v450Maths.cards)?v450Maths.cards:[]){
   if(!c||!/^y13_v450_card_\d{3}$/.test(c.id||'')||knownFlashIds.has(c.id)||
      c.subject!=='Maths'||c.stage!=='A2'||!allowedV450Refs.has(c.specRef)||
