@@ -6168,17 +6168,44 @@ function renderShop(){
  seriesSel.innerHTML='<option value="">All series</option>'+series.map(x=>'<option>'+esc(x)+'</option>').join('');
  if(series.includes(oldSeries))seriesSel.value=oldSeries;
  const seriesFilter=seriesSel.value,ownedFilter=ownedSel.value;
- const allVisibleChars=CHARACTERS.filter(c=>(!seriesFilter||c.series===seriesFilter)&&(ownedFilter==='all'||(ownedFilter==='owned'&&oc.includes(c.id))||(ownedFilter==='locked'&&!oc.includes(c.id))));const visibleChars=allVisibleChars.slice(0,characterVisibleLimit);
+ const search=document.getElementById('shopCharacterSearch')?.value?.trim().toLocaleLowerCase()||'';
+ const allVisibleChars=CHARACTERS.filter(c=>
+  (!seriesFilter||c.series===seriesFilter)&&
+  (ownedFilter==='all'||(ownedFilter==='owned'&&oc.includes(c.id))||(ownedFilter==='locked'&&!oc.includes(c.id)))&&
+  (!search||(c.name+' '+c.series).toLocaleLowerCase().includes(search)));
+ const visibleChars=allVisibleChars.slice(0,characterVisibleLimit);
+ const empty=document.getElementById('shopCharacterEmpty');
+ if(empty)empty.hidden=allVisibleChars.length!==0;
  document.getElementById('characterCount').textContent=oc.length+' / '+CHARACTERS.length+' unlocked';
  document.getElementById('outfitCount').textContent=oo.length+' / '+OUTFITS.length+' unlocked';
  const uniqueLocations=window.RevisionWorldProfileSafety?.distinctLocations(LOCATIONS)||LOCATIONS;
  document.getElementById('locationCount').textContent=uniqueLocations.filter(l=>window.RevisionWorldProfileSafety?.isOwnedLocation(profile,l.id)??ol.includes(l.id)).length+' / '+uniqueLocations.length+' unlocked';
- document.getElementById('characterShop').innerHTML=visibleChars.map(c=>{const def=OUTFITS.find(o=>o.id===c.id+'-default');return '<div class="shop-item character-card '+(curr===c.id?'active-character':'')+'"><div class="shop-icon">'+characterArtwork(c,def)+'</div><b>'+esc(c.name)+'</b><small>'+esc(c.series)+'</small><button class="'+(!oc.includes(c.id)?'buy':'')+'" data-character="'+c.id+'" '+(!oc.includes(c.id)&&profile.points<c.cost?'disabled':'')+'>'+(oc.includes(c.id)?(curr===c.id?'Selected':'Select'):c.cost+' points')+'</button></div>'}).join('');
+ document.getElementById('characterShop').innerHTML=visibleChars.map(c=>{
+  const def=OUTFITS.find(o=>o.id===c.id+'-default');
+  const has=oc.includes(c.id),selected=curr===c.id,affordable=profile.points>=c.cost;
+  const remaining=Math.max(0,c.cost-profile.points);
+  const label=has?(selected?'View outfits':'Select & view outfits'):(affordable?'Unlock · '+c.cost+' points':'Need '+remaining+' more points');
+  const disabled=!has&&!affordable;
+  return '<div class="shop-item character-card '+(selected?'active-character':'')+'"><div class="shop-icon">'+characterArtwork(c,def)+'</div><b>'+esc(c.name)+'</b><small>'+esc(c.series)+'</small>'+
+    '<button class="'+(!has?'buy':'')+'" type="button" data-character="'+esc(c.id)+'" '+(disabled?'disabled title="Costs '+c.cost+' points"':'')+'>'+esc(label)+'</button></div>';
+ }).join('');
  const outfits=OUTFITS.filter(o=>o.character===curr),ch=CHARACTERS.find(c=>c.id===curr)||CHARACTERS[0];
+ const outfitCharacterSelect=document.getElementById('outfitCharacterSelect');
+ if(outfitCharacterSelect){
+  outfitCharacterSelect.innerHTML=CHARACTERS.filter(c=>oc.includes(c.id)).map(c=>
+    '<option value="'+esc(c.id)+'">'+esc(c.name)+' · '+esc(c.series)+'</option>').join('');
+  outfitCharacterSelect.value=curr;
+ }
  document.getElementById('outfitHeading').textContent='Outfits for '+ch.name;
  document.getElementById('outfitCount').textContent=outfits.filter(o=>oo.includes(o.id)).length+' / '+outfits.length+' for '+ch.name;
  document.getElementById('outfitShop').innerHTML=outfits.map(o=>'<div class="shop-item outfit-card"><div class="shop-icon">'+characterArtwork(ch,o)+'</div><b>'+esc(o.name)+'</b><small>'+esc(ch.name)+' · '+esc(ch.series)+'</small><button class="'+(!oo.includes(o.id)?'buy':'')+'" data-outfit="'+o.id+'" '+(!oo.includes(o.id)&&profile.points<o.cost?'disabled':'')+'>'+(oo.includes(o.id)?(profile.equippedOutfit===o.id?'Equipped':'Equip'):o.cost+' points')+'</button>'+'<div class="outfit-image-tools"><label class="outfit-upload">Choose image<input type="file" data-outfit-upload="'+esc(o.id)+'" accept="image/jpeg,image/png,image/webp" aria-label="Choose personal image for '+esc(o.name)+'"></label><button type="button" data-outfit-clear="'+esc(o.id)+'" class="outfit-clear">Reset image</button></div></div>').join('');
- document.querySelectorAll('[data-character]').forEach(b=>b.onclick=()=>buy('character',b.dataset.character));
+ document.querySelectorAll('[data-character]').forEach(b=>b.onclick=()=>{
+  const id=b.dataset.character;
+  if(profile.equippedCharacter!==id||!profile.shopOwned.characters.includes(id))buy('character',id);
+  if(profile.equippedCharacter!==id)return;
+  window.RevisionLoopUI?.applyShopView(document,localStorage,'outfits');
+  window.RevisionLoopUI?.scrollToSection(document,'shopOutfitsSection');
+ });
  document.querySelectorAll('[data-outfit]').forEach(b=>b.onclick=()=>buy('outfit',b.dataset.outfit));
  document.querySelectorAll('[data-outfit-upload]').forEach(input=>input.onchange=async()=>{
   const file=input.files?.[0],id=input.dataset.outfitUpload;if(!file||!OUTFITS.some(x=>x.id===id))return;
@@ -6230,8 +6257,12 @@ function visibleGlobePins(w,h,region=''){
  }
  return shown.sort((a,b)=>Number(a.owned)-Number(b.owned));
 }
+// v456: avoid painting a million canvas pixels while Characters or Outfits is visible.
+window.RevisionLoopDrawGlobe=drawGlobe;
 function drawGlobe(){
- const c=document.getElementById('globe');if(!c)return;
+ const c=document.getElementById('globe');
+ if(!c||document.getElementById('shopLocationsSection')?.hidden||
+    !document.getElementById('shop')?.classList.contains('active'))return;
  // Paint twice as many intrinsic pixels as the 700×360 CSS presentation.
  // Pin coordinates use this same canvas space; no geographic coordinates move.
  if(c.width!==1400||c.height!==720){c.width=1400;c.height=720}
@@ -6846,7 +6877,7 @@ document.getElementById('challengeScope').onchange=()=>{
  renderChallenge();
 };
 document.getElementById('reviewWeakBtn').onclick=buildWeakSession;document.getElementById('redoMistakesBtn').onclick=startMistakes;
-document.getElementById('locationRegion').onchange=()=>{locationVisibleLimit=24;renderLocationGallery();drawGlobe()};document.getElementById('showAllGlobePins').onchange=drawGlobe;document.getElementById('moreLocations').onclick=()=>{locationVisibleLimit+=24;renderLocationGallery()};document.getElementById('moreCharacters').onclick=()=>{characterVisibleLimit+=16;renderShop()};document.getElementById('characterSeries').onchange=()=>{characterVisibleLimit=16;renderShop()};document.getElementById('characterOwnedFilter').onchange=()=>{characterVisibleLimit=16;renderShop()};document.getElementById('specSubject').onchange=renderSyllabusCoverage;document.getElementById('syncBtn').onclick=()=>sync(true);document.getElementById('lockBtn').onclick=lockApp;
+document.getElementById('locationRegion').onchange=()=>{locationVisibleLimit=24;renderLocationGallery();drawGlobe()};document.getElementById('showAllGlobePins').onchange=drawGlobe;document.getElementById('moreLocations').onclick=()=>{locationVisibleLimit+=24;renderLocationGallery()};document.getElementById('moreCharacters').onclick=()=>{characterVisibleLimit+=16;renderShop()};document.getElementById('characterSeries').onchange=()=>{characterVisibleLimit=16;renderShop()};document.getElementById('characterOwnedFilter').onchange=()=>{characterVisibleLimit=16;renderShop()};document.getElementById('shopCharacterSearch').oninput=()=>{characterVisibleLimit=16;renderShop()};document.getElementById('outfitCharacterSelect').onchange=e=>{const id=e.target.value;if(profile.shopOwned.characters.includes(id)&&id!==profile.equippedCharacter)buy('character',id)};document.getElementById('specSubject').onchange=renderSyllabusCoverage;document.getElementById('syncBtn').onclick=()=>sync(true);document.getElementById('lockBtn').onclick=lockApp;
 
 const globe=document.getElementById('globe');
 globe.addEventListener('pointerdown',e=>{dragging=true;dragDistance=0;lastPointer={x:e.clientX,y:e.clientY};globe.setPointerCapture(e.pointerId)});

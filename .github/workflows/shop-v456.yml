@@ -1,0 +1,46 @@
+name: v456 Shop selection and performance QA
+on:
+  pull_request:
+    paths:
+      - index.html
+      - app.js
+      - ui-refresh-v453.js
+      - shop-refresh-v455.css
+      - sw.js
+      - tests/shop-flow-v456.cjs
+      - tests/shop-flow-browser-v456.mjs
+      - tests/shop-v455.cjs
+      - tests/ui-refresh-v453.cjs
+      - .github/workflows/shop-v456.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  shop-flow-and-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax and Shop, cloud and Maths source regression
+        run: |
+          node --check app.js
+          node --check ui-refresh-v453.js
+          node tests/shop-flow-v456.cjs
+          node tests/shop-v455.cjs
+          node tests/ui-refresh-v453.cjs
+          node tests/year13-pure-v450.cjs
+          node tests/aqa-maths-pure-2024-paper1-v452.cjs
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Character search, outfit choice, globe performance and saved XP on phone and desktop
+        run: node tests/shop-flow-browser-v456.mjs
+      - name: Existing Shop, navigation, cloud visibility and Year 13 Maths browser QA
+        run: |
+          node tests/shop-browser-v455.mjs
+          node tests/ui-refresh-browser-v453.mjs
+          node tests/year13-pure-browser-v450.mjs

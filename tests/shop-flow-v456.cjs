@@ -1,0 +1,36 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const html=fs.readFileSync('index.html','utf8');
+const app=fs.readFileSync('app.js','utf8');
+const ui=fs.readFileSync('ui-refresh-v453.js','utf8');
+const css=fs.readFileSync('shop-refresh-v455.css','utf8');
+const cloud=fs.readFileSync('cloud-sync.js','utf8');
+const sw=fs.readFileSync('sw.js','utf8');
+for(const id of ['shopCharacterSearch','shopCharacterEmpty','outfitCharacterSelect','outfitShop','characterShop','globe','shopPoints','cloudQuickAccess']){
+ assert(html.includes('id="'+id+'"'),'Required DOM node missing: '+id);
+}
+assert(html.includes('<button class="tab" data-panel="shop">Shop</button>'));
+assert(!html.includes('<nav class="quick-nav"'));
+assert((html.match(/<nav class="tabs">/g)||[]).length===1);
+assert(app.includes("c.name+' '+c.series"),'Character search covers names and series');
+assert(app.includes('search=document.getElementById(\'shopCharacterSearch\')'));
+assert(app.includes('if(empty)empty.hidden=allVisibleChars.length!==0'));
+assert(app.includes("outfitCharacterSelect.innerHTML=CHARACTERS.filter(c=>oc.includes(c.id))"),'Outfit selector must not expose locked characters');
+assert(app.includes("profile.equippedCharacter!==id||!profile.shopOwned.characters.includes(id)"),'Character card should switch to outfits after safe selection');
+assert(app.includes("applyShopView(document,localStorage,'outfits')"));
+assert(app.includes("outfitCharacterSelect').onchange=e=>"));
+assert(app.includes("!document.getElementById('shop')?.classList.contains('active')"),'Hidden shop should not repaint globe');
+assert(app.includes("document.getElementById('shopLocationsSection')?.hidden"),'Hidden Places should not repaint globe');
+assert(app.includes('window.RevisionLoopDrawGlobe=drawGlobe;'));
+assert(ui.includes("view==='places')doc.defaultView?.requestAnimationFrame"));
+assert(css.includes('.outfit-character-picker'));
+assert(css.includes('input[type="search"]'));
+assert(css.includes('.shop-empty'));
+assert(css.includes('data-theme="dark"'));
+assert(html.includes('shop-refresh-v455.css?v=456'));
+assert(html.includes('ui-refresh-v453.js?v=456'));
+assert(sw.includes("'./shop-refresh-v455.css'"));
+for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
+assert(cloud.includes('createPrivateAccount()'));
+console.log('PASS v456 source: searchable characters, direct outfitting, unlocked-only picker, lazy globe redraw and no change to saved IDs or cloud code');
