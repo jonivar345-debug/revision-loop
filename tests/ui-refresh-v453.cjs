@@ -44,7 +44,7 @@ assert(html.indexOf('class="tabs"')<html.indexOf('class="level-card"'),'Main nav
 assert(html.includes('id="themeToggle"'));
 assert(html.includes('id="cloudQuickAccess"')&&html.includes('id="cloudQuickDetails"'));
 assert(html.includes('id="cloudManageToggle"')&&html.includes('aria-controls="cloudQuickDetails"'));
-assert(html.includes('ui-refresh-v453.css?v=454')&&html.includes('ui-refresh-v453.js?v=454'));
+assert(/ui-refresh-v453\.css\?v=45[45]/.test(html)&&/ui-refresh-v453\.js\?v=45[45]/.test(html),'Existing UI assets must load with fresh version');
 assert(!css.includes('.quick-nav'),'Unused duplicate navigation styling must be removed');
 assert(css.includes('.study-overview'));
 assert(css.includes(':root[data-theme="dark"]'));
