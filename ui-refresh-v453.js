@@ -8,6 +8,8 @@
 })(typeof window==='object'?window:null,function(){
  'use strict';
  const THEME_KEY='revisionLoopThemeV1';
+ const SHOP_VIEW_KEY='revisionLoopShopViewV1';
+ const SHOP_VIEWS=Object.freeze(['characters','outfits','places']);
  const THEMES=['light','dark'];
  function normaliseTheme(value){return THEMES.includes(value)?value:'light'}
  function getTheme(storage){
@@ -64,11 +66,39 @@
   scrollToSection(doc,Object.prototype.hasOwnProperty.call(modes,destination)?'studyModes':destination);
   return true;
  }
+ function normaliseShopView(value){return SHOP_VIEWS.includes(value)?value:'characters'}
+ function getShopView(storage){
+  try{return normaliseShopView(storage.getItem(SHOP_VIEW_KEY))}catch{return 'characters'}
+ }
+ function applyShopView(doc,storage,view){
+  view=normaliseShopView(view);
+  const sections={characters:'shopCharactersSection',outfits:'shopOutfitsSection',places:'shopLocationsSection'};
+  for(const [key,id] of Object.entries(sections)){
+   const section=doc.getElementById(id);
+   if(section)section.hidden=key!==view;
+  }
+  doc.querySelectorAll('[data-shop-view]').forEach(button=>{
+   const selected=button.dataset.shopView===view;
+   button.classList.toggle('active',selected);
+   button.setAttribute('aria-pressed',String(selected));
+  });
+  try{storage.setItem(SHOP_VIEW_KEY,view)}catch{}
+  return view;
+ }
  function boot(){
   const doc=document,storage=window.localStorage;
   applyTheme(doc,storage,getTheme(storage));
   const toggle=doc.getElementById('themeToggle');
   toggle?.addEventListener('click',()=>applyTheme(doc,storage,doc.documentElement.dataset.theme==='dark'?'light':'dark'));
+  applyShopView(doc,storage,getShopView(storage));
+  doc.querySelectorAll('[data-shop-view]').forEach(button=>button.addEventListener('click',()=>{
+   applyShopView(doc,storage,button.dataset.shopView);
+   scrollToSection(doc,'shopTitle');
+  }));
+  doc.getElementById('shopViewOutfits')?.addEventListener('click',()=>{
+   applyShopView(doc,storage,'outfits');
+   scrollToSection(doc,'shopTitle');
+  });
   doc.querySelectorAll('.tab').forEach(button=>button.addEventListener('click',()=>{
    refreshNavigation(doc);
    scrollToSection(doc,button.dataset.panel==='study'?'studyModes':button.dataset.panel);
@@ -96,5 +126,5 @@
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);
   else boot();
  }
- return Object.freeze({THEME_KEY,normaliseTheme,getTheme,applyTheme,scrollToSection,jumpTo,refreshNavigation});
+ return Object.freeze({THEME_KEY,SHOP_VIEW_KEY,normaliseTheme,getTheme,applyTheme,normaliseShopView,getShopView,applyShopView,scrollToSection,jumpTo,refreshNavigation});
 });
