@@ -76,7 +76,7 @@ for(const s of [
  'aqaPure2024P1Audit=v452Pack.version',
  'validatedV452Questions',
  'function renderAqaPureArchive()',
- 'Show 20 June 2024 Paper 1 methods',
+ '2024 Paper 1 · 20 questions · text and marks checked',
  '...validatedV452Questions'
 ])assert(app.includes(s),s);
 assert(/papers=v45[27]/.test(html),'2024 Paper 1 audit stays available in the refreshed maths UI');
