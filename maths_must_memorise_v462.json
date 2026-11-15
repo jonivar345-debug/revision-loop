@@ -1376,9 +1376,9 @@
       "year13PureMock": true,
       "year13Optional": false,
       "front": "What condition defines an even function?",
-      "back": "f(−x)=f(x): symmetry in the y-axis.",
+      "back": "f(−x) = f(x): symmetry about the y-axis.",
       "accept": [
-        "f(−x)=f(x): symmetry in the y-axis."
+        "f(−x) = f(x): symmetry about the y-axis."
       ],
       "reject": [],
       "active": true,
@@ -1403,9 +1403,9 @@
       "year13PureMock": true,
       "year13Optional": false,
       "front": "What condition defines an odd function?",
-      "back": "f(−x)=−f(x): symmetry about the origin.",
+      "back": "f(−x) = −f(x): symmetry about the origin.",
       "accept": [
-        "f(−x)=−f(x): symmetry about the origin."
+        "f(−x) = −f(x): symmetry about the origin."
       ],
       "reject": [],
       "active": true,
@@ -1592,9 +1592,9 @@
       "year13PureMock": true,
       "year13Optional": false,
       "front": "What does a quadratic's discriminant tell you?",
-      "back": "Δ>0: two distinct real roots; Δ=0: repeated root; Δ<0: no real roots.",
+      "back": "Δ > 0: two distinct real roots; Δ = 0: one repeated root; Δ < 0: no real roots.",
       "accept": [
-        "Δ>0: two distinct real roots; Δ=0: repeated root; Δ<0: no real roots."
+        "Δ > 0: two distinct real roots; Δ = 0: one repeated root; Δ < 0: no real roots."
       ],
       "reject": [],
       "active": true,
@@ -1673,9 +1673,9 @@
       "year13PureMock": true,
       "year13Optional": false,
       "front": "State the sum of the first n cubes.",
-      "back": "Σ(r³), r=1..n = [n(n+1)/2]².",
+      "back": "1³ + 2³ + ⋯ + n³ = [n(n+1)/2]².",
       "accept": [
-        "Σ(r³), r=1..n = [n(n+1)/2]²."
+        "1³ + 2³ + ⋯ + n³ = [n(n+1)/2]²."
       ],
       "reject": [],
       "active": true,
@@ -1753,10 +1753,10 @@
       "revisionTopic": "Exponentials and logarithms",
       "year13PureMock": true,
       "year13Optional": false,
-      "front": "Linearise y=Ax^n for A,x>0.",
-      "back": "ln y=n ln x + ln A; gradient n, intercept ln A.",
+      "front": "For y = Ax^n with A,x > 0, what is the straight-line log form?",
+      "back": "ln y = n ln x + ln A. Plot ln y against ln x: gradient n, intercept ln A.",
       "accept": [
-        "ln y=n ln x + ln A; gradient n, intercept ln A."
+        "ln y = n ln x + ln A. Plot ln y against ln x: gradient n, intercept ln A."
       ],
       "reject": [],
       "active": true,
@@ -1780,10 +1780,10 @@
       "revisionTopic": "Exponentials and logarithms",
       "year13PureMock": true,
       "year13Optional": false,
-      "front": "Linearise y=Ab^x for A,b>0.",
-      "back": "ln y=x ln b + ln A; gradient ln b, intercept ln A.",
+      "front": "For y = Ab^x with A,b > 0, what is the straight-line log form?",
+      "back": "ln y = x ln b + ln A. Plot ln y against x: gradient ln b, intercept ln A.",
       "accept": [
-        "ln y=x ln b + ln A; gradient ln b, intercept ln A."
+        "ln y = x ln b + ln A. Plot ln y against x: gradient ln b, intercept ln A."
       ],
       "reject": [],
       "active": true,
@@ -1808,9 +1808,9 @@
       "year13PureMock": true,
       "year13Optional": false,
       "front": "What does f″(x)>0 throughout an interval show?",
-      "back": "The graph is convex (concave up); its gradient increases.",
+      "back": "Convex (concave up): the gradient increases.",
       "accept": [
-        "The graph is convex (concave up); its gradient increases."
+        "Convex (concave up): the gradient increases."
       ],
       "reject": [],
       "active": true,
@@ -1835,9 +1835,9 @@
       "year13PureMock": true,
       "year13Optional": false,
       "front": "What does f″(x)<0 throughout an interval show?",
-      "back": "The graph is concave down; its gradient decreases.",
+      "back": "Concave down: the gradient decreases.",
       "accept": [
-        "The graph is concave down; its gradient decreases."
+        "Concave down: the gradient decreases."
       ],
       "reject": [],
       "active": true,
@@ -1862,9 +1862,9 @@
       "year13PureMock": true,
       "year13Optional": false,
       "front": "What identifies a point of inflection?",
-      "back": "The graph changes concavity; f″ changes sign if it exists nearby.",
+      "back": "The concavity changes across the point; where f″ exists on both sides, its sign changes.",
       "accept": [
-        "The graph changes concavity; f″ changes sign if it exists nearby."
+        "The concavity changes across the point; where f″ exists on both sides, its sign changes."
       ],
       "reject": [],
       "active": true,
