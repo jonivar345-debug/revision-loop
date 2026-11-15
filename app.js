@@ -3182,8 +3182,9 @@ function ensureProfile(){
   profile.economyVersion=2;
  }
  settings.dailyNew=settings.dailyNew||18;settings.physicsUnits=settings.physicsUnits||{};
-  settings.recallMustKnowFirst=settings.recallMustKnowFirst!==false;
-  settings.recallMustKnowOnly=settings.recallMustKnowOnly===true;
+  // Migrate the old second, duplicate 'only' setting to the single visible switch.
+  settings.recallMustKnowFirst=settings.recallMustKnowOnly===true||settings.recallMustKnowFirst!==false;
+  settings.recallMustKnowOnly=false;
 }
 function now(){return Date.now()}
 function dateKey(t=Date.now()){
@@ -4078,9 +4079,12 @@ function currentYear13PureMockQuestion(q){
 // than allocating the entire mock bank or silently ending after 30 items.
 // Keep linked exam parts together and work through unseen material first.
 function buildMockSessionItems(sub,mode,count,seenCards=new Set(),seenGroups=new Set()){
- const cardPool=sub==='Maths'?cards.filter(currentYear13PureMockCard):[];
- // Mock revision must not inherit the unrelated Exam Questions tab's AS/A-level filter.
- const qAll=sub==='Maths'?examQuestions.filter(currentYear13PureMockQuestion):[];
+ const mustOnly=sub==='Maths'&&settings.recallMustKnowFirst!==false;
+ const effectiveMode=mustOnly?'flash':mode;
+ const cardPool=sub==='Maths'?cards.filter(c=>currentYear13PureMockCard(c)&&(!mustOnly||isRecallMustKnow(c))):[];
+ // Strict memorisation excludes both ordinary flashcards and exam questions.
+ // Mock revision does not inherit the Exam Questions tab's separate filter.
+ const qAll=sub==='Maths'&&!mustOnly?examQuestions.filter(currentYear13PureMockQuestion):[];
  const groups=new Map();
  for(const q of qAll){if(!groups.has(q.groupId))groups.set(q.groupId,[]);groups.get(q.groupId).push(q)}
  for(const g of groups.values())g.sort((x,y)=>String(x.groupOrder).localeCompare(String(y.groupOrder),undefined,{numeric:true}));
@@ -4089,14 +4093,14 @@ function buildMockSessionItems(sub,mode,count,seenCards=new Set(),seenGroups=new
  let availableGroups=[...groups.values()].filter(g=>!seenGroups.has(g[0].groupId));
  if(groups.size&&!availableGroups.length){seenGroups.clear();availableGroups=[...groups.values()]}
  const items=[];
- if(mode!=='exam'){
-   const want=mode==='flash'?count:Math.max(1,Math.ceil(count*.6));
+ if(effectiveMode!=='exam'){
+   const want=effectiveMode==='flash'?count:Math.max(1,Math.ceil(count*.6));
    const n=Math.min(want,availableCards.length),score=c=>1+weakness(c)/5+(isDue(c)?4:0)+(1-memoryHealth(c))*3;
    const balance=sub==='Physics'?window.RevisionPhysicsMockBalance:null;
    const picked=balance?balance.pickBalanced(availableCards,n,score,pickRecallCards):pickRecallCards(availableCards,n,score);
    for(const c of picked){items.push({type:'card',id:c.id});seenCards.add(c.id)}
  }
- if(mode!=='flash'){
+ if(effectiveMode!=='flash'){
    const target=Math.max(1,count-items.length);
    const n=Math.min(target,availableGroups.length),score=g=>1+groupWeakness(g);
    const balance=sub==='Physics'?window.RevisionPhysicsMockBalance:null;
@@ -4106,7 +4110,7 @@ function buildMockSessionItems(sub,mode,count,seenCards=new Set(),seenGroups=new
      for(const q of g)items.push({type:'exam',id:q.id,groupId:q.groupId});
    }
  }
- if(mode==='mixed'){
+ if(effectiveMode==='mixed'){
    const blocks=[],seenGroupsInBatch=new Set();
    for(const item of items){
      if(item.type==='exam'&&item.groupId){
@@ -4125,22 +4129,23 @@ function buildMockSessionItems(sub,mode,count,seenCards=new Set(),seenGroups=new
  return items;
 }
 function startMockSession(){
- const sub='Maths',mode=document.getElementById('mockMode').value;
+ const sub='Maths',mustOnly=settings.recallMustKnowFirst!==false;
+ const mode=mustOnly?'flash':document.getElementById('mockMode').value;
  const selection=document.getElementById('mockCount').value,unlimited=selection==='unlimited';
  const count=unlimited?15:(Number(selection)||15);
  const seenCards=new Set(),seenGroups=new Set();
  const items=buildMockSessionItems(sub,mode,count,seenCards,seenGroups);
  if(!items.length){showToast('No mock material is available for that selection yet');return}
- activeSession={kind:'mock',items,index:0,title:'Year 13 Pure Maths · taught mock',
+ activeSession={kind:'mock',items,index:0,title:mustOnly?'Must memorise · Year 13 Pure Maths':'Year 13 Pure Maths · taught mock',
   ...(unlimited?{unlimited:true,mockSubject:sub,mockMode:mode,seenCards,seenGroups}:{})};
  currentCardId=null;renderAll();
 }
 function flashEligible(c){return flashScopeFilter==='mock'?currentYear13PureMockCard(c):flashScopeFilter==='taught'?taughtCard(c):true}
-function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c)&&(!settings.recallMustKnowOnly||isRecallMustKnow(c)))}
+function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c)&&(settings.recallMustKnowFirst===false||isRecallMustKnow(c)))}
 function startFlashSession(){
- const count=Number(document.getElementById('flashCount').value),pool=selectedFlashCards();if(!pool.length){showToast(settings.recallMustKnowOnly?'No must-memorise cards in those topics':'Pick at least one topic');return}
+ const count=Number(document.getElementById('flashCount').value),pool=selectedFlashCards();if(!pool.length){showToast(settings.recallMustKnowFirst!==false?'No selected must-memorise cards in these topics':'Pick at least one topic');return}
  const picked=pickRecallCards(pool,Math.min(count,pool.length),c=>1+weakness(c)/6+(isDue(c)?4:0)+(isNew(c)?1:0));
- activeSession={kind:'flash',items:picked.map(c=>({type:'card',id:c.id})),index:0,title:settings.recallMustKnowOnly?'Must memorise · key recall':'Random flashcards'};currentCardId=null;renderAll();
+ activeSession={kind:'flash',items:picked.map(c=>({type:'card',id:c.id})),index:0,title:settings.recallMustKnowFirst!==false?'Must memorise · key recall':'Random flashcards'};currentCardId=null;renderAll();
 }
 // v430: isolated Paper 2 coach; no changes to school mock eligibility or saved reviews.
 function paper2CoachCards(section='all'){
@@ -4819,13 +4824,24 @@ function refreshExamFilters(defaultIfEmpty=false){
 }
 function renderTopicCounts(){
  const chosen=selectedFlashCards();
- document.getElementById('flashTopicCount').textContent=flashTopics.size+' topics · '+chosen.length+' eligible cards · '+(flashScopeFilter==='mock'?'mock only':flashScopeFilter==='taught'?'taught so far':'full A-level');
+ const mustOnly=settings.recallMustKnowFirst!==false;
+ const mockModeSelect=document.getElementById('mockMode');
+ if(mockModeSelect){
+   if(mustOnly){
+     if(!mockModeSelect.disabled)mockModeSelect.dataset.beforeMemorise=mockModeSelect.value;
+     mockModeSelect.value='flash';mockModeSelect.disabled=true;
+   }else if(mockModeSelect.disabled){
+     mockModeSelect.disabled=false;
+     mockModeSelect.value=mockModeSelect.dataset.beforeMemorise||'mixed';
+   }
+ }
+ document.getElementById('flashTopicCount').textContent=flashTopics.size+' topics · '+chosen.length+' '+(mustOnly?'must-memorise':'eligible')+' cards · '+(flashScopeFilter==='mock'?'mock only':flashScopeFilter==='taught'?'taught so far':'full A-level');
  const all=subjectCards(document.getElementById('flashSubject').value).filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c));
  const essentials=all.filter(isRecallMustKnow).length;
  const info=document.getElementById('flashMustKnowCount');
- if(info)info.textContent=essentials+' selected key facts, identities and equations in these topics'+(settings.recallMustKnowOnly?' · only these will be shown.':'. Other cards remain in normal sessions.');
+ if(info)info.textContent=essentials+' selected priority cards in these topics'+(mustOnly?' · only these will appear.':' · switch on Must memorise only to study just these.');
  for(const id of ['mockMustKnowFirst','flashMustKnowFirst']){const control=document.getElementById(id);if(control)control.checked=settings.recallMustKnowFirst!==false}
- const only=document.getElementById('flashMustKnowOnly');if(only)only.checked=settings.recallMustKnowOnly===true;
+ const only=document.getElementById('flashMustKnowOnly');if(only)only.checked=mustOnly;
  const coachCount=document.getElementById('paper2CoachSummary');
  if(coachCount){
   const p2=paper2CoachCards(document.getElementById('paper2Section').value);
@@ -6912,8 +6928,11 @@ document.getElementById('flashSubject').onchange=()=>{flashTopics.clear();refres
    save();renderTopicCounts();
   };
  }
- document.getElementById('flashMustKnowOnly').onchange=e=>{
-  settings.recallMustKnowOnly=e.target.checked;
+ // Hidden compatibility input for older settings; the visible switch now controls filtering.
+ const legacyOnly=document.getElementById('flashMustKnowOnly');
+ if(legacyOnly)legacyOnly.onchange=e=>{
+  settings.recallMustKnowFirst=e.target.checked;
+  settings.recallMustKnowOnly=false;
   save();renderTopicCounts();
  };
 document.querySelectorAll('[data-flash-preset]').forEach(b=>b.onclick=()=>applyFlashPreset(b.dataset.flashPreset));
