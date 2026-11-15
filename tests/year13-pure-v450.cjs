@@ -62,8 +62,11 @@ for(const fake of [
  {id:'y13_v450_card_999',subject:'Maths',stage:'A2',mock:true}
 ])assert(!ctx.isCard(fake));
 assert(!ctx.isQuestion({id:'old_as_question',subject:'Maths',level:'AS',mock:true}));
-assert(app.includes("const cardPool=sub==='Maths'?cards.filter(currentYear13PureMockCard):[]"));
-assert(app.includes("const qAll=sub==='Maths'?examQuestions.filter(currentYear13PureMockQuestion):[]"));
+assert(app.includes("const mustOnly=sub==='Maths'&&settings.recallMustKnowFirst!==false;"));
+assert(app.includes("const effectiveMode=mustOnly?'flash':mode;"));
+assert(app.includes("const cardPool=sub==='Maths'?cards.filter(c=>currentYear13PureMockCard(c)&&(!mustOnly||isRecallMustKnow(c))):[]"));
+assert(app.includes("const qAll=sub==='Maths'&&!mustOnly?examQuestions.filter(currentYear13PureMockQuestion):[]"));
+// v462's dedicated tests also execute the real selector in mixed, exam and unlimited modes.
 assert(app.includes("function flashEligible(c){return flashScopeFilter==='mock'?currentYear13PureMockCard(c)"));
 assert(app.includes("function challengeCards(sub,scope)")&&app.includes("a.filter(currentYear13PureMockCard)"));
 assert(app.includes("function challengeQuestions(sub,scope)")&&app.includes("q.filter(currentYear13PureMockQuestion)"));
