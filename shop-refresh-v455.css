@@ -1,0 +1,107 @@
+/* v455: A single Shop for characters, outfits and places. */
+.shop-intro{margin:3px 0 13px;padding:4px 2px}
+.shop-intro h2{font-size:clamp(1.3rem,3.1vw,1.7rem);line-height:1.2;letter-spacing:-.03em;margin:4px 0 7px}
+.shop-intro p{color:var(--muted);font-size:.82rem;line-height:1.5;margin:0;max-width:66ch}
+#shop .shop-hero{
+ display:grid;grid-template-columns:minmax(112px,155px) minmax(0,1fr);gap:18px;
+ border:1px solid var(--line);padding:15px;
+ background:linear-gradient(115deg,var(--card),var(--soft));border-radius:19px;
+ box-shadow:var(--shadow);
+ align-items:center;margin-bottom:14px;
+}
+#shop .character-preview{min-height:140px;height:155px;border-radius:15px}
+.shop-hero-copy{min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+.shop-hero-copy h3{font-size:clamp(1.14rem,2.6vw,1.52rem);letter-spacing:-.028em;margin:0;line-height:1.2}
+.shop-hero-copy p{margin:0;font-size:.77rem;color:var(--muted);overflow-wrap:anywhere;line-height:1.45}
+#shop .shop-points-balance{
+ display:inline-flex;align-items:center;gap:4px;
+ font-size:.81rem;padding:8px 11px;border-radius:999px;
+ color:#174d39;background:#dcf9e9;border:1px solid #a6e6c4;
+ white-space:normal;margin-top:2px;
+}
+#shop .shop-points-balance span{font-weight:900;font-size:1rem}
+.shop-hero-action{margin-top:2px}
+.shop-category-switch{
+ display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+ border:1px solid var(--line);background:var(--soft);gap:6px;
+ padding:6px;border-radius:16px;margin:10px 0 14px;
+ position:sticky;top:62px;z-index:40;
+}
+.shop-category{
+ cursor:pointer;min-width:0;min-height:47px;
+ color:var(--muted);background:transparent;border:1px solid transparent;
+ border-radius:11px;padding:10px 7px;font-size:.82rem;font-weight:800;
+ transition:background .16s,border-color .16s,box-shadow .16s;
+}
+.shop-category:hover{color:var(--ink);background:var(--card)}
+.shop-category.active,.shop-category[aria-pressed="true"]{
+ background:var(--card);border-color:var(--line);color:var(--blue2);
+ box-shadow:0 2px 12px rgba(26,49,83,.08);
+}
+.shop-section[hidden]{display:none!important}
+.shop-section{scroll-margin-top:140px;min-width:0}
+#shop .shop-section>.section-head,#shop .character-outfits-panel>.section-head{
+ background:transparent;border:0;padding:5px 2px 10px;margin:0 0 6px;
+}
+#shop .section-head h2{font-size:1.07rem;letter-spacing:-.02em}
+#shop .section-head p{font-size:.76rem;line-height:1.5;max-width:65ch}
+#shop .section-head strong{flex:none;align-self:flex-start;white-space:normal;text-align:right;font-size:.71rem;color:var(--muted)}
+#shop .character-filter{gap:10px;margin-bottom:14px}
+#shop .character-filter select,#shop .world-gallery-controls select{
+ min-height:44px;padding:9px 11px;border-radius:10px;
+ background:var(--card);border:1px solid var(--line);color:var(--ink)
+}
+#shop .shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,175px),1fr));gap:11px}
+#shop .shop-item{
+ border:1px solid var(--line);border-radius:15px;padding:11px;
+ box-shadow:0 3px 15px rgba(20,37,76,.035);
+ transition:box-shadow .16s,border-color .16s,transform .16s;
+ background:var(--card);
+}
+#shop .shop-item:hover{border-color:#9bb8ef;box-shadow:0 9px 23px rgba(20,37,76,.1);transform:translateY(-1px)}
+#shop .character-card.active-character{
+ border:2px solid var(--blue);padding:10px;box-shadow:0 0 0 3px var(--accent-surface);
+}
+#shop .shop-icon{border-radius:12px;background:var(--soft)}
+#shop .shop-item>b{font-size:.85rem;letter-spacing:-.01em;line-height:1.35}
+#shop .shop-item small{color:var(--muted);font-size:.7rem;line-height:1.4}
+#shop .shop-item button{min-height:42px;border-radius:9px;font-weight:800}
+#shop .character-outfits-panel{border-top:0;margin:0;padding:0}
+#shop .outfit-media-note{
+ margin:2px 0 15px;border-left:3px solid var(--blue);
+ background:var(--soft);padding:10px 12px;border-radius:0 10px 10px 0;
+ font-size:.72rem;color:var(--muted);line-height:1.5;
+}
+#shop .world-photo-credits-access{margin:7px 0 11px}
+#shop .world-gallery-controls{background:var(--card);border-color:var(--line);border-radius:13px}
+#shop .globe-card{border-radius:18px}
+#shop .shop-section>.globe-head{margin:0}
+#shop .world-more{margin-top:12px;min-height:42px}
+:root[data-theme="dark"] #shop .shop-hero{background:linear-gradient(110deg,var(--card),#1c304b)!important;border-color:var(--line)}
+:root[data-theme="dark"] #shop .shop-points-balance{background:#153e32;color:#b4f7d3;border-color:#386951}
+:root[data-theme="dark"] #shop .shop-category-switch{background:var(--soft);border-color:var(--line)}
+:root[data-theme="dark"] #shop .shop-category{color:var(--muted)}
+:root[data-theme="dark"] #shop .shop-category.active,:root[data-theme="dark"] #shop .shop-category[aria-pressed="true"]{
+ background:#2b4161;border-color:#5a789e;color:#c4dcff;
+}
+:root[data-theme="dark"] #shop :is(.shop-item,.character-filter select,.world-gallery-controls select){background:var(--card)!important;color:var(--ink);border-color:var(--line)}
+:root[data-theme="dark"] #shop :is(.outfit-media-note,.shop-icon){background:var(--soft);color:var(--muted)}
+:root[data-theme="dark"] #shop .shop-item:hover{border-color:#88aee3}
+:root[data-theme="dark"] #shop .globe-card{background:#09192d!important;border-color:#355277}
+@media(max-width:610px){
+ #shop .shop-hero{grid-template-columns:110px minmax(0,1fr);gap:12px;padding:11px}
+ #shop .character-preview{height:126px;min-height:126px}
+ #shop .shop-category-switch{top:54px;padding:5px;gap:4px}
+ #shop .shop-category{font-size:.75rem;min-height:44px}
+ #shop .shop-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ #shop .shop-item{padding:9px}
+ #shop .shop-item .shop-icon{height:132px}
+ #shop .section-head{flex-wrap:wrap}
+}
+@media(max-width:370px){
+ #shop .shop-grid{grid-template-columns:minmax(0,1fr)}
+ #shop .shop-hero{grid-template-columns:86px minmax(0,1fr);gap:9px}
+ #shop .character-preview{height:106px;min-height:106px}
+ #shop .shop-points-balance{padding:6px 8px;font-size:.72rem}
+}
+@media(prefers-reduced-motion:reduce){#shop .shop-item{transition:none}}
