@@ -95,7 +95,7 @@
     <p>Weak spots, older knowledge and real AQA questions are mixed together.</p>
     <div class="starter-controls">
       <select id="challengeSubject"><option value="">All subjects</option><option>Physics</option><option>Chemistry</option><option>Maths</option></select>
-      <select id="challengeScope"><option value="mock">Mock scope</option><option value="taught">Everything taught so far</option></select>
+      <select id="challengeScope"><option value="mock">Year 13 Pure mock</option><option value="taught">Everything taught so far</option></select>
       <button id="startChallenge" class="primary-btn">Start today's challenge</button>
     </div>
     <div id="challengeStatus" class="starter-status"></div>
@@ -111,27 +111,27 @@
   <main>
     <section id="study" class="panel active">
       <div class="study-type">
-        <button class="study-type-btn active" data-study="mock">Mock</button>
+        <button class="study-type-btn active" data-study="mock">Year 13 Pure mock</button>
         <button class="study-type-btn" data-study="flashcards">Flashcards</button>
         <button class="study-type-btn" data-study="exam">Exam questions</button>
       </div>
 
       <div id="mockControls" class="control-card">
         <div class="control-row three">
-          <label><span>Subject</span><select id="mockSubject"><option>Physics</option><option>Chemistry</option><option>Maths</option></select></label>
+          <label><span>Current mock</span><select id="mockSubject"><option value="Maths" selected>Year 13 AQA Pure Maths</option></select></label>
           <label><span>Session</span><select id="mockMode"><option value="mixed">Mixed flashcards + exam questions</option><option value="flash">Flashcards only</option><option value="exam">Exam questions only</option></select></label>
           <label><span>Length</span><select id="mockCount"><option value="10">10 items</option><option value="15" selected>15 items</option><option value="20">20 items</option><option value="30">30 items</option><option value="unlimited">Unlimited — end whenever</option></select></label>
         </div>
         <label class="recall-priority-option"><input type="checkbox" id="mockMustKnowFirst" checked><span><strong>Must memorise first</strong> — bring key definitions and equations not printed by AQA to the front of flashcard practice.</span></label>
-        <div class="coverage-note">Uses only the topics currently tagged for your mock. Within flashcards, unlearned or due must-memorise facts are prioritised; exam questions remain mixed. Other flashcards remain available.</div>
-        <p id="physicsMockBreadthNote" class="maths-mock-scope"><strong>Physics mock breadth:</strong> short sessions are balanced across Measurements, Particles &amp; radiation, Waves, Mechanics &amp; materials and Electricity, with required practicals RP1–RP6 included in the bank. Exam-question practice is independent of the separate Exam questions tab's filters. Choose Unlimited to keep working through all available mock material before it repeats. For AQA AS Paper 2's practical/data, written and multiple-choice formats, also use the separate Paper 2 trainer under Flashcards.</p>
-        <p id="mathsMockScopeNote" class="maths-mock-scope" hidden><strong>Maths first mock: Year 12/AS Pure only.</strong> Pure topics studied in Year 12, selected from both papers. No Statistics, Mechanics, radians or Year 13-only content. The separate Year 13 class paper is after the other mocks and is not included in this preset.</p>
+        <div class="coverage-note">Only the new, taught Year 13 Pure Maths flashcards and original worked questions are selected here. Other subjects, AS material and additional Year 2 topics stay available under Flashcards and Exam questions. Use Unlimited to continue and finish whenever you choose.</div>
+        <p id="physicsMockBreadthNote" class="maths-mock-scope" hidden><strong>Physics mock breadth:</strong> short sessions are balanced across Measurements, Particles &amp; radiation, Waves, Mechanics &amp; materials and Electricity, with required practicals RP1–RP6 included in the bank. Exam-question practice is independent of the separate Exam questions tab's filters. Choose Unlimited to keep working through all available mock material before it repeats. For AQA AS Paper 2's practical/data, written and multiple-choice formats, also use the separate Paper 2 trainer under Flashcards.</p>
+        <p id="mathsMockScopeNote" class="maths-mock-scope"><strong>Current mock: Year 13 AQA Pure Maths only.</strong> Covers taught radians, trigonometric identities and equations, Year 2 differentiation and integration, functions, modulus, graph transformations, algebraic fractions, proof, sequences, fractional/negative binomial expansions, logarithms and exponentials. No Statistics, Mechanics or old Year 1 mock-only material. Numerical methods, Year 2 vectors and parametric equations remain available as separate additional practice but are excluded from this mock until confirmed taught.</p>
         <button id="startMock" class="primary-btn full-btn">Start mock revision</button>
       </div>
 
       <div id="flashControls" class="control-card hidden">
         <div class="control-row two">
-          <label><span>Subject</span><select id="flashSubject"><option>Physics</option><option>Chemistry</option><option>Maths</option></select></label>
+          <label><span>Subject</span><select id="flashSubject"><option>Physics</option><option>Chemistry</option><option selected>Maths</option></select></label>
           <label><span>Session size</span><select id="flashCount"><option value="10">10 cards</option><option value="20" selected>20 cards</option><option value="30">30 cards</option><option value="50">50 cards</option></select></label>
         </div>
         <div class="recall-priority-options" aria-label="Flashcard memorisation priorities">
@@ -160,7 +160,7 @@
         </section>
         <div class="picker-head"><b>Topics to include</b><span id="flashTopicCount"></span></div>
         <div class="preset-row">
-          <button class="mini-btn" data-flash-preset="mock">Mock topics</button>
+          <button class="mini-btn" data-flash-preset="mock">Year 13 mock topics</button>
           <button class="mini-btn" data-flash-preset="taught">Taught so far</button>
           <button class="mini-btn" data-flash-preset="all">All available</button>
           <button class="mini-btn" data-flash-preset="clear">Clear</button>
@@ -171,8 +171,8 @@
 
       <div id="examControls" class="control-card hidden">
         <div class="control-row three">
-          <label><span>Subject</span><select id="examSubject"><option>Physics</option><option>Chemistry</option><option>Maths</option></select></label>
-          <label><span>Qualification</span><select id="examLevel"><option value="both">AS and A-level</option><option value="AS">AS only</option><option value="A-level">A-level only</option></select></label>
+          <label><span>Subject</span><select id="examSubject"><option>Physics</option><option>Chemistry</option><option selected>Maths</option></select></label>
+          <label><span>Qualification</span><select id="examLevel"><option value="both">AS and A-level</option><option value="AS">AS only</option><option value="A-level" selected>A-level only</option></select></label>
           <label><span>Question groups</span><select id="examCount"><option value="5">5 groups</option><option value="10" selected>10 groups</option><option value="15">15 groups</option><option value="20">20 groups</option></select></label>
           <label><span>Ordering</span><select id="examOrder"><option value="adaptive">Random + weak-topic boost</option><option value="random">Fully random</option></select></label>
         </div>
@@ -185,6 +185,8 @@
           </select></label>
           <p class="stretch-help" id="examDifficultyCount" aria-live="polite">Choose mixed practice or focus on longer questions that require several steps.</p>
         </div>
+        <div class="preset-row"><button id="examYear13Preset" class="mini-btn" type="button">Select Year 13 Pure mock questions</button></div>
+        <p class="recall-priority-note">Original AQA-style worked questions, each with a self-review mark scheme. Numerical methods, Year 2 vectors and untaught parametric equations are not included in this preset.</p>
         <div class="picker-head"><b>Years</b><span id="examYearCount"></span></div>
         <div class="preset-row"><button id="yearsAll" class="mini-btn">All available</button><button id="yearsRecent" class="mini-btn">Most recent</button><button id="yearsClear" class="mini-btn">Clear</button></div>
         <div id="examYears" class="check-grid compact"></div>
@@ -362,7 +364,7 @@
 <script src="physics-mock-balance-v439.js?v=439" defer></script>
 <script src="physics-paper2-visuals-v447.js?v=447" defer></script>
 <script src="physics-paper2-visuals-v449.js?v=449" defer></script>
-<script src="app.js?v=430&physics=v439&chem=v433&data=6&focus=v440&world=v442&paper2=v449" defer></script>
+<script src="app.js?v=430&physics=v439&chem=v433&data=6&focus=v440&world=v442&paper2=v449&year13=v450" defer></script>
 <script src="study-focus-v440.js?v=440" defer></script>
 <script src="world-zoom-helpers.js?v=61" defer></script>
 <script src="world-globe-article-bridge.js?v=73" defer></script>
