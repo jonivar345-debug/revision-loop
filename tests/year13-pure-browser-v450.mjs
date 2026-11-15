@@ -69,7 +69,7 @@ try{
   assert(await archive.isVisible(),'AQA Pure archive should be visible in Maths exam mode');
   assert.equal(await archive.locator('details.pure-paper-year').count(),16,'Seven target years, all 2023 Pure source panels, 2024 methods and 2025 topic panels');
   const descriptions=await archive.innerText();
-  assert(descriptions.includes('21 public papers indexed')&&descriptions.includes('2024 Paper 2/3 Pure Section A methods')&&descriptions.includes('2023 Paper 1')&&descriptions.includes('2023 Paper 2')&&descriptions.includes('2023 Paper 3'));
+  assert(descriptions.includes('21 public papers indexed')&&descriptions.includes('2024 Paper 2/3 Pure methods')&&descriptions.includes('2023 Paper 1')&&descriptions.includes('2023 Paper 2')&&descriptions.includes('2023 Paper 3'));
   await archive.locator('details.pure-paper-year').nth(13).locator('summary').click();
   const questionText=await archive.innerText();
   assert(questionText.includes('2025')&&questionText.includes('Q17'));
