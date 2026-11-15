@@ -78,22 +78,35 @@ try{
   assert.equal(await page.locator('#mockSubject').inputValue(),'Maths');
   assert(await page.locator('#mathsMockScopeNote').isVisible());
   assert.equal(await page.locator('#physicsMockBreadthNote').isVisible(),false);
-  const all=await page.evaluate(()=>buildMockSessionItems('Maths','mixed',30));
-  assert(all.length>=10,'Mixed school mock must contain cards and worked questions');
-  const audit=await page.evaluate(()=>buildMockSessionItems('Maths','mixed',30).map(item=>{
-   const obj=item.type==='card'?cards.find(x=>x.id===item.id):examQuestions.find(x=>x.id===item.id);
-   return {id:item.id,type:item.type,subject:obj.subject,flag:obj.year13PureMock,level:obj.stage||obj.level};
+  // v462: the default must-memorise switch is a strict flashcard-only filter.
+  assert(await page.locator('#mockMustKnowFirst').isChecked());
+  assert(await page.locator('#mockMode').isDisabled());
+  const strictAudit=await page.evaluate(()=>buildMockSessionItems('Maths','mixed',30).map(item=>{
+   const c=cards.find(x=>x.id===item.id);
+   return {type:item.type,selected:!!c&&isRecallMustKnow(c),id:item.id};
   }));
-  assert(audit.every(x=>x.subject==='Maths'&&x.flag===true&&/^y13_v(?:450|451|452|457|462)_/.test(x.id)));
-  assert(audit.some(x=>x.type==='card')&&audit.some(x=>x.type==='exam'));
+  assert.equal(strictAudit.length,30);
+  assert(strictAudit.every(x=>x.type==='card'&&x.selected),'Must memorise cannot fall back to ordinary cards or exam questions');
+  const everyPriority=await page.evaluate(()=>cards.filter(c=>currentYear13PureMockCard(c)&&isRecallMustKnow(c)).length);
+  assert.equal(everyPriority,89);
+  // Turning the switch off restores ordinary mixed Maths mock revision.
+  await page.locator('#mockMustKnowFirst').uncheck();
+  assert(await page.locator('#mockMode').isEnabled());
+  const ordinary=await page.evaluate(()=>buildMockSessionItems('Maths','mixed',30));
+  assert(ordinary.some(x=>x.type==='card')&&ordinary.some(x=>x.type==='exam'),
+    'Normal mixed practice must remain available when must memorise is off');
+  await page.locator('#mockMustKnowFirst').check();
+  assert(await page.locator('#mockMode').isDisabled());
   assert.equal((await page.evaluate(()=>buildMockSessionItems('Physics','mixed',10))).length,0);
   assert.equal((await page.evaluate(()=>buildMockSessionItems('Chemistry','mixed',10))).length,0);
-  await page.locator('#mockMode').selectOption('flash');
   await page.locator('#mockCount').selectOption('unlimited');
   await page.locator('#startMock').click();
   const mock=await page.evaluate(()=>({kind:activeSession.kind,items:activeSession.items.length,
-   unlimited:activeSession.unlimited,all:activeSession.items.every(x=>x.type==='card'&&/^y13_v(?:450|462)_card_/.test(x.id))}));
+   unlimited:activeSession.unlimited,all:activeSession.items.every(x=>x.type==='card'&&
+    isRecallMustKnow(cards.find(c=>c.id===x.id)))}));
   assert.equal(mock.kind,'mock');assert.equal(mock.items,15);assert(mock.unlimited&&mock.all);
+  assert(await page.locator('.maths-memorise-card').isVisible(),
+    'Selected Maths cards should have readable, dedicated formatting');
   assert(await page.locator('#endUnlimitedMock').isVisible());
   await page.locator('#skipCard').click();
   assert.equal(await page.evaluate(()=>profile.lifetimeXp),140,'Skipping cannot award XP');
@@ -101,8 +114,8 @@ try{
   assert.equal(await page.locator('#flashSubject').inputValue(),'Maths');
   const flash=await page.evaluate(()=>({scope:flashScopeFilter,count:selectedFlashCards().length,
    selected:selectedFlashCards().every(c=>currentYear13PureMockCard(c))}));
-  assert.deepEqual(flash,{scope:'mock',count:176,selected:true});
-  await page.locator('#flashMustKnowOnly').check();
+  assert.deepEqual(flash,{scope:'mock',count:89,selected:true});
+  assert(await page.locator('#flashMustKnowFirst').isChecked());
   const mustKnow=await page.evaluate(()=>({
    count:selectedFlashCards().length,
    exact:selectedFlashCards().every(c=>isRecallMustKnow(c)&&currentYear13PureMockCard(c)),
@@ -111,7 +124,9 @@ try{
   }));
   assert.deepEqual(mustKnow,{count:89,exact:true,excluded:true},
     'Only the 89 explicitly selected Maths memorisation cards should appear');
-  await page.locator('#flashMustKnowOnly').uncheck();
+  await page.locator('#flashMustKnowFirst').uncheck();
+  assert.equal((await page.evaluate(()=>selectedFlashCards().length)),176,
+    'Unticking must memorise restores all 176 taught mock flashcards');
   await page.locator('[data-flash-preset="taught"]').click();
   assert((await page.evaluate(()=>selectedFlashCards().length))>=176);
   await page.locator('[data-flash-preset="mock"]').click();
