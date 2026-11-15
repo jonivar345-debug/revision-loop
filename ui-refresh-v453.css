@@ -24,20 +24,6 @@ html:has(body){scroll-padding-top:70px}
 button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{
  outline:3px solid var(--focus);outline-offset:3px;
 }
-.quick-nav{
- display:flex;align-items:center;gap:8px;margin:7px 0 12px;
- overflow-x:auto;scrollbar-width:thin;padding:3px 2px 8px;
- scroll-snap-type:x proximity;
-}
-.quick-nav-btn{
- flex:1 0 auto;min-width:106px;min-height:43px;
- border:1px solid var(--line);border-radius:12px;background:var(--card);
- color:var(--ink);font-weight:750;font-size:.82rem;padding:10px 12px;
- box-shadow:0 2px 8px rgba(27,45,82,.035);scroll-snap-align:start;
- transition:background .15s,border-color .15s,transform .15s;
-}
-.quick-nav-btn:hover{border-color:var(--blue);background:var(--accent-surface);transform:translateY(-1px)}
-.quick-nav-btn[aria-current="page"]{border-color:var(--blue);color:var(--blue2);background:var(--accent-surface)}
 .sync-quick-access{
  background:var(--card);border:1px solid var(--line);border-radius:16px;
  padding:14px 16px;margin:0 0 12px;color:var(--ink);
@@ -91,11 +77,11 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 :root[data-theme="dark"] :is(.stat span,.brand p,.starter-card>p,.control-row label>span,.picker-head span,.coverage-note,.quick-review-note,.cloud-quick-details p,.section-head p,.shop-hero p,.queue-pos,.card-description,.card-meta small,.paper2-coach .paper2-coach-note){
  color:var(--muted)!important;
 }
-:root[data-theme="dark"] :is(.tab,.study-type-btn,.mini-btn,.icon-btn,.quick-nav-btn,.quick-review-btn,.session-end-btn,.paper2-mcq-option,.paper2-card-hint button){
+:root[data-theme="dark"] :is(.tab,.study-type-btn,.mini-btn,.icon-btn,.quick-review-btn,.session-end-btn,.paper2-mcq-option,.paper2-card-hint button){
  background:var(--card);border-color:var(--line);color:var(--ink);
 }
 :root[data-theme="dark"] :is(.tab.active,.primary-btn,.paper2-mcq-option.selected .paper2-choice-letter){background:#346dd6;color:#fff;border-color:#346dd6}
-:root[data-theme="dark"] :is(.study-type-btn.active,.quick-nav-btn[aria-current="page"],.quick-review-known){
+:root[data-theme="dark"] :is(.study-type-btn.active,.quick-review-known){
  background:var(--accent-surface);color:#acd0ff;border-color:var(--blue);
 }
 :root[data-theme="dark"] :is(input:not([type="checkbox"]):not([type="radio"]),select,textarea,.cloud-quick-details input){
@@ -136,8 +122,6 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
  .top-actions .mini-avatar{width:34px;height:36px}
  .brand h1{font-size:1.22rem}
  .brand p{font-size:.66rem}
- .quick-nav{gap:7px}
- .quick-nav-btn{font-size:.76rem;min-width:103px;padding:9px 10px}
  .tabs{top:0;gap:4px;padding:5px}
  .tab{min-height:43px;font-size:.72rem}
  .stat{padding:11px 9px}
@@ -147,5 +131,44 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 }
 @media(prefers-reduced-motion:reduce){
  html{scroll-behavior:auto}
- .quick-nav-btn,.icon-btn,.primary-btn,.study-type-btn{transition:none}
+ .icon-btn,.primary-btn,.study-type-btn{transition:none}
+}
+
+/* v454: one main section bar, with study modes inside Revision only. */
+.tabs{
+ grid-template-columns:repeat(4,minmax(0,1fr));
+ margin:9px 0 12px;
+}
+.tab[aria-current="page"],.tab.active{
+ background:#223a67;border-color:#223a67;color:#fff;
+}
+.study-type-btn[aria-current="page"],.study-type-btn.active{
+ background:var(--accent-surface);border-color:var(--blue);color:var(--blue2);
+}
+.study-overview{
+ border:1px solid var(--line);border-radius:16px;background:var(--card);
+ margin:0 0 12px;overflow:hidden;
+}
+.study-overview>summary{
+ cursor:pointer;padding:12px 15px;font-size:.86rem;font-weight:800;
+ display:flex;gap:9px;align-items:center;flex-wrap:wrap;color:var(--ink);
+ list-style-position:inside;
+}
+.study-overview>summary span{
+ color:var(--muted);font-weight:500;font-size:.73rem;
+}
+.study-overview[open]>summary{
+ border-bottom:1px solid var(--line);background:var(--soft);
+}
+.study-overview-inner{padding:10px 13px 13px}
+.study-overview .level-card{margin-top:0}
+.study-overview .starter-card{margin-bottom:0}
+.study-overview .stats-grid{margin:8px 0}
+#studyModes{scroll-margin-top:92px}
+:root[data-theme="dark"] .study-overview{background:var(--card);border-color:var(--line)}
+:root[data-theme="dark"] .study-overview[open]>summary{background:var(--soft)}
+@media(max-width:600px){
+ .study-overview>summary{font-size:.79rem;padding:10px 11px}
+ .study-overview-inner{padding:9px}
+ .tabs{top:0}
 }
